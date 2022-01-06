@@ -1,0 +1,15 @@
+name: propertyTypes
+in: query
+description: Types de bien
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - HOUSE
+      - APARTMENT
+      - PREMISES
+      - LAND
+      - BUILDING
+      - PARKING

@@ -1,0 +1,5 @@
+name: constructionYearMin
+description: Année minimale de construction (YYYY)
+in: query
+schema:
+  type: integer

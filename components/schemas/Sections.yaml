@@ -1,0 +1,93 @@
+type: object
+properties:
+  estimationEngine:
+    type: object
+    properties:
+      estimatedPrice:
+        type: number
+        format: double
+      estimatedPriceM2:
+        type: number
+        format: double
+      estimatedPriceRange:
+        $ref: ./Range.yaml
+      zones:
+        type: array
+        items:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+                - DISTRICT
+                - CITY
+                - DEPARTMENT
+                - REGION
+                - UNKNOWN
+            name:
+              type: string
+            priceM2Percentiles:
+              $ref: ./Percentiles.yaml
+            priceM2Distribution:
+              $ref: ./DateHistogram.yaml
+            boundingBoxes:
+              type: array
+              items:
+                $ref: ./LngLat.yaml
+  marketStats:
+    type: object
+    properties:
+      propertySearchQuery:
+        $ref: ./PropertySearchQuery.yaml
+      pricePercentiles:
+        $ref: ./Percentiles.yaml
+      priceM2Percentiles:
+        $ref: ./Percentiles.yaml
+      durationPercentiles:
+        $ref: ./Percentiles.yaml
+      priceM2Distribution:
+        $ref: ./Histogram.yaml
+      durationDistribution:
+        $ref: ./Histogram.yaml
+      priceM2Evolution:
+        $ref: ./DateHistogram.yaml
+      durationEvolution:
+        $ref: ./DateHistogram.yaml
+  similarProperties:
+    type: object
+    properties:
+      properties:
+        type: array
+        items:
+          $ref: ./Property.yaml
+  propertyPriceStudy:
+    type: object
+    properties:
+      priceComment:
+        type: string
+      similarPropertiesComment:
+        type: string
+      similarProperties:
+        type: array
+        items:
+          $ref: ./Property.yaml
+      showMarketPrice:
+        type: boolean
+      estimatedPrice:
+        type: number
+        format: double
+      activeSerie:
+        type: boolean
+      expiredSerie:
+        type: boolean
+  conclusion:
+    type: object
+    properties:
+      conclusion:
+        type: string
+      showPrice:
+        type: boolean
+      showFees:
+        type: boolean
+      showPriceWithFees:
+        type: boolean

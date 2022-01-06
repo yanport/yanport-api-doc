@@ -1,0 +1,5 @@
+name: durationDaysMin
+in: query
+description: Durée minimale en jours
+schema:
+  type: integer

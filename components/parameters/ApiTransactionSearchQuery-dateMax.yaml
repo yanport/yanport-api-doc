@@ -1,0 +1,6 @@
+name: dateMax
+in: query
+description: Date maximum de la transaction d'API
+schema:
+  type: string
+  format: date-time

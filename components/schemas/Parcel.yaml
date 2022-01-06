@@ -1,0 +1,32 @@
+type: object
+properties:
+  id:
+    type: string
+  inseeCode:
+    type: string
+  number:
+    type: string
+  prefix:
+    type: string
+  created:
+    type: string
+  updated:
+    type: string
+  section:
+    type: string
+  surface:
+    type: number
+  geometry:
+    type: object
+    properties:
+      type:
+        type: string
+      coordinates:
+        type: array
+        items:
+          type: object
+          properties:
+            lat:
+              type: number
+            lng:
+              type: number

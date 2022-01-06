@@ -1,0 +1,17 @@
+name: field
+in: query
+description: Champ sur lequel sont calculés les statistiques
+required: true
+schema:
+  type: string
+  enum:
+    - PRICE
+    - PRICE_HC
+    - PRICE_CC
+    - PRICE_M2
+    - PRICE_M2_HC
+    - PRICE_M2_CC
+    - SURFACE
+    - ROOM_COUNT
+    - DURATION_DAYS
+    - MARKETING_DAYS

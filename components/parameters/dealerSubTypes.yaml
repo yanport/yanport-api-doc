@@ -1,0 +1,13 @@
+name: dealerSubTypes
+in: query
+description: Sous types de vendeur
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - REAL_ESTATE
+      - NOTARY
+      - REALTY_DEVELOPER
+      - PROPERTY_MANAGER

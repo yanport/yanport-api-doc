@@ -1,0 +1,29 @@
+get:
+  tags:
+    - IRIS
+  summary: Récupérer des iris (ID)
+  description: Récupérer des iris par leur identifiant
+  parameters:
+    - name: ids
+      in: query
+      description: Liste d'identifiants
+      required: true
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+  responses:
+    '200':
+      description: La liste des iris
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Iris.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

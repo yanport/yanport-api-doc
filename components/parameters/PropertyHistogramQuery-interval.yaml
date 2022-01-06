@@ -1,0 +1,7 @@
+name: interval
+in: query
+description: Valeur de l'intervalle de l'histogramme
+schema:
+  type: integer
+  format: int64
+  minimum: 1

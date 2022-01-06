@@ -1,0 +1,28 @@
+type: object
+properties:
+  name:
+    type: string
+    maxLength: 1000
+  description:
+    type: string
+    maxLength: 10000
+  legalDevices:
+    type: array
+    items:
+      type: string
+      enum:
+        - TVA
+        - PINEL
+        - PTZ
+        - LMP
+        - LMNP
+        - PLS
+  certifications:
+    type: array
+    items:
+      type: string
+      enum:
+        - RT2012
+        - RE2020
+        - HPE
+        - HQE

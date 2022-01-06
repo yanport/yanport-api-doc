@@ -1,0 +1,8 @@
+name: tokenIds
+in: query
+description: Liste des tokenIds
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

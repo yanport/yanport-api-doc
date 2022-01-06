@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  type:
+    type: string
+    enum:
+      - HOUSE
+      - APARTMENT
+      - PREMISES
+      - LAND
+      - BUILDING
+      - PARKING
+  price:
+    items:
+      $ref: ./Range.yaml
+    minimum: 10
+    maximum: 100000000
+  suface:
+    type: number
+    format: double
+  roomCount:
+    type: integer
+  ads:
+    type: array
+    maxItems: 100
+    items:
+      $ref: ./AdRef.yaml

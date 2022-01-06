@@ -1,0 +1,6 @@
+name: percentiles
+in: query
+schema:
+  type: array
+  items:
+    type: number

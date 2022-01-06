@@ -1,0 +1,7 @@
+name: existingFields
+in: query
+description: Attributs existants
+schema:
+  type: array
+  items:
+    type: string

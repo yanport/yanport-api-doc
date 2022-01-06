@@ -1,0 +1,8 @@
+type: string
+enum:
+  - STUDY
+  - AD
+  - DVF
+  - CLIENT
+  - CLAMEUR
+example: AD

@@ -1,0 +1,6 @@
+name: deleteDateMinOrActive
+in: query
+description: Date minimum de suppression ou actif
+schema:
+  type: string
+  format: date-time

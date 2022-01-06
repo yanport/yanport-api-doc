@@ -1,0 +1,9 @@
+type: object
+properties:
+  coOwner:
+    type: boolean
+  type:
+    type: string
+    enum:
+      - LEGAL_PERSON
+      - PRIVATE

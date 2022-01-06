@@ -1,0 +1,33 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+    minimum: 0
+    example: 4801814507552768
+  organizationId:
+    type: integer
+    format: int64
+    minimum: 0
+  type:
+    $ref: ./Dealer-Type.yaml
+  subType:
+    $ref: ./Dealer-SubType.yaml
+  name:
+    type: string
+    minLength: 1
+    maxLength: 300
+    example: dealer's name
+  phoneNumber:
+    type: string
+    example: 01748596***
+  phoneNumberHash:
+    type: string
+  email:
+    type: string
+    format: email
+    example: example@email.com
+  agenciesUnwanted:
+    type: boolean
+  bloctel:
+    $ref: ./Bloctel.yaml

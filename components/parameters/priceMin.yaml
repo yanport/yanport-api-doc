@@ -1,0 +1,6 @@
+name: priceMin
+in: query
+description: Prix minimum
+schema:
+  type: integer
+  format: double

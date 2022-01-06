@@ -1,0 +1,6 @@
+name: savedSearchIds
+in: query
+description: Les identifiants sauvegardés
+schema:
+  type: string
+  format: uuid

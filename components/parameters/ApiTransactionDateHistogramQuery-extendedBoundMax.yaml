@@ -1,0 +1,6 @@
+name: extendedBoundMax
+in: query
+description: Date limite haute de l'aggrégation demandée
+schema:
+  type: string
+  format: date-time

@@ -1,0 +1,7 @@
+name: externalUserIds
+in: query
+description: Liste d'identifiants externe client
+schema:
+  type: array
+  items:
+    type: string

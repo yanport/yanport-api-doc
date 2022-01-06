@@ -1,0 +1,6 @@
+name: deliveryDateMin
+in: query
+description: Date minimum de livraison
+schema:
+  type: string
+  format: date-time

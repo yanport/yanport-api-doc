@@ -1,0 +1,7 @@
+name: interval
+in: query
+required: true
+schema:
+  type: integer
+  default: 1
+  minimum: 1

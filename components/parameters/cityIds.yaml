@@ -1,0 +1,9 @@
+name: cityIds
+in: query
+description: Liste d'identifiants de villes
+style: form
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

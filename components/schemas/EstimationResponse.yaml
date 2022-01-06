@@ -1,0 +1,59 @@
+type: object
+properties:
+  estimation:
+    type: object
+    properties:
+      value:
+        type: number
+        example: 348277.28
+      percentiles:
+        type: object
+        properties:
+          '25':
+            type: number
+            example: 328002.78511154104
+          '50':
+            type: number
+            example: 348277.28089816734
+          '75':
+            type: number
+            example: 362923.32953035925
+  reliability:
+    type: object
+    properties:
+      score:
+        type: integer
+        description: >-
+          Score de fiabilité calculé à partir de l'erreur moyenne et de la zone
+          géographique (0 = non fiable, 100 = très fiable)
+        format: int32
+        minimum: 0
+        maximum: 100
+        example: 78
+  evaluation:
+    type: object
+    properties:
+      count:
+        type: integer
+        format: int32
+        example: 30
+      residual:
+        type: object
+        properties:
+          mean:
+            type: number
+            format: double
+            description: Erreur moyenne constatée lors de la validation de nos modèles
+            example: 5.85
+          percentiles:
+            type: object
+            properties:
+              '50':
+                type: number
+                example: 4.218634115526066
+              '75':
+                type: number
+                example: 8.277662756212566
+              '90':
+                type: number
+                example: 13.359326513857988

@@ -1,0 +1,45 @@
+type: object
+properties:
+  cityId:
+    type: number
+    format: int64
+    minimum: 0
+    example: 47892974
+  quarterId:
+    type: number
+    format: int64
+    minimum: 0
+  irisIds:
+    type: array
+    items:
+      type: string
+    example: []
+  parcelIds:
+    type: array
+    items:
+      type: string
+    example: []
+  agglomerationId:
+    type: number
+    format: int64
+    example: 4762789950839808
+  streetNumber:
+    type: string
+  street:
+    type: string
+  city:
+    type: string
+    example: Cloyes-Les-Trois-Rivières
+  zipCode:
+    type: string
+    example: 28220
+  deptCode:
+    type: string
+    example: 28
+  country:
+    type: string
+  location:
+    $ref: ./Location.yaml
+  approximateLocation:
+    type: object
+    format: GeoJsonObject

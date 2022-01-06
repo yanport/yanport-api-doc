@@ -1,0 +1,373 @@
+type: object
+properties:
+  descriptive:
+    type: object
+    properties:
+      description:
+        type: string
+        maxLength: 10000
+        example: >-
+          Charmante petite maison située dans un quartier calme. La maison de
+          120m2 environ comporte un séjour de 35m2 environ, une cuisine, une
+          salle de douche, un espace nuit ainsi que deux chambres de 11 m2
+          environ. Le plus, un sous sol complet et un agréable jardin! Mérite
+          votre attention! Honoraires d'agence à la charge du
+          vendeur.Information d'affichage énergétique sur ce bien DPE F indice
+          356 et GES G indice 83.
+      pros:
+        type: array
+        maxItems: 10
+        items:
+          type: string
+          maxLength: 1000
+        example:
+          - Belle exposition
+      cons:
+        type: array
+        maxItems: 10
+        items:
+          type: string
+          maxLength: 1000
+        example:
+          - Proche d'une route bruyante
+      comments:
+        type: string
+        maxLength: 2000
+      generalState:
+        $ref: ./State.yaml
+      services:
+        type: object
+        properties:
+          CARETAKER:
+            type: boolean
+          CLEANING:
+            type: boolean
+      equipments:
+        type: object
+        properties:
+          FURNITURE:
+            type: boolean
+            example: true
+          FIREPLACE:
+            type: boolean
+            example: true
+          AIR_CONDITIONING:
+            type: boolean
+            example: false
+          ADSL:
+            type: boolean
+            example: false
+          CABLE:
+            type: boolean
+            example: false
+          FIBER:
+            type: boolean
+            example: false
+          ELEVATOR:
+            type: boolean
+            example: false
+          DIGICODE:
+            type: boolean
+            example: false
+          INTERCOM:
+            type: boolean
+            example: false
+          VIDEOPHONE:
+            type: boolean
+            example: false
+          BIKE_AREA:
+            type: boolean
+            example: true
+          TWO_WHEEL_PARK:
+            type: boolean
+            example: false
+          DISABLED_ACCESS:
+            type: boolean
+            example: false
+  visual:
+    type: object
+    properties:
+      images:
+        type: array
+        maxItems: 40
+        items:
+          type: string
+          format: uri
+      orientations:
+        type: array
+        items:
+          type: string
+          enum:
+            - NORTH
+            - EAST
+            - SOUTH
+            - WEST
+      views:
+        type: array
+        items:
+          type: string
+          enum:
+            - SEA
+            - MOUNTAIN
+            - RIVER
+            - LAKE
+  geometry:
+    type: object
+    properties:
+      surface:
+        type: number
+        format: double
+        minimum: 5
+      surfaceCarrez:
+        type: number
+        format: double
+        minimum: 5
+      areas:
+        type: array
+        maxItems: 100
+        items:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+                - BEDROOM
+                - BATHROOM
+                - SHOWER_ROOM
+                - TOILET
+                - KITCHEN
+                - LUNCHROOM
+                - LIVING_ROOM
+                - BALCONY
+                - TERRACE
+                - CELLAR
+                - GARDEN
+                - PARKING
+                - SWIMMING_POOL
+                - OTHER
+            surface:
+              type: number
+              format: double
+            kitchenType:
+              type: string
+              enum:
+                - OPENED
+                - CLOSED
+                - KITCHENETTE
+            kitchenEquipments:
+              type: array
+              items:
+                type: string
+                enum:
+                  - FITTED
+                  - EQUIPPED
+                  - NONE
+      roomCount:
+        type: integer
+        minimum: 1
+        maximum: 200
+      areaCount:
+        type: object
+        properties:
+          BEDROOM:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 2
+          BATHROOM:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 0
+          SHOWER_ROOM:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          TOILET:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          KITCHEN:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          LUNCHROOM:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          LIVING_ROOM:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          BALCONY:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 0
+          TERRACE:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 2
+          CELLAR:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          GARDEN:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 2
+          PARKING:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          SWIMMING_POOL:
+            type: integer
+            format: int64
+            minimum: 0
+            example: 1
+          OTHER:
+            type: integer
+            format: int64
+            minimum: 0
+      floors:
+        type: array
+        maxItems: 100
+        items:
+          type: object
+          properties:
+            level:
+              type: integer
+              minimum: -10
+              maximum: 100
+              example: 2
+            surface:
+              type: number
+              format: double
+              minimum: 1
+              maximum: 10000
+              example: 120
+            basementType:
+              type: string
+              enum:
+                - PARTIAL
+                - FULL
+      floorCount:
+        type: integer
+        minimum: 0
+        maximum: 100
+  construction:
+    type: object
+    properties:
+      newBuild:
+        type: boolean
+      year:
+        type: integer
+        minimum: 1000
+        maximum: 2500
+      period:
+        $ref: ./Range.yaml
+      urbanismRules:
+        type: array
+        items:
+          type: string
+          enum:
+            - SEISMIC_ZONE
+            - TECHNOLOGICAL_ZONE
+            - FLOOD_ZONE
+            - CLASSIFIED_ZONE
+            - NOISE_ZONE
+            - PROTECTED_NATURAL_ZONE
+            - LANDSLIDE_ZONE
+  energy:
+    type: object
+    properties:
+      heatingTypes:
+        type: array
+        items:
+          type: string
+          enum:
+            - ELECTRIC
+            - GAS
+            - FUEL
+            - WOOD
+            - SOLAR
+            - HEAT_PUMP
+            - UNDERFLOOR
+            - OTHER
+            - NONE
+      heatingMode:
+        type: string
+        enum:
+          - INDIVIDUAL
+          - COLLECTIVE
+          - MIXED
+      waterHeatingTypes:
+        type: array
+        items:
+          type: string
+          enum:
+            - ELECTRIC
+            - GAS
+            - FUEL
+            - WOOD
+            - SOLAR
+            - HEAT_PUMP
+            - UNDERFLOOR
+            - OTHER
+            - NONE
+      waterHeatingMode:
+        type: string
+        enum:
+          - INDIVIDUAL
+          - COLLECTIVE
+          - MIXED
+      consumption:
+        type: integer
+        minimum: 0
+        maximum: 10000
+      consumptionRange:
+        $ref: ./Range.yaml
+      greenHouseGasConsumption:
+        type: integer
+        minimum: 0
+        maximum: 10000
+  condominium:
+    type: object
+    properties:
+      lotCount:
+        type: integer
+        minimum: 1
+        maximum: 10000
+      expenses:
+        type: number
+        format: double
+        minimum: 1
+        maximum: 100000
+      inDifficulty:
+        type: boolean
+  additionalFeatures:
+    type: array
+    maxItems: 100
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - HOUSE
+            - APARTMENT
+            - PREMISES
+            - LAND
+            - BUILDING
+            - PARKING
+        features:
+          $ref: ./Property-Features.yaml

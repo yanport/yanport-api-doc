@@ -1,0 +1,20 @@
+type: object
+properties:
+  <sku_value>:
+    type: object
+    properties:
+      points:
+        type: array
+        items:
+          type: object
+          properties:
+            x:
+              type: string
+              format: date
+            'y':
+              type: object
+              properties:
+                count:
+                  type: integer
+                sum:
+                  type: number

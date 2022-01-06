@@ -1,0 +1,5 @@
+name: q
+in: query
+description: Recherche plein-texte
+schema:
+  type: string

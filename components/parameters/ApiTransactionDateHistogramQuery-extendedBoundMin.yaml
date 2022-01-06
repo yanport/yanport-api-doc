@@ -1,0 +1,6 @@
+name: extendedBoundMin
+in: query
+description: Date limite basse de l'aggrégation demandée
+schema:
+  type: string
+  format: date-time

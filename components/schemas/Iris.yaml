@@ -1,0 +1,22 @@
+type: object
+properties:
+  id:
+    type: string
+  code:
+    type: string
+  name:
+    type: string
+  inseeCode:
+    type: string
+  cityId:
+    type: number
+  type:
+    type: string
+    enum:
+      - HOUSING
+      - ACTIVITY
+      - VARIOUS
+      - UNCUT
+  geometry:
+    type: object
+    format: GeoJsonObject

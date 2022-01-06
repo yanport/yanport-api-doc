@@ -1,0 +1,6 @@
+name: priceM2Min
+in: query
+description: Prix au mètre carré minimum
+schema:
+  type: integer
+  format: double

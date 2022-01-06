@@ -1,0 +1,1 @@
+curl 'https://api.yanport.com/properties/estimate?field=PRICE&marketingType=SALE&propertyType=APARTMENT&lat=48.875553&lng=2.357353&surface=29.83&newBuild=false&floor=5&roomCount=1' --header 'Authorization: Bearer YOUR_TOKEN'

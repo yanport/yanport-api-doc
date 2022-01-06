@@ -1,0 +1,27 @@
+get:
+  tags:
+    - Agglomeration (EPCI)
+  summary: Récupérer des agglomérations
+  description: Retourne les agglomérations correspondantes aux critères demandés
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/BoundingBoxSearchQuery-bbox.yaml
+    - $ref: ../components/parameters/ids.yaml
+    - $ref: ../components/parameters/codes.yaml
+    - $ref: ../components/parameters/types.yaml
+    - $ref: ../components/parameters/regionCodes.yaml
+    - $ref: ../components/parameters/departmentCodes.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+  responses:
+    '200':
+      description: Liste des agglomérations trouvées
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Agglomeration.yaml

@@ -1,0 +1,6 @@
+name: priceHCMax
+in: query
+description: Prix hors charges maximum
+schema:
+  type: integer
+  format: double

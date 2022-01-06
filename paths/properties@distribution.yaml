@@ -1,0 +1,35 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: 'Disitribution (prix, surface, etc)'
+  description: >-
+    Permet de construire un graphique de distribution des biens selon plusieurs
+    critères (voir le champ field).
+
+
+    ### Exemples
+      #### Distribution des durées de publication des biens en vente entre 2016 et 2017 à Levallois-Perret
+        /properties/distribution?field=DURATION_DAYS&intervalField=DURATION_DAYS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&publicationDateMin=2016-01-01T00%3A00%3A00.00&publicationDateMax=2017-01-01T00%3A00%3A00.00
+  parameters:
+    - $ref: ../components/parameters/PropertyHistogramQuery-field.yaml
+    - $ref: ../components/parameters/percentiles.yaml
+    - $ref: ../components/parameters/PropertyHistogramQuery-intervalField.yaml
+    - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
+    - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMin.yaml
+    - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMax.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Une liste de points
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Histogram.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

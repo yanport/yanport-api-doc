@@ -1,0 +1,8 @@
+name: departments
+in: query
+description: Liste de départements
+style: form
+schema:
+  type: array
+  items:
+    type: string

@@ -1,0 +1,19 @@
+type: object
+properties:
+  dealers:
+    type: array
+    items:
+      $ref: ./Marketing-Dealer.yaml
+  deliveryDate:
+    type: string
+    format: date-time
+  publicationStartDate:
+    type: string
+    format: date-time
+  publicationEndDate:
+    type: string
+    format: date-time
+  publicationDays:
+    type: integer
+  active:
+    type: boolean

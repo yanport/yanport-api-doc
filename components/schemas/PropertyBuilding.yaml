@@ -1,0 +1,38 @@
+type: object
+properties:
+  type:
+    type: string
+    maxLength: 200
+  floorCount:
+    type: integer
+    minimum: 0
+    maximum: 100
+  constructionYear:
+    type: integer
+    minimum: 1000
+    maximum: 3000
+  constructionMaterials:
+    type: string
+    maxLength: 1000
+  generalState:
+    $ref: ./State.yaml
+  commonAreaState:
+    $ref: ./State.yaml
+  facadeState:
+    $ref: ./State.yaml
+  elevator:
+    type: boolean
+  caretaker:
+    type: boolean
+  digicode:
+    type: boolean
+  intercom:
+    type: boolean
+  adsl:
+    type: boolean
+  cable:
+    type: boolean
+  fiber:
+    type: boolean
+  disableAccess:
+    type: boolean

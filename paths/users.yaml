@@ -1,0 +1,110 @@
+post:
+  tags:
+    - Utilisateurs
+  summary: Créer un utilisateur
+  description: Retourne l'utilisateur créé
+  requestBody:
+    required: true
+    description: Formulaire pour la création d'un utilisateur
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            user:
+              $ref: ../components/schemas/User.yaml
+            password:
+              type: string
+            confirmPassword:
+              type: string
+  responses:
+    '200':
+      description: L'utilisateur créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+get:
+  tags:
+    - Utilisateurs
+  summary: Rechercher des utilisateurs
+  description: Rechercher des utilisateurs
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/q.yaml
+    - name: username
+      in: query
+      description: Nom de l'utilisateur
+      schema:
+        type: string
+    - name: email
+      in: query
+      description: Email de l'utilisateur
+      schema:
+        type: string
+    - name: externalId
+      in: query
+      description: TODO
+      schema:
+        type: string
+    - name: organizationId
+      in: query
+      description: Identifiant de l'organisation
+      schema:
+        type: integer
+        format: int64
+    - name: mandataryNetworkIds
+      in: query
+      description: Identifiants de réseaux mandataires
+      schema:
+        type: array
+        items:
+          type: integer
+          format: int64
+    - name: agencyIds
+      in: query
+      description: Identifiants d'agences
+      schema:
+        type: array
+        items:
+          type: integer
+          format: int64
+    - name: active
+      in: query
+      description: Filter les utilisateurs actifs ou non
+      schema:
+        type: boolean
+    - name: firstConnection
+      in: query
+      description: Filtrer les utilisateurs s'étant deja connectés à l'application ou non
+      schema:
+        type: boolean
+    - name: admin
+      in: query
+      description: Filter les utilisateurs administrateurs ou non
+      schema:
+        type: boolean
+  responses:
+    '200':
+      description: Les utilisateurs trouvés
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/User.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

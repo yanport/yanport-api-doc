@@ -1,0 +1,6 @@
+name: salePropertyCountMin
+description: Nombre minimal de biens en vente
+in: query
+schema:
+  type: integer
+  minimum: 0

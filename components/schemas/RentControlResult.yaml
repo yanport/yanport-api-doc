@@ -1,0 +1,14 @@
+type: object
+properties:
+  status:
+    $ref: ./RentControlStatus.yaml
+  address:
+    $ref: ./Address.yaml
+  constructionPeriod:
+    $ref: ./Range.yaml
+  irishQuarter:
+    $ref: ./Iris.yaml
+  zones:
+    $ref: ./RentControlZone.yaml
+  buildings:
+    $ref: ./Building.yaml

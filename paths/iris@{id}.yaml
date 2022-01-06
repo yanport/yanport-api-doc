@@ -1,0 +1,23 @@
+get:
+  tags:
+    - IRIS
+  summary: Récupérer un iris (ID)
+  description: Récupérer un iris par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'iris
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Le quartier demandé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Iris.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,31 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Centiles
+  description: >-
+    Permet de récupérer les indicateurs de références sur les biens selon
+    plusieurs critères.
+
+
+    ### Exemples
+      #### PrixM2 median des biens en cours de publication en vente à Levallois-Perret
+        /properties/percentiles?field=PRICE&percentiles=50&marketingTypes=SALE&active=true&zipCodes=92300
+  parameters:
+    - $ref: ../components/parameters/PropertyPercentileQuery-field.yaml
+    - $ref: ../components/parameters/percentiles.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Les percentiles
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Percentiles.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

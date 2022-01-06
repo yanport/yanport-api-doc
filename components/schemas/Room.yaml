@@ -1,0 +1,17 @@
+type: object
+properties:
+  roomType:
+    type: string
+    maxLength: 200
+  surface:
+    type: integer
+    maximum: 1000
+    minimum: 0
+  wallCovering:
+    type: string
+    maxLength: 200
+  floorCovering:
+    type: string
+    maxLength: 200
+  generalState:
+    $ref: ./State.yaml

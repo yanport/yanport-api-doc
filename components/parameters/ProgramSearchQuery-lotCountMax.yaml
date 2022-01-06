@@ -1,0 +1,6 @@
+name: lotCountMax
+in: query
+description: Nombre de lot maximum
+schema:
+  type: integer
+  format: int64

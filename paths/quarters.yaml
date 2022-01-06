@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Quartier
+  summary: Rechercher des quartiers
+  description: Récupérer des quartiers selon différents critères
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+  responses:
+    '200':
+      description: La liste des quartiers
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Quarter.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

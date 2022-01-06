@@ -1,0 +1,44 @@
+get:
+  tags:
+    - Les biens similaires (ancien/neuf)
+  summary: Récupérer les biens similaires
+  description: Retourne les biens similaires correspondants aux critères demandés.
+  parameters:
+    - $ref: ../components/parameters/minDocCount.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+    - $ref: ../components/parameters/marketingTypes.yaml
+    - $ref: ../components/parameters/propertyTypes.yaml
+    - $ref: ../components/parameters/price.yaml
+    - $ref: ../components/parameters/surface.yaml
+    - $ref: ../components/parameters/publicationDateMin.yaml
+    - $ref: ../components/parameters/SimilarPropertyQuery-active.yaml
+    - $ref: ../components/parameters/SimilarPropertyQuery-roomCount.yaml
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+  responses:
+    '200':
+      description: Liste des biens similaires trouvés
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              searchResponse:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  hits:
+                    type: array
+                    items:
+                      $ref: ../components/schemas/Property.yaml
+              searchQuery:
+                $ref: ../components/schemas/PropertySearchQuery.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

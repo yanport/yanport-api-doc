@@ -1,0 +1,6 @@
+name: base64
+in: query
+required: true
+description: L'image est-elle encodée en base 64
+schema:
+  type: boolean

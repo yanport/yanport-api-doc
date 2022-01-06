@@ -1,0 +1,42 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  userId:
+    type: integer
+    format: int64
+  organizationId:
+    type: integer
+    format: int64
+  propertyId:
+    type: integer
+    format: int64
+  dealer:
+    $ref: ./Dealer.yaml
+  creationDate:
+    type: string
+    format: date-time
+  dueDate:
+    type: string
+    format: date-time
+  doneDate:
+    type: string
+    format: date-time
+  status:
+    type: string
+    enum:
+      - WON
+      - LOST
+      - UNKNOWN
+  lostReason:
+    type: string
+    enum:
+      - REFUSAL
+      - UNREACHABLE
+      - MARKETING_DONE
+      - IN_MANDATE
+      - OTHER
+  savedSearchIds:
+    type: number
+    format: uuid

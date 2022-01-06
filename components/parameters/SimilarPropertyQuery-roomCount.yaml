@@ -1,0 +1,5 @@
+name: roomCount
+in: query
+description: Nombre de pièces
+schema:
+  type: integer

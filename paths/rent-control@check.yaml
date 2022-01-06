@@ -1,0 +1,40 @@
+post:
+  tags:
+    - Encadrement des loyers
+  summary: Encadrement des loyers
+  description: >-
+    Permet de controller vis-à-vis de la législation si un loyer est hors/dans
+    l'encadrement des loyers.
+  requestBody:
+    description: Requête d'encadrement d'un loyer
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            rawAddress:
+              type: string
+            surface:
+              type: number
+              format: double
+            roomCount:
+              type: integer
+            price:
+              type: number
+              format: double
+            furnished:
+              type: boolean
+            constructionPeriod:
+              $ref: ../components/schemas/Range.yaml
+  responses:
+    '200':
+      description: Le status vis-à-vis de l'encadrement
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/RentControlResult.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

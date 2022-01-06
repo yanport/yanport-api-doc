@@ -1,0 +1,11 @@
+name: intervalUnit
+in: query
+description: Unité de temps de l'intervalle
+schema:
+  type: string
+  default: MONTHS
+  enum:
+    - DAYS
+    - WEEKS
+    - MONTHS
+    - YEARS

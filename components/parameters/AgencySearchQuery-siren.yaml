@@ -1,0 +1,7 @@
+name: siren
+in: query
+description: Siren de l'entreprise
+schema:
+  type: array
+  items:
+    type: string

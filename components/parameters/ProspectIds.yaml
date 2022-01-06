@@ -1,0 +1,8 @@
+name: prospectIds
+in: query
+description: Liste d'identifiants de prospects
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

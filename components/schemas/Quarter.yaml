@@ -1,0 +1,13 @@
+type: object
+properties:
+  id:
+    type: number
+    format: int64
+  cityId:
+    type: number
+    format: int54
+  name:
+    type: string
+  geometry:
+    type: object
+    format: GeoJsonObject

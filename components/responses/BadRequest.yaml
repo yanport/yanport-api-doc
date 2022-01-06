@@ -1,0 +1,8 @@
+description: Paramètres de la requête invalides
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/DefaultResponse.yaml
+    example:
+      msg: Bad request
+      status: 400

@@ -1,0 +1,24 @@
+get:
+  tags:
+    - Réseaux de mandataires
+  summary: Récupérer un réseau mandataire
+  description: Récupérer un réseau mandataire par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant du réseau de mandataire
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: Le réseau mandataire correspondant
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/MandataryNetwork.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,63 @@
+post:
+  tags:
+    - Prospects
+  summary: Créer un prospect
+  description: Retourne le prospect créé
+  requestBody:
+    required: true
+    description: Formulaire pour la création d'un utilisateur
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            prospects:
+              $ref: ../components/schemas/Prospect.yaml
+  responses:
+    '200':
+      description: Le prospect a été créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Prospect.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+get:
+  tags:
+    - Prospects
+  summary: Chercher des prospects
+  description: Récupérer des prospects
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/propertyIds.yaml
+    - $ref: ../components/parameters/dueDateMin.yaml
+    - $ref: ../components/parameters/dueDateMax.yaml
+    - $ref: ../components/parameters/missingFields.yaml
+    - $ref: ../components/parameters/existingFields.yaml
+    - $ref: ../components/parameters/doneDateMin.yaml
+    - $ref: ../components/parameters/doneDateMax.yaml
+    - $ref: ../components/parameters/savedSearchIds.yaml
+  responses:
+    '200':
+      description: Les prospects correspondant
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Prospect.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,6 @@
+name: priceM2HCMax
+in: query
+description: Prix au mètres carré hors charges maximum
+schema:
+  type: integer
+  format: double

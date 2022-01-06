@@ -1,0 +1,28 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Statistiques (SubGroupBy)
+  description: >-
+    Permet de récupérer les statistiques basiques des biens regroupé selon 1
+    critère et 1 sous-critère.
+  parameters:
+    - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
+    - $ref: ../components/parameters/PropertyGroupByStatsQuery-groupBy.yaml
+    - $ref: ../components/parameters/PropertySubGroupByStatsQuery-subGroupBy.yaml
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Les statistiques regoupés par le champ et sous champ demandé
+      content:
+        application/json:
+          schema:
+            type: object
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

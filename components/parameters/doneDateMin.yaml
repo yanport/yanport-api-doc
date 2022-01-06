@@ -1,0 +1,6 @@
+name: doneDateMin
+in: query
+description: description de doneDateMin
+schema:
+  type: string
+  format: date

@@ -1,0 +1,6 @@
+name: surfaceMax
+in: query
+description: Surface maximale
+schema:
+  type: integer
+  format: double

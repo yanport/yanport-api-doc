@@ -1,0 +1,6 @@
+name: dueDateMin
+in: query
+description: description de dueDateMin
+schema:
+  type: string
+  format: date

@@ -1,0 +1,12 @@
+name: certifications
+in: query
+description: Liste des certifications
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - RT2012
+      - RE2020
+      - HPE
+      - HQE

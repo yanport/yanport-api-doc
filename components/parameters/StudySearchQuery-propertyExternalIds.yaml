@@ -1,0 +1,7 @@
+name: propertyExternalIds
+in: query
+description: Liste d'identifiants externes de biens
+schema:
+  type: array
+  items:
+    type: string

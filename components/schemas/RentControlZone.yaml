@@ -1,0 +1,19 @@
+type: object
+properties:
+  id:
+    type: integer
+  observatoryId:
+    type: integer
+  irisQuarterIds:
+    type: array
+    items:
+      type: string
+  roomCountCategory:
+    $ref: ./Range.yaml
+  constructionPeriod:
+    $ref: ./Range.yaml
+  furnished:
+    type: boolean
+  median:
+    type: number
+    format: double

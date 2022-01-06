@@ -1,0 +1,9 @@
+name: size
+in: query
+description: Nombre de résultats
+schema:
+  type: integer
+  minimum: 0
+  maximum: 1000
+  default: 20
+example: 50

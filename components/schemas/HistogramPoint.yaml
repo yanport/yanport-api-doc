@@ -1,0 +1,7 @@
+type: object
+properties:
+  x:
+    type: string
+    example: 0
+  'y':
+    $ref: ./Percentiles.yaml

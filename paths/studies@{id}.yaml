@@ -1,0 +1,68 @@
+get:
+  tags:
+    - Etudes
+  summary: Récupérer une étude
+  description: Récupérer une étude par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'étude
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':
+      description: L'étude correspondante
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Study.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+put:
+  tags:
+    - Etudes
+  summary: Mettre à jour une étude
+  description: Mettre à jour une étude par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'étude
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':
+      description: L'étude mise à jour
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Study.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+delete:
+  tags:
+    - Etudes
+  summary: Supprimer une étude
+  description: Supprimer une étude par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'étude
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':
+      $ref: ../components/responses/NoContent.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,323 @@
+openapi: 3.0.0
+servers:
+  - url: api.yanport.com
+    description: Yanport API server
+security:
+  - JWT: []
+info:
+  description: >
+    # Getting started
+
+
+    ## Introduction
+
+    Voici quelques ressources qui vous aideront à explorer notre API.
+
+      Nos services webs utilisent le protocole __HTTPS__ sur le port 443, tout
+      accès en HTTP sur le port 80 est bloqué par notre pare-feu. Les échanges de
+      données sont réalisées en __JSON__.
+
+
+    ## Méthodes d'authentification
+
+    Avant de commencer, vous devez nous
+    [contacter](https://www.yanport.com/contact) afin d'obtenir un [JSON
+    WebToken (JWT)](https://jwt.io/) qui vous permettra de vous identifier à
+    chaque requête
+
+
+    ### Header (production)
+
+    La méthode privilégiée pour s’authentifier est de passer à chaque requête le
+    token dans le header `Authorization: Bearer {{ JWT }}` en remplaçant `{{ JWT
+    }}` par votre token.
+
+
+    ### Query Param (développement)
+
+    Il est aussi possible de passer le token directement en query param de la
+    requête `https://api.yanport.com/?token={{ JWT }}`.
+
+
+    ## Client http
+
+    Il est possible d'utiliser un client http comme
+    [Insomnia](https://insomnia.rest/) ou [Postman](https://www.postman.com/) et
+    importer notre fichier openapi.yaml.
+
+    Pensez à ajouter votre Bearer token.
+
+
+    ## API client SDK
+
+    Il est également possible d'utiliser un client SDK comme
+    [openapi-generator](https://github.com/OpenAPITools/openapi-generator)
+
+
+    ## Limitation
+
+    Toutes les requêtes à notre API sont loggées, c’est pourquoi vous devez
+    respecter nos [conditions
+    d'utilisation](https://www.yanport.com/legal/cgu/api) afin d’éviter tout
+    usage abusif de notre API.
+
+
+    ### Limite d'utilisation
+
+    Notre système de rate limiting est basé sur [token bucket](https://en.wikipedia.org/wiki/Token_bucket).
+
+
+    Voici les limites au niveau de notre API :
+
+    - Nombre de requêtes par seconde
+        - Taille du bucket : 100
+        - Remplissage : 10 requêtes par seconde
+        - Status HTTP : [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
+        - Ex : "too many requests for Payload{id=1}, only 10 req/s are allowed,
+        retry after 480ms"
+
+
+    - Bande passante
+        - Taille du bucket : 20Mb
+        - Remplissage : 5Kb par seconde
+        - Status HTTP : 509
+        - Ex : "too many bytes consumed for Payload{id=1}, 5120 bytes/s are allowed"
+  version: '1.0'
+  title: Yanport API
+  termsOfService: 'https://www.yanport.com/legal/cgu/api'
+  contact:
+    email: dev@yanport.com
+tags:
+  - name: Modele-annonce
+    x-displayName: Annonce
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Ad" />
+  - name: Modele-bien
+    x-displayName: Bien
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Property" />
+  - name: Modele-programme
+    x-displayName: Programme
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Program" />
+  - name: Modele-agglomeration
+    x-displayName: Agglomération
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Agglomeration" />
+  - name: Modele-commune
+    x-displayName: Commune
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/City" />
+  - name: Modele-quartier
+    x-displayName: Quartier
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Quarter" />
+  - name: Modele-IRIS
+    x-displayName: IRIS
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Iris" />
+  - name: Modele-parcelle
+    x-displayName: Parcelle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Parcel" />
+  - name: Modele-utilisateur
+    x-displayName: Utilisateur
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/User" />
+  - name: Modele-etude
+    x-displayName: Etude
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Study" />
+  - name: Modele-prospect
+    x-displayName: Prospect
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Prospect" />
+  - name: Modele-activite-de-prospection
+    x-displayName: Activité de pospection
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/ProspectActivity" />
+x-tagGroups:
+  - name: MOTEUR DE RECHERCHE
+    tags:
+      - Les annonces (ancien/neuf)
+      - Les biens (ancien/neuf)
+      - Les biens similaires (ancien/neuf)
+      - Les programmes (neuf)
+  - name: MOTEUR D'ESTIMATION
+    tags:
+      - 'Estimation (prix, loyer, etc)'
+  - name: CARTOGRAPHIE DU MARCHE
+    tags:
+      - Génération de carte
+  - name: INDICATEURS DE MARCHE
+    tags:
+      - Indicateurs sur les biens (ancien/neuf)
+      - Indicateurs sur les biens similaires (ancien/neuf)
+      - Indicateurs sur les programmes (neuf)
+  - name: REFERENTIEL GEOGRAPHIQUE
+    tags:
+      - Agglomeration (EPCI)
+      - Commune
+      - Quartier
+      - IRIS
+      - Parcelle
+  - name: REFERENTIEL DES PROFESIONNELS
+    tags:
+      - 'Etablissement (agence, promoteur, etc)'
+      - Réseaux de mandataires
+  - name: INTEGRATION DE NOS SOLUTIONS
+    tags:
+      - Utilisateurs
+      - Etudes
+      - Prospects
+      - Activités de prospection
+  - name: FACTURATION
+    tags:
+      - Consommation API
+  - name: Autre
+    tags:
+      - Prospection
+      - Encadrement des loyers
+  - name: MODELES
+    tags:
+      - Modele-annonce
+      - Modele-bien
+      - Modele-programme
+      - Modele-agglomeration
+      - Modele-commune
+      - Modele-quartier
+      - Modele-IRIS
+      - Modele-parcelle
+      - Modele-utilisateur
+      - Modele-etude
+      - Modele-prospect
+      - Modele-activite-de-prospection
+paths:
+  /ads:
+    $ref: paths/ads.yaml
+  '/ads/{id}':
+    $ref: 'paths/ads@{id}.yaml'
+  /ads/ids:
+    $ref: paths/ads@ids.yaml
+  /ads/urls:
+    $ref: paths/ads@urls.yaml
+  /properties:
+    $ref: paths/properties.yaml
+  '/properties/{id}':
+    $ref: 'paths/properties@{id}.yaml'
+  '/properties/{id}/ads':
+    $ref: 'paths/properties@{id}@ads.yaml'
+  /properties/ids:
+    $ref: paths/properties@ids.yaml
+  /similar-properties:
+    $ref: paths/similar-properties.yaml
+  /programs:
+    $ref: paths/programs.yaml
+  '/programs/{id}':
+    $ref: 'paths/programs@{id}.yaml'
+  '/programs/{id}/ads':
+    $ref: 'paths/programs@{id}@ads.yaml'
+  /programs/ids:
+    $ref: paths/programs@ids.yaml
+  /properties/count:
+    $ref: paths/properties@count.yaml
+  '/properties/count/group-by-{groupBy}':
+    $ref: 'paths/properties@count@group-by-{groupBy}.yaml'
+  '/properties/count/group-by-{groupBy}-and-{subGroupBy}':
+    $ref: 'paths/properties@count@group-by-{groupBy}-and-{subGroupBy}.yaml'
+  /properties/stats:
+    $ref: paths/properties@stats.yaml
+  '/properties/stats/group-by-{groupBy}':
+    $ref: 'paths/properties@stats@group-by-{groupBy}.yaml'
+  '/properties/stats/group-by-{groupBy}-and-{subGroupBy}':
+    $ref: 'paths/properties@stats@group-by-{groupBy}-and-{subGroupBy}.yaml'
+  /properties/percentiles:
+    $ref: paths/properties@percentiles.yaml
+  '/properties/percentiles/group-by-{groupBy}':
+    $ref: 'paths/properties@percentiles@group-by-{groupBy}.yaml'
+  '/properties/percentiles/group-by-{groupBy}-and-{subGroupBy}':
+    $ref: 'paths/properties@percentiles@group-by-{groupBy}-and-{subGroupBy}.yaml'
+  /properties/distribution:
+    $ref: paths/properties@distribution.yaml
+  /properties/evolution:
+    $ref: paths/properties@evolution.yaml
+  /properties/evolution/stock:
+    $ref: paths/properties@evolution@stock.yaml
+  /similar-properties/percentiles:
+    $ref: paths/similar-properties@percentiles.yaml
+  /programs/count:
+    $ref: paths/programs@count.yaml
+  /properties/estimate:
+    $ref: paths/properties@estimate.yaml
+  /maps:
+    $ref: paths/maps.yaml
+  /agglomerations:
+    $ref: paths/agglomerations.yaml
+  '/agglomerations/{id}':
+    $ref: 'paths/agglomerations@{id}.yaml'
+  /agglomerations/ids:
+    $ref: paths/agglomerations@ids.yaml
+  /cities:
+    $ref: paths/cities.yaml
+  '/cities/{id}':
+    $ref: 'paths/cities@{id}.yaml'
+  /cities/ids:
+    $ref: paths/cities@ids.yaml
+  /quarters:
+    $ref: paths/quarters.yaml
+  '/quarters/{id}':
+    $ref: 'paths/quarters@{id}.yaml'
+  /quarters/ids:
+    $ref: paths/quarters@ids.yaml
+  /iris:
+    $ref: paths/iris.yaml
+  '/iris/{id}':
+    $ref: 'paths/iris@{id}.yaml'
+  /iris/ids:
+    $ref: paths/iris@ids.yaml
+  /parcels:
+    $ref: paths/parcels.yaml
+  '/parcels/{id}':
+    $ref: 'paths/parcels@{id}.yaml'
+  /parcels/ids:
+    $ref: paths/parcels@ids.yaml
+  /agencies:
+    $ref: paths/agencies.yaml
+  '/agencies/{id}':
+    $ref: 'paths/agencies@{id}.yaml'
+  /mandatary-networks:
+    $ref: paths/mandatary-networks.yaml
+  '/mandatary-networks/{id}':
+    $ref: 'paths/mandatary-networks@{id}.yaml'
+  /users:
+    $ref: paths/users.yaml
+  '/users/{id}':
+    $ref: 'paths/users@{id}.yaml'
+  /studies:
+    $ref: paths/studies.yaml
+  '/studies/{id}':
+    $ref: 'paths/studies@{id}.yaml'
+  /prospects:
+    $ref: paths/prospects.yaml
+  '/prospects/{id}':
+    $ref: 'paths/prospects@{id}.yaml'
+  /prospect-activities:
+    $ref: paths/prospect-activities.yaml
+  '/prospect-activities/{id}':
+    $ref: 'paths/prospect-activities@{id}.yaml'
+  /api-transactions:
+    $ref: paths/api-transactions.yaml
+  /api-transactions/evolution/group-by-sku:
+    $ref: paths/api-transactions@evolution@group-by-sku.yaml
+  '/api-transactions/{id}':
+    $ref: 'paths/api-transactions@{id}.yaml'
+  /phone-numbers:
+    $ref: paths/phone-numbers.yaml
+  /rent-control/check:
+    $ref: paths/rent-control@check.yaml
+components:
+  securitySchemes:
+    JWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  url:
+    type: string
+  crawlSource:
+    $ref: ./CrawlSource.yaml
+  lastCrawlDate:
+    type: string
+    format: date-time
+  type:
+    type: string
+    enum:
+      - PROPERTY
+      - PROGRAM
+  property:
+    $ref: ./Property.yaml
+  program:
+    $ref: ./Program.yaml

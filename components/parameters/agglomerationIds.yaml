@@ -1,0 +1,9 @@
+name: agglomerationIds
+in: query
+description: Liste d'identifiants d'agglomérations
+style: form
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

@@ -1,0 +1,6 @@
+name: doneDateMax
+in: query
+description: description de doneDateMax
+schema:
+  type: string
+  format: date

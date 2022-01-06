@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Commune
+  summary: Récupérer une ville (ID)
+  description: Récupérer une ville par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de la ville
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: La ville demandée
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/City.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

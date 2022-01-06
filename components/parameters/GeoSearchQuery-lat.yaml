@@ -1,0 +1,6 @@
+name: lat
+in: query
+description: Latitude
+schema:
+  type: number
+  format: double

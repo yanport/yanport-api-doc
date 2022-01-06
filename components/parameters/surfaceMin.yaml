@@ -1,0 +1,6 @@
+name: surfaceMin
+in: query
+description: Surface minimale
+schema:
+  type: integer
+  format: double

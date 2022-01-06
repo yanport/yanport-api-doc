@@ -1,0 +1,7 @@
+name: inseeCodes
+in: query
+description: Liste des codes insee
+schema:
+  type: array
+  items:
+    type: string

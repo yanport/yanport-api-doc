@@ -1,0 +1,6 @@
+type: string
+enum:
+  - REAL_ESTATE
+  - NOTARY
+  - REALTY_DEVELOPER
+  - PROPERTY_MANAGER

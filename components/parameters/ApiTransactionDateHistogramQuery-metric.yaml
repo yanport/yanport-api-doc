@@ -1,0 +1,11 @@
+name: metric
+in: query
+required: true
+description: méthode de calcul de l'aggrégation
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - percentiles
+      - sum

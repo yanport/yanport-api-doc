@@ -1,0 +1,59 @@
+post:
+  tags:
+    - Activités de prospection
+  summary: Créer une activité de prospection
+  description: Retourne l'activité de prospection créé
+  requestBody:
+    required: true
+    description: Formulaire pour la création d'une activité de prospection
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            prospects:
+              $ref: ../components/schemas/ProspectActivity.yaml
+  responses:
+    '200':
+      description: L'activité de prospection a été créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProspectActivity.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+get:
+  tags:
+    - Activités de prospection
+  summary: Chercher des activités de prospection
+  description: Récupérer des activités de prospection
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/ProspectIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/dateMin.yaml
+    - $ref: ../components/parameters/dateMax.yaml
+    - $ref: ../components/parameters/types.yaml
+    - $ref: ../components/parameters/done.yaml
+  responses:
+    '200':
+      description: Les activités de prospection correspondantes
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/ProspectActivity.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

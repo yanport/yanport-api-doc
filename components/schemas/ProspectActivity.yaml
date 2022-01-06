@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  userId:
+    type: integer
+    format: int64
+  prospectId:
+    type: string
+    format: uuid
+  type:
+    type: string
+    enum:
+      - Qualification
+      - Appel
+      - Email
+      - SMS
+      - Rendez-vous
+      - Tâche
+      - Note
+  date:
+    type: string
+    format: date
+  note:
+    type: string
+  done:
+    type: boolean

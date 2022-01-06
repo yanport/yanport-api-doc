@@ -1,0 +1,14 @@
+name: legalDevices
+in: query
+description: Liste des dispositifs légaux
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - TVA
+      - PINEL
+      - PTZ
+      - LMP
+      - LMNP
+      - PLS

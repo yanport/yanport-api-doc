@@ -1,0 +1,8 @@
+description: La resource demandée n'existe pas
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/DefaultResponse.yaml
+    example:
+      msg: Not found
+      status: 404

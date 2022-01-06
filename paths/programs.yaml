@@ -1,0 +1,86 @@
+get:
+  tags:
+    - Les programmes (neuf)
+  summary: Rechercher des programmes
+  description: >-
+    Rechercher les programmes immobiliers actifs ou expirés selon plusieurs
+    critères (prix, surface, ville, ...)
+
+
+    Par défaut les résultats sont paginés, pour parcourir l'ensemble des biens
+    les paramètres `from` et `size` doivent être renseignés. Le paramètre `from`
+    définit le début du set de données et `size` le nombre d'éléments à
+    récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
+
+
+    Concernant le tri le paramètre `sort` à pour syntaxe `field:asc|desc` en
+    remplaçant `field` par le nom du champ sur lequel appliqué le tri.
+
+
+    ### Exemples
+      #### Les programmes en cours de publication sur Levallois-Perret entre 120 et 130m²
+        /programs?active=true&zipCodes=92300&surfaceMin=120&surfaceMax=130
+      #### Les programmes en cours de publication dans le 17ème arrondissement de Paris
+        /programs?active=true&zipCodes=75017
+      #### Les derniers programmes publiés en Corse sur LeBonCoinNeuf et SeLogerNeuf
+        /programs?active=true&crawlSources=LE_BON_COIN_NEUF&crawlSources=SE_LOGER_NEUF&departments=2B&sort=marketing.publicationStartDate:asc
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-name.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-description.yaml
+    - $ref: ../components/parameters/crawlSources.yaml
+    - $ref: ../components/parameters/active.yaml
+    - $ref: ../components/parameters/dealerNames.yaml
+    - $ref: ../components/parameters/dealerIds.yaml
+    - $ref: ../components/parameters/excludedDealerIds.yaml
+    - $ref: ../components/parameters/ids.yaml
+    - $ref: ../components/parameters/propertyIds.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-roomCountMin.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-roomCountMax.yaml
+    - $ref: ../components/parameters/departments.yaml
+    - $ref: ../components/parameters/zipCodes.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/quarterIds.yaml
+    - $ref: ../components/parameters/publicationDateMin.yaml
+    - $ref: ../components/parameters/publicationDateMax.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deleteDateMinOrActive.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deleteDateMaxOrActive.yaml
+    - $ref: ../components/parameters/durationDaysMin.yaml
+    - $ref: ../components/parameters/durationDaysMax.yaml
+    - $ref: ../components/parameters/surfaceMin.yaml
+    - $ref: ../components/parameters/surfaceMax.yaml
+    - $ref: ../components/parameters/priceMin.yaml
+    - $ref: ../components/parameters/priceMax.yaml
+    - $ref: ../components/parameters/missingFields.yaml
+    - $ref: ../components/parameters/existingFields.yaml
+    - $ref: ../components/parameters/excludedIds.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-legalDevices.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-certifications.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deliveryDateMin.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deliveryDateMax.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-lotCountMin.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-lotCountMax.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+  responses:
+    '200':
+      description: La liste des programmes
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Program.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,9 @@
+type: object
+properties:
+  year:
+    type: integer
+  value:
+    type: number
+    format: double
+    minimum: 0
+    maximum: 100000

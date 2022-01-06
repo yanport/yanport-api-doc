@@ -1,0 +1,33 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Evolution du stock
+  description: >-
+    Permet de constuire une courbe représentant l'évolution du stock de biens
+    selon plusieurs critères.
+
+
+    ### Exemples
+       #### Evolution du stock des biens entre 2016 et 2017 à Levallois-Perret
+         /properties/evolution/stock?interval=1&intervalUnit=MONTHS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&dateMin=2016-01-01&dateMax=2017-01-01
+  parameters:
+    - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
+    - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/dateMin.yaml
+    - $ref: ../components/parameters/dateMax.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Une liste de points
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/StockEvolution.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

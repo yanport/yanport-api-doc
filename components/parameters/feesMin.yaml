@@ -1,0 +1,6 @@
+name: feesMin
+in: query
+description: Honoraires minimales
+schema:
+  type: integer
+  format: double

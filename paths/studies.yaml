@@ -1,0 +1,90 @@
+post:
+  tags:
+    - Etudes
+  summary: Créer une étude
+  description: Retourne l'étude créé
+  requestBody:
+    required: true
+    description: Formulaire pour la création d'une étude
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            userId:
+              type: integer
+              format: int64
+            externalUserId:
+              type: string
+            agencyId:
+              type: integer
+              format: int64
+            externalAgencyId:
+              type: string
+            organizationId:
+              type: integer
+              format: int64
+            name:
+              type: string
+            customer:
+              $ref: ../components/schemas/Customer.yaml
+            property:
+              $ref: ../components/schemas/Property.yaml
+            sections:
+              $ref: ../components/schemas/Sections.yaml
+            creationDate:
+              type: string
+              format: date-time
+            updateDate:
+              type: string
+              format: date-time
+  responses:
+    '200':
+      description: L'étude créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Study.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+get:
+  tags:
+    - Etudes
+  summary: Rechercher des études
+  description: Rechercher des études selon plusieurs critères
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-externalUserIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-externalAgencyIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-organizationIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-marketingTypes.yaml
+    - $ref: ../components/parameters/StudySearchQuery-propertyExternalIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-creationDateMin.yaml
+    - $ref: ../components/parameters/StudySearchQuery-creationDateMax.yaml
+  responses:
+    '200':
+      description: Les études trouvées
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Study.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

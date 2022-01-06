@@ -1,0 +1,50 @@
+get:
+  tags:
+    - 'Etablissement (agence, promoteur, etc)'
+  summary: Rechercher des agences
+  description: |-
+    Rechercher des agences selon plusieurs critères
+
+    ### Exemples
+      #### Les agences situées à Levallois-Perret et qui ont au moins 10 biens en vente et en location
+        /agencies?cityIds=54178039&salePropertyCountMin=10&rentPropertyCountMin=10
+      #### Les agences situées dans un rayon de 100m autour de Levallois-Perret
+        /agencies?lat=48.8932&lon=2.2879&radius=100m
+      #### Les agences Nexity
+        /agencies?siren=487530099
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-externalId.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-organizationId.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-siren.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-siret.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-cityIds.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-salePropertyCountMin.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-salePropertyCountMax.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-rentPropertyCountMin.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-rentPropertyCountMax.yaml
+    - $ref: ../components/parameters/AgencySearchQuery-active.yaml
+  responses:
+    '200':
+      description: Les agences trouvées
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Agency.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

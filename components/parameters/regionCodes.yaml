@@ -1,0 +1,8 @@
+name: regionCodes
+in: query
+description: Liste de codes de région
+style: form
+schema:
+  type: array
+  items:
+    type: string

@@ -1,0 +1,45 @@
+get:
+  tags:
+    - Activités de prospection
+  summary: Récupérer une activité de prospection (ID)
+  description: Récupérer une activité de prospection par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant d'une activité de prospection
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: L'activité de prospection demandée
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/ProspectActivity.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+delete:
+  tags:
+    - Activités de prospection
+  summary: Supprimer une activité de prospection
+  description: Supprime l'activité de prospection correspondante à l'id donné
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'activité de prospection
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      $ref: ../components/responses/NoContent.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

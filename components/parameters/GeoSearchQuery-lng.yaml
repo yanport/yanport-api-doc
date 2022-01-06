@@ -1,0 +1,6 @@
+name: lng
+in: query
+description: Longitude
+schema:
+  type: number
+  format: double

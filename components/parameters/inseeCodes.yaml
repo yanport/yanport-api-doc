@@ -1,0 +1,5 @@
+name: inseeCodes
+in: query
+description: les codes insee
+schema:
+  type: string

@@ -1,0 +1,9 @@
+name: source
+in: query
+description: La source de données à utiliser
+schema:
+  type: string
+  enum:
+    - AD
+    - DVF
+    - CLIENT

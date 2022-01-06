@@ -1,0 +1,6 @@
+name: priceM2HCMin
+in: query
+description: Prix au mètres carré hors charges minimum
+schema:
+  type: integer
+  format: double

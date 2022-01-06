@@ -1,0 +1,152 @@
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - SALE
+      - RENT
+      - LIFE_ANNUITY
+  price:
+    type: number
+    format: double
+    minimum: 10
+    maximum: 100000000
+    example: 253000
+  priceRange:
+    items:
+      $ref: ./Range.yaml
+    minimum: 10
+    maximum: 100000000
+  sellingPrice:
+    type: number
+    format: double
+    minimum: 10
+    maximum: 100000000
+    example: 250000
+  sellingPriceRange:
+    items:
+      $ref: ./Range.yaml
+    minimum: 10
+    maximum: 100000000
+  priceHC:
+    type: number
+    format: double
+    minimum: 0
+    example: 212000
+  priceM2HC:
+    type: number
+    format: double
+    minimum: 0
+    example: 2500
+  priceCC:
+    type: number
+    format: double
+    minimum: 0
+  priceM2CC:
+    type: number
+    format: double
+    minimum: 0
+  relevantPrice:
+    type: number
+    format: double
+    minimum: 0
+  priceM2:
+    type: number
+    format: double
+  priceEvents:
+    type: array
+    items:
+      $ref: ./PriceEvent.yaml
+  lastPriceDecreaseDate:
+    type: string
+    format: date
+  lastPriceUpdateDate:
+    type: string
+    format: date
+  dealers:
+    type: array
+    maximum: 10
+    items:
+      $ref: ./Marketing-Dealer.yaml
+  marketingStartDate:
+    type: string
+    format: date-time
+  marketingEndDate:
+    type: string
+    format: date-time
+  marketingDays:
+    type: integer
+    format: int64
+    minimum: 0
+  publicationStartDate:
+    type: string
+    format: date-time
+  publicationEndDate:
+    type: string
+    format: date-time
+  publicationDays:
+    type: integer
+    format: int64
+    minimum: 0
+  active:
+    type: boolean
+  rentalExpenses:
+    type: number
+    format: double
+    minimum: 1
+    maximum: 100000
+  rentalExpensesIncluded:
+    type: boolean
+  rentalExpensesEvents:
+    type: array
+    items:
+      $ref: ./RentalExpensesEvent.yaml
+  deposit:
+    type: number
+    format: double
+    minimum: 1
+    maximum: 100000
+  propertyTax:
+    type: number
+    format: double
+    minimum: 1
+    maximum: 100000
+  fees:
+    type: number
+    format: double
+    minimum: 20
+    maximum: 1000000
+  feesPercent:
+    type: number
+    format: double
+    minimum: 0
+    maximum: 100
+  feesPayer:
+    type: string
+    enum:
+      - BUYER
+      - SELLER
+  feesIncluded:
+    type: boolean
+  exclusiveMandate:
+    type: boolean
+  saleStatus:
+    type: string
+    enum:
+      - OFFER
+      - COMPROMISE
+      - CANCELLED
+      - SIGNED
+      - LOST
+  occupied:
+    type: boolean
+  rentControl:
+    $ref: ./RentControl.yaml
+  rentalCategory:
+    type: string
+    enum:
+      - FREE
+      - AGREED
+      - TAX_FREE
+  owner:
+    $ref: ./Owner.yaml

@@ -1,0 +1,8 @@
+name: organizationIds
+in: query
+description: Liste des organizationIds
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

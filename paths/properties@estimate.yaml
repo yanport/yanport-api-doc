@@ -1,0 +1,148 @@
+get:
+  tags:
+    - 'Estimation (prix, loyer, etc)'
+  summary: Estimer un bien
+  description: >-
+    Permet d'estimer un bien précisemment selon ses caractéristiques et sa
+    localisation. (Prix, Rendement locatif, Marge de négociation)
+  x-code-samples:
+    - lang: curl
+      source:
+        $ref: ../code_samples/curl/properties@estimate/get.sh
+  parameters:
+    - name: field
+      in: query
+      description: >-
+        Champ à estimer, PRICE == Prix, GROSS_RENTAL_YIELD == Rendement locatif
+        brut, NEGOTIATION_MARGIN == Marge de négociation
+      schema:
+        type: string
+        enum:
+          - PRICE
+          - GROSS_RENTAL_YIELD
+          - NEGOTIATION_MARGIN
+      required: true
+    - name: marketingType
+      in: query
+      description: 'Type de marché (vente, location)'
+      schema:
+        type: string
+        enum:
+          - SALE
+          - RENT
+      required: true
+    - name: propertyType
+      in: query
+      description: 'Type de bien (maison, appartement)'
+      schema:
+        type: string
+        enum:
+          - HOUSE
+          - APARTMENT
+      required: true
+    - name: lat
+      in: query
+      description: Latitude du bien (coordonées GPS)
+      schema:
+        type: number
+        format: double
+      required: true
+    - name: lng
+      in: query
+      description: Longitude du bien (coordonées GPS)
+      schema:
+        type: number
+        format: double
+      required: true
+    - name: surface
+      in: query
+      description: Surface du bien
+      schema:
+        type: number
+        format: double
+        minimum: 5
+      required: true
+    - name: landSurface
+      in: query
+      description: Surface de la parcelle (maison uniquement)
+      schema:
+        type: number
+        format: double
+    - name: newBuild
+      in: query
+      description: Construction neuve
+      schema:
+        type: boolean
+    - name: furnished
+      in: query
+      description: Indique si le bien d'intérêt est meublé ou pas (location uniquement)
+      schema:
+        type: boolean
+    - name: constructionYear
+      in: query
+      description: L'année de construction
+      schema:
+        type: number
+        format: integer
+    - name: floor
+      in: query
+      description: Etage du bien (appartement uniquement)
+      schema:
+        type: number
+        format: integer
+        minimum: 0
+    - name: roomCount
+      in: query
+      description: Nombre de pièces du bien
+      schema:
+        type: integer
+        minimum: 5
+    - name: balconyCount
+      in: query
+      description: Nombre de balcons du bien
+      schema:
+        type: integer
+    - name: parkingCount
+      in: query
+      description: Nombre de places de parking du bien
+      schema:
+        type: integer
+    - name: terraceCount
+      in: query
+      description: Nombre de terrasses du bien
+      schema:
+        type: integer
+    - name: floorCount
+      in: query
+      description: Nombre d'étages du bien
+      schema:
+        type: integer
+    - name: swimmingPoolCount
+      in: query
+      description: Nombre de piscines (maison uniquement)
+      schema:
+        type: integer
+    - name: date
+      in: query
+      description: Date à laquelle on souhaite réaliser l'estimation
+      schema:
+        type: string
+        format: date-time
+        default: Date courante
+    - name: price
+      in: query
+      description: Prix du bien (marge de négociation uniquement)
+      schema:
+        type: number
+        format: double
+  responses:
+    '200':
+      description: 'La valeur du champ estimé (Prix, etc)'
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/EstimationResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

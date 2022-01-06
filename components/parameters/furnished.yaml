@@ -1,0 +1,5 @@
+name: furnished
+in: query
+description: Meublé
+schema:
+  type: boolean

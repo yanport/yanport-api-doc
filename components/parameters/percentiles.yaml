@@ -1,0 +1,13 @@
+name: percentiles
+in: query
+description: Les percentiles
+example:
+  - '10.0'
+  - '50.0'
+  - '90.0'
+style: form
+schema:
+  type: array
+  items:
+    type: number
+    format: double

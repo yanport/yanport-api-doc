@@ -1,0 +1,24 @@
+type: object
+properties:
+  count:
+    type: integer
+    format: int64
+    minimum: 0
+    example: 191524
+  min:
+    type: number
+    format: double
+    example: 1
+  max:
+    type: number
+    format: double
+    example: 29000
+  avg:
+    type: number
+    format: double
+    example: 700.4780763768509
+  sum:
+    type: number
+    format: double
+    minimum: 0
+    example: 1.341583631E

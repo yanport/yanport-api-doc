@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Parcelle
+  summary: Récupérer des parcelles
+  description: Retourne la parcelle dont l'id correspond
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: L'identifiant de la parcelle
+      schema:
+        type: number
+  responses:
+    '200':
+      description: Parcelle trouvée
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Parcel.yaml

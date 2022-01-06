@@ -1,0 +1,10 @@
+name: type
+in: query
+description: Type d'annonce (biens ou programmes immobiliers)
+schema:
+  type: string
+  enum:
+    - PROPERTY
+    - PROGRAM
+required: true
+example: PROPERTY

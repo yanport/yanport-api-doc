@@ -1,0 +1,6 @@
+name: publicationDateMax
+in: query
+description: 'Date limite de publication (YYYY-mm-ddTHH:mm:ss)'
+schema:
+  type: string
+  format: date-time

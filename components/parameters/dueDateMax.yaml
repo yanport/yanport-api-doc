@@ -1,0 +1,6 @@
+name: dueDateMax
+in: query
+description: description de dueDateMax
+schema:
+  type: string
+  format: date

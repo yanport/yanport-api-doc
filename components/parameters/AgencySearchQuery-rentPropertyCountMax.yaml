@@ -1,0 +1,6 @@
+name: rentPropertyCountMax
+description: Nombre maximal de biens en location
+in: query
+schema:
+  type: integer
+  minimum: 0

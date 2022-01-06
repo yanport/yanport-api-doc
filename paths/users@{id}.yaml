@@ -1,0 +1,75 @@
+get:
+  tags:
+    - Utilisateurs
+  summary: Récupérer un utilisateur par id
+  description: Retourne l'utilisateur correspondant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'utilisateur
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: L'utilisateur créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+put:
+  tags:
+    - Utilisateurs
+  summary: Mettre à jour un utilisateur
+  description: Met à jour un utilisateur et retourne celui-ci
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'utilisateur
+      required: true
+      schema:
+        type: integer
+        format: int64
+  requestBody:
+    required: true
+    description: Données de l'utilisateur à mettre à jour
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/User.yaml
+  responses:
+    '200':
+      description: L'utilisateur mis à jour
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+delete:
+  tags:
+    - Utilisateurs
+  summary: Supprimer un utilisateur
+  description: Supprime l'utilisateur correspondant à l'id donné
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'utilisateur
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      $ref: ../components/responses/NoContent.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

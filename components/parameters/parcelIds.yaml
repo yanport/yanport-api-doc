@@ -1,0 +1,8 @@
+name: parcelIds
+in: query
+description: Liste d'identifiants de parcelles
+style: form
+schema:
+  type: array
+  items:
+    type: string

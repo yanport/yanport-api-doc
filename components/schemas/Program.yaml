@@ -1,0 +1,20 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  externalId:
+    type: string
+  features:
+    $ref: ./Program-Features.yaml
+  marketing:
+    $ref: ./Program-Marketing.yaml
+  stock:
+    $ref: ./Program-Stock.yaml
+  address:
+    $ref: ./Address.yaml
+  ads:
+    type: array
+    maxItems: 100
+    items:
+      $ref: ./AdRef.yaml

@@ -1,0 +1,231 @@
+type: object
+properties:
+  searchQueryParam:
+    $ref: ./SearchQueryParam.yaml
+  queryString:
+    type: string
+  source:
+    type: array
+    items:
+      $ref: ./Source.yaml
+  ids:
+    type: array
+    items:
+      type: string
+  marketingTypes:
+    type: array
+    items:
+      $ref: ./MarketingType.yaml
+  crawlSources:
+    type: array
+    items:
+      $ref: ./CrawlSource.yaml
+  active:
+    type: boolean
+  dealerTypes:
+    type: array
+    items:
+      $ref: ./Dealer-Type.yaml
+  dealerSubTypes:
+    type: array
+    items:
+      $ref: ./Dealer-SubType.yaml
+  dealerNames:
+    type: array
+    items:
+      type: string
+  exclusiveMandate:
+    type: boolean
+  dealerIds:
+    type: integer
+    format: int64
+  excludedDealerIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  propertyIds:
+    type: array
+    items:
+      type: string
+  programIds:
+    type: array
+    items:
+      type: string
+  bloctelStatus:
+    type: array
+    items:
+      type: string
+  propertyTypes:
+    type: array
+    items:
+      $ref: ./PropertyType.yaml
+  roomCounts:
+    type: array
+    items:
+      type: integer
+  departments:
+    type: array
+    items:
+      type: string
+  zipCodes:
+    type: array
+    items:
+      type: string
+  cityIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  agglomerationIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  irisIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  quarterIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  parcelIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  publicationDateMin:
+    type: string
+    format: date-time
+  publicationDateMax:
+    type: string
+    format: date-time
+  lastPriceDecreaseDateMin:
+    type: string
+    format: date-time
+  lastPriceDecreaseDateMax:
+    type: string
+    format: date-time
+  lastPriceUpdateDateMin:
+    type: string
+    format: date-time
+  lastPriceUpdateDateMax:
+    type: string
+    format: date-time
+  deleteDateMin:
+    type: string
+    format: date-time
+  deleteDateMax:
+    type: string
+    format: date-time
+  marketingStartDateMin:
+    type: string
+    format: date-time
+  marketingStartDateMax:
+    type: string
+    format: date-time
+  marketingEndDateMin:
+    type: string
+    format: date-time
+  marketingEndDateMax:
+    type: string
+    format: date-time
+  durationDaysMin:
+    type: integer
+  durationDaysMax:
+    type: integer
+  surfaceMin:
+    type: number
+    format: double
+  surfaceMax:
+    type: number
+    format: double
+  priceMin:
+    type: number
+    format: double
+  priceMax:
+    type: number
+    format: double
+  priceM2Min:
+    type: number
+    format: double
+  priceM2Max:
+    type: number
+    format: double
+  priceHCMin:
+    type: number
+    format: double
+  priceHCMax:
+    type: number
+    format: double
+  priceM2HCMin:
+    type: number
+    format: double
+  priceM2HCMax:
+    type: number
+    format: double
+  priceCCMin:
+    type: number
+    format: double
+  priceCCMax:
+    type: number
+    format: double
+  priceM2CCMin:
+    type: number
+    format: double
+  priceM2CCMax:
+    type: number
+    format: double
+  feesMin:
+    type: number
+    format: double
+  feesMax:
+    type: number
+    format: double
+  depositMin:
+    type: number
+    format: double
+  depositMax:
+    type: number
+    format: double
+  furnished:
+    type: boolean
+  newBuild:
+    type: boolean
+  constructionYearMin:
+    type: integer
+  constructionYearMax:
+    type: integer
+  floorLevelMin:
+    type: integer
+  floorLevelMax:
+    type: integer
+  landSurfaceMin:
+    type: number
+    format: double
+  landSurfaceMax:
+    type: number
+    format: double
+  missingFields:
+    type: array
+    items:
+      type: string
+  excludedIds:
+    type: array
+    items:
+      type: string
+  creationDateMin:
+    type: string
+    format: date-time
+  creationDateMax:
+    type: string
+    format: date-time
+  updateDateMin:
+    type: string
+    format: date-time
+  updateDateMax:
+    type: string
+    format: date-time

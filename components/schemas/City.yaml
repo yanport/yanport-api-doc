@@ -1,0 +1,33 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  inseeCode:
+    type: string
+  deptCode:
+    type: string
+  deptName:
+    type: string
+  zipCodes:
+    type: array
+    items:
+      type: string
+  localities:
+    type: array
+    items:
+      type: string
+  name:
+    type: string
+  usageName:
+    type: string
+  regionName:
+    type: string
+  population:
+    type: number
+    format: double
+  centroid:
+    $ref: ./Location.yaml
+  geometry:
+    type: object
+    format: GeoJsonObject

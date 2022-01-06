@@ -1,0 +1,7 @@
+name: deptCodes
+in: query
+description: Liste des codes département
+schema:
+  type: array
+  items:
+    type: string

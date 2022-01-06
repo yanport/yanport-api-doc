@@ -1,0 +1,24 @@
+get:
+  tags:
+    - 'Etablissement (agence, promoteur, etc)'
+  summary: Récupérer une agence
+  description: Récupérer une agence par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'agence
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: L'agence correspondante
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Agency.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Statistiques
+  description: Permet de récupérer les statistiques des biens selon plusieurs critères.
+  parameters:
+    - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Les statistiques
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Stats.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

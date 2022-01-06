@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Les programmes (neuf)
+  summary: Récupérer un programme (ID)
+  description: Récupérer un programme par son identifiant
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Le programme
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Program.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

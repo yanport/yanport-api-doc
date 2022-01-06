@@ -1,0 +1,8 @@
+type: string
+enum:
+  - NEW
+  - VERY_GOOD
+  - GOOD
+  - NORMAL
+  - BAD
+  - VERY_BAD

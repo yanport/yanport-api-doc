@@ -1,0 +1,25 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  name:
+    type: string
+  description:
+    type: string
+  siren:
+    type: string
+  siret:
+    type: string
+  address:
+    $ref: ./Address.yaml
+  phone:
+    type: string
+  email:
+    type: string
+  url:
+    type: string
+  imageUrl:
+    type: string
+  active:
+    type: boolean

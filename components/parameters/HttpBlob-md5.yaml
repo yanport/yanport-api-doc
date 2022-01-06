@@ -1,0 +1,6 @@
+name: md5
+in: query
+required: true
+description: Somme md5 de l'image
+schema:
+  type: string

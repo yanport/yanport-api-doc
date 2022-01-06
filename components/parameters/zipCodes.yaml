@@ -1,0 +1,8 @@
+name: zipCodes
+in: query
+description: Liste de codes postaux
+style: form
+schema:
+  type: array
+  items:
+    type: string

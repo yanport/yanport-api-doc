@@ -1,0 +1,56 @@
+get:
+  tags:
+    - Les biens (ancien/neuf)
+  summary: Rechercher des biens
+  description: >-
+    Rechercher les biens actifs ou expirés selon plusieurs critères (prix,
+    surface, ville, ...)
+
+
+    La recherche plein-texte est disponible sur le titre et la description via
+    le query param `q` _(voir notre
+    [FAQ](https://support.yanport.com/hc/fr/articles/360020880459-Affiner-ma-recherche-avec-des-mots-cl%C3%A9s)
+    concernant la syntaxe)_
+
+
+    Par défaut les résultats sont paginés, pour parcourir l'ensemble des biens
+    les paramètres `from` et `size` doivent être renseignés. Le paramètre `from`
+    définit le début du set de données et `size` le nombre d'éléments à
+    récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
+
+
+    Concernant le tri le paramètre `sort` à pour syntaxe `field:asc|desc` en
+    remplaçant `field` par le nom du champ sur lequel appliqué le tri.
+
+
+    ### Exemples
+      #### Les biens en cours de publication sur Levallois-Perret entre 120 et 130m²
+        /properties?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130
+      #### Les biens en cours de publication dans le 17ème arrondissement de Paris avec balcon
+        /properties?active=true&source=AD&zipCodes=75017&q=balcon
+      #### Les derniers biens de particulier publiés en Corse sur LeBonCoin et PAP
+        /properties?active=true&source=AD&crawlSources=LE_BON_COIN&crawlSources=PAP&departments=2B&sort=marketing.publicationStartDate:asc
+  parameters:
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: La liste des biens
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Property.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

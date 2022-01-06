@@ -1,0 +1,6 @@
+name: lotCountMin
+in: query
+description: Nombre de lot minimum
+schema:
+  type: integer
+  format: int64

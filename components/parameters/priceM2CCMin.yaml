@@ -1,0 +1,6 @@
+name: priceM2CCMin
+in: query
+description: Prix au mètres carré charges comprises minimum
+schema:
+  type: integer
+  format: double

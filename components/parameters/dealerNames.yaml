@@ -1,0 +1,8 @@
+name: dealerNames
+in: query
+description: Liste de noms de vendeurs
+style: form
+schema:
+  type: array
+  items:
+    type: string

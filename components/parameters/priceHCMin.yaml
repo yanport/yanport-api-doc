@@ -1,0 +1,6 @@
+name: priceHCMin
+in: query
+description: Prix hors charges minimum
+schema:
+  type: integer
+  format: double

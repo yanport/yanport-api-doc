@@ -1,0 +1,28 @@
+get:
+  tags:
+    - Les biens (ancien/neuf)
+  summary: Récupérer des biens (ID)
+  description: Récupérer des biens par leur identifiant
+  parameters:
+    - name: ids
+      in: query
+      required: true
+      style: form
+      schema:
+        type: array
+        items:
+          type: string
+          format: uuid
+  responses:
+    '200':
+      description: Le bien
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Property.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

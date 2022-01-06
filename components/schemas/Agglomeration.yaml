@@ -1,0 +1,27 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  code:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+    enum:
+      - CC
+      - CA
+      - CU
+      - METRO
+      - SAN
+  regionCode:
+    type: string
+  departmentCodes:
+    type: array
+    items:
+      type: string
+    example: ["75", "92"]
+  geometry:
+    type: object
+    format: GeoJsonObject

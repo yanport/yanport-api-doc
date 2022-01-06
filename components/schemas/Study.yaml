@@ -1,0 +1,26 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  userId:
+    type: integer
+    format: int64
+  externalUserId:
+    type: string
+  agencyId:
+    type: integer
+    format: int64
+  externalAgencyId:
+    type: string
+  organizationId:
+    type: integer
+    format: int64
+  name:
+    type: string
+  customer:
+    $ref: ./Customer.yaml
+  property:
+    $ref: ./Property.yaml
+  sections:
+    $ref: ./Sections.yaml

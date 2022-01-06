@@ -1,0 +1,15 @@
+type: object
+properties:
+  title:
+    type: string
+    enum:
+      - MR
+      - MRS
+  name:
+    type: string
+  address:
+    $ref: ./Address.yaml
+  mail:
+    type: string
+  phone:
+    type: string

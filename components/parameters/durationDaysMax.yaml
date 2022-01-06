@@ -1,0 +1,5 @@
+name: durationDaysMax
+in: query
+description: Durée maximale en jours
+schema:
+  type: integer

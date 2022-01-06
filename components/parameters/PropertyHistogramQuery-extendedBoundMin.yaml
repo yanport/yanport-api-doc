@@ -1,0 +1,6 @@
+name: extendedBoundMin
+in: query
+description: Garantit un intervalle minimale
+schema:
+  type: integer
+  format: int64

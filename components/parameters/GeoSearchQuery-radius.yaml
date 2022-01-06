@@ -1,0 +1,6 @@
+name: radius
+in: query
+description: Rayon
+schema:
+  type: string
+  default: 10m

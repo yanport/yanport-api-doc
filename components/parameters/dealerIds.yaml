@@ -1,0 +1,9 @@
+name: dealerIds
+in: query
+description: Liste d'identifiants de vendeurs
+style: form
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

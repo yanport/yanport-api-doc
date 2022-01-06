@@ -1,0 +1,27 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Statistiques (GroupBy)
+  description: >-
+    Permet de récupérer les statistiques basiques des biens regroupé selon 1
+    critère.
+  parameters:
+    - $ref: ../components/parameters/PropertyGroupByStatsQuery-groupBy.yaml
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Les statistiques regroupés par le champ demandé
+      content:
+        application/json:
+          schema:
+            type: object
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

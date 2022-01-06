@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Centiles (SubGroupBy)
+  description: >-
+    Permet de récupérer les indicateurs de références regroupé selon 1 critère
+    et 1 sous-critère.
+  parameters:
+    - $ref: ../components/parameters/PropertyGroupByPercentileQuery-groupBy.yaml
+    - $ref: ../components/parameters/PropertySubGroupByStatsQuery-subGroupBy.yaml
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/PropertyPercentileQuery-field.yaml
+    - $ref: ../components/parameters/percentiles.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Les percentiles regoupés par le champ demandé
+      content:
+        application/json:
+          schema:
+            type: object
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,6 @@
+name: landSurfaceMin
+in: query
+description: Surface minimale du terrain
+schema:
+  type: integer
+  format: double

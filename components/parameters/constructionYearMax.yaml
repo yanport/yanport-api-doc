@@ -1,0 +1,5 @@
+name: constructionYearMax
+description: Année limite de construction (YYYY)
+in: query
+schema:
+  type: integer

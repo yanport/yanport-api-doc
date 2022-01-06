@@ -1,0 +1,8 @@
+name: types
+in: query
+description: Liste de types d'agglomération
+style: form
+schema:
+  type: array
+  items:
+    type: string

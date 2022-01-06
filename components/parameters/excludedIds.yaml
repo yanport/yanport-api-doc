@@ -1,0 +1,7 @@
+name: excludedIds
+in: query
+description: Identifiants à exclure
+schema:
+  type: array
+  items:
+    type: string

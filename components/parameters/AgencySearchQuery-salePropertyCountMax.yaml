@@ -1,0 +1,6 @@
+name: salePropertyCountMax
+description: Nombre maximal de biens en vente
+in: query
+schema:
+  type: integer
+  minimum: 0

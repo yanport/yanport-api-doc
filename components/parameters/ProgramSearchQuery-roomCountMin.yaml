@@ -1,0 +1,6 @@
+name: roomCountMin
+in: query
+description: Nomnbre de pièces minimum
+schema:
+  type: integer
+  format: int64

@@ -1,0 +1,6 @@
+name: roomCountMax
+in: query
+description: Nombre de pièces maximum
+schema:
+  type: integer
+  format: int64

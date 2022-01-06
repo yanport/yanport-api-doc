@@ -1,0 +1,6 @@
+name: location
+in: query
+required: true
+description: Localisation de l'image
+schema:
+  type: string

@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Agglomeration (EPCI)
+  summary: Récupérer une agglomération
+  description: Retourne l'agglomération dont l'id correspond
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: L'identifiant de l'agglomération
+      schema:
+        type: number
+  responses:
+    '200':
+      description: Agglomeration trouvée
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Agglomeration.yaml

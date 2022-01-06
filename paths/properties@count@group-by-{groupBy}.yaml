@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Nombre de biens (GroupBy)
+  description: |-
+    Retourne le nombre de biens regroupés selon 1 critère.
+
+    ### Exemples
+      #### Nombre de biens regroupés par portails en cours de publication sur Levallois-Perret
+        /properties/count/group-by-crawl-sources?active=true&source=AD&zipCodes=92300
+  parameters:
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-groupBy.yaml
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Le nombre de biens
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CountResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

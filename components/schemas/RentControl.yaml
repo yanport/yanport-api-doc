@@ -1,0 +1,14 @@
+type: object
+properties:
+  status:
+    $ref: ./RentControlStatus.yaml
+  irisQuarterId:
+    type: string
+  priceM2Min:
+    type: number
+    format: double
+    minimum: 0
+  priceM2Max:
+    type: number
+    format: double
+    minimum: 0

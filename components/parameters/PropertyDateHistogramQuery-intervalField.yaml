@@ -1,0 +1,11 @@
+name: intervalField
+in: query
+description: Champ sur lequel sont calculés les statistiques
+required: true
+schema:
+  type: string
+  enum:
+    - PUBLICATION_DATE
+    - DELETE_DATE
+    - MARKETING_START_DATE
+    - MARKETING_END_DATE

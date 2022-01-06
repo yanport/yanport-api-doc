@@ -1,0 +1,6 @@
+name: feesMax
+in: query
+description: Honoraires maximales
+schema:
+  type: integer
+  format: double

@@ -1,0 +1,14 @@
+type: object
+properties:
+  count:
+    type: integer
+    format: int64
+    example: 7568
+  values:
+    type: array
+    items:
+      $ref: ./PercentilesValues.yaml
+    example:
+      '10.0': 733.9903725490195
+      '90.0': 2090.3659166666666
+      '50.0': 1382.6789025251455

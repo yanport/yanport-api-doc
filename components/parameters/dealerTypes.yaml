@@ -1,0 +1,17 @@
+name: dealerTypes
+in: query
+description: 'Types de vendeur (agence, mandataire..)'
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - AGENCY
+      - PRIVATE
+      - SOLICITOR
+      - MANDATARY
+      - REALTY_DEVELOPER
+      - PUBLIC_HOUSING
+      - DIRECT_SALE
+      - OTHER

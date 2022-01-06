@@ -1,0 +1,67 @@
+get:
+  tags:
+    - Indicateurs sur les programmes (neuf)
+  summary: Nombre de programmes
+  description: >-
+    Compte le nombre de programmes par rapport à certains critères de
+    recherches. (prix, surface, ville, ...)
+
+
+    ### Exemples
+      #### Nombre de programmes en cours de publication sur Levallois-Perret entre 120 et 130m²
+        /programs/count?active=true&zipCodes=92300&surfaceMin=120&surfaceMax=130
+  parameters:
+    - name: searchQueryParam
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-name.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-description.yaml
+    - $ref: ../components/parameters/crawlSources.yaml
+    - $ref: ../components/parameters/active.yaml
+    - $ref: ../components/parameters/dealerNames.yaml
+    - $ref: ../components/parameters/dealerIds.yaml
+    - $ref: ../components/parameters/excludedDealerIds.yaml
+    - $ref: ../components/parameters/ids.yaml
+    - $ref: ../components/parameters/propertyIds.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-roomCountMin.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-roomCountMax.yaml
+    - $ref: ../components/parameters/departments.yaml
+    - $ref: ../components/parameters/zipCodes.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/quarterIds.yaml
+    - $ref: ../components/parameters/publicationDateMin.yaml
+    - $ref: ../components/parameters/publicationDateMax.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deleteDateMinOrActive.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deleteDateMaxOrActive.yaml
+    - $ref: ../components/parameters/durationDaysMin.yaml
+    - $ref: ../components/parameters/durationDaysMax.yaml
+    - $ref: ../components/parameters/surfaceMin.yaml
+    - $ref: ../components/parameters/surfaceMax.yaml
+    - $ref: ../components/parameters/priceMin.yaml
+    - $ref: ../components/parameters/priceMax.yaml
+    - $ref: ../components/parameters/missingFields.yaml
+    - $ref: ../components/parameters/existingFields.yaml
+    - $ref: ../components/parameters/excludedIds.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-legalDevices.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-certifications.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deliveryDateMin.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-deliveryDateMax.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-lotCountMin.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-lotCountMax.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+  responses:
+    '200':
+      description: Le nombre de programmes
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CountResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

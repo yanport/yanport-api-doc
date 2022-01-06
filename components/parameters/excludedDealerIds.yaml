@@ -1,0 +1,9 @@
+name: excludedDealerIds
+in: query
+description: Liste d'identifiants de vendeurs à exclure
+style: form
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

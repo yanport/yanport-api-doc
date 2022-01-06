@@ -1,0 +1,34 @@
+get:
+  tags:
+    - Réseaux de mandataires
+  summary: Rechercher des réseaux mandataires
+  description: |-
+    Rechercher des réseaux mandataires selon plusieurs critères
+
+    ### Exemples
+      #### Rechercher le réseau Efficity
+        /mandatary-networks?q=efficity'
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/MandataryNetworkSearchQuery-siren.yaml
+  responses:
+    '200':
+      description: Les réseaux mandataires trouvés
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/MandataryNetwork.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

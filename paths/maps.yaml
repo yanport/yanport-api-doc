@@ -1,0 +1,63 @@
+get:
+  tags:
+    - Génération de carte
+  summary: Données cartographique
+  description: Retourne un GeoJSON avec des données géographiques
+  x-code-samples:
+    - lang: curl
+      source:
+        $ref: ../code_samples/curl/maps/get.sh
+  parameters:
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+    - name: field
+      in: query
+      description: 'Champ à analyser (Prix, etc)'
+      schema:
+        type: string
+        enum:
+          - PRICE
+          - PRICE_HC
+          - PRICE_CC
+          - PRICE_M2
+          - PRICE_M2_HC
+          - PRICE_M2_CC
+          - SURFACE
+          - ROOM_COUNT
+          - DURATION_DAYS
+          - MARKETING_DAYS
+      required: true
+      example: PRICE_M2
+    - name: bbox
+      in: query
+      description: >-
+        Rectangle qui délimite la zone géographique (latitude en haut à
+        gauche,longitude en haut à gauche,latitude en bas à droite,longitude en
+        bas à droite)
+      schema:
+        type: string
+      example: >-
+        46.677582373658055,-5.154210305797569,43.44691443123976,7.7415115092989115
+      required: true
+    - name: zoomLevel
+      in: query
+      description: Niveau de zoom
+      schema:
+        type: number
+        format: double
+      example: 7.5
+      required: true
+  responses:
+    '200':
+      description: GeoJson de données géographiques
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/MapsResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

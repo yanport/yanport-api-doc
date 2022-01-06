@@ -1,0 +1,5 @@
+name: externalId
+in: query
+description: Identifiant externe client
+schema:
+  type: string

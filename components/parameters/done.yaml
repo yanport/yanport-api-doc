@@ -1,0 +1,5 @@
+name: done
+in: query
+description: Description de done
+schema:
+  type: boolean

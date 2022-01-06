@@ -1,0 +1,6 @@
+name: deliveryDateMax
+in: query
+description: Date maximum de livraison
+schema:
+  type: string
+  format: date-time

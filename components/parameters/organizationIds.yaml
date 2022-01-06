@@ -1,0 +1,7 @@
+name: organizationIds
+in: query
+description: Identifiants d'organisations
+schema:
+  type: array
+  items:
+    type: string

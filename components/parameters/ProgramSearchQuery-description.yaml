@@ -1,0 +1,5 @@
+name: description
+in: query
+description: Description de programme
+schema:
+  type: string

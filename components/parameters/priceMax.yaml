@@ -1,0 +1,6 @@
+name: priceMax
+in: query
+description: Prix maximum
+schema:
+  type: integer
+  format: double

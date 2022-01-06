@@ -1,0 +1,6 @@
+name: depositMin
+in: query
+description: Caution minimale
+schema:
+  type: integer
+  format: double

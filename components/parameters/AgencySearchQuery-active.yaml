@@ -1,0 +1,5 @@
+name: active
+description: Agence active
+in: query
+schema:
+  type: boolean

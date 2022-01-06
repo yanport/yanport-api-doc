@@ -1,0 +1,38 @@
+get:
+  tags:
+    - Consommation API
+  summary: Récupérer l'aggregation d'une propriété des transactions d'API
+  description: >-
+    Retourne l'aggregation d'une propriété des transactions d'API selon
+    l'intervalle de temps demandé, correspondant aux critères demandés et
+    regroupé par sku
+  parameters:
+    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-field.yaml
+    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-interval.yaml
+    - $ref: >-
+        ../components/parameters/ApiTransactionDateHistogramQuery-intervalField.yaml
+    - $ref: >-
+        ../components/parameters/ApiTransactionDateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-metric.yaml
+    - $ref: >-
+        ../components/parameters/ApiTransactionDateHistogramQuery-percentiles.yaml
+    - $ref: >-
+        ../components/parameters/ApiTransactionDateHistogramQuery-extendedBoundMin.yaml
+    - $ref: >-
+        ../components/parameters/ApiTransactionDateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/ApiTransactionSearchQuery-tokenIds.yaml
+    - $ref: ../components/parameters/ApiTransactionSearchQuery-organizationIds.yaml
+    - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMin.yaml
+    - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMax.yaml
+    - $ref: ../components/parameters/ApiTransactionSearchQuery-skus.yaml
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+  responses:
+    '200':
+      description: Aggregation d'une propriété des transactions d'API
+      content:
+        application/json:
+          schema:
+            $ref: >-
+              ../components/schemas/ApiTransactionGroupBySkuSumDateHistogram.yaml

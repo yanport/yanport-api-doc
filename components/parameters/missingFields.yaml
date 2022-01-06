@@ -1,0 +1,7 @@
+name: missingFields
+in: query
+description: Attributs manquants
+schema:
+  type: array
+  items:
+    type: string

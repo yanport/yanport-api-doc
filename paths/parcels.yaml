@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Parcelle
+  summary: Récupérer des parcelles
+  description: Retourne les parcelles correspondantes aux critères demandés
+  parameters:
+    - $ref: ../components/parameters/SearchQueryParam-from.yaml
+    - $ref: ../components/parameters/SearchQueryParam-size.yaml
+    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
+    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+    - $ref: ../components/parameters/inseeCodes.yaml
+  responses:
+    '200':
+      description: Liste des parcelles trouvées
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Parcel.yaml

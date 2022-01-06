@@ -1,0 +1,9 @@
+name: termsSize
+in: query
+description: Précision des résultats
+required: true
+schema:
+  type: integer
+  minimum: 10
+  maximum: 100
+  default: 30

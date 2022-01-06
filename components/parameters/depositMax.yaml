@@ -1,0 +1,6 @@
+name: depositMax
+in: query
+description: Caution maximale
+schema:
+  type: integer
+  format: double

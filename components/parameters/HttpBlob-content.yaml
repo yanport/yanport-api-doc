@@ -1,0 +1,7 @@
+name: content
+in: query
+required: true
+description: L'image
+schema:
+  type: string
+  format: byte

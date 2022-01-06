@@ -1,0 +1,45 @@
+get:
+  tags:
+    - Prospects
+  summary: Récupérer un prospect (ID)
+  description: Récupérer un prospect par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant d'un prospect
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Le prospect demandé
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Prospect.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+delete:
+  tags:
+    - Prospects
+  summary: Supprimer un prospect
+  description: Supprime le prospect correspondant à l'id donné
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant du prospect
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      $ref: ../components/responses/NoContent.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

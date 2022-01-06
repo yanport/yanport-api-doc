@@ -1,0 +1,10 @@
+type: object
+properties:
+  price:
+    type: number
+    format: double
+    minimum: 0
+    maximum: 100000000
+  date:
+    type: string
+    format: date

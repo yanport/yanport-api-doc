@@ -1,0 +1,7 @@
+name: siret
+in: query
+description: Siret de l'entreprise
+schema:
+  type: array
+  items:
+    type: string

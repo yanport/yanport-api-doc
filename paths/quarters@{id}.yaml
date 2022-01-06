@@ -1,0 +1,24 @@
+get:
+  tags:
+    - Quartier
+  summary: Récupérer un quartier (ID)
+  description: Récupérer un quartier par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant du quartier
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: Le quartier demandé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Quarter.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

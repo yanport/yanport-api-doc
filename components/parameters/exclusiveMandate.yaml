@@ -1,0 +1,5 @@
+name: exclusiveMandate
+in: query
+description: Mandat Exclusif
+schema:
+  type: boolean

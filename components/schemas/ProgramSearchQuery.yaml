@@ -1,0 +1,124 @@
+type: object
+properties:
+  searchQueryParam:
+    $ref: ./SearchQueryParam.yaml
+  name:
+    type: string
+  description:
+    type: string
+  crawlSources:
+    type: array
+    items:
+      $ref: ./CrawlSource.yaml
+  active:
+    type: boolean
+  dealerNames:
+    type: array
+    items:
+      type: string
+  dealerIds:
+    type: integer
+    format: int64
+  excludedDealerIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  propertyIds:
+    type: array
+    items:
+      type: string
+  ids:
+    type: array
+    items:
+      type: string
+  roomCountMin:
+    type: integer
+    format: int64
+  roomCountMax:
+    type: integer
+    format: int64
+  departments:
+    type: array
+    items:
+      type: string
+  zipCodes:
+    type: array
+    items:
+      type: string
+  cityIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  quarterIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  publicationDateMin:
+    type: string
+    format: date-time
+  publicationDateMax:
+    type: string
+    format: date-time
+  deleteDateMinOrActive:
+    type: string
+    format: date-time
+  deleteDateMaxOrActive:
+    type: string
+    format: date-time
+  durationDaysMin:
+    type: integer
+  durationDaysMax:
+    type: integer
+  surfaceMin:
+    type: number
+    format: double
+  surfaceMax:
+    type: number
+    format: double
+  priceMin:
+    type: number
+    format: double
+  priceMax:
+    type: number
+    format: double
+  missingFields:
+    type: array
+    items:
+      type: string
+  existingFields:
+    type: array
+    items:
+      type: string
+  excludedIds:
+    type: array
+    items:
+      type: string
+  organizationIds:
+    type: array
+    items:
+      type: string
+  legalDevices:
+    type: array
+    items:
+      type: string
+  certifications:
+    type: array
+    items:
+      type: string
+  deliveryDateMin:
+    type: string
+    format: date-time
+  deliveryDateMax:
+    type: string
+    format: date-time
+  lotCountMin:
+    type: integer
+    format: int64
+  lotCountMax:
+    type: integer
+    format: int64
+  geoSearchQuery:
+    $ref: ./GeoSearchQuery.yaml

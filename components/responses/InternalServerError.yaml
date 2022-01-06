@@ -1,0 +1,8 @@
+description: Une erreur coté serveur s'est produite
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/DefaultResponse.yaml
+    example:
+      msg: Internal server error
+      status: 500
