@@ -1,0 +1,8 @@
+name: applicantZipCodes
+in: query
+description: Liste de codes postaux des demandeurs de permis de construire
+style: form
+schema:
+  type: array
+  items:
+    type: string

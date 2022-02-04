@@ -1,0 +1,63 @@
+type: object
+properties:
+  authorisationDate:
+    type: string
+    format: date
+  constructionStartDate:
+    type: string
+    format: date
+  constructionEndDate:
+    type: string
+    format: date
+  sourceUpdateDate:
+    type: string
+    format: date
+  extension:
+    type: boolean
+  upwardExtension:
+    type: boolean
+  levelCreation:
+    type: boolean
+  maxLevel:
+    type: integer
+  annex:
+    type: string
+    enum:
+      - POOL
+      - GARAGE
+      - VERANDA
+      - GARDEN_HOME
+      - OTHER
+      - MANY
+  projectType:
+    type: string
+    enum:
+      - RESIDENTIAL
+      - NON_RESIDENTIAL
+      - MIXED
+  surfaces:
+    type: object
+    properties:
+      RESIDENTIAL_BEFORE_PROJECT:
+        type: integer
+      RESIDENTIAL_CREATED:
+        type: integer
+      TRANSFORMED_TO_RESIDENTIAL:
+        type: integer
+      RESIDENTIAL_DEMOLISHED:
+        type: integer
+      TRANSFORMED_FROM_RESIDENTIAL:
+        type: integer
+      NON_RESIDENTIAL_BEFORE_PROJECT:
+        type: integer
+      NON_RESIDENTIAL_CREATED:
+        type: integer
+      TRANSFORMED_TO_NON_RESIDENTIAL:
+        type: integer
+      NON_RESIDENTIAL_DEMOLISHED:
+        type: integer
+      TRANSFORMED_FROM_NON_RESIDENTIAL:
+        type: integer
+  housingCount:
+    $ref: ./BuildingPermit-housingCount.yaml
+

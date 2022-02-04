@@ -1,0 +1,12 @@
+name: states
+in: query
+description: 'Etats des travaux du permis de construire (autorisés, annulés, commencés, achevés)'
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - AUTHORISED
+      - CANCELED
+      - STARTED
+      - FINISHED

@@ -1,0 +1,30 @@
+type: object
+properties:
+  totalCreated:
+    type: integer
+  perTypeCount:
+    type: object
+    properties:
+      SINGLE:
+        type: integer
+      COLLECTIVE:
+        type: integer
+      DEMOLISHED:
+        type: integer
+      SOCIAL:
+        type: integer
+  perRoomCount:
+    type: object
+    properties:
+      1:
+        type: integer
+      2:
+        type: integer
+      3:
+        type: integer
+      4:
+        type: integer
+      5:
+        type: integer
+      6:
+        type: integer

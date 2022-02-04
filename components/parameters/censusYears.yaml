@@ -1,0 +1,9 @@
+name: censusYears
+in: query
+description: Liste des années de publication des statistiques par l'Insee
+style: form
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

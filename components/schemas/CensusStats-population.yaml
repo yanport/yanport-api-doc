@@ -1,0 +1,52 @@
+type: object
+properties:
+  populationCount:
+    type: integer
+    format: int64
+  ages:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-populationRange.yaml
+        count:
+          type: integer
+          format: int64
+  activityTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - FARMER
+            - ARTISAN
+            - CADRE
+            - INTERMEDIATE
+            - EMPLOYEE
+            - LABOR
+            - RETIRED
+            - UNEMPLOYED
+        count:
+          type: integer
+          format: int64
+  nationalities:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - NATIONALS
+            - FOREIGNERS
+            - IMMIGRANTS
+        count:
+          type: integer
+          format: int64
+  activity:
+    $ref: ./CensusStats-activity.yaml
+  education:
+    $ref: ./CensusStats-education.yaml

@@ -1,0 +1,109 @@
+type: object
+properties:
+  agesPopulation:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-activityRange.yaml
+        count:
+          type: integer
+          format: int64
+  ages:
+    type: object
+    properties:
+      ACTIVE:
+        type: array
+        items:
+          type: object
+          properties:
+            category:
+              $ref: ./CensusStats-activityRange.yaml
+            count:
+              type: integer
+              format: int64
+      ACTIVE_OCCUPIED:
+        type: array
+        items:
+          type: object
+          properties:
+            category:
+              $ref: ./CensusStats-activityRange.yaml
+            count:
+              type: integer
+              format: int64
+  types:
+    type: object
+    properties:
+      ACTIVE:
+        type: array
+        items:
+          type: object
+          properties:
+            category:
+              type: string
+              enum:
+                - FARMER
+                - ARTISAN
+                - CADRE
+                - INTERMEDIATE
+                - EMPLOYEE
+                - LABOR
+                - RETIRED
+                - UNEMPLOYED
+            count:
+              type: integer
+              format: int64
+      ACTIVE_OCCUPIED:
+        type: array
+        items:
+          type: object
+          properties:
+            category:
+              type: string
+              enum:
+                - FARMER
+                - ARTISAN
+                - CADRE
+                - INTERMEDIATE
+                - EMPLOYEE
+                - LABOR
+                - RETIRED
+                - UNEMPLOYED
+            count:
+              type: integer
+              format: int64
+  commuteTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - ON_FOOT
+            - BICYCLE
+            - MOTORCYCLE
+            - CAR
+            - PUBLIC_TRANSPORT
+        count:
+          type: integer
+          format: int64
+  locations:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - IN_CITY
+            - OUT_OF_CITY
+            - OUT_OF_COUNTRY
+        count:
+          type: integer
+          format: int64
+  populationCount:
+    type: integer
+    format: int64

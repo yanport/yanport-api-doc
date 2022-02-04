@@ -1,0 +1,9 @@
+name: zone
+in: query
+description: La zone géographique des statistiques
+schema:
+  type: string
+  enum:
+    - IRIS
+    - CITY
+    - DEPARTMENT

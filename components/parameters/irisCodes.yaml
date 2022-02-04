@@ -1,6 +1,6 @@
-name: inseeCodes
+name: irisCodes
 in: query
-description: Liste de codes insee
+description: Liste de codes de zones IRIS
 style: form
 schema:
   type: array

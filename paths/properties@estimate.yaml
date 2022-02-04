@@ -33,12 +33,14 @@ get:
       required: true
     - name: propertyType
       in: query
-      description: 'Type de bien (maison, appartement)'
+      description: 'Type de bien (maison, appartement, terrain).
+        LAND uniquement avec field=PRICE et marketingType=SALE'
       schema:
         type: string
         enum:
           - HOUSE
           - APARTMENT
+          - LAND
       required: true
     - name: lat
       in: query
@@ -56,12 +58,18 @@ get:
       required: true
     - name: surface
       in: query
-      description: Surface du bien
+      description: Surface du bien (ou du terrain si propertyType = LAND)
       schema:
         type: number
         format: double
         minimum: 5
       required: true
+    - name: roomCount
+      in: query
+      description: Nombre de pièces du bien
+      schema:
+        type: integer
+        minimum: 1
     - name: landSurface
       in: query
       description: Surface de la parcelle (maison uniquement)
@@ -70,7 +78,7 @@ get:
         format: double
     - name: newBuild
       in: query
-      description: Construction neuve
+      description: Construction neuve (vente uniquement)
       schema:
         type: boolean
     - name: furnished
@@ -91,35 +99,51 @@ get:
         type: number
         format: integer
         minimum: 0
-    - name: roomCount
+    - name: floorCount
       in: query
-      description: Nombre de pièces du bien
+      description: Nombre d'étages du bien (maison uniquement)
       schema:
         type: integer
-        minimum: 5
+    - name: generalState
+      in: query
+      description: Etat général du bien.
+      schema:
+        type: string
+        enum:
+          - VERY BAD
+          - BAD
+          - NORMAL
+          - GOOD
+          - VERY GOOD
+          - NEW
     - name: balconyCount
       in: query
-      description: Nombre de balcons du bien
+      description: Nombre de balcons (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
       schema:
         type: integer
     - name: parkingCount
       in: query
-      description: Nombre de places de parking du bien
+      description: Nombre de places de parking (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
       schema:
         type: integer
     - name: terraceCount
       in: query
-      description: Nombre de terrasses du bien
-      schema:
-        type: integer
-    - name: floorCount
-      in: query
-      description: Nombre d'étages du bien
+      description: Nombre de terrasses (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
       schema:
         type: integer
     - name: swimmingPoolCount
       in: query
-      description: Nombre de piscines (maison uniquement)
+      description: Nombre de piscines (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      schema:
+        type: integer
+    - name: cellarCount
+      in: query
+      description: Nombre de caves (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      schema:
+        type: integer
+    - name: gardenCount
+      in: query
+      description: Nombre de jardins (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
       schema:
         type: integer
     - name: date

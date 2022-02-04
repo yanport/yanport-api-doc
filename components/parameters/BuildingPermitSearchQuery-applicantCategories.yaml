@@ -1,0 +1,14 @@
+name: applicantCategories
+in: query
+description: 'Catégories de demandeurs de permis de construire (particuliers, bailleurs sociaux, promoteurs et professionnels de la construction, administration publique, autre type de société, locaux purs)'
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - PRIVATE
+      - SOCIAL_LANDLORD
+      - PROPERTY_DEVELOPER
+      - PUBLIC_ADMINISTRATION
+      - OTHER_COMPANY
+      - PURE_LOCAL

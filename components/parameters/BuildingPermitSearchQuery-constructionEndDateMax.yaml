@@ -1,0 +1,7 @@
+name: constructionEndDateMax
+in: query
+description: 'Date maximale de la fin de la construction du projet (YYYY-mm-dd)'
+schema:
+  type: string
+  format: date
+

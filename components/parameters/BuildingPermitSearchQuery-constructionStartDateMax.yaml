@@ -1,0 +1,7 @@
+name: constructionStartDateMax
+in: query
+description: 'Date maximale du début de la construction du projet (YYYY-mm-dd)'
+schema:
+  type: string
+  format: date
+

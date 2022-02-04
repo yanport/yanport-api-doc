@@ -23,6 +23,8 @@ get:
 
     Concernant le tri le paramètre `sort` à pour syntaxe `field:asc|desc` en
     remplaçant `field` par le nom du champ sur lequel appliqué le tri.
+    Il est également possible de faire un tri par distance par-rapport à une géolocalisation
+    avec la syntaxe `sort=address.location:geo:lat:lon`
 
 
     ### Exemples
@@ -32,6 +34,8 @@ get:
         /ads?active=true&zipCodes=75017&q=balcon
       #### Les dernières annonces de particulier publiées en Corse sur LeBonCoin et PAP
         /ads?active=true&crawlSources=LE_BON_COIN&crawlSources=PAP&departments=2B&sort=property.marketing.publicationDate:asc
+      #### Les annonces en cours sur Levallois-Perret entre 120 et 130m² triés par distance par-rapport au point de coordonnées (48.8956, 2.2827)
+        /ads?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130&sort=address.location:geo:48.8956:2.2827
   parameters:
     - $ref: ../components/parameters/SearchQueryParam-from.yaml
     - $ref: ../components/parameters/SearchQueryParam-size.yaml

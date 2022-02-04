@@ -1,6 +1,6 @@
-name: inseeCodes
+name: deptCodes
 in: query
-description: Liste de codes insee
+description: Liste de codes de département
 style: form
 schema:
   type: array

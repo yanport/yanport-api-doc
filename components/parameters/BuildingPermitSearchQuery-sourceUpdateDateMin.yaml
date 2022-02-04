@@ -1,0 +1,7 @@
+name: sourceUpdateDateMin
+in: query
+description: 'Date de mise à jour minimale du permis de construire dans la base SITADEL (YYYY-mm-dd)'
+schema:
+  type: string
+  format: date
+

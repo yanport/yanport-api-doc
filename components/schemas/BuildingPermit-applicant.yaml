@@ -1,0 +1,33 @@
+type: object
+properties:
+  name:
+    type: string
+  category:
+    type: string
+    enum:
+      - PRIVATE
+      - SOCIAL_LANDLORD
+      - PROPERTY_DEVELOPER
+      - PUBLIC_ADMINISTRATION
+      - OTHER_COMPANY
+      - PURE_LOCAL
+  subCategory:
+    type: string
+    enum:
+      - SAI
+      - SIMPLE
+      - SCI
+      - HLM
+      - EPL
+      - OTHER
+      - REAL
+      - STATE_ODAC
+      - DEP_REG
+      - CITY_EPIC
+  siren:
+    type: string
+  siret:
+    type: string
+  zipCode:
+    type: string
+    example: 750010

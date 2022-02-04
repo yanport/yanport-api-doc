@@ -10,6 +10,7 @@ schema:
     - CITY_DEPT_CODE
     - DEALERS_TYPE
     - DEALERS_ID
+    - IRIS_ID
     - MARKETING_TYPE
     - PROPERTY_TYPE
     - SURFACE

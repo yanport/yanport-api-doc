@@ -1,0 +1,7 @@
+name: updateDateMin
+in: query
+description: 'Date de mise à jour minimale du permis de construire dans notre base (YYYY-mm-dd)'
+schema:
+  type: string
+  format: date
+

@@ -1,0 +1,11 @@
+name: purposes
+in: query
+description: 'Objectifs du projet du permis de construire (occupation personnelle, vente, location)'
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - PERSONAL_USE
+      - SALE
+      - RENT

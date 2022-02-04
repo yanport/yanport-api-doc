@@ -1,0 +1,7 @@
+name: constructionStartDateMin
+in: query
+description: 'Date minimale du début de la construction du projet (YYYY-mm-dd)'
+schema:
+  type: string
+  format: date
+
