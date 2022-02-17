@@ -15,3 +15,4 @@ schema:
     - ROOM_COUNT
     - DURATION_DAYS
     - MARKETING_DAYS
+    - FEES_PERCENT

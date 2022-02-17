@@ -1,0 +1,117 @@
+type: object
+properties:
+  householdsCount:
+    type: integer
+    format: int64
+  peopleInHouseholdsCount:
+    type: integer
+    format: int64
+  hasParkingCount:
+    type: integer
+    format: int64
+  activityTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - FARMER
+            - ARTISAN
+            - CADRE
+            - INTERMEDIATE
+            - EMPLOYEE
+            - LABOR
+            - RETIRED
+            - UNEMPLOYED
+        count:
+          type: integer
+          format: int64
+  cohabitationModes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - SINGLE_PERSON
+            - OTHER_NON_FAMILY
+            - COUPLE_WITHOUT_CHILDREN
+            - COUPLE_WITH_CHILDREN
+            - SINGLE_PARENT_FAMILY
+        count:
+          type: integer
+          format: int64
+  housingSeniority:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-householdRange.yaml
+        count:
+          type: integer
+          format: int64
+  housingSeniorityPopulation:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-householdRange.yaml
+        count:
+          type: integer
+          format: int64
+  carPossession:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - ONE
+            - TWO_OR_MORE
+        count:
+          type: integer
+          format: int64
+  incomes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: number
+          format: double
+        count:
+          type: integer
+          format: int64
+          example: 'Le revenu en euro'
+  incomeProportionTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - ACTIVITY
+            - RETIREMENT
+            - LEGACY
+            - SOCIAL
+            - TAXES
+        count:
+          type: integer
+          format: int64
+          example: 'part de la catégorie dans le revenu en pourcentage'
+  lastFirstDecilesIncomeRatio:
+    type: number
+    format: double
+  richPoorIncomeRatio:
+    type: number
+    format: double
+  giniIndex:
+    type: number
+    format: double

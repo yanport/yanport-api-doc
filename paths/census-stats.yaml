@@ -1,18 +1,22 @@
 get:
   tags:
-    - Quartier
-  summary: Rechercher des quartiers
-  description: Récupérer des quartiers selon différents critères
+    - Statistiques socioéconomiques
+  summary: Rechercher des statistiques socioéconomiques
+  description: Récupérer des statistiques socioéconomiques par zones géographiques (source INSEE)
   parameters:
     - $ref: ../components/parameters/SearchQueryParam-from.yaml
     - $ref: ../components/parameters/SearchQueryParam-size.yaml
     - $ref: ../components/parameters/SearchQueryParam-sort.yaml
     - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/zone.yaml
+    - $ref: ../components/parameters/censusYears.yaml
+    - $ref: ../components/parameters/irisCodes.yaml
     - $ref: ../components/parameters/cityIds.yaml
-    - $ref: ../components/parameters/departmentCodes.yaml
+    - $ref: ../components/parameters/inseeCodes.yaml
+    - $ref: ../components/parameters/deptCodes.yaml
   responses:
     '200':
-      description: La liste des quartiers
+      description: Les statistiques des zones recherchées
       content:
         application/json:
           schema:
@@ -23,7 +27,7 @@ get:
               hits:
                 type: array
                 items:
-                  $ref: ../components/schemas/Quarter.yaml
+                  $ref: ../components/schemas/CensusStats.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

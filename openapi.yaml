@@ -120,6 +120,14 @@ tags:
     x-displayName: Parcelle
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Parcel" />
+  - name: Modele-censusStats
+    x-displayName: Statistiques socioéconomiques
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/CensusStats" />
+  - name: Modele-buildingPermit
+    x-displayName: Permis de construire
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/BuildingPermit" />
   - name: Modele-utilisateur
     x-displayName: Utilisateur
     description: |
@@ -161,6 +169,12 @@ x-tagGroups:
       - Quartier
       - IRIS
       - Parcelle
+  - name: STATISTIQUES SOCIOECONOMIQUES
+    tags:
+      - Statistiques socioéconomiques
+  - name: REFERENTIEL DES PERMIS DE CONSTRUIRE
+    tags:
+      - Permis de construire
   - name: REFERENTIEL DES PROFESIONNELS
     tags:
       - 'Etablissement (agence, promoteur, etc)'
@@ -187,6 +201,8 @@ x-tagGroups:
       - Modele-commune
       - Modele-quartier
       - Modele-IRIS
+      - Modele-censusStats
+      - Modele-buildingPermit
       - Modele-parcelle
       - Modele-utilisateur
       - Modele-etude
@@ -281,6 +297,10 @@ paths:
     $ref: 'paths/parcels@{id}.yaml'
   /parcels/ids:
     $ref: paths/parcels@ids.yaml
+  /census-stats:
+    $ref: paths/census-stats.yaml
+  /building-permits:
+    $ref: paths/building-permit.yaml
   /agencies:
     $ref: paths/agencies.yaml
   '/agencies/{id}':

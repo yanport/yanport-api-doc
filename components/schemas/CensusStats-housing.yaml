@@ -1,0 +1,104 @@
+type: object
+properties:
+  householdsCount:
+    type: integer
+    format: int64
+  propertyTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - APARTMENT
+            - HOUSE
+            - SOCIAL
+        count:
+          type: integer
+          format: int64
+  roomCounts:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-housingRoomCountRange.yaml
+        count:
+          type: integer
+          format: int64
+  surfaces:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-housingSurfacesRange.yaml
+        count:
+          type: integer
+          format: int64
+  occupationTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - MAIN
+            - SECONDARY
+            - VACANT
+        count:
+          type: integer
+          format: int64
+  occupationStatus:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - OWNER
+            - TENANT
+            - FREE
+        count:
+          type: integer
+          format: int64
+  mainPropertyTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - APARTMENT
+            - HOUSE
+            - SOCIAL
+        count:
+          type: integer
+          format: int64
+  mainConstructionDates:
+    type: object
+    properties:
+      APARTMENT:
+        type: array
+        items:
+          type: object
+          properties:
+            category:
+              $ref: ./CensusStats-housingRoomCountRange.yaml
+            count:
+              type: integer
+              format: int64
+      HOUSE:
+        type: array
+        items:
+          type: object
+          properties:
+            category:
+              $ref: ./CensusStats-housingRoomCountRange.yaml
+            count:
+              type: integer
+              format: int64

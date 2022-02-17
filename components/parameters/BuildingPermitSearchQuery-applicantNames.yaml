@@ -1,0 +1,7 @@
+name: applicantNames
+in: query
+description: Dénomination du demandeur de permis de construire (non disponnible pour les demandes de particuliers)
+schema:
+  type: array
+  items:
+    type: string

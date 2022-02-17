@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: string
+  zone:
+    type: string
+    enum:
+      - IRIS
+      - CITY
+      - DEPARTMENT
+  year:
+    type: number
+  irisCode:
+    type: string
+  cityId:
+    type: number
+  inseeCode:
+    type: string
+  deptCode:
+    type: string
+  population:
+    $ref: ./CensusStats-population.yaml
+  housing:
+    $ref: ./CensusStats-housing.yaml
+  household:
+    $ref: ./CensusStats-household.yaml
+  family:
+    $ref: ./CensusStats-family.yaml

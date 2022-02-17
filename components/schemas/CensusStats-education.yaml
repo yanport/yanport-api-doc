@@ -1,0 +1,25 @@
+type: object
+properties:
+  unschooledCount:
+    type: integer
+    format: int64
+  agesPopulation:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-educationRange.yaml
+        count:
+          type: integer
+          format: int64
+  agesSchooled:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          $ref: ./CensusStats-educationRange.yaml
+        count:
+          type: integer
+          format: int64

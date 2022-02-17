@@ -1,0 +1,6 @@
+name: authorisationDateMax
+in: query
+description: "Date maximale de l'autorisation de permis de construire (YYYY-mm-dd)"
+schema:
+  type: string
+  format: date

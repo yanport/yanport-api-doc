@@ -1,5 +1,8 @@
 name: inseeCodes
 in: query
-description: les codes insee
+description: Liste de codes insee
+style: form
 schema:
-  type: string
+  type: array
+  items:
+    type: string

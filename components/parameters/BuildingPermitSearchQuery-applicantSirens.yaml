@@ -1,0 +1,7 @@
+name: applicantSirens
+in: query
+description: Liste des numéros SIREN des demandeurs de permis de construire
+schema:
+  type: array
+  items:
+    type: string

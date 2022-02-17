@@ -1,0 +1,7 @@
+name: sourceUpdateDateMax
+in: query
+description: 'Date de mise à jour maximale du permis de construire dans la base SITADEL (YYYY-mm-dd)'
+schema:
+  type: string
+  format: date
+

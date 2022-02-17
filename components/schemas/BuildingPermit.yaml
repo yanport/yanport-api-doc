@@ -1,0 +1,35 @@
+type: object
+properties:
+  id:
+    type: string
+  creationDate:
+    type: string
+    format: date-time
+  updateDate:
+    type: string
+    format: date-time
+  type:
+    type: string
+    enum:
+      - NEW_BUILD
+      - EXISTING_BUILD
+  state:
+    type: string
+    enum:
+      - AUTHORISED
+      - CANCELED
+      - STARTED
+      - FINISHED
+  purpose:
+    type: string
+    enum:
+      - PERSONAL_USE
+      - SALE
+      - RENT
+  address:
+    $ref: ./Address.yaml
+  features:
+    $ref: ./BuildingPermit-features.yaml
+  applicant:
+    $ref: ./BuildingPermit-applicant.yaml
+

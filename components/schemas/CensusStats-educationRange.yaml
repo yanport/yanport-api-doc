@@ -1,0 +1,12 @@
+type: object
+properties:
+  lowerEndpoint:
+    type: integer
+    example: 2
+  lowerBoundType:
+    $ref: ./BoundType.yaml
+  upperEndpoint:
+    type: integer
+    example: 5
+  upperBoundType:
+    $ref: ./BoundType.yaml

@@ -179,6 +179,12 @@ properties:
   priceM2CCMax:
     type: number
     format: double
+  negotiationMarginMin:
+    type: number
+    format: double
+  negotiationMarginMax:
+    type: number
+    format: double
   feesMin:
     type: number
     format: double

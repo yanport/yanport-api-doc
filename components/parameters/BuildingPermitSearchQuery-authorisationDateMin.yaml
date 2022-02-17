@@ -1,0 +1,6 @@
+name: authorisationDateMin
+in: query
+description: "Date minimale de l'autorisation de permis de construire (YYYY-mm-dd)"
+schema:
+  type: string
+  format: date

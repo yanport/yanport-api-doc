@@ -1,0 +1,7 @@
+name: permitNumbers
+in: query
+description: Liste des numéros de permis de construire
+schema:
+  type: array
+  items:
+    type: string

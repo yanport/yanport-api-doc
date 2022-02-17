@@ -1,0 +1,10 @@
+name: types
+in: query
+description: 'Types de permis de construire (nouvelle construction, travaux sur construction existante)'
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - NEW_BUILD
+      - EXISTING_BUILD

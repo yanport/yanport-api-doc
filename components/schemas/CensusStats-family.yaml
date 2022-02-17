@@ -1,0 +1,19 @@
+type: object
+properties:
+  familiesCount:
+    type: integer
+    format: int64
+  familyTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        category:
+          type: string
+          enum:
+            - WITHOUT_CHILDREN
+            - WITH_CHILDREN
+            - SINGLE_PARENT
+        count:
+          type: integer
+          format: int64
