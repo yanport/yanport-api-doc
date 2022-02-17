@@ -1,6 +1,6 @@
 name: codes
 in: query
-description: Liste de codes d'agglomération
+description: Liste de codes
 style: form
 schema:
   type: array

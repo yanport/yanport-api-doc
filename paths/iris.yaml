@@ -9,6 +9,10 @@ get:
     - $ref: ../components/parameters/SearchQueryParam-sort.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/inseeCodes.yaml
+    - $ref: ../components/parameters/departmentCodes.yaml
+    - $ref: ../components/parameters/irisTypes.yaml
+    - $ref: ../components/parameters/codes.yaml
   responses:
     '200':
       description: La liste des iris

@@ -9,6 +9,7 @@ get:
     - $ref: ../components/parameters/SearchQueryParam-sort.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/departmentCodes.yaml
   responses:
     '200':
       description: La liste des quartiers
