@@ -9,6 +9,9 @@ properties:
   prospectId:
     type: string
     format: uuid
+  organizationId:
+    type: integer
+    format: int64
   type:
     type: string
     enum:

@@ -17,7 +17,8 @@ Thank you for investing your time in contributing to our project! Any contributi
 Congratulations :tada::tada: The Yanport team thanks you :sparkles:. 
 
 ## Testing
-
+1. Générer la documentation
 ```shell
 npx @redocly/openapi-cli  bundle src/openapi.yaml -o dist/openapi.yaml
 ```
+2. Valider les changements, par exemple en utilisant https://editor.swagger.io/ 

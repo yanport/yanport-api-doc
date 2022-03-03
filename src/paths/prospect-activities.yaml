@@ -35,6 +35,7 @@ get:
     - $ref: ../components/parameters/SearchQueryParam-sort.yaml
     - $ref: ../components/parameters/ProspectIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/organizationId.yaml
     - $ref: ../components/parameters/dateMin.yaml
     - $ref: ../components/parameters/dateMax.yaml
     - $ref: ../components/parameters/types.yaml
