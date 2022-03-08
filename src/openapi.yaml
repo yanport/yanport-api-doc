@@ -88,10 +88,6 @@ info:
   contact:
     email: dev@yanport.com
 tags:
-  - name: Modele-annonce
-    x-displayName: Annonce
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Ad" />
   - name: Modele-bien
     x-displayName: Bien
     description: |
@@ -147,7 +143,6 @@ tags:
 x-tagGroups:
   - name: MOTEUR DE RECHERCHE
     tags:
-      - Les annonces (ancien/neuf)
       - Les biens (ancien/neuf)
       - Les biens similaires (ancien/neuf)
       - Les programmes (neuf)
@@ -194,7 +189,6 @@ x-tagGroups:
       - Encadrement des loyers
   - name: MODELES
     tags:
-      - Modele-annonce
       - Modele-bien
       - Modele-programme
       - Modele-agglomeration
@@ -209,20 +203,10 @@ x-tagGroups:
       - Modele-prospect
       - Modele-activite-de-prospection
 paths:
-  /ads:
-    $ref: paths/ads.yaml
-  '/ads/{id}':
-    $ref: 'paths/ads@{id}.yaml'
-  /ads/ids:
-    $ref: paths/ads@ids.yaml
-  /ads/urls:
-    $ref: paths/ads@urls.yaml
   /properties:
     $ref: paths/properties.yaml
   '/properties/{id}':
     $ref: 'paths/properties@{id}.yaml'
-  '/properties/{id}/ads':
-    $ref: 'paths/properties@{id}@ads.yaml'
   /properties/ids:
     $ref: paths/properties@ids.yaml
   /similar-properties:
@@ -231,8 +215,6 @@ paths:
     $ref: paths/programs.yaml
   '/programs/{id}':
     $ref: 'paths/programs@{id}.yaml'
-  '/programs/{id}/ads':
-    $ref: 'paths/programs@{id}@ads.yaml'
   /programs/ids:
     $ref: paths/programs@ids.yaml
   /properties/count:
