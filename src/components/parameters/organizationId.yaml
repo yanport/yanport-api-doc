@@ -1,0 +1,6 @@
+name: organizationId
+in: query
+description: Identifiant de l'organisation
+schema:
+  type: integer
+  format: int64
