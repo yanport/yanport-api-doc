@@ -17,11 +17,17 @@ def field (status):
   else:
     return { "value": "Deploy failed"}
 
-slack_token = sys.argv[1]
-start_timestamp = sys.argv[2]
-job_status = sys.argv[3]
-job_id = sys.argv[4]
-push_author = sys.argv[5]
+def safe_list_get (l, idx, default):
+  try:
+    return l[idx]
+  except IndexError:
+    return default
+
+slack_token = safe_list_get(sys.argv, 1, "unknown token")
+start_timestamp = safe_list_get(sys.argv, 2, 0)
+job_status = safe_list_get(sys.argv, 3, "unknown status")
+job_id = safe_list_get(sys.argv, 4, "unknown workflow")
+push_author = safe_list_get(sys.argv, 5, "unknown actor")
 
 gmtime = time.gmtime(int(time.time()) - int(start_timestamp))
 duration = '{} min {} sec'.format(str(gmtime.tm_hour * 60 + gmtime.tm_min), str(gmtime.tm_sec))
