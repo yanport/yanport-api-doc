@@ -9,3 +9,6 @@ properties:
   radius:
     type: string
     default: 10m
+  approximate:
+    type: boolean
+    default: false

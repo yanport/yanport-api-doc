@@ -235,3 +235,5 @@ properties:
   updateDateMax:
     type: string
     format: date-time
+  geoSearchQuery:
+    $ref: ./GeoSearchQuery.yaml
