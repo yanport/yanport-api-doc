@@ -20,6 +20,10 @@ properties:
     type: array
     items:
       $ref: ./CrawlSource.yaml
+  excludedCrawlSources:
+    type: array
+    items:
+      $ref: ./CrawlSource.yaml
   active:
     type: boolean
   dealerTypes:
