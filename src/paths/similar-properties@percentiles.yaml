@@ -15,9 +15,6 @@ get:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/minDocCount.yaml
     - $ref: ../components/parameters/cityIds.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
     - $ref: ../components/parameters/marketingTypes.yaml
     - $ref: ../components/parameters/propertyTypes.yaml
     - $ref: ../components/parameters/price.yaml
@@ -27,6 +24,11 @@ get:
     - $ref: ../components/parameters/SimilarPropertyQuery-roomCount.yaml
     - $ref: ../components/parameters/SimilarPropertyPercentileQuery-field.yaml
     - $ref: ../components/parameters/percentiles.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
       description: Les percentiles

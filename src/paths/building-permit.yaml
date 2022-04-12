@@ -8,8 +8,6 @@ get:
     - $ref: ../components/parameters/SearchQueryParam-size.yaml
     - $ref: ../components/parameters/SearchQueryParam-sort.yaml
     - $ref: ../components/parameters/q.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-permitNumbers.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-updateDateMin.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-updateDateMax.yaml
@@ -39,6 +37,11 @@ get:
     - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantZipCodes.yaml
     - $ref: ../components/parameters/existingFields.yaml
     - $ref: ../components/parameters/missingFields.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
       description: La liste des permis de construire

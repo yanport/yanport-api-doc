@@ -7,10 +7,12 @@ get:
     - $ref: ../components/parameters/SearchQueryParam-from.yaml
     - $ref: ../components/parameters/SearchQueryParam-size.yaml
     - $ref: ../components/parameters/SearchQueryParam-sort.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
     - $ref: ../components/parameters/inseeCodes.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
       description: Liste des parcelles trouvées

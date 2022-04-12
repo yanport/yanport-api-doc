@@ -51,9 +51,11 @@ get:
     - $ref: ../components/parameters/ProgramSearchQuery-deliveryDateMax.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-lotCountMin.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-lotCountMax.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
       description: Le nombre de programmes
