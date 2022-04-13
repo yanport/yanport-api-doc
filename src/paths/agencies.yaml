@@ -22,14 +22,16 @@ get:
     - $ref: ../components/parameters/AgencySearchQuery-siren.yaml
     - $ref: ../components/parameters/AgencySearchQuery-siret.yaml
     - $ref: ../components/parameters/AgencySearchQuery-cityIds.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lat.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-lng.yaml
-    - $ref: ../components/parameters/GeoSearchQuery-radius.yaml
     - $ref: ../components/parameters/AgencySearchQuery-salePropertyCountMin.yaml
     - $ref: ../components/parameters/AgencySearchQuery-salePropertyCountMax.yaml
     - $ref: ../components/parameters/AgencySearchQuery-rentPropertyCountMin.yaml
     - $ref: ../components/parameters/AgencySearchQuery-rentPropertyCountMax.yaml
     - $ref: ../components/parameters/AgencySearchQuery-active.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
       description: Les agences trouvées
