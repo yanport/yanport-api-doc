@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Les biens (ancien/neuf)
+  summary: Récupérer des biens (URL)
+  description: Récupérer des biens par leurs annonces
+  parameters:
+    - name: url
+      in: query
+      required: true
+      style: form
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Le bien
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Property.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

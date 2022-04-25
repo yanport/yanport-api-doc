@@ -209,6 +209,8 @@ paths:
     $ref: 'paths/properties@{id}.yaml'
   /properties/ids:
     $ref: paths/properties@ids.yaml
+  /properties/ads/urls:
+    $ref: paths/properties@ads@urls.yaml
   /similar-properties:
     $ref: paths/similar-properties.yaml
   /programs:
