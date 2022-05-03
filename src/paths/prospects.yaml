@@ -43,6 +43,7 @@ get:
     - $ref: ../components/parameters/doneDateMin.yaml
     - $ref: ../components/parameters/doneDateMax.yaml
     - $ref: ../components/parameters/savedSearchIds.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
   responses:
     '200':
       description: Les prospects correspondant
