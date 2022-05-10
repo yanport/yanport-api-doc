@@ -1,12 +1,17 @@
 type: object
 properties:
   from:
+    description: Offset à partir du premier résultat
     type: integer
-    default: 0
     minimum: 0
+    maximum: 2000
+    default: 0
   size:
+    description: Nombre de résultats
     type: integer
-    default: 20
+    minimum: 0
     maximum: 1000
+    default: 20
   sort:
+    description: Trier par
     type: string
