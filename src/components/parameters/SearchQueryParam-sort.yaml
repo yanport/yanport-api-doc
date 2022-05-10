@@ -1,5 +1,0 @@
-name: sort
-in: query
-description: Trier par
-schema:
-  type: string

@@ -9,9 +9,10 @@ get:
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMin.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMax.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-skus.yaml
-    - $ref: ../components/parameters/SearchQueryParam-from.yaml
-    - $ref: ../components/parameters/SearchQueryParam-size.yaml
-    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - name: searchQueryParam
+        in: query
+        schema:
+          $ref: ../components/schemas/SearchQueryParam.yaml
   responses:
     '200':
       description: Liste des transactions d'API trouvées

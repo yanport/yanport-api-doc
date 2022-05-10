@@ -4,9 +4,10 @@ get:
   summary: Rechercher des villes
   description: Récupérer des villes selon différents critères
   parameters:
-    - $ref: ../components/parameters/SearchQueryParam-from.yaml
-    - $ref: ../components/parameters/SearchQueryParam-size.yaml
-    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - name: searchQueryParam
+        in: query
+        schema:
+          $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/zipCodes.yaml
     - $ref: ../components/parameters/CitySearchQuery-inseeCodes.yaml

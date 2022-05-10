@@ -4,9 +4,10 @@ get:
   summary: Récupérer des parcelles
   description: Retourne les parcelles correspondantes aux critères demandés
   parameters:
-    - $ref: ../components/parameters/SearchQueryParam-from.yaml
-    - $ref: ../components/parameters/SearchQueryParam-size.yaml
-    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - name: searchQueryParam
+        in: query
+        schema:
+          $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/inseeCodes.yaml
     - name: geoSearchQueryParam
       in: query

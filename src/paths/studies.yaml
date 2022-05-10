@@ -58,9 +58,10 @@ get:
   summary: Rechercher des études
   description: Rechercher des études selon plusieurs critères
   parameters:
-    - $ref: ../components/parameters/SearchQueryParam-from.yaml
-    - $ref: ../components/parameters/SearchQueryParam-size.yaml
-    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - name: searchQueryParam
+        in: query
+        schema:
+          $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-externalUserIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml

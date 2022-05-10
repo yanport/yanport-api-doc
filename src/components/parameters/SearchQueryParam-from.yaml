@@ -1,9 +1,0 @@
-name: from
-in: query
-description: Offset à partir du premier résultat
-schema:
-  type: integer
-  minimum: 0
-  maximum: 2000
-  default: 0
-example: 0

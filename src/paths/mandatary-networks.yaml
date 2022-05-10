@@ -9,9 +9,10 @@ get:
       #### Rechercher le réseau Efficity
         /mandatary-networks?q=efficity'
   parameters:
-    - $ref: ../components/parameters/SearchQueryParam-from.yaml
-    - $ref: ../components/parameters/SearchQueryParam-size.yaml
-    - $ref: ../components/parameters/SearchQueryParam-sort.yaml
+    - name: searchQueryParam
+        in: query
+        schema:
+          $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/MandataryNetworkSearchQuery-siren.yaml
   responses:
