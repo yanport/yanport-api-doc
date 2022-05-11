@@ -59,9 +59,9 @@ get:
   description: Rechercher des études selon plusieurs critères
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-externalUserIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml

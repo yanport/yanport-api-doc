@@ -1,0 +1,6 @@
+name: hardBoundMin
+in: query
+description: Tronque les résultats inférieurs à cette valeur
+schema:
+  type: number
+  format: double

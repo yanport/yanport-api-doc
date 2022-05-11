@@ -5,9 +5,9 @@ get:
   description: Récupérer des quartiers selon différents critères
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/cityIds.yaml
     - $ref: ../components/parameters/deptCodes.yaml

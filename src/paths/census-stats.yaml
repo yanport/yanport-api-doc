@@ -5,9 +5,9 @@ get:
   description: Récupérer des statistiques socioéconomiques par zones géographiques (source INSEE)
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/zone.yaml
     - $ref: ../components/parameters/censusYears.yaml

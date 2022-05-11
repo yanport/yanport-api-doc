@@ -2,5 +2,5 @@ name: extendedBoundMax
 in: query
 description: Garantit un intervalle maximale
 schema:
-  type: integer
-  format: int64
+  type: number
+  format: double

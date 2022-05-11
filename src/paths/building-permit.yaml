@@ -5,9 +5,9 @@ get:
   description: Récupérer des permis de construire selon différents critères (source SITADEL)
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-permitNumbers.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-updateDateMin.yaml

@@ -35,9 +35,9 @@ get:
   description: Rechercher des utilisateurs
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - name: username
       in: query
