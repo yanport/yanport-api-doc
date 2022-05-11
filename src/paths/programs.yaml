@@ -30,9 +30,9 @@ get:
         /programs?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130&sort=address.location:geo:48.8956:2.2827
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-name.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-description.yaml
     - $ref: ../components/parameters/crawlSources.yaml

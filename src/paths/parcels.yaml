@@ -5,9 +5,9 @@ get:
   description: Retourne les parcelles correspondantes aux critères demandés
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/inseeCodes.yaml
     - name: geoSearchQueryParam
       in: query

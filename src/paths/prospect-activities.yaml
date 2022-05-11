@@ -31,9 +31,9 @@ get:
   description: Récupérer des activités de prospection
   parameters:
     - name: searchQueryParam
-        in: query
-        schema:
-          $ref: ../components/schemas/SearchQueryParam.yaml
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/ProspectIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
     - $ref: ../components/parameters/organizationId.yaml
