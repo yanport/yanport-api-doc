@@ -2,9 +2,8 @@ get:
   tags:
     - 'Estimation (prix, loyer, etc)'
   summary: Estimer un bien
-  description: >-
-    Permet d'estimer un bien précisemment selon ses caractéristiques et sa
-    localisation. (Prix, Rendement locatif, Marge de négociation)
+  description: "Estimation précise du prix, loyer, rendement locatif ou de la marge de négociation selon les caractéristiques du bien et sa
+    localisation."
   x-code-samples:
     - lang: curl
       source:
@@ -12,9 +11,8 @@ get:
   parameters:
     - name: field
       in: query
-      description: >-
-        Champ à estimer, PRICE == Prix, GROSS_RENTAL_YIELD == Rendement locatif
-        brut, NEGOTIATION_MARGIN == Marge de négociation
+      description: "Champ à estimer, PRICE => Prix ou loyer, GROSS_RENTAL_YIELD => Rendement locatif brut (maison, 
+      appartement et parking), NEGOTIATION_MARGIN => Marge de négociation (maison et appartement uniquement)."
       schema:
         type: string
         enum:
@@ -24,7 +22,7 @@ get:
       required: true
     - name: marketingType
       in: query
-      description: 'Type de marché (vente, location)'
+      description: "Type de marché (vente, location). Uniquement vente pour les terrains."
       schema:
         type: string
         enum:
@@ -33,32 +31,42 @@ get:
       required: true
     - name: propertyType
       in: query
-      description: 'Type de bien (maison, appartement, terrain).
-        LAND uniquement avec field=PRICE et marketingType=SALE'
+      description: "Type de bien (maison, appartement, terrain, parking)."
       schema:
         type: string
         enum:
           - HOUSE
           - APARTMENT
           - LAND
+          - PARKING
       required: true
+    - name: propertySubType
+      in: query
+      description: "Sous-type de bien (parking uniquement)."
+      schema:
+        type: string
+        enum:
+          - PARKING_SPOT
+          - BOX
+          - GARAGE
+        default: PARKING_SPOT
     - name: lat
       in: query
-      description: Latitude du bien (coordonées GPS)
+      description: "Latitude du bien (coordonées GPS)."
       schema:
         type: number
         format: double
       required: true
     - name: lng
       in: query
-      description: Longitude du bien (coordonées GPS)
+      description: "Longitude du bien (coordonées GPS)."
       schema:
         type: number
         format: double
       required: true
     - name: surface
       in: query
-      description: Surface du bien (ou du terrain si propertyType = LAND)
+      description: "Surface du bien (ou du terrain si propertyType = LAND)."
       schema:
         type: number
         format: double
@@ -66,47 +74,47 @@ get:
       required: true
     - name: roomCount
       in: query
-      description: Nombre de pièces du bien
+      description: "Nombre de pièces du bien."
       schema:
         type: integer
         minimum: 1
     - name: landSurface
       in: query
-      description: Surface de la parcelle (maison uniquement)
+      description: "Surface de la parcelle (maison uniquement)."
       schema:
         type: number
         format: double
     - name: newBuild
       in: query
-      description: Construction neuve (vente uniquement)
+      description: "Construction neuve (vente uniquement, appartement et maison uniquement)."
       schema:
         type: boolean
     - name: furnished
       in: query
-      description: Indique si le bien d'intérêt est meublé ou pas (location uniquement)
+      description: "Indique si le bien d'intérêt est meublé ou pas (location uniquement)."
       schema:
         type: boolean
     - name: constructionYear
       in: query
-      description: L'année de construction
+      description: "L'année de construction (maison et terrain uniquement)."
       schema:
         type: number
         format: integer
     - name: floor
       in: query
-      description: Etage du bien (appartement uniquement)
+      description: "Etage du bien (appartement uniquement)."
       schema:
         type: number
         format: integer
         minimum: 0
     - name: floorCount
       in: query
-      description: Nombre d'étages du bien (maison uniquement)
+      description: "Nombre d'étages du bien (maison uniquement)."
       schema:
         type: integer
     - name: generalState
       in: query
-      description: Etat général du bien.
+      description: "Etat général du bien (maison et appartement uniquement)."
       schema:
         type: string
         enum:
@@ -118,50 +126,50 @@ get:
           - NEW
     - name: balconyCount
       in: query
-      description: Nombre de balcons (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      description: "Nombre de balcons (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)."
       schema:
         type: integer
     - name: parkingCount
       in: query
-      description: Nombre de places de parking (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      description: "Nombre de places de parking (0 ou 1, fixé à 1 si la valeur indiquée est supérieure). Maison ou appartement uniquement."
       schema:
         type: integer
     - name: terraceCount
       in: query
-      description: Nombre de terrasses (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      description: "Nombre de terrasses (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)."
       schema:
         type: integer
     - name: swimmingPoolCount
       in: query
-      description: Nombre de piscines (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      description: "Nombre de piscines (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)."
       schema:
         type: integer
     - name: cellarCount
       in: query
-      description: Nombre de caves (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      description: "Nombre de caves (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)."
       schema:
         type: integer
     - name: gardenCount
       in: query
-      description: Nombre de jardins (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)
+      description: "Nombre de jardins (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)."
       schema:
         type: integer
     - name: date
       in: query
-      description: Date à laquelle on souhaite réaliser l'estimation
+      description: "Date à laquelle on souhaite réaliser l'estimation."
       schema:
         type: string
         format: date-time
         default: Date courante
     - name: price
       in: query
-      description: Prix du bien (marge de négociation uniquement)
+      description: "Prix du bien (marge de négociation uniquement)."
       schema:
         type: number
         format: double
   responses:
     '200':
-      description: 'La valeur du champ estimé (Prix, etc)'
+      description: 'La valeur du champ estimé (Prix, etc).'
       content:
         application/json:
           schema:
