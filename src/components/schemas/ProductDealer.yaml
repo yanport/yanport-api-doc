@@ -1,0 +1,9 @@
+type: object
+properties:
+  type:
+    $ref: ./Dealer-Type.yaml
+  dealerIds:
+    type: array
+    items:
+      type: number
+      format: int54
