@@ -1,0 +1,12 @@
+type: object
+properties:
+  active:
+    type: boolean
+  admin:
+    type: boolean
+  roles:
+    type: array
+    items:
+      $ref: ./User-Role.yaml
+  emailChecked:
+    type: boolean

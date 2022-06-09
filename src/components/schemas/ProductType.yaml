@@ -1,0 +1,6 @@
+type: string
+enum:
+  - AGENT_360
+  - ADB_360
+  - DATA_360
+  - API

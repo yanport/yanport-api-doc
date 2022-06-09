@@ -1,0 +1,14 @@
+type: string
+enum:
+  - ALERTS
+  - ANALYTICS
+  - DASHBOARD
+  - PROPERTIES
+  - PROSPECTS
+  - STUDIES
+  - BILLING
+  - ESTIMATES
+  - MAPS
+  - INVESTMENT
+  - PROGRAMS
+  - MARKET_STUDIES

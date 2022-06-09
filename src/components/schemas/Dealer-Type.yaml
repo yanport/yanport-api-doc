@@ -3,3 +3,4 @@ enum:
   - PRIVATE
   - AGENCY
   - MANDATARY
+example: AGENCY

@@ -49,28 +49,31 @@ get:
       description: Email de l'utilisateur
       schema:
         type: string
-    - name: externalId
+    - name: externalIds
       in: query
-      description: TODO
+      description: Identifiants externes de l'utilisateur
       schema:
-        type: string
+        type: array
+        items:
+          type: string
+          pattern: '^CLIENT:.*$'
+        example: CLIENT:1234
     - name: organizationId
       in: query
       description: Identifiant de l'organisation
       schema:
         type: integer
         format: int64
-    - name: mandataryNetworkIds
+    - name: dealerTypes
       in: query
-      description: Identifiants de réseaux mandataires
+      description: Types de vendeur (agence, mandataire)
       schema:
         type: array
         items:
-          type: integer
-          format: int64
-    - name: agencyIds
+          $ref: ../components/schemas/Dealer-Type.yaml
+    - name: dealerIds
       in: query
-      description: Identifiants d'agences
+      description: Identifiants du vendeur
       schema:
         type: array
         items:
@@ -81,9 +84,11 @@ get:
       description: Filter les utilisateurs actifs ou non
       schema:
         type: boolean
-    - name: firstConnection
+    - name: onBoarded
       in: query
-      description: Filtrer les utilisateurs s'étant deja connectés à l'application ou non
+      description: >-
+        Filtrer les utilisateurs s'étant deja connectés à l'application ou
+        non
       schema:
         type: boolean
     - name: admin
@@ -91,6 +96,19 @@ get:
       description: Filter les utilisateurs administrateurs ou non
       schema:
         type: boolean
+    - name: marketingTypes
+      in: query
+      schema:
+        type: array
+        items:
+          $ref: ../components/schemas/MarketingType.yaml
+    - name: productTypes
+      in: query
+      description: 'Types de produit (Agent 360, Data 360)'
+      schema:
+        type: array
+        items:
+          $ref: ../components/schemas/ProductType.yaml
   responses:
     '200':
       description: Les utilisateurs trouvés

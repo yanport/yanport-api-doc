@@ -1,0 +1,18 @@
+type: object
+properties:
+  email:
+    type: string
+    format: email
+  title:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  mobilePhoneNumber:
+    type: string
+  officePhoneNumber:
+    type: string
+  avatarUrl:
+    type: string
+    format: uri

@@ -1,0 +1,21 @@
+type: object
+properties:
+  cities:
+    type: array
+    items:
+      type: integer
+      format: int64
+  zipCodes:
+    type: array
+    items:
+      type: string
+  departments:
+    type: array
+    items:
+      type: string
+  quarters:
+    type: array
+    items:
+      type: string
+  locked:
+    type: boolean

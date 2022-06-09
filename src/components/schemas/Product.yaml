@@ -1,0 +1,14 @@
+type: object
+properties:
+  type:
+    $ref: ./ProductType.yaml
+  marketingTypes:
+    $ref: ./MarketingType.yaml
+  modules:
+    $ref: ./Module.yaml
+  sources:
+    $ref: ./Source.yaml
+  commercialZone:
+    $ref: ./CommercialZone.yaml
+  dealer:
+    $ref: ./ProductDealer.yaml
