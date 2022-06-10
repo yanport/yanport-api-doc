@@ -147,6 +147,10 @@ properties:
   surfaceMax:
     type: number
     format: double
+  roomCountMin:
+    type: integer
+  roomCountMax:
+    type: integer
   priceMin:
     type: number
     format: double
