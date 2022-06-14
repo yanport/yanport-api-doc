@@ -14,6 +14,11 @@ get:
     - $ref: ../components/parameters/deptCodes.yaml
     - $ref: ../components/parameters/irisTypes.yaml
     - $ref: ../components/parameters/codes.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
       description: La liste des iris
