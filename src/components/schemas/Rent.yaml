@@ -1,0 +1,6 @@
+type: object
+properties:
+  estimate:
+    $ref: ./Estimate-rent.yaml
+  stats:
+    $ref: ./Estimate-stats.yaml

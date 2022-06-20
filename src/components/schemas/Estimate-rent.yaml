@@ -1,0 +1,6 @@
+type: object
+properties:
+  price:
+    $ref: ./EstimationResponse.yaml
+  marketingDuration:
+    $ref: ./EstimationResponse.yaml

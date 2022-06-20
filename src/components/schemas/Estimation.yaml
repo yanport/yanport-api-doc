@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  userId:
+    type: integer
+    format: int64
+  organizationId:
+    type: integer
+    format: int64
+  property:
+    $ref: ./Property.yaml
+  creationDate:
+    type: string
+    format: date-time
+  estimates:
+    type: array
+    items:
+      type: object
+      properties:
+        reference:
+          type: string
+          format: uuid
+        sale:
+          $ref: ./Sale.yaml
+        rent:
+          $ref: ./Rent.yaml

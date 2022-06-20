@@ -1,0 +1,10 @@
+type: object
+properties:
+  onMarketPropertyPoints:
+    type: array
+    items:
+      $ref: ./PropertyPoint.yaml
+  soldPropertyPoints:
+    type: array
+    items:
+      $ref: ./PropertyPoint.yaml

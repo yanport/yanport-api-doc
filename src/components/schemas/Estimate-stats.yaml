@@ -1,0 +1,8 @@
+type: object
+properties:
+  similarPropertyPoints:
+    $ref: ./SimilarPropertyPoints.yaml
+  propertiesDuration:
+    $ref: ./Percentiles.yaml
+  similarPropertiesPrice:
+    $ref: ./Percentiles.yaml
