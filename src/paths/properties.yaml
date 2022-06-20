@@ -57,3 +57,30 @@ get:
       $ref: ../components/responses/BadRequest.yaml
     '500':
       $ref: ../components/responses/InternalServerError.yaml
+post:
+  tags:
+    - Les biens (ancien/neuf)
+  summary: Ajouter un bien
+  description: Retourne le bien créé avec son identiant, l'horodatage et son adresse complétée
+  requestBody:
+    required: true
+    description: Formulaire pour la création d'un bien (de source CLIENT)
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            properties:
+              $ref: ../components/schemas/Property.yaml
+  responses:
+    '200':
+      description: Le bien a été créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Property.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
