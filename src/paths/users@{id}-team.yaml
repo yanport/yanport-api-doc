@@ -1,7 +1,7 @@
 get:
   tags:
     - Utilisateurs
-  summary: Récupérer les utilisateurs par agence
+  summary: Récupérer les utilisateurs par agence(s)
   description: Retourne les utilisateurs correspondant
   parameters:
     - name: id
