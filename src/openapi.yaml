@@ -297,6 +297,8 @@ paths:
     $ref: paths/users.yaml
   '/users/{id}':
     $ref: 'paths/users@{id}.yaml'
+  '/users/{id}/team':
+    $ref: 'paths/users@{id}-team.yaml'
   /studies:
     $ref: paths/studies.yaml
   '/studies/{id}':

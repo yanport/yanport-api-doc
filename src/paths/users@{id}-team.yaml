@@ -1,0 +1,32 @@
+get:
+  tags:
+    - Utilisateurs
+  summary: Récupérer les utilisateurs par agence
+  description: Retourne les utilisateurs correspondant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'utilisateur
+      required: true
+      schema:
+        type: integer
+        format: int64
+    - name: agencyIds
+      in: query
+      description: Liste d'identifiants d'agences
+      schema:
+        type: array
+        items:
+          type: integer
+          format: int64
+  responses:
+    '200':
+      description: L'utilisateur créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
