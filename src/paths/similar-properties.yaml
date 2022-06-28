@@ -8,6 +8,7 @@ get:
     - $ref: ../components/parameters/cityIds.yaml
     - $ref: ../components/parameters/marketingTypes.yaml
     - $ref: ../components/parameters/propertyTypes.yaml
+    - $ref: ../components/parameters/propertySubTypes.yaml
     - $ref: ../components/parameters/price.yaml
     - $ref: ../components/parameters/surface.yaml
     - $ref: ../components/parameters/publicationDateMin.yaml

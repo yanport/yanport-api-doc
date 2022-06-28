@@ -1,0 +1,22 @@
+name: propertySubTypes
+in: query
+description: Sous Types de bien
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - CHALET
+      - MANSION
+      - CASTLE
+      - HOMESTEAD
+      - LOFT
+      - DUPLEX
+      - TRIPLEX
+      - SHOP
+      - OFFICE
+      - BOX
+      - GARAGE
+      - PARKING_SPOT
+

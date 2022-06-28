@@ -64,6 +64,10 @@ properties:
     type: array
     items:
       $ref: ./PropertyType.yaml
+  propertySubTypes:
+    type: array
+    items:
+      $ref: ./PropertySubType.yaml
   roomCounts:
     type: array
     items:
