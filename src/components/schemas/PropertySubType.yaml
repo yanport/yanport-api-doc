@@ -1,14 +1,14 @@
 type: string
-  enum:
-    - CHALET
-    - MANSION
-    - CASTLE
-    - HOMESTEAD
-    - LOFT
-    - DUPLEX
-    - TRIPLEX
-    - SHOP
-    - OFFICE
-    - BOX
-    - GARAGE
-    - PARKING_SPOT
+enum:
+  - CHALET
+  - MANSION
+  - CASTLE
+  - HOMESTEAD
+  - LOFT
+  - DUPLEX
+  - TRIPLEX
+  - SHOP
+  - OFFICE
+  - BOX
+  - GARAGE
+  - PARKING_SPOT
