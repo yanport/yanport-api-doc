@@ -15,13 +15,13 @@ properties:
   type:
     type: string
     enum:
-      - Qualification
-      - Appel
-      - Email
+      - QUALIFICATION
+      - CALL
+      - MAIL
       - SMS
-      - Rendez-vous
-      - Tâche
-      - Note
+      - MEETING
+      - TASK
+      - NOTE
   date:
     type: string
     format: date
