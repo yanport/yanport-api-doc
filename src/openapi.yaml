@@ -251,6 +251,8 @@ paths:
     $ref: paths/properties@estimate.yaml
   /maps:
     $ref: paths/maps.yaml
+  /maps/stock:
+    $ref: paths/maps@stock.yaml
   /agglomerations:
     $ref: paths/agglomerations.yaml
   '/agglomerations/{id}':
