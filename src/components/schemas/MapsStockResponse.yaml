@@ -1245,9 +1245,4 @@ properties:
                 - DEPARTMENT
               example: AGGLOMERATION
             count:
-              type: object
-              properties:
-                count:
-                  type: integer
-                  format: int64
-                  example: 64
+              $ref: ./CountResponse.yaml
