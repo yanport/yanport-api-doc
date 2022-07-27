@@ -124,6 +124,34 @@ get:
           - GOOD
           - VERY GOOD
           - NEW
+    - name: energyConsumptionLetter
+      in: query
+      description: "Classe de diagnostic de performance énergétique (DPE) (maison et appartement uniquement).
+      Si energyConsumptionLetter n'est pas renseignée on applique la valeur de greenhouseGasConsumptionLetter. Si aucune des deux n'est renseignée les valeurs restent vides"
+      schema:
+        type: string
+        enum:
+          - A
+          - B
+          - C
+          - D
+          - E
+          - F
+          - G
+    - name: greenhouseGasConsumptionLetter
+      in: query
+      description: "Classe d'émission de gaz à effet de serre (GES) (maison et appartement uniquement). 
+      Si greenhouseGasConsumptionLetter n'est pas renseignée on applique la valeur de energyConsumptionLetter. Si aucune des deux n'est renseignée les valeurs restent vides"
+      schema:
+        type: string
+        enum:
+          - A
+          - B
+          - C
+          - D
+          - E
+          - F
+          - G
     - name: balconyCount
       in: query
       description: "Nombre de balcons (0 ou 1, fixé à 1 si la valeur indiquée est supérieure)."
