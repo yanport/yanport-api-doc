@@ -126,8 +126,8 @@ get:
           - NEW
     - name: energyConsumptionLetter
       in: query
-      description: "Lettre de diagnostic de performance énergétique (DPE) (maison et appartement uniquement).
-      La classe GES est mise par default si DPE n'est pas renseignée."
+      description: "Classe de diagnostic de performance énergétique (DPE) (maison et appartement uniquement).
+      Si energyConsumptionLetter n'est pas renseignée on applique la valeur de greenhouseGasConsumptionLetter. Si aucune des deux n'est renseignée les valeurs restent vides"
       schema:
         type: string
         enum:
@@ -140,8 +140,8 @@ get:
           - G
     - name: greenhouseGasConsumptionLetter
       in: query
-      description: "Classe gaz à effet de serre (GES) (maison et appartement uniquement). 
-      La lettre DPE est mise par default si GES n'est pas renseignée."
+      description: "Classe d'émission de gaz à effet de serre (GES) (maison et appartement uniquement). 
+      Si greenhouseGasConsumptionLetter n'est pas renseignée on applique la valeur de energyConsumptionLetter. Si aucune des deux n'est renseignée les valeurs restent vides"
       schema:
         type: string
         enum:
