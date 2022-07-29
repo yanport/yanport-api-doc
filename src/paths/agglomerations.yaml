@@ -13,7 +13,7 @@ get:
     - $ref: ../components/parameters/codes.yaml
     - $ref: ../components/parameters/types.yaml
     - $ref: ../components/parameters/regionCodes.yaml
-    - $ref: ../components/parameters/deptCodes.yaml
+    - $ref: ../components/parameters/departmentCodes.yaml
     - name: geoSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de biens
