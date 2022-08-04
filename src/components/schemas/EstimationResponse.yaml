@@ -57,3 +57,54 @@ properties:
               '90':
                 type: number
                 example: 13.359326513857988
+  explain:
+    type: object
+    properties:
+      baseValue:
+        type: number
+        description: Valeur de base pour le calcul des valeurs de Shapley
+        example: 13262.14
+      reliability:
+        type: object
+        properties:
+          value:
+            type: integer
+            description: >-
+              Score de fiabilité des contributions des variables (0 = non fiable, 100 = très fiable)
+            format: int32
+            minimum: 0
+            maximum: 100
+            example: 78
+          status:
+            type: string
+            description: Statut du calcul du score de fiabilité
+            enum:
+              - OK
+              - IRIS_ID_NOT_FOUND
+      features:
+        type: object
+        properties:
+          featureName:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 4.046371444228836
+              status:
+                type: string
+                description: Statut pour savoir si la variable est prise en compte correctement
+                enum:
+                  - OK
+                  - NOT_ENOUGH_INFO_IN_TRAINING_SET
+                  - NON_DISCRIMINATING_FEATURE
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "0"

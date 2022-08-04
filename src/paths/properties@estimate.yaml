@@ -195,6 +195,11 @@ get:
       schema:
         type: number
         format: double
+    - name: explain
+      in: query
+      description: "Obtenir l'explication des variables (maison et appartement uniquement)."
+      schema:
+        type: boolean
   responses:
     '200':
       description: 'La valeur du champ estimé (Prix, etc).'
