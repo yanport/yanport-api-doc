@@ -77,7 +77,7 @@ properties:
                 minimum: -100
                 maximum: 100
                 example: 4.046371444228836
-              properlyAccountedFor:
+              handled:
                 type: boolean
                 description: Indique si la variable est correctement prise en compte par le modèle
               imputed:
