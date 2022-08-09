@@ -197,7 +197,8 @@ get:
         format: double
     - name: explain
       in: query
-      description: "Obtenir l'explication des variables (maison et appartement uniquement)."
+      description: "Obtenir l'explication des variables (maison et appartement uniquement).
+      Si la fiabilité des contributions est trop faible, cet argument est ignoré."
       schema:
         type: boolean
   responses:
