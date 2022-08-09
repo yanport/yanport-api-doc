@@ -77,13 +77,9 @@ properties:
                 minimum: -100
                 maximum: 100
                 example: 4.046371444228836
-              contribComment:
-                type: string
-                description: Commentaire pour savoir si la variable est prise en compte correctement
-                enum:
-                  - IMPACTING_FEATURE
-                  - NOT_ENOUGH_INFO_IN_TRAINING_SET
-                  - NON_DISCRIMINATING_FEATURE
+              properlyAccountedFor:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
               imputed:
                 type: boolean
                 description: Indique si la variable est imputée
