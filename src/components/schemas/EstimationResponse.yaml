@@ -62,12 +62,12 @@ properties:
     properties:
       baseValue:
         type: number
-        description: Valeur de base pour le calcul des valeurs de Shapley
-        example: 13262.14
+        description: Valeur de base pour le calcul des contributions
+        example: 10751.97
       features:
         type: object
         properties:
-          featureName:
+          constructionYear:
             type: object
             properties:
               contribInPercent:
@@ -76,14 +76,324 @@ properties:
                 description: Contribution de la variable en pourcentage
                 minimum: -100
                 maximum: 100
-                example: 4.046371444228836
+                example: -1.80
               handled:
                 type: boolean
                 description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
               imputed:
                 type: boolean
                 description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "1911"
+          generalState:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: -0.55
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "NORMAL"
+          balconyCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: -0.22
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
               value:
                 type: string
                 description: Valeur de la variable
                 example: "0"
+          cellarCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: false,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "0"
+          gardenCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: false,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "0"
+          parkingCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: false,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "0"
+          swimmingPoolCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: false,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "0"
+          terraceCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: -0.19
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "0"
+          lat:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "48.875553"
+          floor:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 1.65
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: false,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "5"
+          lng:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: false,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "2.357353"
+          newBuild:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: false,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "false"
+          roomCount:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: -1.88
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: false,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "1"
+          surface:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 2.44
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: false,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "29.83"
+          date:
+            type: object
+            properties:
+              contribInPercent:
+                type: number
+                format: double
+                description: Contribution de la variable en pourcentage
+                minimum: -100
+                maximum: 100
+                example: 0.0
+              handled:
+                type: boolean
+                description: Indique si la variable est correctement prise en compte par le modèle
+                example: true,
+              imputed:
+                type: boolean
+                description: Indique si la variable est imputée
+                example: true,
+              value:
+                type: string
+                description: Valeur de la variable
+                example: "2022-08-17T08:19:38.162429"
