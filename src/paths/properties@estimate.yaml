@@ -195,6 +195,12 @@ get:
       schema:
         type: number
         format: double
+    - name: explain
+      in: query
+      description: "Obtenir l'explication des variables (maison et appartement uniquement).
+      Si l'interprétabilité n'est pas jugée suffisament fiable cet argument est ignoré."
+      schema:
+        type: boolean
   responses:
     '200':
       description: 'La valeur du champ estimé (Prix, etc).'
