@@ -198,7 +198,7 @@ get:
     - name: explain
       in: query
       description: "Obtenir l'explication des variables (maison et appartement uniquement).
-      Si la fiabilité des contributions est trop faible, cet argument est ignoré."
+      Si l'interprétabilité n'est pas jugée suffisament fiable cet argument est ignoré."
       schema:
         type: boolean
   responses:
