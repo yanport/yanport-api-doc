@@ -1,0 +1,6 @@
+name: reliability
+in: query
+description: Renvoie un score de fiabilité entre 0 et 100, avec le score de chaque méthode utilisée.
+schema:
+  type: boolean
+  default: false

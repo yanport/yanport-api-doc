@@ -50,6 +50,8 @@ get:
         format: double
       example: 7.5
       required: true
+    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
+
   responses:
     '200':
       description: GeoJson de données géographiques
