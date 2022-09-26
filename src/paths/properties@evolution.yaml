@@ -19,6 +19,7 @@ get:
     - $ref: ../components/parameters/ReliableQuery-reliability.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMin.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/PropertyHistogramQuery-forecasting.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens

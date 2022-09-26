@@ -1,0 +1,5 @@
+name: forecasting
+in: query
+description: Prolonger la courbe DVF à partir des annonces
+schema:
+  type: boolean
