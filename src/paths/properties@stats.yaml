@@ -5,6 +5,7 @@ get:
   description: Permet de récupérer les statistiques des biens selon plusieurs critères.
   parameters:
     - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
+    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens

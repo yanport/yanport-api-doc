@@ -4,6 +4,16 @@ properties:
     type: integer
     format: int64
     example: 7568
+  reliability:
+    type: object
+    items:
+      $ref: ./ReliableQueryReliability.yaml
+    example:
+      'score': 81
+      'methods':
+        'name': "NUMBER_OF_OBSERVATIONS"
+        'score': 81
+        'weight': 1.0
   values:
     type: array
     items:

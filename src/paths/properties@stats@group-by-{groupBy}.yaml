@@ -9,6 +9,7 @@ get:
     - $ref: ../components/parameters/PropertyGroupByStatsQuery-groupBy.yaml
     - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
     - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
+    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens
