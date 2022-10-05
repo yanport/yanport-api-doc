@@ -4,6 +4,9 @@ properties:
     type: integer
     format: int64
     example: 7568
+  forecast:
+    type: boolean
+    example: false
   reliability:
     type: object
     items:

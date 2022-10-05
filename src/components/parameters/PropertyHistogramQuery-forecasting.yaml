@@ -1,0 +1,5 @@
+name: forecasting
+in: query
+description: Prévision de l'indicateur
+schema:
+  type: boolean
