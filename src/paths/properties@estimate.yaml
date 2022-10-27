@@ -2,8 +2,12 @@ get:
   tags:
     - 'Estimation (prix, loyer, etc)'
   summary: Estimer un bien
-  description: "Estimation précise du prix, loyer, rendement locatif ou de la marge de négociation selon les caractéristiques du bien et sa
-    localisation."
+  description: >-
+    Estimation précise du prix, loyer, rendement locatif ou de la marge de négociation selon les caractéristiques du bien et sa
+    localisation.
+    ### Exemples
+      #### Estimation du prix d'un bien de 38m² et 2 pièces à Rennes
+        /properties/estimate?field=PRICE&marketingType=SALE&propertyType=APARTMENT&lat=48.1125&lng=-1.6735&surface=38&roomCount=2
   x-code-samples:
     - lang: curl
       source:
