@@ -1,7 +1,7 @@
 get:
   tags:
     - Indicateurs sur les biens (ancien/neuf)
-  summary: 'Disitribution (prix, surface, etc)'
+  summary: 'Distribution (prix, surface, etc)'
   description: >-
     Permet de construire un graphique de distribution des biens selon plusieurs
     critères (voir le champ field).
