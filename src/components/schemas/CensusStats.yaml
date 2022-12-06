@@ -8,16 +8,11 @@ properties:
       - IRIS
       - CITY
       - DEPARTMENT
+      - AGGLOMERATION
+  zoneId:
+    type: string
   year:
     type: number
-  irisCode:
-    type: string
-  cityId:
-    type: number
-  inseeCode:
-    type: string
-  deptCode:
-    type: string
   population:
     $ref: ./CensusStats-population.yaml
   housing:

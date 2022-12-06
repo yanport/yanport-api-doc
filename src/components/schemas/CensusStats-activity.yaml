@@ -104,6 +104,6 @@ properties:
         count:
           type: integer
           format: int64
-  populationCount:
+  retireesCount:
     type: integer
     format: int64
