@@ -1,6 +1,6 @@
 type: object
 properties:
-  householdsCount:
+  housingsCount:
     type: integer
     format: int64
   propertyTypes:
@@ -102,3 +102,6 @@ properties:
             count:
               type: integer
               format: int64
+  mainNotStudioOvercrowdedCount:
+    type: integer
+    format: int64
