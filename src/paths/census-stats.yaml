@@ -10,11 +10,9 @@ get:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/zone.yaml
+    - $ref: ../components/parameters/zoneIds.yaml
     - $ref: ../components/parameters/censusYears.yaml
-    - $ref: ../components/parameters/irisCodes.yaml
-    - $ref: ../components/parameters/cityIds.yaml
-    - $ref: ../components/parameters/inseeCodes.yaml
-    - $ref: ../components/parameters/deptCodes.yaml
+
   responses:
     '200':
       description: Les statistiques des zones recherchées
