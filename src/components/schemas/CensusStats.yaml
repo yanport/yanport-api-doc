@@ -9,6 +9,8 @@ properties:
       - CITY
       - DEPARTMENT
       - AGGLOMERATION
+      - ZIPCODE
+      - QUARTER
   zoneId:
     type: string
   year:

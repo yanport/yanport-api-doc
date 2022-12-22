@@ -8,3 +8,5 @@ schema:
     - CITY
     - DEPARTMENT
     - AGGLOMERATION
+    - ZIPCODE
+    - QUARTER
