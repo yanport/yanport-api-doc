@@ -3,8 +3,12 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Statistiques (GroupBy)
   description: >-
-    Permet de récupérer les statistiques basiques des biens regroupé selon 1
-    critère.
+    Permet de récupérer des statistiques de base regroupées selon 1 critère sur les biens.
+    
+    
+    ### Exemples
+      #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret regroupées par portail
+        /properties/stats/group-by-CRAWL_SOURCES?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/PropertyGroupByStatsQuery-groupBy.yaml
     - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml

@@ -2,7 +2,13 @@ get:
   tags:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Statistiques
-  description: Permet de récupérer les statistiques des biens selon plusieurs critères.
+  description: >-
+    Permet de récupérer des statistiques de base (moyenne, somme, minimum et maximum) sur les biens.
+    
+    
+    ### Exemples
+      #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret
+        /properties/stats?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
     - $ref: ../components/parameters/ReliableQuery-reliability.yaml

@@ -3,8 +3,12 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Statistiques (SubGroupBy)
   description: >-
-    Permet de récupérer les statistiques basiques des biens regroupé selon 1
-    critère et 1 sous-critère.
+    Permet de récupérer des statistiques de base sur les biens regroupés selon 2 critères.
+    
+    
+    ### Exemples
+      #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret regroupées par portail et type d'annonceur
+        /properties/stats/group-by-CRAWL_SOURCES-and-DEALERS_TYPE?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/PropertyStatsQuery-field.yaml
     - $ref: ../components/parameters/PropertyGroupByStatsQuery-groupBy.yaml

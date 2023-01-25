@@ -3,8 +3,12 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Centiles (SubGroupBy)
   description: >-
-    Permet de récupérer les indicateurs de références regroupé selon 1 critère
-    et 1 sous-critère.
+    Permet de récupérer des percentiles sur les biens regroupés selon 2 critères.
+    
+    
+    ### Exemples
+      #### Prix au m² median des appartements en cours de publication en vente à Levallois-Perret regroupés par portail et type d'annonceur
+        /properties/percentiles/group-by-CRAWL_SOURCES-and-DEALERS_TYPE?field=PRICE_M2&percentiles=50&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/PropertyGroupByPercentileQuery-groupBy.yaml
     - $ref: ../components/parameters/PropertySubGroupByStatsQuery-subGroupBy.yaml
