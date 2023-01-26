@@ -1,5 +1,6 @@
 name: forecasting
 in: query
-description: Prévision de l'indicateur
+description: Prévision de l'indicateur. Disponible uniquement avec `source=DVF` et `reliability=true`.
 schema:
   type: boolean
+  default: false
