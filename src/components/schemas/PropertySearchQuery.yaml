@@ -247,5 +247,11 @@ properties:
   updateDateMax:
     type: string
     format: date-time
+  externalProperties:
+    type: array
+    items:
+      type: string
+      example:
+        ID:externalId
   geoSearchQuery:
     $ref: ./GeoSearchQuery.yaml

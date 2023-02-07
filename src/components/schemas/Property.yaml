@@ -12,9 +12,21 @@ properties:
   aggregatePropertyId:
     type: string
     format: uuid
-  externalId:
-    type: string
-    example: externalId-1
+  externalProperties:
+    type: object
+    properties:
+      key:
+        type: string
+        enum:
+          - ID
+          - REALTY_ID
+          - VERSION
+      value:
+        type: string
+    required:
+      - key
+    example:
+      ID: external property id
   type:
     type: string
     enum:
