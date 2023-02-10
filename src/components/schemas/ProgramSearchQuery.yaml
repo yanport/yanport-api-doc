@@ -120,5 +120,7 @@ properties:
   lotCountMax:
     type: integer
     format: int64
+  stockPreview:
+    type: boolean
   geoSearchQuery:
     $ref: ./GeoSearchQuery.yaml

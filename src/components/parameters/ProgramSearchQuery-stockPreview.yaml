@@ -1,0 +1,5 @@
+name: stockPreview
+in: query
+description: Le stock est une pré-visualisation des lots
+schema:
+  type: boolean
