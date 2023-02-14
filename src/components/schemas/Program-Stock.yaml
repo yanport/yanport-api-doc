@@ -1,7 +1,15 @@
 type: object
 properties:
+  preview:
+    type: boolean
   lotCount:
     type: integer
+  activeLotCount:
+    type: integer
+  activeLotCountEvents:
+    type: array
+    items:
+      $ref: ./ActiveLotCountEvent.yaml
   priceRange:
     items:
       $ref: ./Range.yaml

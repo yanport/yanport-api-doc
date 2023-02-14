@@ -1,0 +1,8 @@
+type: object
+properties:
+  activeLotCount:
+    type: number
+    format: integer
+  date:
+    type: string
+    format: date
