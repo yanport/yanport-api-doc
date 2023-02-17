@@ -9,8 +9,8 @@ get:
       #### Nombre de biens regroupés par surface en cours de publication sur Levallois-Perret répartis selon les intervalles ]+∞-60[ et [100-+∞[
         /properties/count/group-by-surface?active=true&source=AD&zipCodes=92300&intervals=*:60&intervals=100:*
   parameters:
-    - $ref: ../components/parameters/PropertyCountRangeQuery-field.yaml
-    - $ref: ../components/parameters/PropertyCountRangeQuery-intervals.yaml
+    - $ref: ../components/parameters/PropertyRangesByCountQuery-field.yaml
+    - $ref: ../components/parameters/PropertyRangesByCountQuery-intervals.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens
@@ -22,7 +22,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/CountRangeByResponse.yaml
+            $ref: ../components/schemas/CountRangesByResponse.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
