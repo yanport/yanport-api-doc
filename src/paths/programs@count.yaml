@@ -52,6 +52,7 @@ get:
     - $ref: ../components/parameters/ProgramSearchQuery-lotCountMin.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-lotCountMax.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-stockPreview.yaml
+    - $ref: ../components/parameters/ProgramSearchQuery-stages.yaml
     - name: geoSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de biens

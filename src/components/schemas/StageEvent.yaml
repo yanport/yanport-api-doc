@@ -1,0 +1,11 @@
+type: object
+properties:
+  stage:
+    type: string
+    enum:
+      - PRESALE
+      - BUILDING_IN_PROGRESS
+      - LAST_OFFERS
+  date:
+    type: string
+    format: date

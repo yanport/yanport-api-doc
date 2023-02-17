@@ -1,0 +1,11 @@
+name: stages
+in: query
+description: Liste des étapes marketing des programmes
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - PRESALE
+      - BUILDING_IN_PROGRESS
+      - LAST_OFFERS

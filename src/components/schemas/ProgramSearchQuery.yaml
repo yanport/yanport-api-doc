@@ -122,5 +122,13 @@ properties:
     format: int64
   stockPreview:
     type: boolean
+  stage:
+    type: array
+    items:
+      type: string
+      enum:
+        - PRESALE
+        - BUILDING_IN_PROGRESS
+        - LAST_OFFERS
   geoSearchQuery:
     $ref: ./GeoSearchQuery.yaml

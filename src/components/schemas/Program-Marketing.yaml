@@ -4,6 +4,17 @@ properties:
     type: array
     items:
       $ref: ./Marketing-Dealer.yaml
+  stage:
+    type: string
+    enum:
+      - PRESALE
+      - BUILDING_IN_PROGRESS
+      - LAST_OFFERS
+    example: BUILDING_IN_PROGRESS
+  stageEvents:
+    type: array
+    items:
+      $ref: ./StageEvent.yaml
   deliveryDate:
     type: string
     format: date-time
