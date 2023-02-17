@@ -1,0 +1,9 @@
+name: intervals
+in: query
+description: Intervalles de regroupement semi-ouverts à droite
+required: true
+schema:
+  type: array
+  items:
+    type: string
+  example: ["*:20", "20:40", "40:*"]
