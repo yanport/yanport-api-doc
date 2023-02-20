@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Nombre de biens (RangesBy)
+  description: |-
+    Retourne le nombre de biens regroupés par un ensemble d'intervalles selon 1 critère.
+
+    ### Exemples
+      #### Nombre de biens regroupés par surface en cours de publication sur Levallois-Perret répartis selon les intervalles ]-∞-60[  et [60-+∞[
+        /properties/count/group-by-surface?active=true&source=AD&zipCodes=92300&intervals=*:60&intervals=60:*
+  parameters:
+    - $ref: ../components/parameters/PropertyRangesByCountQuery-field.yaml
+    - $ref: ../components/parameters/PropertyRangesByCountQuery-intervals.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Le nombre de biens
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CountRangesByResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,0 +1,11 @@
+type: object
+properties:
+  ranges:
+    type: array
+    items:
+      type: object
+      properties:
+        range:
+          $ref: ./Range.yaml
+        count:
+          $ref: ./CountResponse.yaml
