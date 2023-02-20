@@ -14,12 +14,10 @@ jobs:
         run: echo "TIMESTAMP=$(date +%s)" >> $GITHUB_ENV
 
       - name: Checkout branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: install node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 15.0.0
+        uses: actions/setup-node@v3
 
       - name: Install OpenAPI
         run: npm install -g @redocly/openapi-cli@1.0.0-beta.82
@@ -28,12 +26,12 @@ jobs:
         run: openapi bundle src/openapi.yaml -o dist/openapi.yaml
 
       - name: GCP auth
-        uses: google-github-actions/auth@v0.4.0
+        uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_WWW_AUTOMATION_CREDENTIALS }}
 
       - name: Upload file
-        uses: google-github-actions/upload-cloud-storage@v0.4.0
+        uses: google-github-actions/upload-cloud-storage@v1
         with:
           path: ./dist/openapi.yaml
           destination: yanport-www.appspot.com
