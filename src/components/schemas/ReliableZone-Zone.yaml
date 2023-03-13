@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: string
+    example: "1234"
+  type:
+    type: string
+    example: "IRIS"
+  selected:
+    type: boolean
+    example: true
+  eligible:
+    type: boolean
+    example: true
+  propertiesCounts:
+    type: integer
+    format: int64
+    example: 100

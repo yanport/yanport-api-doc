@@ -1,0 +1,22 @@
+type: object
+properties:
+  roomCounts:
+    type: array
+    items:
+      type: integer
+      example: 3
+  intervalUnit:
+    type: string
+    example: QUARTERS
+  dateMin:
+    type: string
+    format: date-time
+  dateMax:
+    type: string
+    format: date-time
+  source:
+    type: string
+    example: DVF
+  field:
+    type: string
+    example: PRICE_M2

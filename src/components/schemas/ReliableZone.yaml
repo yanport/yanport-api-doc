@@ -1,0 +1,10 @@
+type: object
+properties:
+  zones:
+    type: array
+    items:
+      $ref: ./ReliableZone-Zone.yaml
+  query:
+    $ref: ./ReliableZone-Query.yaml
+  reliability:
+    $ref: ./ReliableZone-Reliability.yaml
