@@ -3,7 +3,7 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Evolution du stock
   description: >-
-    Permet de constuire une courbe représentant l'évolution du stock de biens
+    Permet de construire une courbe représentant l'évolution du stock de biens
     selon plusieurs critères.
 
 
