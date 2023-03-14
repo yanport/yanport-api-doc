@@ -2,17 +2,17 @@ type: object
 properties:
   id:
     type: string
-    example: "1234"
+    example: 751062402
   type:
     type: string
-    example: "IRIS"
+    enum:
+      - IRIS
+      - CITY
+      - AGGLOMERATION
+    example: IRIS
   selected:
     type: boolean
     example: true
   eligible:
     type: boolean
     example: true
-  propertiesCounts:
-    type: integer
-    format: int64
-    example: 100
