@@ -3,8 +3,8 @@ properties:
   zones:
     type: array
     items:
-      $ref: ./ReliableZone-Zone.yaml
+      $ref: ./ReliableZone-zone.yaml
   query:
-    $ref: ./ReliableZone-Query.yaml
+    $ref: ./ReliableZone-query.yaml
   reliability:
-    $ref: ./ReliableZone-Reliability.yaml
+    $ref: ./ReliableZone-reliability.yaml
