@@ -5,29 +5,8 @@ get:
   description: >-
     Permet de construire une zone géographique où les indicateurs sur les biens sont fiables.
   parameters:
-    - name: marketingType
-      in: query
-      description: Type de marché (vente, location, rente viagère).
-      schema:
-        type: string
-        enum:
-          - SALE
-          - RENT
-          - LIFE_ANNUITY
-      required: true
-    - name: propertyType
-      in: query
-      description: Type de bien (maison, appartement, terrain, parking, immeuble, local).
-      schema:
-        type: string
-        enum:
-          - HOUSE
-          - APARTMENT
-          - LAND
-          - PARKING
-          - BUILDING
-          - PREMISES
-      required: true
+    - $ref: ../components/parameters/marketingType.yaml
+    - $ref: ../components/parameters/propertyType.yaml
     - name: agglomerationId
       in: query
       description: Identifiant de l'agglomération. Requis si `zone=AGGLOMERATION`.
@@ -47,7 +26,7 @@ get:
         type: string
     - name: zone
       in: query
-      description: Type de zone (iris, ville, agglomération).
+      description: Type de zone (iris, ville, agglomération)
       schema:
         type: string
         enum:
@@ -58,7 +37,7 @@ get:
     - $ref: ../components/parameters/newBuild.yaml
     - name: intervalUnit
       in: query
-      description: Unité de temps minimale de l'intervalle.
+      description: Unité de temps minimale de l'intervalle
       schema:
         type: string
         default: MONTHS
@@ -68,19 +47,19 @@ get:
           - YEARS
     - name: dateMin
       in: query
-      description: Date minimale pour le calcul de l'évolution (YYYY-mm-dd).
+      description: Date minimale pour le calcul de l'évolution (YYYY-mm-dd)
       schema:
         type: string
         format: date
     - name: dateMax
       in: query
-      description: Date maximale pour le calcul de l'évolution (YYYY-mm-dd).
+      description: Date maximale pour le calcul de l'évolution (YYYY-mm-dd)
       schema:
         type: string
         format: date
     - name: source
       in: query
-      description: Source des biens.
+      description: Source des biens
       schema:
         type: string
         enum:
@@ -89,7 +68,7 @@ get:
           - DVF
     - name: field
       in: query
-      description: Champ sur lequel sont calculés les statistiques.
+      description: Champ sur lequel sont calculés les statistiques
       schema:
         type: string
         default: PRICE_M2
