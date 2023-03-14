@@ -3,7 +3,7 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: 'Evolution (prix, surface, etc)'
   description: >-
-    Permet de constuire une courbe d'évolution du nombre de biens selon
+    Permet de construire une courbe d'évolution du nombre de biens selon
     plusieurs critères.
 
 
