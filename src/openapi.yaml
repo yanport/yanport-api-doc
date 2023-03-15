@@ -15,7 +15,7 @@ info:
 
       Nos services webs utilisent le protocole __HTTPS__ sur le port 443, tout
       accès en HTTP sur le port 80 est bloqué par notre pare-feu. Les échanges de
-      données sont réalisées en __JSON__.
+      données sont réalisés en __JSON__.
 
 
     ## Méthodes d'authentification
@@ -23,7 +23,7 @@ info:
     Avant de commencer, vous devez nous
     [contacter](https://www.yanport.com/contact) afin d'obtenir un [JSON
     WebToken (JWT)](https://jwt.io/) qui vous permettra de vous identifier à
-    chaque requête
+    chaque requête.
 
 
     ### Header (production)
