@@ -5,9 +5,11 @@ properties:
     format: int64
   inseeCode:
     type: string
+  inseeCodeAssociated:
+    type: string
   deptCode:
     type: string
-  deptName:
+  agglomerationId:
     type: string
   zipCodes:
     type: array
@@ -21,7 +23,11 @@ properties:
     type: string
   usageName:
     type: string
-  regionName:
+  previousNames:
+    type: array
+    items:
+      type: string
+  regionCode:
     type: string
   population:
     type: number
@@ -31,3 +37,9 @@ properties:
   geometry:
     type: object
     format: GeoJsonObject
+  actuality:
+    type: string
+    enum:
+      - ACTIVE
+      - DELEGATED
+      - DISTRICT
