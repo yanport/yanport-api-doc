@@ -10,12 +10,10 @@ properties:
       - PROPERTY_DEVELOPER
       - PUBLIC_ADMINISTRATION
       - OTHER_COMPANY
-      - PURE_LOCAL
   subCategory:
     type: string
     enum:
       - SAI
-      - SIMPLE
       - SCI
       - HLM
       - EPL
@@ -24,10 +22,37 @@ properties:
       - STATE_ODAC
       - DEP_REG
       - CITY_EPIC
+  legalCategory:
+    type: string
+    enum:
+      - 6540
+      - 5710
+      - 5499
+      - 6541
+      - 4140
+      - 5599
+      - 6599
+      - 5546
+      - 5202
+      - 7210
+      - 5515
+      - 5560
+      - 5547
+      - 5699
+      - 9220
+      - 5646
+      - 6598
+      - 7220
+      - 7346
+      - 6597
   siren:
     type: string
   siret:
     type: string
+  nafCode:
+    type: string
   zipCode:
     type: string
     example: 750010
+  cityName:
+    type: string

@@ -8,6 +8,8 @@ properties:
   updateDate:
     type: string
     format: date-time
+  permitNumber:
+    type: string
   type:
     type: string
     enum:
