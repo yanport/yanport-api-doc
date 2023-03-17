@@ -17,8 +17,6 @@ properties:
       - SAN
   regionCode:
     type: string
-  departmentCode:
-    type: string
   departmentCodes:
     type: array
     items:
