@@ -5,9 +5,13 @@ properties:
     format: int64
   cityId:
     type: number
-    format: int54
+    format: int64
+  deptCode:
+    type: string
   name:
     type: string
   geometry:
     type: object
     format: GeoJsonObject
+  centroid:
+    $ref: ./Location.yaml

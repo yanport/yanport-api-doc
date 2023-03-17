@@ -14,7 +14,9 @@ properties:
   zoneId:
     type: string
   year:
-    type: number
+    type: integer
+    minimum: 1000
+    maximum: 2500
   population:
     $ref: ./CensusStats-population.yaml
   housing:

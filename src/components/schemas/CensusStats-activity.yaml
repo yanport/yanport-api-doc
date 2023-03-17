@@ -50,8 +50,6 @@ properties:
                 - INTERMEDIATE
                 - EMPLOYEE
                 - LABOR
-                - RETIRED
-                - UNEMPLOYED
             count:
               type: integer
               format: int64
@@ -69,8 +67,6 @@ properties:
                 - INTERMEDIATE
                 - EMPLOYEE
                 - LABOR
-                - RETIRED
-                - UNEMPLOYED
             count:
               type: integer
               format: int64
