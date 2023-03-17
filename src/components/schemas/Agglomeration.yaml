@@ -22,6 +22,14 @@ properties:
     items:
       type: string
     example: ["75", "92"]
+  centroid:
+    $ref: ./Location.yaml
   geometry:
     type: object
     format: GeoJsonObject
+  active:
+    type: boolean
+  years:
+    type: array
+    items:
+      type: integer
