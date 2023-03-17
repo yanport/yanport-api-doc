@@ -27,6 +27,10 @@ properties:
     type: array
     items:
       type: string
+  quarters:
+    type: array
+    items:
+      type: string
   regionCode:
     type: string
   population:
