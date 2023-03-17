@@ -28,7 +28,7 @@ properties:
     items:
       type: string
   quarters:
-    type: array
+    $ref: ./Quarter.yaml
     items:
       type: string
   regionCode:
