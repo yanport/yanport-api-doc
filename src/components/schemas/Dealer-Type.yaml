@@ -1,6 +1,5 @@
 type: string
 enum:
-  - PRIVATE
   - AGENCY
   - MANDATARY
 example: AGENCY

@@ -12,3 +12,5 @@ properties:
     $ref: ./CommercialZone.yaml
   dealer:
     $ref: ./ProductDealer.yaml
+  onBoarded:
+    type: boolean

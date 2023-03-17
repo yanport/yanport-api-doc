@@ -2,3 +2,6 @@ type: string
 enum:
   - AD
   - DVF
+  - CLIENT
+  - CLAMEUR
+  - STUDY

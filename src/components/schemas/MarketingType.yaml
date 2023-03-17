@@ -2,4 +2,3 @@ type: string
 enum:
   - SALE
   - RENT
-  - LIFE_ANNUITY
