@@ -1,0 +1,11 @@
+type: object
+properties:
+  reliable:
+    type: boolean
+    example: true
+  score:
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 100
+    example: 78
