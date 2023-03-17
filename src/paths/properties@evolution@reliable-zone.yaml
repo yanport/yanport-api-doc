@@ -4,6 +4,12 @@ get:
   summary: 'Zone fiable'
   description: >-
     Permet de construire une zone géographique où les indicateurs sur les biens sont fiables.
+
+    Voir notre [article](https://www.yanport.com/blog/posts/etude-de-marche-a-ladresse) pour plus de détails.
+
+    ### Exemple
+      #### Zone fiable pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
+        /properties/evolution/reliable-zone?propertyType=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
   parameters:
     - $ref: ../components/parameters/marketingType.yaml
     - $ref: ../components/parameters/propertyType.yaml
