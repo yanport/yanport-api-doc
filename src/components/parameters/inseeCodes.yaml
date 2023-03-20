@@ -1,6 +1,6 @@
 name: inseeCodes
 in: query
-description: Liste de codes insee
+description: Liste de codes insee de commune
 style: form
 schema:
   type: array

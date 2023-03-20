@@ -8,25 +8,17 @@ properties:
     type: string
   prefix:
     type: string
+    example: "071"
   created:
     type: string
   updated:
     type: string
   section:
     type: string
+    example: "A"
   surface:
     type: number
   geometry:
     type: object
-    properties:
-      type:
-        type: string
-      coordinates:
-        type: array
-        items:
-          type: object
-          properties:
-            lat:
-              type: number
-            lng:
-              type: number
+    format: GeoJsonObject
+
