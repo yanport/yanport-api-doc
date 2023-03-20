@@ -1,0 +1,93 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: 'Zone fiable'
+  description: >-
+    Permet de construire une zone géographique où les indicateurs sur les biens sont fiables.
+
+    Voir notre [article](https://www.yanport.com/blog/posts/etude-de-marche-a-ladresse) pour plus de détails.
+
+    ### Exemple
+      #### Zone fiable pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
+        /properties/evolution/reliable-zone?propertyType=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
+  parameters:
+    - $ref: ../components/parameters/marketingType.yaml
+    - $ref: ../components/parameters/propertyType.yaml
+    - name: agglomerationId
+      in: query
+      description: Identifiant de l'agglomération. Requis si `zone=AGGLOMERATION`.
+      schema:
+        type: integer
+        format: int64
+    - name: cityId
+      in: query
+      description: Identifiant de la ville. Requis si `zone=CITY`.
+      schema:
+        type: integer
+        format: int64
+    - name: irisId
+      in: query
+      description: Identifiant de l'iris. Requis si `zone=IRIS`.
+      schema:
+        type: string
+    - name: zone
+      in: query
+      description: Type de zone (iris, ville, agglomération)
+      schema:
+        type: string
+        enum:
+          - IRIS
+          - CITY
+          - AGGLOMERATION
+    - $ref: ../components/parameters/roomCounts.yaml
+    - $ref: ../components/parameters/newBuild.yaml
+    - name: intervalUnit
+      in: query
+      description: Unité de temps minimale de l'intervalle
+      schema:
+        type: string
+        default: MONTHS
+        enum:
+          - MONTHS
+          - QUARTERS
+          - YEARS
+    - name: dateMin
+      in: query
+      description: Date minimale pour le calcul de l'évolution (YYYY-mm-dd)
+      schema:
+        type: string
+        format: date
+    - name: dateMax
+      in: query
+      description: Date maximale pour le calcul de l'évolution (YYYY-mm-dd)
+      schema:
+        type: string
+        format: date
+    - name: source
+      in: query
+      description: Source des biens
+      schema:
+        type: string
+        enum:
+          - AD
+          - CLAMEUR
+          - DVF
+    - name: field
+      in: query
+      description: Champ sur lequel sont calculés les statistiques
+      schema:
+        type: string
+        default: PRICE_M2
+        enum:
+          - PRICE_M2
+  responses:
+    '200':
+      description: Zone fiable
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ReliableZone.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
