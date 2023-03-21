@@ -10,3 +10,5 @@ properties:
       $ref: ./User-Role.yaml
   emailChecked:
     type: boolean
+  backOfficeModules:
+    type: string

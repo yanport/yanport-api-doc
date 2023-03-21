@@ -10,8 +10,7 @@ properties:
     type: integer
     format: int64
   propertyId:
-    type: integer
-    format: int64
+    type: string
   dealer:
     $ref: ./Dealer.yaml
   creationDate:
@@ -38,8 +37,7 @@ properties:
       - IN_MANDATE
       - OTHER
   savedSearchIds:
-    type: number
-    format: uuid
+    type: string
   source:
     type: string
     enum:

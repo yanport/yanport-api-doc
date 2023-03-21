@@ -12,6 +12,10 @@ properties:
         type: string
       PRODPAD:
         type: string
+      CLAMEUR:
+        type: string
+      SENDINBLUE:
+        type: string
   organizationId:
     type: integer
     format: int64
