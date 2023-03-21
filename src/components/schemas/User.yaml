@@ -33,5 +33,3 @@ properties:
     $ref: ./Security.yaml
   product:
     $ref: ./Product.yaml
-  onBoarded:
-    type: boolean
