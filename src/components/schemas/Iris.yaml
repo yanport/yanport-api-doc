@@ -10,6 +10,9 @@ properties:
     type: string
   cityId:
     type: number
+    format: int64
+  deptCode:
+    type: string
   type:
     type: string
     enum:
@@ -20,3 +23,5 @@ properties:
   geometry:
     type: object
     format: GeoJsonObject
+  centroid:
+    $ref: ./Location.yaml
