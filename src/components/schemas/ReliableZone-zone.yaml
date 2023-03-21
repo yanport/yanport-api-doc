@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: string
+    example: 751062402
+  type:
+    type: string
+    enum:
+      - IRIS
+      - CITY
+      - AGGLOMERATION
+    example: IRIS
+  selected:
+    type: boolean
+    example: true
+  eligible:
+    type: boolean
+    example: true

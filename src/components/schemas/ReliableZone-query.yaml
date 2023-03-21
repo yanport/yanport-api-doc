@@ -1,0 +1,32 @@
+type: object
+properties:
+  roomCounts:
+    type: array
+    items:
+      type: integer
+      example: 3
+  intervalUnit:
+    type: string
+    enum:
+      - MONTHS
+      - QUARTERS
+      - YEARS
+    example: QUARTERS
+  dateMin:
+    type: string
+    format: date-time
+  dateMax:
+    type: string
+    format: date-time
+  source:
+    type: string
+    enum:
+      - AD
+      - CLAMEUR
+      - DVF
+    example: DVF
+  field:
+    type: string
+    enum:
+      - PRICE_M2
+    example: PRICE_M2

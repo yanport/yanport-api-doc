@@ -12,6 +12,8 @@ properties:
   sourceUpdateDate:
     type: string
     format: date
+  submissionYear:
+    type: integer
   extension:
     type: boolean
   upwardExtension:

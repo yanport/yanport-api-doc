@@ -243,6 +243,8 @@ paths:
     $ref: paths/properties@distribution.yaml
   /properties/evolution:
     $ref: paths/properties@evolution.yaml
+  /properties/evolution/reliable-zone:
+    $ref: paths/properties@evolution@reliable-zone.yaml
   /properties/evolution/stock:
     $ref: paths/properties@evolution@stock.yaml
   /similar-properties/percentiles:
