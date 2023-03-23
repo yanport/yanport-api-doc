@@ -327,8 +327,6 @@ paths:
     $ref: paths/api-transactions@evolution@group-by-sku.yaml
   '/api-transactions/{id}':
     $ref: 'paths/api-transactions@{id}.yaml'
-  /phone-numbers:
-    $ref: paths/phone-numbers.yaml
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
 components:
