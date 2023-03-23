@@ -309,6 +309,10 @@ paths:
     $ref: paths/studies.yaml
   '/studies/{id}':
     $ref: 'paths/studies@{id}.yaml'
+  /estimations:
+    $ref: paths/estimations.yaml
+  '/estimations/{id}':
+    $ref: 'paths/estimations@{id}.yaml'
   /prospects:
     $ref: paths/prospects.yaml
   '/prospects/{id}':
