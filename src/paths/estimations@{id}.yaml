@@ -1,6 +1,6 @@
 get:
   tags:
-    - Estimation (prix, loyer, etc)
+    - Estimation
   summary: Récupérer une estimation
   description: Récupérer une estimation par son identifiant
   parameters:
@@ -24,7 +24,7 @@ get:
       $ref: ../components/responses/InternalServerError.yaml
 put:
   tags:
-    - Estimation (prix, loyer, etc)
+    - Estimation
   summary: Mettre à jour une estimation
   description: Mettre à jour une estimation par son identifiant
   parameters:
@@ -48,7 +48,7 @@ put:
       $ref: ../components/responses/InternalServerError.yaml
 delete:
   tags:
-    - Estimation (prix, loyer, etc)
+    - Estimation
   summary: Supprimer une estimation
   description: Supprimer une estimation par son identifiant
   parameters:

@@ -1,6 +1,6 @@
 post:
   tags:
-    - Estimation (prix, loyer, etc)
+    - Estimation
   summary: Ajouter une estimation
   description: Retourne l'estimation créée avec son identiant, l'horodatage et une estimation par marché
   requestBody:
