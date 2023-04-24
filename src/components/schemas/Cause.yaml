@@ -1,0 +1,17 @@
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - COLOCATION
+  value:
+    type: string
+    enum:
+      - UNKNOWN
+      - SAFE
+      - UNUSUAL
+      - SUSPECT
+      - ANORMAL
+    example: SAFE
+  level:
+    type: integer
