@@ -5,6 +5,8 @@ properties:
     format: uuid
   crawlSource:
     $ref: ./CrawlSource.yaml
+  reference:
+    type :boolean
   url:
     type: string
     format: uri
