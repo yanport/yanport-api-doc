@@ -49,10 +49,15 @@ properties:
       - TRIPLEX
       - SHOP
       - OFFICE
+      - BOX
+      - GARAGE
+      - PARKING_SPOT
   features:
     $ref: ./Property-Features.yaml
   marketing:
     $ref: ./Property-Marketing.yaml
+  investment:
+    $ref: ./Property-Investment.yaml
   address:
     $ref: ./Address.yaml
   ads:
