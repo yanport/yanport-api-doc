@@ -28,30 +28,9 @@ properties:
     example:
       ID: external property id
   type:
-    type: string
-    enum:
-      - HOUSE
-      - APARTMENT
-      - PREMISES
-      - LAND
-      - BUILDING
-      - PARKING
-    example: HOUSE
+    $ref: ./PropertyType.yaml
   subType:
-    type: string
-    enum:
-      - CHALET
-      - MANSION
-      - CASTLE
-      - HOMESTEAD
-      - LOFT
-      - DUPLEX
-      - TRIPLEX
-      - SHOP
-      - OFFICE
-      - BOX
-      - GARAGE
-      - PARKING_SPOT
+    $ref: ./PropertySubType.yaml
   features:
     $ref: ./Property-Features.yaml
   marketing:
