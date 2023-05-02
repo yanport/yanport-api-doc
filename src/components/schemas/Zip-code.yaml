@@ -1,0 +1,14 @@
+type: object
+properties:
+  id:
+    type: string
+  cityId:
+    type: number
+    format: int64
+  name:
+    type: string
+  geometry:
+    type: object
+    format: GeoJsonObject
+  centroid:
+    $ref: ./Location.yaml

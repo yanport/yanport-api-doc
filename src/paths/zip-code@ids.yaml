@@ -1,0 +1,29 @@
+get:
+  tags:
+    - ZIP-CODE
+  summary: Récupérer des zip-code (ID)
+  description: Récupérer des zip-code par leur identifiant
+  parameters:
+    - name: ids
+      in: query
+      description: Liste d'identifiants
+      required: true
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+  responses:
+    '200':
+      description: La liste des zip-code
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Zip-code.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

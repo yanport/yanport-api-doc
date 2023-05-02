@@ -1,0 +1,35 @@
+get:
+  tags:
+    - ZIP-CODE
+  summary: Rechercher des code postaux
+  description: Récupérer des code postaux selon différents critères
+  parameters:
+    - name: searchQueryParam
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de biens
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
+  responses:
+    '200':
+      description: La liste des code postaux
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Zip-code.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
