@@ -1,4 +1,4 @@
 type: object
 properties:
   rental:
-    $ref: ./rental.yaml
+    $ref: ./Rental.yaml

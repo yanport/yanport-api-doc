@@ -4,6 +4,9 @@ properties:
     $ref: ./RentControlStatus.yaml
   irisQuarterId:
     type: string
+  median:
+    type: number
+    format: double
   min:
     type: number
     format: double
@@ -12,3 +15,4 @@ properties:
     type: number
     format: double
     minimum: 0
+

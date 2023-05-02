@@ -86,26 +86,26 @@ properties:
   marketingEndDate:
     type: string
     format: date-time
+  marketingDateRange:
+    items:
+      $ref: ./RangeDateTime.yaml
   marketingDays:
     type: integer
     format: int64
     minimum: 0
-  marketingDateRange:
-    items:
-      $ref: ./RangeDateTime.yaml
   publicationStartDate:
     type: string
     format: date-time
   publicationEndDate:
     type: string
     format: date-time
+  publicationDateRange:
+    items:
+      $ref: ./RangeDateTime.yaml
   publicationDays:
     type: integer
     format: int64
     minimum: 0
-  publicationDateRange:
-    items:
-      $ref: ./RangeDateTime.yaml
   active:
     type: boolean
   rentalExpenses:
