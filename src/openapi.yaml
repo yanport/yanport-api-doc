@@ -163,6 +163,7 @@ x-tagGroups:
       - Indicateurs sur les programmes (neuf)
   - name: REFERENTIEL GEOGRAPHIQUE
     tags:
+      - Département
       - Agglomeration (EPCI)
       - Commune
       - Quartier
@@ -196,6 +197,7 @@ x-tagGroups:
     tags:
       - Modele-bien
       - Modele-programme
+      - Modele-departement
       - Modele-agglomeration
       - Modele-commune
       - Modele-quartier
@@ -262,6 +264,12 @@ paths:
     $ref: paths/maps.yaml
   /maps/stock:
     $ref: paths/maps@stock.yaml
+  /departments:
+    $ref: paths/departments.yaml
+  '/departments/{id}':
+    $ref: 'paths/departments@{id}.yaml'
+  /departments/ids:
+    $ref: paths/departments@ids.yaml
   /agglomerations:
     $ref: paths/agglomerations.yaml
   '/agglomerations/{id}':
