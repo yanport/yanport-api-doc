@@ -96,6 +96,10 @@ tags:
     x-displayName: Programme
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Program" />
+  - name: Modele-departement
+    x-displayName: Département
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Department" />
   - name: Modele-agglomeration
     x-displayName: Agglomération
     description: |
