@@ -101,7 +101,7 @@ get:
         type: boolean
     - name: constructionYear
       in: query
-      description: "L'année de construction (maison et terrain uniquement)."
+      description: "L'année de construction (maison et appartement uniquement)."
       schema:
         type: number
         format: integer
