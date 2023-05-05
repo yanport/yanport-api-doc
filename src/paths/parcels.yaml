@@ -1,7 +1,7 @@
 get:
   tags:
     - Parcelle
-  summary: Récupérer des parcelles
+  summary: Rechercher des parcelles
   description: Retourne les parcelles correspondantes aux critères demandés
   parameters:
     - name: searchQueryParam

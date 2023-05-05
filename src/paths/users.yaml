@@ -93,7 +93,7 @@ get:
         type: boolean
     - name: admin
       in: query
-      description: Filter les utilisateurs administrateurs ou non
+      description: Filtrer les utilisateurs administrateurs ou non
       schema:
         type: boolean
     - name: marketingTypes

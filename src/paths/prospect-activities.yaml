@@ -2,7 +2,7 @@ post:
   tags:
     - Activités de prospection
   summary: Créer une activité de prospection
-  description: Retourne l'activité de prospection créé
+  description: Retourne l'activité de prospection créée
   requestBody:
     required: true
     description: Formulaire pour la création d'une activité de prospection

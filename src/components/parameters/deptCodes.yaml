@@ -1,6 +1,6 @@
 name: deptCodes
 in: query
-description: Liste de codes de département
+description: Liste de codes de départements
 style: form
 schema:
   type: array

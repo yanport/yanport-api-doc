@@ -2,7 +2,7 @@ post:
   tags:
     - Etudes
   summary: Créer une étude
-  description: Retourne l'étude créé
+  description: Retourne l'étude créée
   requestBody:
     required: true
     description: Formulaire pour la création d'une étude

@@ -1,6 +1,6 @@
 name: externalUserIds
 in: query
-description: Liste d'identifiants externe client
+description: Liste d'identifiants externes client
 schema:
   type: array
   items:
