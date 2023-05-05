@@ -13,9 +13,9 @@ get:
     récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
 
 
-    Concernant le tri le paramètre `sort` à pour syntaxe `field:asc|desc` en
+    Concernant le tri, le paramètre `sort` a pour syntaxe `field:asc|desc`, en
     remplaçant `field` par le nom du champ sur lequel appliqué le tri.
-    Il est également possible de faire un tri par distance par-rapport à une géolocalisation
+    Il est également possible de faire un tri par distance par rapport à une géolocalisation
     avec la syntaxe `sort=address.location:geo:lat:lon`
 
 
@@ -26,7 +26,7 @@ get:
         /programs?active=true&zipCodes=75017
       #### Les derniers programmes publiés en Corse sur LeBonCoinNeuf et SeLogerNeuf
         /programs?active=true&crawlSources=LE_BON_COIN_NEUF&crawlSources=SE_LOGER_NEUF&departments=2B&sort=marketing.publicationStartDate:asc
-      #### Les programmes sur Levallois-Perret triés par distance par-rapport au point de coordonnées (48.8956, 2.2827)
+      #### Les programmes sur Levallois-Perret triés par distance par rapport au point de coordonnées (48.8956, 2.2827)
         /programs?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130&sort=address.location:geo:48.8956:2.2827
   parameters:
     - name: searchQueryParam
