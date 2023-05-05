@@ -1,0 +1,64 @@
+get:
+  tags:
+    - Indicateurs sur les permis de construire
+  summary: Nombre de permis de construire
+  description: >-
+    Compte le nombre de permis de construire par rapport à certains critères de
+    recherche. 
+
+
+    ### Exemples
+      #### Nombre de permis de construire actifs à Vincennes
+        /building-permits/count?active=true&zipCodes=94300
+  parameters:
+    - name: searchQueryParam
+      in: query
+      description: Paramètres de recherche de permis de construire
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-permitNumbers.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-updateDateMin.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-updateDateMax.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-types.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-states.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-purposes.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-authorisationDateMin.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-authorisationDateMax.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-constructionStartDateMin.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-constructionStartDateMax.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-constructionEndDateMin.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-constructionEndDateMax.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-sourceUpdateDateMin.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-sourceUpdateDateMax.yaml
+    - $ref: ../components/parameters/deptCodes.yaml
+    - $ref: ../components/parameters/zipCodes.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/agglomerationIds.yaml
+    - $ref: ../components/parameters/irisIds.yaml
+    - $ref: ../components/parameters/quarterIds.yaml
+    - $ref: ../components/parameters/parcelIds.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantNames.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantCategories.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantSubCategories.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantSirens.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantSirets.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantZipCodes.yaml
+    - $ref: ../components/parameters/existingFields.yaml
+    - $ref: ../components/parameters/missingFields.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche de permis de construire
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
+  responses:
+    '200':
+      description: Le nombre de permis de construire
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CountResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
