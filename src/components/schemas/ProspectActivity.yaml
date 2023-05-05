@@ -25,7 +25,5 @@ properties:
   date:
     type: string
     format: date
-  note:
-    type: string
   done:
     type: boolean
