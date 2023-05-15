@@ -2,7 +2,15 @@ get:
   tags:
     - Agglomeration (EPCI)
   summary: Récupérer des agglomérations
-  description: Retourne les agglomérations correspondantes aux critères demandés
+  description: >-
+    Retourne les agglomérations correspondantes aux critères demandés
+    
+    
+    ### Exemples
+      #### La liste des agglomérations
+        /agglomerations
+      #### L'agglomération correspondant aux coordonnées géographiques du centre ville de Lyon
+        /agglomerations/match?lat=45.759060&lng=4.847331
   parameters:
     - name: searchQueryParam
       in: query

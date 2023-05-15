@@ -2,7 +2,13 @@ get:
   tags:
     - Agglomeration (EPCI)
   summary: Récupérer une agglomération
-  description: Retourne l'agglomération dont l'id correspond
+  description: >-
+    Récupérer une agglomération par son identifiant
+    
+    
+    ### Exemple
+      #### La Métropole de Lyon
+        /agglomerations/4762789881060352
   parameters:
     - name: id
       in: path
