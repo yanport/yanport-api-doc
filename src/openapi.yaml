@@ -349,12 +349,12 @@ paths:
     $ref: 'paths/api-transactions@{id}.yaml'
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
-  /zip-code:
-    $ref: paths/zip-code.yaml
-  '/zip-code/{id}':
-    $ref: 'paths/zip-code@{id}.yaml'
-  /zip-code/ids:
-    $ref: paths/zip-code@ids.yaml
+  /zip-codes:
+    $ref: paths/zip-codes.yaml
+  '/zip-codes/{id}':
+    $ref: 'paths/zip-codes@{id}.yaml'
+  /zip-codes/ids:
+    $ref: paths/zip-codes@ids.yaml
 components:
   securitySchemes:
     JWT:

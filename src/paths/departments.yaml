@@ -2,7 +2,15 @@ get:
   tags:
     - Département
   summary: Rechercher des départements
-  description: Récupérer des départements selon différents critères
+  description: >-
+    Récupérer des départements selon différents critères
+    
+    
+    ### Exemples
+      #### La liste des départements
+        /departments
+      #### Le département correspondant aux coordonnées géographiques du centre ville de La Rochelle
+        /departments/match?lat=46.159783653934596&lng=-1.1514798008421312
   parameters:
     - name: searchQueryParam
       in: query

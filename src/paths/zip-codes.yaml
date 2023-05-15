@@ -2,7 +2,15 @@ get:
   tags:
     - ZIP-CODE
   summary: Rechercher des code postaux
-  description: Récupérer des code postaux selon différents critères
+  description: >-
+    Récupérer des codes postaux selon différents critères
+    
+    
+    ### Exemples
+      #### La liste des codes postaux
+        /zip-codes
+      #### Le code postal correspondant au cityId 48786021
+        /zip-codes?cityIds=48786021
   parameters:
     - name: searchQueryParam
       in: query
