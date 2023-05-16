@@ -2,7 +2,11 @@ get:
   tags:
     - Commune
   summary: Rechercher des villes
-  description: Récupérer des villes selon différents critères
+  description: >-
+    Récupérer des villes selon différents critères
+    ### Exemple
+      #### Les villes de l'agglomération d'Alès
+        /cities?agglomerationsIds=4762789825649664
   parameters:
     - name: searchQueryParam
       in: query

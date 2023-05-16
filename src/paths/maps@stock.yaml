@@ -2,7 +2,11 @@ get:
   tags:
     - Génération de carte
   summary: Données cartographique du stock
-  description: Retourne un GeoJSON avec des données géographiques représentant le stock de biens
+  description: >-
+    Retourne un GeoJSON avec des données géographiques représentant le stock de biens
+    ### Exemple
+      #### Carte des stocks d'une zone du Nord de Nantes
+        /maps/stock?bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
   x-code-samples:
     - lang: curl
       source:
