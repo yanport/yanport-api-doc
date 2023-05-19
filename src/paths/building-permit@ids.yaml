@@ -2,7 +2,7 @@ get:
   tags:
     - Permis de construire
   summary: Récupérer des permis de construire (ID)
-  description: Récupérer des permis de construire par leurs identifiants
+  description: Retourne les permis de construire selon leurs identifiants
   parameters:
     - name: ids
       in: query

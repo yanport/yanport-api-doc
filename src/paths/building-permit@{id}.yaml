@@ -2,7 +2,7 @@ get:
   tags:
     - Permis de construire
   summary: Récupérer un permis de construire (ID)
-  description: Récupérer un permis de construire par son identifiant
+  description: Retourne un permis de construire selon son identifiant
   parameters:
     - name: id
       in: path

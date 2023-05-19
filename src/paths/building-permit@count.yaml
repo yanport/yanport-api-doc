@@ -3,7 +3,7 @@ get:
     - Indicateurs sur les permis de construire
   summary: Nombre de permis de construire
   description: >-
-    Compte le nombre de permis de construire par rapport à certains critères de
+    Retourne le nombre de permis de construire correspondant à certains critères de
     recherche. 
 
 
