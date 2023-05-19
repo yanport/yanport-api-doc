@@ -1,15 +1,19 @@
 get:
   tags:
-    - Permis de construire
-  summary: Récupérer des permis de construire
+    - Indicateurs sur les permis de construire
+  summary: Nombre de permis de construire
   description: >-
-    Retourne des permis de construire selon différents critères (source SITADEL)
-    ### Exemple
-      #### Les permis de construire de nouveaux bâtiments dans le 77 autorisés depuis le 01/01/2023
-        /building-permits?authorisationDateMin=2023-01-01&states=AUTHORISED&types=NEW_BUILD&depCodes=77
+    Retourne le nombre de permis de construire correspondant à certains critères de
+    recherche. 
+
+
+    ### Exemples
+      #### Nombre de permis de construire actifs à Vincennes
+        /building-permits/count?active=true&zipCodes=94300
   parameters:
     - name: searchQueryParam
       in: query
+      description: Paramètres de recherche de permis de construire
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
@@ -44,23 +48,16 @@ get:
     - $ref: ../components/parameters/missingFields.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche de permis de construire
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
-      description: La liste des permis de construire
+      description: Le nombre de permis de construire
       content:
         application/json:
           schema:
-            type: object
-            properties:
-              total:
-                type: integer
-              hits:
-                type: array
-                items:
-                  $ref: ../components/schemas/BuildingPermit.yaml
+            $ref: ../components/schemas/CountResponse.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
