@@ -1,6 +1,6 @@
 name: propertySubTypes
 in: query
-description: Sous Types de bien
+description: Sous-types de bien
 style: form
 schema:
   type: array

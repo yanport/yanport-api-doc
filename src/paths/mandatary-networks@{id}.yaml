@@ -2,7 +2,7 @@ get:
   tags:
     - Réseaux de mandataires
   summary: Récupérer un réseau mandataire
-  description: Récupérer un réseau mandataire par son identifiant
+  description: Retourne un réseau mandataire selon son identifiant
   parameters:
     - name: id
       in: path

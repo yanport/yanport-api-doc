@@ -1,22 +1,22 @@
 get:
   tags:
-    - IRIS
-  summary: Récupérer un iris (ID)
-  description: Retourne un iris selon son identifiant
+    - Département
+  summary: Récupérer un département (ID)
+  description: Retourne un département selon son identifiant
   parameters:
     - name: id
       in: path
-      description: L'identifiant de l'iris
+      description: L'identifiant du département
       required: true
       schema:
         type: string
   responses:
     '200':
-      description: Le quartier demandé
+      description: Le département demandé
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Iris.yaml
+            $ref: ../components/schemas/Department.yaml
     '404':
       $ref: ../components/responses/ResourceNotFound.yaml
     '500':

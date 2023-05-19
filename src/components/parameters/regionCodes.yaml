@@ -1,6 +1,6 @@
 name: regionCodes
 in: query
-description: Liste de codes de région
+description: Liste de codes de régions
 style: form
 schema:
   type: array

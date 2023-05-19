@@ -2,7 +2,7 @@ get:
   tags:
     - Agglomeration (EPCI)
   summary: Récupérer des agglomérations
-  description: Retourne les agglomérations correspondantes aux critères demandés
+  description: Retourne les agglomérations correspondant aux critères demandés
   parameters:
     - name: searchQueryParam
       in: query

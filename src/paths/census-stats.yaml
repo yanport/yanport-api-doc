@@ -1,8 +1,8 @@
 get:
   tags:
     - Statistiques socioéconomiques
-  summary: Rechercher des statistiques socioéconomiques
-  description: Récupérer des statistiques socioéconomiques par zones géographiques (source INSEE)
+  summary: Récupérer des statistiques socioéconomiques
+  description: Retourne des statistiques socioéconomiques par zones géographiques (source INSEE)
   parameters:
     - name: searchQueryParam
       in: query

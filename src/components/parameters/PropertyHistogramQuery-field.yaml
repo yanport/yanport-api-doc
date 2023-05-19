@@ -1,6 +1,6 @@
 name: field
 in: query
-description: Champ sur lequel sont calculés les statistiques
+description: Champ sur lequel sont calculées les statistiques
 required: true
 schema:
   type: string

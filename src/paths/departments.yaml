@@ -1,18 +1,18 @@
 get:
   tags:
-    - Commune
-  summary: Récupérer des villes
-  description: Retourne des villes selon différents critères
+    - Département
+  summary: Récupérer des départements
+  description: Retourne des départements selon différents critères
   parameters:
     - name: searchQueryParam
       in: query
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/departments.yaml
+    - $ref: ../components/parameters/deptCodes.yaml
     - $ref: ../components/parameters/zipCodes.yaml
-    - $ref: ../components/parameters/CitySearchQuery-inseeCodes.yaml
-    - $ref: ../components/parameters/CitySearchQuery-deptCodes.yaml
-    - $ref: ../components/parameters/excludedIds.yaml
+    - $ref: ../components/parameters/codes.yaml
     - name: geoSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de biens
@@ -20,7 +20,7 @@ get:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
-      description: La liste des villes
+      description: La liste des départements
       content:
         application/json:
           schema:
@@ -31,7 +31,7 @@ get:
               hits:
                 type: array
                 items:
-                  $ref: ../components/schemas/City.yaml
+                  $ref: ../components/schemas/Department.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

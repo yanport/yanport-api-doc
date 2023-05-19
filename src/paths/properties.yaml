@@ -1,9 +1,9 @@
 get:
   tags:
     - Les biens (ancien/neuf)
-  summary: Rechercher des biens
+  summary: Récupérer des biens
   description: >-
-    Rechercher les biens actifs ou expirés selon plusieurs critères (prix,
+    Retourne les biens actifs ou expirés selon plusieurs critères (prix,
     surface, ville, ...)
 
 
@@ -19,9 +19,9 @@ get:
     récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
 
 
-    Concernant le tri le paramètre `sort` à pour syntaxe `field:asc|desc` en
+    Concernant le tri, le paramètre `sort` a pour syntaxe `field:asc|desc`, en
     remplaçant `field` par le nom du champ sur lequel appliqué le tri.
-    Il est également possible de faire un tri par distance par-rapport à une géolocalisation
+    Il est également possible de faire un tri par distance par rapport à une géolocalisation
     avec la syntaxe `sort=address.location:geo:lat:lon`
 
     ### Exemples
@@ -29,9 +29,9 @@ get:
         /properties?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130
       #### Les biens en cours de publication dans le 17ème arrondissement de Paris avec balcon
         /properties?active=true&source=AD&zipCodes=75017&q=balcon
-      #### Les derniers biens de particulier publiés en Corse sur LeBonCoin et PAP
+      #### Les derniers biens de particuliers publiés en Corse sur LeBonCoin et PAP
         /properties?active=true&source=AD&crawlSources=LE_BON_COIN&crawlSources=PAP&departments=2B&sort=marketing.publicationStartDate:asc
-      #### Les biens en cours sur Levallois-Perret entre 120 et 130m² triés par distance par-rapport au point de coordonnées (48.8956, 2.2827)
+      #### Les biens en cours sur Levallois-Perret entre 120 et 130m² triés par distance par rapport au point de coordonnées (48.8956, 2.2827)
         /properties?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130&sort=address.location:geo:48.8956:2.2827
   parameters:
     - name: propertySearchQuery
@@ -61,7 +61,7 @@ post:
   tags:
     - Les biens (ancien/neuf)
   summary: Ajouter un bien
-  description: Retourne le bien créé avec son identiant, l'horodatage et son adresse complétée
+  description: Retourne le bien créé avec son identifiant, l'horodatage et son adresse complétée
   requestBody:
     required: true
     description: Formulaire pour la création d'un bien (de source CLIENT)
