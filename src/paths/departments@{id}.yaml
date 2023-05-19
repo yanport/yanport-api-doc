@@ -2,7 +2,13 @@ get:
   tags:
     - Département
   summary: Récupérer un département (ID)
-  description: Retourne un département selon son identifiant
+  description: >-
+    Retourne un département selon son identifiant
+    
+    
+    ### Exemple
+      #### Le département 59 (Nord)
+        /departments/59
   parameters:
     - name: id
       in: path

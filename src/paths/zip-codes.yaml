@@ -1,26 +1,23 @@
 get:
   tags:
-    - Département
-  summary: Récupérer des départements
+    - ZIP-CODE
+  summary: Récupérer des code postaux
   description: >-
-    Retourne des départements selon différents critères
+    Retourne des codes postaux selon différents critères
     
     
     ### Exemples
-      #### La liste des départements
-        /departments
-      #### Le département correspondant aux coordonnées géographiques du centre ville de La Rochelle
-        /departments/match?lat=46.159783653934596&lng=-1.1514798008421312
+      #### La liste des codes postaux
+        /zip-codes
+      #### Le code postal correspondant au cityId 48786021
+        /zip-codes?cityIds=48786021
   parameters:
     - name: searchQueryParam
       in: query
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
-    - $ref: ../components/parameters/departments.yaml
-    - $ref: ../components/parameters/deptCodes.yaml
-    - $ref: ../components/parameters/zipCodes.yaml
-    - $ref: ../components/parameters/codes.yaml
+    - $ref: ../components/parameters/cityIds.yaml
     - name: geoSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de biens
@@ -28,7 +25,7 @@ get:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
-      description: La liste des départements
+      description: La liste des code postaux
       content:
         application/json:
           schema:
@@ -39,7 +36,7 @@ get:
               hits:
                 type: array
                 items:
-                  $ref: ../components/schemas/Department.yaml
+                  $ref: ../components/schemas/Zip-code.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

@@ -144,6 +144,11 @@ tags:
     x-displayName: Activité de prospection
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/ProspectActivity" />
+  - name: Modele-zip-code
+    x-displayName: Zip-code
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Zip-code" />
+      <SchemaDefinition schemaRef="#/components/schemas/Zip-code" />
 x-tagGroups:
   - name: MOTEUR DE RECHERCHE
     tags:
@@ -209,6 +214,8 @@ x-tagGroups:
       - Modele-etude
       - Modele-prospect
       - Modele-activite-de-prospection
+      - Modele-zip-code
+
 paths:
   /properties:
     $ref: paths/properties.yaml
@@ -352,6 +359,12 @@ paths:
     $ref: 'paths/api-transactions@{id}.yaml'
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
+  /zip-codes:
+    $ref: paths/zip-codes.yaml
+  '/zip-codes/{id}':
+    $ref: 'paths/zip-codes@{id}.yaml'
+  /zip-codes/ids:
+    $ref: paths/zip-codes@ids.yaml
 components:
   securitySchemes:
     JWT:

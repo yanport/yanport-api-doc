@@ -2,11 +2,16 @@ get:
   tags:
     - Les biens similaires (ancien/neuf)
   summary: Récupérer les biens similaires
-  description: Retourne les biens similaires correspondant aux critères demandés.
+  description: >-
+    Retourne les biens similaires correspondant aux critères demandés.
+
+    ### Exemple
+      #### Les biens similaires à un 2 pièces 47m2 à Bordeaux de 220000€ publiés depuis le 01/01/2023
+        /similar-properties?cityIds=48666765&marketingType=SALE&propertyTypes=APARTMENT&price=220000&surface=47&roomCount=2&publicationDateMin=2023-01-01T00:00:00Z
   parameters:
     - $ref: ../components/parameters/minDocCount.yaml
     - $ref: ../components/parameters/cityIds.yaml
-    - $ref: ../components/parameters/marketingTypes.yaml
+    - $ref: ../components/parameters/marketingType.yaml
     - $ref: ../components/parameters/propertyTypes.yaml
     - $ref: ../components/parameters/propertySubTypes.yaml
     - $ref: ../components/parameters/price.yaml

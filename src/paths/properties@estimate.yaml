@@ -6,9 +6,11 @@ get:
     Estimation précise du prix, loyer, rendement locatif ou de la marge de négociation selon les caractéristiques du bien et sa
     localisation.
     
-    ### Exemple
-      #### Estimation du prix d'un bien de 38m² et 2 pièces à Rennes
-        /properties/estimate?field=PRICE&marketingType=SALE&propertyType=APARTMENT&lat=48.1125&lng=-1.6735&surface=38&roomCount=2
+    ### Exemples
+      #### Estimation du loyer d'un appartement de 38m² et 2 pièces à Rennes
+        /properties/estimate?field=PRICE&marketingType=RENT&propertyType=APARTMENT&lat=48.1125&lng=-1.6735&surface=38&roomCount=2
+      #### Estimation d'une maison à Nantes de 1990 de 150m2 avec parking, terrasse et jardin - avec interprétabilité
+        /properties/estimate?field=PRICE&marketingType=SALE&constructionYear=1990&propertyType=HOUSE&lat=47.25620549&lng=-1.55873660&surface=150&roomCount=6&parkingCount=1&terraceCount=1&gardenCount=1&explain=True&landSurface=3089
   x-code-samples:
     - lang: curl
       source:

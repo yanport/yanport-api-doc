@@ -1,14 +1,12 @@
 get:
   tags:
-    - Département
-  summary: Récupérer des départements (ID)
+    - ZIP-CODE
+  summary: Récupérer des zip-code (ID)
   description: >-
-    Retourne des départements selon leurs identifiants
-    
-    
+    Retourne des zip-code selon leurs identifiants
     ### Exemple
-      #### Les départements d'Ile de France
-        /departments/ids?ids=75&ids=77&ids=78&ids=91&ids=92&ids=93&ids=94&ids=95
+      #### Les codes postaux du 8ème et 9ème arrondissements de Paris
+        /zip-codes/ids?zipCodes=75008&zipCodes=75009
   parameters:
     - name: ids
       in: query
@@ -22,13 +20,13 @@ get:
               type: string
   responses:
     '200':
-      description: La liste des départements
+      description: La liste des zip-code
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: ../components/schemas/Department.yaml
+              $ref: ../components/schemas/Zip-code.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
