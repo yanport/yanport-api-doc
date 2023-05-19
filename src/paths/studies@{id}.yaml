@@ -2,7 +2,7 @@ get:
   tags:
     - Etudes
   summary: Récupérer une étude
-  description: Récupérer une étude par son identifiant
+  description: Retourne une étude selon son identifiant
   parameters:
     - name: id
       in: path

@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Département
+  summary: Récupérer un département (ID)
+  description: Retourne un département selon son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant du département
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Le département demandé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Department.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,8 +1,8 @@
 get:
   tags:
     - Commune
-  summary: Rechercher des villes
-  description: Récupérer des villes selon différents critères
+  summary: Récupérer des villes
+  description: Retourne des villes selon différents critères
   parameters:
     - name: searchQueryParam
       in: query

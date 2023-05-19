@@ -3,6 +3,8 @@ properties:
   id:
     type: string
     format: uuid
+  reference:
+    type: boolean
   crawlSource:
     $ref: ./CrawlSource.yaml
   url:

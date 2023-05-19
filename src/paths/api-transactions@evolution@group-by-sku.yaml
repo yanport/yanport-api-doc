@@ -3,7 +3,7 @@ get:
     - Consommation API
   summary: Récupérer l'aggregation d'une propriété des transactions d'API
   description: >-
-    Retourne l'aggregation d'une propriété des transactions d'API selon
+    Retourne l'agrégation d'une propriété des transactions d'API selon
     l'intervalle de temps demandé, correspondant aux critères demandés et
     regroupé par sku
   parameters:

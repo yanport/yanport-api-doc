@@ -2,7 +2,7 @@ post:
   tags:
     - Etudes
   summary: Créer une étude
-  description: Retourne l'étude créé
+  description: Retourne l'étude créée
   requestBody:
     required: true
     description: Formulaire pour la création d'une étude
@@ -55,8 +55,8 @@ post:
 get:
   tags:
     - Etudes
-  summary: Rechercher des études
-  description: Rechercher des études selon plusieurs critères
+  summary: Récupérer des études
+  description: Retourne des études selon plusieurs critères
   parameters:
     - name: searchQueryParam
       in: query

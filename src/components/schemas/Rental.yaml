@@ -1,0 +1,10 @@
+type: object
+properties:
+  monthlyPrice:
+    type: number
+    format: double
+    minimum: 10
+    maximum: 100000
+  yield:
+    $ref: ./Yield.yaml
+    

@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Département
+  summary: Récupérer des départements (ID)
+  description: Retourne des départements selon leurs identifiants
+  parameters:
+    - name: ids
+      in: query
+      description: Liste d'identifiants
+      required: true
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+  responses:
+    '200':
+      description: La liste des départements
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Department.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

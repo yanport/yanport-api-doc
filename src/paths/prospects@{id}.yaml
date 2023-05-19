@@ -2,7 +2,7 @@ get:
   tags:
     - Prospects
   summary: Récupérer un prospect (ID)
-  description: Récupérer un prospect par son identifiant
+  description: Retourne un prospect selon son identifiant
   parameters:
     - name: id
       in: path

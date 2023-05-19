@@ -2,7 +2,7 @@ get:
   tags:
     - Commune
   summary: Récupérer des villes (ID)
-  description: Récupérer des villes par leur identifiant
+  description: Retourne des villes selon leurs identifiants
   parameters:
     - name: ids
       in: query

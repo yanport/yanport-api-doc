@@ -2,7 +2,7 @@ get:
   tags:
     - Consommation API
   summary: Récupérer des transactions d'API
-  description: Retourne les transactions d'API correspondantes aux critères demandés
+  description: Retourne les transactions d'API correspondant aux critères demandés
   parameters:
     - $ref: ../components/parameters/ApiTransactionSearchQuery-tokenIds.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-organizationIds.yaml

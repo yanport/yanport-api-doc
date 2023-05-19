@@ -31,8 +31,8 @@ post:
 get:
   tags:
     - Utilisateurs
-  summary: Rechercher des utilisateurs
-  description: Rechercher des utilisateurs
+  summary: Récupérer des utilisateurs
+  description: Retourne des utilisateurs
   parameters:
     - name: searchQueryParam
       in: query
@@ -93,7 +93,7 @@ get:
         type: boolean
     - name: admin
       in: query
-      description: Filter les utilisateurs administrateurs ou non
+      description: Filtrer les utilisateurs administrateurs ou non
       schema:
         type: boolean
     - name: marketingTypes

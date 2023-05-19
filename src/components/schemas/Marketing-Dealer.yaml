@@ -9,6 +9,10 @@ properties:
     type: integer
     format: int64
     minimum: 0
+  externalId:
+    type: string
+  externalOrganizationId:
+    type: string
   type:
     $ref: ./Dealer-Type.yaml
   subType:

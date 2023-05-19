@@ -1,8 +1,8 @@
 get:
   tags:
     - IRIS
-  summary: Rechercher des iris
-  description: Récupérer des iris selon différents critères
+  summary: Récupérer des iris
+  description: Retourne des iris selon différents critères
   parameters:
     - name: searchQueryParam
       in: query

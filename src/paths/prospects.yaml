@@ -5,7 +5,7 @@ post:
   description: Retourne le prospect créé
   requestBody:
     required: true
-    description: Formulaire pour la création d'un utilisateur
+    description: Formulaire pour la création d'un prospect
     content:
       application/json:
         schema:
