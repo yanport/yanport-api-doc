@@ -314,10 +314,14 @@ paths:
     $ref: paths/agencies.yaml
   '/agencies/{id}':
     $ref: 'paths/agencies@{id}.yaml'
+  '/agencies/ids':
+    $ref: paths/agencies@ids.yaml
   /mandatary-networks:
     $ref: paths/mandatary-networks.yaml
   '/mandatary-networks/{id}':
     $ref: 'paths/mandatary-networks@{id}.yaml'
+  '/mandatary-networks/ids':
+    $ref: paths/mandatary-networks@ids.yaml
   /users:
     $ref: paths/users.yaml
   '/users/{id}':
