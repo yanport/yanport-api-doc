@@ -27,8 +27,8 @@ post:
 get:
   tags:
     - Activités de prospection
-  summary: Chercher des activités de prospection
-  description: Récupérer des activités de prospection
+  summary: Récupérer des activités de prospection
+  description: Retourne des activités de prospection selon différents critères
   parameters:
     - name: searchQueryParam
       in: query

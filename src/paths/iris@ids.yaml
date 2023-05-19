@@ -2,7 +2,7 @@ get:
   tags:
     - IRIS
   summary: Récupérer des iris (ID)
-  description: Récupérer des iris par leurs identifiants
+  description: Retourne des iris selon leurs identifiants
   parameters:
     - name: ids
       in: query

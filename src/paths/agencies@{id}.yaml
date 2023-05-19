@@ -1,8 +1,8 @@
 get:
   tags:
     - 'Etablissement (agence, promoteur, etc)'
-  summary: Récupérer une agence
-  description: Récupérer une agence par son identifiant
+  summary: Récupérer un établissement
+  description: Retourne un établissement par son identifiant
   parameters:
     - name: id
       in: path

@@ -2,7 +2,7 @@ get:
   tags:
     - Parcelle
   summary: Récupérer une parcelle (ID)
-  description: Retourne la parcelle dont l'id correspond
+  description: Retourne une parcelle selon son identifiant
   parameters:
     - name: id
       in: path

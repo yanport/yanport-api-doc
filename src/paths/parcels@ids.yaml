@@ -2,7 +2,7 @@ get:
   tags:
     - Parcelle
   summary: Récupérer des parcelles (ID)
-  description: Retourne les parcelles qui disposent des id renseignées
+  description: Retourne des parcelles selon leurs identifiants
   parameters:
     - name: ids
       in: query

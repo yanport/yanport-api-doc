@@ -2,7 +2,7 @@ get:
   tags:
     - Les programmes (neuf)
   summary: Récupérer des programmes (ID)
-  description: Récupérer des programmes par leurs identifiants
+  description: Retourne des programmes selon leurs identifiants
   parameters:
     - name: ids
       in: query

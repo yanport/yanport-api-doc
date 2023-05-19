@@ -2,7 +2,7 @@ get:
   tags:
     - Les biens (ancien/neuf)
   summary: Récupérer des biens (ID)
-  description: Récupérer des biens par leurs identifiants
+  description: Retourne des biens selon leurs identifiants
   parameters:
     - name: ids
       in: query

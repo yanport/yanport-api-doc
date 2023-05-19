@@ -2,7 +2,7 @@ get:
   tags:
     - Département
   summary: Récupérer des départements (ID)
-  description: Récupérer des départements par leurs identifiants
+  description: Retourne des départements selon leurs identifiants
   parameters:
     - name: ids
       in: query

@@ -2,7 +2,7 @@ get:
   tags:
     - Département
   summary: Récupérer un département (ID)
-  description: Récupérer un département par son identifiant
+  description: Retourne un département selon son identifiant
   parameters:
     - name: id
       in: path
