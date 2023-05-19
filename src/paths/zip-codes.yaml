@@ -1,9 +1,9 @@
 get:
   tags:
     - ZIP-CODE
-  summary: Rechercher des code postaux
+  summary: Récupérer des code postaux
   description: >-
-    Récupérer des codes postaux selon différents critères
+    Retourne des codes postaux selon différents critères
     
     
     ### Exemples
