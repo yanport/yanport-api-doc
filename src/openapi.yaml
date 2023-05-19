@@ -304,6 +304,12 @@ paths:
     $ref: paths/census-stats.yaml
   /building-permits:
     $ref: paths/building-permit.yaml
+  /building-permits/count:
+    $ref: paths/building-permit@count.yaml
+  '/building-permits/{id}':
+    $ref: 'paths/building-permit@{id}.yaml'
+  /building-permits/ids:
+    $ref: paths/building-permit@ids.yaml
   /agencies:
     $ref: paths/agencies.yaml
   '/agencies/{id}':

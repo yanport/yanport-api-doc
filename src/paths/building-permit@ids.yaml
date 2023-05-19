@@ -1,0 +1,28 @@
+get:
+  tags:
+    - Permis de construire
+  summary: Récupérer des permis de construire (ID)
+  description: Retourne les permis de construire selon leurs identifiants
+  parameters:
+    - name: ids
+      in: query
+      required: true
+      style: form
+      schema:
+        type: array
+        items:
+          type: string
+          format: uuid
+  responses:
+    '200':
+      description: Permis de construire
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/BuildingPermit.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
