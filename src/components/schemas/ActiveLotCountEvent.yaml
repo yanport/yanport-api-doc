@@ -1,6 +1,6 @@
 type: object
 properties:
-  activeLotCount:
+  count:
     type: number
     format: integer
   date:

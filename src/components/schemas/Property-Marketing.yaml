@@ -53,10 +53,22 @@ properties:
   priceM2:
     type: number
     format: double
+  priceM2Range:
+    items:
+      $ref: ./Range.yaml
+  negotiationMargin:
+    items:
+      $ref: ./Range.yaml
+    minimum: 0
+    maximum: 100
   priceEvents:
     type: array
     items:
       $ref: ./PriceEvent.yaml
+  priceEventsRange:
+    type: array
+    items:
+      $ref: ./PriceEventRange.yaml
   lastPriceDecreaseDate:
     type: string
     format: date
@@ -74,6 +86,9 @@ properties:
   marketingEndDate:
     type: string
     format: date-time
+  marketingDateRange:
+    items:
+      $ref: ./RangeDateTime.yaml
   marketingDays:
     type: integer
     format: int64
@@ -84,6 +99,9 @@ properties:
   publicationEndDate:
     type: string
     format: date-time
+  publicationDateRange:
+    items:
+      $ref: ./RangeDateTime.yaml
   publicationDays:
     type: integer
     format: int64

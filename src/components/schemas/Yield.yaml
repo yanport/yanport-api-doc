@@ -1,0 +1,10 @@
+type: object
+properties:
+  gross:
+    type: number
+    format: double
+    example: 2530
+  net:
+    type: number
+    format: double
+    example: 2530
