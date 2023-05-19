@@ -101,7 +101,7 @@ get:
         type: boolean
     - name: constructionYear
       in: query
-      description: "L'année de construction (maison et terrain uniquement)."
+      description: "L'année de construction (maison et appartement uniquement)."
       schema:
         type: number
         format: integer
@@ -123,11 +123,11 @@ get:
       schema:
         type: string
         enum:
-          - VERY BAD
+          - VERY_BAD
           - BAD
           - NORMAL
           - GOOD
-          - VERY GOOD
+          - VERY_GOOD
           - NEW
     - name: energyConsumptionLetter
       in: query

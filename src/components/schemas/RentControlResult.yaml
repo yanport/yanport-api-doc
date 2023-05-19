@@ -6,7 +6,7 @@ properties:
     $ref: ./Address.yaml
   constructionPeriod:
     $ref: ./Range.yaml
-  irishQuarter:
+  irisQuarter:
     $ref: ./Iris.yaml
   zones:
     $ref: ./RentControlZone.yaml
