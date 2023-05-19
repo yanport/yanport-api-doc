@@ -2,7 +2,7 @@ get:
   tags:
     - Réseaux de mandataires
   summary: Récupérer des réseaux mandataires
-  description: Récupérer des réseaux mandataires par leurs identifiants
+  description: Retourne des réseaux mandataires selon leurs identifiants
   parameters:
     - name: ids
       in: query

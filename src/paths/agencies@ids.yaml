@@ -1,8 +1,8 @@
 get:
   tags:
     - 'Etablissement (agence, promoteur, etc)'
-  summary: Récupérer des agences
-  description: Récupérer des agences par leurs identifiants
+  summary: Récupérer des établissements
+  description: Retourne des établissements selon leurs identifiants
   parameters:
     - name: ids
       in: query
