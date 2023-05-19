@@ -31,8 +31,8 @@ post:
 get:
   tags:
     - Utilisateurs
-  summary: Rechercher des utilisateurs
-  description: Rechercher des utilisateurs
+  summary: Récupérer des utilisateurs
+  description: Retourne des utilisateurs
   parameters:
     - name: searchQueryParam
       in: query

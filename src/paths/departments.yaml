@@ -1,8 +1,8 @@
 get:
   tags:
     - Département
-  summary: Rechercher des départements
-  description: Récupérer des départements selon différents critères
+  summary: Récupérer des départements
+  description: Retourne des départements selon différents critères
   parameters:
     - name: searchQueryParam
       in: query

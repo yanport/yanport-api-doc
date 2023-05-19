@@ -1,9 +1,9 @@
 get:
   tags:
     - Les biens (ancien/neuf)
-  summary: Rechercher des biens
+  summary: Récupérer des biens
   description: >-
-    Rechercher les biens actifs ou expirés selon plusieurs critères (prix,
+    Retourne les biens actifs ou expirés selon plusieurs critères (prix,
     surface, ville, ...)
 
 

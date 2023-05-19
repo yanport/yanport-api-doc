@@ -1,9 +1,9 @@
 get:
   tags:
     - Les programmes (neuf)
-  summary: Rechercher des programmes
+  summary: Récupérer des programmes
   description: >-
-    Rechercher les programmes immobiliers actifs ou expirés selon plusieurs
+    Retourne les programmes immobiliers actifs ou expirés selon plusieurs
     critères (prix, surface, ville, ...)
 
 
