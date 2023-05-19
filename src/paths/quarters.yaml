@@ -1,8 +1,8 @@
 get:
   tags:
     - Quartier
-  summary: Rechercher des quartiers
-  description: Récupérer des quartiers selon différents critères
+  summary: Récupérer des quartiers
+  description: Retourne des quartiers selon différents critères
   parameters:
     - name: searchQueryParam
       in: query

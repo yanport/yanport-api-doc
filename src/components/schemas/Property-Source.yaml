@@ -5,4 +5,5 @@ enum:
   - DVF
   - CLIENT
   - CLAMEUR
+  - ORGANIZATION
 example: AD

@@ -2,7 +2,7 @@ get:
   tags:
     - Consommation API
   summary: Récupérer une transaction de l'API
-  description: Retourne une transaction de l'API dont l'id correspond
+  description: Retourne une transaction de l'API selon son identifiant
   parameters:
     - name: id
       in: path

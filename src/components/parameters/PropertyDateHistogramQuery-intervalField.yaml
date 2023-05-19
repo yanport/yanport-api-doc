@@ -1,6 +1,6 @@
 name: intervalField
 in: query
-description: Champ sur lequel sont calculés les statistiques
+description: Champ de date utilisé pour les regroupements
 required: true
 schema:
   type: string

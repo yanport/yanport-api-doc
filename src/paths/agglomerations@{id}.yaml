@@ -2,7 +2,7 @@ get:
   tags:
     - Agglomeration (EPCI)
   summary: Récupérer une agglomération
-  description: Retourne l'agglomération dont l'id correspond
+  description: Retourne l'agglomération selon son identifiant
   parameters:
     - name: id
       in: path

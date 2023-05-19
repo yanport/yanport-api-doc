@@ -1,0 +1,17 @@
+type: object
+properties:
+  value:
+    type: string
+    enum:
+      - UNKNOWN
+      - SAFE
+      - UNUSUAL
+      - SUSPECT
+      - ANORMAL
+    example: SAFE
+  level:
+    type: integer
+  causes:
+    type: array
+    items:
+      $ref: ./Cause.yaml

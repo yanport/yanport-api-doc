@@ -2,7 +2,7 @@ get:
   tags:
     - Agglomeration (EPCI)
   summary: Récupérer des agglomérations
-  description: Retourne les agglomérations qui disposent des id renseignées
+  description: Retourne les agglomérations selon des identifiants
   parameters:
     - name: ids
       in: query

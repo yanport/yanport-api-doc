@@ -247,6 +247,10 @@ properties:
   updateDateMax:
     type: string
     format: date-time
+  anomalyLevelMin:
+    type: integer
+  anomalyLevelMax:
+    type: integer
   externalProperties:
     type: array
     items:

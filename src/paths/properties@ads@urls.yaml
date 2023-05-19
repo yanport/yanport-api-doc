@@ -2,7 +2,7 @@ get:
   tags:
     - Les biens (ancien/neuf)
   summary: Récupérer des biens (URL)
-  description: Récupérer des biens par leurs annonces
+  description: Retourne des biens selon les urls d'annonces
   parameters:
     - name: url
       in: query

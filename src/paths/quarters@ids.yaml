@@ -2,7 +2,7 @@ get:
   tags:
     - Quartier
   summary: Récupérer des quartiers (ID)
-  description: Récupérer des quartiers par leur identifiant
+  description: Retourne des quartiers selon leurs identifiants
   parameters:
     - name: ids
       in: query

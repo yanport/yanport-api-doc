@@ -96,6 +96,10 @@ tags:
     x-displayName: Programme
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Program" />
+  - name: Modele-departement
+    x-displayName: Département
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Department" />
   - name: Modele-agglomeration
     x-displayName: Agglomération
     description: |
@@ -137,7 +141,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Prospect" />
   - name: Modele-activite-de-prospection
-    x-displayName: Activité de pospection
+    x-displayName: Activité de prospection
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/ProspectActivity" />
 x-tagGroups:
@@ -159,6 +163,7 @@ x-tagGroups:
       - Indicateurs sur les programmes (neuf)
   - name: REFERENTIEL GEOGRAPHIQUE
     tags:
+      - Département
       - Agglomeration (EPCI)
       - Commune
       - Quartier
@@ -192,6 +197,7 @@ x-tagGroups:
     tags:
       - Modele-bien
       - Modele-programme
+      - Modele-departement
       - Modele-agglomeration
       - Modele-commune
       - Modele-quartier
@@ -258,6 +264,12 @@ paths:
     $ref: paths/maps.yaml
   /maps/stock:
     $ref: paths/maps@stock.yaml
+  /departments:
+    $ref: paths/departments.yaml
+  '/departments/{id}':
+    $ref: 'paths/departments@{id}.yaml'
+  /departments/ids:
+    $ref: paths/departments@ids.yaml
   /agglomerations:
     $ref: paths/agglomerations.yaml
   '/agglomerations/{id}':
@@ -292,6 +304,12 @@ paths:
     $ref: paths/census-stats.yaml
   /building-permits:
     $ref: paths/building-permit.yaml
+  /building-permits/count:
+    $ref: paths/building-permit@count.yaml
+  '/building-permits/{id}':
+    $ref: 'paths/building-permit@{id}.yaml'
+  /building-permits/ids:
+    $ref: paths/building-permit@ids.yaml
   /agencies:
     $ref: paths/agencies.yaml
   '/agencies/{id}':
