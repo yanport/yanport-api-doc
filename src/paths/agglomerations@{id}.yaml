@@ -3,7 +3,7 @@ get:
     - Agglomeration (EPCI)
   summary: Récupérer une agglomération
   description: >-
-    Récupérer une agglomération par son identifiant
+    Retourne l'agglomération selon son identifiant
     
     
     ### Exemple

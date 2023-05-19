@@ -2,7 +2,7 @@ get:
   tags:
     - Les programmes (neuf)
   summary: Récupérer un programme (ID)
-  description: Récupérer un programme par son identifiant
+  description: Retourne un programme selon son identifiant
   parameters:
     - name: id
       in: path

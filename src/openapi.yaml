@@ -141,7 +141,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Prospect" />
   - name: Modele-activite-de-prospection
-    x-displayName: Activité de pospection
+    x-displayName: Activité de prospection
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/ProspectActivity" />
   - name: Modele-zip-code

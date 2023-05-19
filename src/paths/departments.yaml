@@ -1,9 +1,9 @@
 get:
   tags:
     - Département
-  summary: Rechercher des départements
+  summary: Récupérer des départements
   description: >-
-    Récupérer des départements selon différents critères
+    Retourne des départements selon différents critères
     
     
     ### Exemples

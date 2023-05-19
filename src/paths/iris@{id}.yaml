@@ -2,7 +2,7 @@ get:
   tags:
     - IRIS
   summary: Récupérer un iris (ID)
-  description: Récupérer un iris par son identifiant
+  description: Retourne un iris selon son identifiant
   parameters:
     - name: id
       in: path

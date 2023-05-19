@@ -3,7 +3,7 @@ get:
     - Département
   summary: Récupérer un département (ID)
   description: >-
-    Récupérer un département par son identifiant
+    Retourne un département selon son identifiant
     
     
     ### Exemple

@@ -2,7 +2,7 @@ get:
   tags:
     - Activités de prospection
   summary: Récupérer une activité de prospection (ID)
-  description: Récupérer une activité de prospection par son identifiant
+  description: Retourne une activité de prospection selon son identifiant
   parameters:
     - name: id
       in: path
@@ -27,7 +27,7 @@ delete:
   tags:
     - Activités de prospection
   summary: Supprimer une activité de prospection
-  description: Supprime l'activité de prospection correspondante à l'id donné
+  description: Supprime l'activité de prospection correspondant à l'id donné
   parameters:
     - name: id
       in: path
