@@ -47,6 +47,8 @@ properties:
     type: array
     items:
       $ref: ./PropertyRef.yaml
+  quality:
+    $ref: ./Property-Quality.yaml
   creationDate:
     type: string
     format: date-time

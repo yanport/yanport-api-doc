@@ -1,0 +1,5 @@
+name: anomalyLevelMin
+in: query
+description: Niveau d'anomalie minimum (compris entre -1 et 3)
+schema:
+  type: integer
