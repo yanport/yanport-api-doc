@@ -2,7 +2,7 @@ get:
   tags:
     - Les biens similaires (ancien/neuf)
   summary: Récupérer les biens similaires
-  description: Retourne les biens similaires correspondants aux critères demandés.
+  description: Retourne les biens similaires correspondant aux critères demandés.
   parameters:
     - $ref: ../components/parameters/minDocCount.yaml
     - $ref: ../components/parameters/cityIds.yaml

@@ -13,7 +13,7 @@ get:
         format: int64
   responses:
     '200':
-      description: L'agence correspondante
+      description: L'établissement correspondant
       content:
         application/json:
           schema:
