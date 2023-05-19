@@ -1,9 +1,9 @@
 get:
   tags:
     - Permis de construire
-  summary: Rechercher des permis de construire
+  summary: Récupérer des permis de construire
   description: >-
-    Récupérer des permis de construire selon différents critères (source SITADEL)
+    Retourne des permis de construire selon différents critères (source SITADEL)
     ### Exemple
       #### Les permis de construire de nouveaux bâtiments dans le 77 autorisés depuis le 01/01/2023
         /building-permits?authorisationDateMin=2023-01-01&states=AUTHORISED&types=NEW_BUILD&depCodes=77

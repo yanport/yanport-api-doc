@@ -39,7 +39,7 @@ get:
       in: query
       description: >-
         Rectangle qui délimite la zone géographique (latitude en haut à
-        gauche,longitude en haut à gauche,latitude en bas à droite,longitude en
+        gauche, longitude en haut à gauche, latitude en bas à droite, longitude en
         bas à droite)
       schema:
         type: string

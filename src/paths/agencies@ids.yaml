@@ -1,0 +1,26 @@
+get:
+  tags:
+    - 'Etablissement (agence, promoteur, etc)'
+  summary: Récupérer des établissements
+  description: Retourne des établissements selon leurs identifiants
+  parameters:
+    - name: ids
+      in: query
+      required: true
+      style: form
+      description: Les identifiants des agences
+      schema:
+        type: array
+        items:
+          type: string
+  responses:
+    '200':
+      description: Les agences correspondantes
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Agency.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

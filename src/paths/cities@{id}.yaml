@@ -2,7 +2,7 @@ get:
   tags:
     - Commune
   summary: Récupérer une ville (ID)
-  description: Récupérer une ville par son identifiant
+  description: Retourne une ville selon son identifiant
   parameters:
     - name: id
       in: path

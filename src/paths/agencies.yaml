@@ -1,9 +1,9 @@
 get:
   tags:
     - 'Etablissement (agence, promoteur, etc)'
-  summary: Rechercher des agences
+  summary: Récupérer des établissements
   description: |-
-    Rechercher des agences selon plusieurs critères
+    Retourne des établissements selon plusieurs critères
 
     ### Exemples
       #### Les agences situées à Levallois-Perret et qui ont au moins 10 biens en vente et en location

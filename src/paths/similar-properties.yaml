@@ -3,7 +3,7 @@ get:
     - Les biens similaires (ancien/neuf)
   summary: Récupérer les biens similaires
   description: >-
-    Retourne les biens similaires correspondants aux critères demandés.
+    Retourne les biens similaires correspondant aux critères demandés.
 
     ### Exemple
       #### Les biens similaires à un 2 pièces 47m2 à Bordeaux de 220000€ publiés depuis le 01/01/2023

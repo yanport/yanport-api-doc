@@ -1,0 +1,12 @@
+type: object
+properties:
+  lowerEndpoint:
+    type: string
+    format: date
+  lowerBoundType:
+    $ref: ./BoundType.yaml
+  upperEndpoint:
+    type: string
+    format: date
+  upperBoundType:
+    $ref: ./BoundType.yaml

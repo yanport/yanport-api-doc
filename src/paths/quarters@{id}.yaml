@@ -2,7 +2,7 @@ get:
   tags:
     - Quartier
   summary: Récupérer un quartier (ID)
-  description: Récupérer un quartier par son identifiant
+  description: Retourne un quartier selon son identifiant
   parameters:
     - name: id
       in: path

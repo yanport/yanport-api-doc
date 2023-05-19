@@ -1,9 +1,9 @@
 get:
   tags:
     - IRIS
-  summary: Rechercher des iris
+  summary: Récupérer des iris
   description:  >-
-    Récupérer des iris selon différents critères
+    Retourne des iris selon différents critères
     ### Exemple
       #### Les iris de la ville de Pau de type habitation
         /iris?cityIds=51470903&types=HOUSING
