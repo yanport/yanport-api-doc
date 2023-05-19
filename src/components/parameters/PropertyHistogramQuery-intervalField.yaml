@@ -1,6 +1,6 @@
 name: intervalField
 in: query
-description: Champ sur lequel sont calculées les statistiques
+description: Champ sur lequel sont définis les intervalles
 required: true
 schema:
   type: string
