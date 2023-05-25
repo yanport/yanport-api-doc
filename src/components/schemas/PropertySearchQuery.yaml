@@ -191,6 +191,10 @@ properties:
   priceM2CCMax:
     type: number
     format: double
+  priceEventCountMin:
+    type: integer
+  priceEventCountMax:
+    type: integer
   negotiationMarginMin:
     type: number
     format: double
