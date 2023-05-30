@@ -31,7 +31,7 @@ data = {
   "attachments": [
     {
       "pretext": 'Build and deploy API documentation <https://storage.googleapis.com/yanport-www.appspot.com/openapi.yaml>',
-      "text": '{} after {} (<https://github.com/yanport/yanport-app/actions/runs/{}|Open>)'.format(job_status.capitalize(), duration, job_id),
+      "text": '{} after {} (<https://github.com/yanport/yanport-api-doc/actions/runs/{}|Open>)'.format(job_status.capitalize(), duration, job_id),
       "color": color(job_status),
       "fields": [
         field(job_status)
