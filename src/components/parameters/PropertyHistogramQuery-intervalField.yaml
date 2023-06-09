@@ -6,12 +6,19 @@ schema:
   type: string
   enum:
     - PRICE
-    - PRICE_HC
-    - PRICE_CC
-    - PRICE_M2
-    - PRICE_M2_HC
-    - PRICE_M2_CC
-    - SURFACE
-    - ROOM_COUNT
-    - DURATION_DAYS
-    - MARKETING_DAYS
+      - PRICE_HC
+      - PRICE_CC
+      - PRICE_M2
+      - PRICE_M2_HC
+      - PRICE_M2_CC
+      - PRICE_EVENTS_RANGE_PRICE
+      - PRICE_EVENTS_RANGE_PRICE_M2
+      - PRICE_EVENTS_COUNT
+      - SURFACE
+      - ROOM_COUNT
+      - DURATION_DAYS
+      - MARKETING_DAYS
+      - FEES_PERCENT
+      - GROSS_RENTAL_YIELD
+      - NEGOTIATION_MARGIN
+      - CONSTRUCTION_YEAR
