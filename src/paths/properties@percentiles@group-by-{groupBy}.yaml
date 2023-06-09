@@ -12,7 +12,7 @@ get:
   parameters:
     - $ref: ../components/parameters/PropertyGroupByPercentileQuery-groupBy.yaml
     - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
-    - $ref: ../components/parameters/PropertyPercentileQuery-field.yaml
+    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
     - $ref: ../components/parameters/percentiles.yaml
     - $ref: ../components/parameters/ReliableQuery-reliability.yaml
     - name: propertySearchQuery

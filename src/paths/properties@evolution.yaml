@@ -11,7 +11,7 @@ get:
       #### Evolution des prix des biens en vente entre 2016 et 2017 à Levallois-Perret
         /properties/evolution?field=PRICE&intervalField=DELETE_DATE&interval=1&intervalUnit=MONTHS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&publicationDateMin=2016-01-01T00:00:00.00&publicationDateMax=2017-01-01T00:00:00.00
   parameters:
-    - $ref: ../components/parameters/PropertyDateHistogramQuery-field.yaml
+    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
     - $ref: ../components/parameters/percentiles.yaml
     - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalField.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
