@@ -23,7 +23,7 @@ get:
     - $ref: ../components/parameters/publicationDateMin.yaml
     - $ref: ../components/parameters/SimilarPropertyQuery-active.yaml
     - $ref: ../components/parameters/SimilarPropertyQuery-roomCount.yaml
-    - $ref: ../components/parameters/SimilarPropertyPercentileQuery-field.yaml
+    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
     - $ref: ../components/parameters/percentiles.yaml
     - name: geoSearchQueryParam
       in: query
