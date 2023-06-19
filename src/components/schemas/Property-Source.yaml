@@ -3,7 +3,7 @@ enum:
   - STUDY
   - AD
   - DVF
-  - CLIENT
+  - USER
   - CLAMEUR
   - ORGANIZATION
 example: AD

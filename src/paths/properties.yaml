@@ -64,7 +64,7 @@ post:
   description: Retourne le bien créé avec son identifiant, l'horodatage et son adresse complétée
   requestBody:
     required: true
-    description: Formulaire pour la création d'un bien (de source CLIENT)
+    description: Formulaire pour la création d'un bien (de source USER)
     content:
       application/json:
         schema:

@@ -6,4 +6,4 @@ schema:
   enum:
     - AD
     - DVF
-    - CLIENT
+    - USER
