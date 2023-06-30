@@ -48,12 +48,25 @@ properties:
     items:
       type: integer
       format: int64
+  externalDealerOrganizationIds:
+    type: array
+    items:
+      type: string
+  externalDealerIds:
+    type: array
+    items:
+      type: string
   propertyIds:
     type: array
     items:
       type: string
   programIds:
     type: array
+    items:
+      type: string
+  organizationIds:
+    type: array
+    description: correspond au champ "marketing.dealers.organizationId"
     items:
       type: string
   bloctelStatus:
@@ -111,6 +124,24 @@ properties:
   publicationDateMax:
     type: string
     format: date-time
+  publicationDateRangeMin:
+    type: string
+    format: date-time
+  publicationDateRangeMax:
+    type: string
+    format: date-time
+  priceEventDateMin:
+    type: string
+    format: date-time
+  priceEventDateMax:
+    type: string
+    format: date-time
+  priceEventRangeDateMin:
+    type: string
+    format: date-time
+  priceEventRangeDateMax:
+    type: string
+    format: date-time
   lastPriceDecreaseDateMin:
     type: string
     format: date-time
@@ -145,6 +176,18 @@ properties:
     type: integer
   durationDaysMax:
     type: integer
+  marketingDaysMin:
+    type: integer
+  marketingDaysMax:
+    type: integer
+  grossRentalYieldMin:
+    type: number
+    format: double
+  grossRentalYieldMax:
+    type: number
+    format: double
+  saleStatus:
+    type: string
   surfaceMin:
     type: number
     format: double
@@ -191,6 +234,12 @@ properties:
   priceM2CCMax:
     type: number
     format: double
+  priceEventRangePriceM2Min:
+    type: number
+    format: double
+  priceEventRangePriceM2Max:
+    type: number
+    format: double
   priceEventCountMin:
     type: integer
   priceEventCountMax:
@@ -217,6 +266,10 @@ properties:
     type: boolean
   newBuild:
     type: boolean
+  forBuild:
+    type: boolean
+  serviced:
+    type: boolean
   constructionYearMin:
     type: integer
   constructionYearMax:
@@ -231,14 +284,45 @@ properties:
   landSurfaceMax:
     type: number
     format: double
+  generalStates:
+    type: array
+    items:
+      type: string
+  energyConsumptionDiagnosisLetters:
+    type: array
+    items:
+      type: string
+      example: 'D'
+  greenhouseGasConsumptionDiagnosisLetters:
+    type: array
+    items:
+      type: string
+      example: 'D'
+  energyDiagnosisDateMin:
+    type: string
+    format: date-time
+  energyDiagnosisDateMax:
+    type: string
+    format: date-time
   missingFields:
     type: array
     items:
       type: string
+  existingFields:
+    type: array
+    items:
+      type: string
+      example: 'features.geometry.roomCount'
   excludedIds:
     type: array
     items:
       type: string
+  investmentRentalMonthlyPriceMin:
+    type: number
+    format: double
+  investmentRentalMonthlyPriceMax:
+    type: number
+    format: double
   creationDateMin:
     type: string
     format: date-time
