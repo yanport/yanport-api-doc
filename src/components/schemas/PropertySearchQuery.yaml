@@ -12,10 +12,6 @@ properties:
     type: array
     items:
       type: string
-  aggregatePropertyIds:
-    type: array
-    items:
-      type: string
   marketingTypes:
     type: array
     items:
@@ -70,6 +66,7 @@ properties:
       type: string
   organizationIds:
     type: array
+    description: correspond au champs "marketing.dealers.organizationId"
     items:
       type: string
   bloctelStatus:
@@ -161,12 +158,6 @@ properties:
     type: string
     format: date-time
   deleteDateMax:
-    type: string
-    format: date-time
-  deleteDateMinOrActive:
-    type: string
-    format: date-time
-  deleteDateMaxOrActive:
     type: string
     format: date-time
   marketingStartDateMin:
@@ -321,6 +312,7 @@ properties:
     type: array
     items:
       type: string
+      example: 'features.geometry.roomCount'
   excludedIds:
     type: array
     items:
