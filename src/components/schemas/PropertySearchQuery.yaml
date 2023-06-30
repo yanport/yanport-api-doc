@@ -66,7 +66,7 @@ properties:
       type: string
   organizationIds:
     type: array
-    description: correspond au champs "marketing.dealers.organizationId"
+    description: correspond au champ "marketing.dealers.organizationId"
     items:
       type: string
   bloctelStatus:
