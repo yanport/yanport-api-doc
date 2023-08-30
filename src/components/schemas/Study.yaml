@@ -6,22 +6,37 @@ properties:
   userId:
     type: integer
     format: int64
-  externalUserId:
+  version:
     type: string
+    enum:
+      - V1
+      - V2
   agencyId:
     type: integer
     format: int64
-  externalAgencyId:
-    type: string
+  mandataryNetworkId:
+    type: integer
+    format: int64
   organizationId:
     type: integer
     format: int64
+  externalIds:
+    type: object
+    properties:
+      USER:
+        type: string
+      AGENCY:
+        type: string
   name:
     type: string
   customer:
     $ref: ./Customer.yaml
   property:
     $ref: ./Property.yaml
+  pages:
+    type: array
+    items:
+      $ref: ./StudyPage.yaml
   sections:
     $ref: ./Sections.yaml
   creationDate:

@@ -1,7 +1,0 @@
-name: externalAgencyIds
-in: query
-description: Liste d'identifiants externes d'agences
-schema:
-  type: array
-  items:
-    type: string

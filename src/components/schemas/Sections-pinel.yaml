@@ -1,0 +1,15 @@
+type: object
+properties:
+  zone:
+    type: string
+    enum:
+      - A
+      - A_BIS
+      - B1
+      - B2
+  surface:
+    type: number
+  priceM2HC:
+    type: number
+  description:
+    type: string

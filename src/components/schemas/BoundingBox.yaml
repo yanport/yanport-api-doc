@@ -1,0 +1,6 @@
+type: object
+properties:
+  upperLeftCorner:
+    $ref: ./Location.yaml
+  lowerRightCorner:
+    $ref: ./Location.yaml

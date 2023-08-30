@@ -1,0 +1,14 @@
+type: object
+deprecated: true
+properties:
+  priceComment:
+    type: string
+    deprecated: true
+  similarPropertiesComment:
+    type: string
+    deprecated: true
+  propertyPoints:
+    type: array
+    items:
+      $ref: ./PropertyPoint.yaml
+    deprecated: true

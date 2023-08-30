@@ -9,38 +9,7 @@ post:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            id:
-              type: string
-              format: uuid
-            userId:
-              type: integer
-              format: int64
-            externalUserId:
-              type: string
-            agencyId:
-              type: integer
-              format: int64
-            externalAgencyId:
-              type: string
-            organizationId:
-              type: integer
-              format: int64
-            name:
-              type: string
-            customer:
-              $ref: ../components/schemas/Customer.yaml
-            property:
-              $ref: ../components/schemas/Property.yaml
-            sections:
-              $ref: ../components/schemas/Sections.yaml
-            creationDate:
-              type: string
-              format: date-time
-            updateDate:
-              type: string
-              format: date-time
+          $ref: ../components/schemas/Study.yaml
   responses:
     '200':
       description: L'étude créé
@@ -62,15 +31,18 @@ get:
       in: query
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-externalUserIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-externalAgencyIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-organizationIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-externalIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-marketingTypes.yaml
+    - $ref: ../components/parameters/StudySearchQuery-propertyIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-propertyExternalIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-creationDateMin.yaml
     - $ref: ../components/parameters/StudySearchQuery-creationDateMax.yaml
+    - $ref: ../components/parameters/missingFields.yaml
+    - $ref: ../components/parameters/existingFields.yaml
   responses:
     '200':
       description: Les études trouvées

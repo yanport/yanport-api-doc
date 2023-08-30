@@ -1,0 +1,26 @@
+type: object
+properties:
+  propertySearchQuery:
+    $ref: ./PropertySearchQuery.yaml
+  pricePercentiles:
+    $ref: ./Percentiles.yaml
+  priceM2Percentiles:
+    $ref: ./Percentiles.yaml
+  durationPercentiles:
+    $ref: ./Percentiles.yaml
+  priceM2Distribution:
+    $ref: ./Histogram.yaml
+  durationDistribution:
+    $ref: ./Histogram.yaml
+  priceM2Evolution:
+    $ref: ./DateHistogram.yaml
+  forecastPriceM2Evolution:
+    $ref: ./DateHistogram.yaml
+  durationEvolution:
+    $ref: ./DateHistogram.yaml
+  stockEvolution:
+    $ref: ./DateHistogram.yaml
+  maps:
+    type: array
+    items:
+      $ref: ./StudyMap.yaml
