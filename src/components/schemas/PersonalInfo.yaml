@@ -27,5 +27,3 @@ properties:
     type: array
     items:
       $ref: ./SocialNetwork.yaml
-  newsletter:
-    type: boolean

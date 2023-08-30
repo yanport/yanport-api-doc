@@ -35,5 +35,3 @@ properties:
   updateDate:
     type: string
     format: date-time
-  onBoarded:
-    type: boolean

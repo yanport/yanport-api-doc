@@ -14,10 +14,6 @@ properties:
     type: array
     items:
       $ref: ./Source.yaml
-  toggleFeatures:
-    type: array
-    items:
-      $ref: ./ToggleFeature.yaml
   commercialZone:
     $ref: ./CommercialZone.yaml
   dealer:
