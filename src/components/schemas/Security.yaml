@@ -11,4 +11,6 @@ properties:
   emailChecked:
     type: boolean
   backOfficeModules:
-    type: string
+    type: array
+    items:
+      type: string

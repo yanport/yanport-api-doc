@@ -5,9 +5,14 @@ properties:
     format: email
   title:
     type: string
+    enum:
+      - MR
+      - MRS
   firstName:
     type: string
   lastName:
+    type: string
+  position:
     type: string
   mobilePhoneNumber:
     type: string
@@ -16,3 +21,11 @@ properties:
   avatarUrl:
     type: string
     format: uri
+  presentation:
+    type: string
+  socialNetworks:
+    type: array
+    items:
+      $ref: ./SocialNetwork.yaml
+  newsletter:
+    type: boolean

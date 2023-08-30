@@ -3,12 +3,24 @@ properties:
   type:
     $ref: ./ProductType.yaml
   marketingTypes:
-    $ref: ./MarketingType.yaml
+    type: array
+    items:
+      $ref: ./MarketingType.yaml
   modules:
-    $ref: ./Module.yaml
+    type: array
+    items:
+      $ref: ./Module.yaml
   sources:
-    $ref: ./Source.yaml
+    type: array
+    items:
+      $ref: ./Source.yaml
+  toggleFeatures:
+    type: array
+    items:
+      $ref: ./ToggleFeature.yaml
   commercialZone:
     $ref: ./CommercialZone.yaml
   dealer:
     $ref: ./ProductDealer.yaml
+  onBoarded:
+    type: boolean

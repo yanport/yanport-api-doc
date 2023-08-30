@@ -1,0 +1,10 @@
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - STUDY_V2
+  events:
+    type: array
+    items:
+      $ref: ./ToggleFeatureEvent.yaml

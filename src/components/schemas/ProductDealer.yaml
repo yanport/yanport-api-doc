@@ -6,4 +6,4 @@ properties:
     type: array
     items:
       type: number
-      format: int54
+      format: int64
