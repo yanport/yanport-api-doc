@@ -25,7 +25,30 @@ get:
   tags:
     - Etudes
   summary: Récupérer des études
-  description: Retourne des études selon plusieurs critères
+  description: >-
+    Retourne des études selon plusieurs critères
+    
+    
+    La recherche plein-texte est disponible sur le nom de l'étude, le nom du client et l'adresse du bien via
+    le query param `q`.
+    
+    
+    Par défaut les résultats sont paginés, pour parcourir l'ensemble des études
+    les paramètres `from` et `size` doivent être renseignés. Le paramètre `from`
+    définit le début du set de données et `size` le nombre d'éléments à
+    récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
+    
+    
+    Concernant le tri, le paramètre `sort` a pour syntaxe `field:asc|desc`, en
+    remplaçant `field` par le nom du champ sur lequel appliquer le tri.
+    
+    ### Exemples
+      #### Les études d'un utilisateur
+        /studies?userIds=123456789
+      #### Les études à partir d'un identifiant externe d'utilisateur
+        /studies?externalIds=USER:abc123
+      #### Les études à partir d'un identifiant externe de bien
+        /studies?propertyExternalIds=ID:abc123
   parameters:
     - name: searchQueryParam
       in: query
