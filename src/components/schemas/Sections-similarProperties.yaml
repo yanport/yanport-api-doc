@@ -1,0 +1,38 @@
+type: object
+properties:
+  onMarketProperties:
+    type: array
+    items:
+      $ref: ./Property.yaml
+  outdatedProperties:
+    type: array
+    items:
+      $ref: ./Property.yaml
+  offMarketProperties:
+    type: array
+    items:
+      $ref: ./Property.yaml
+  organizationProperties:
+    type: array
+    items:
+      $ref: ./Property.yaml
+  maps:
+    type: array
+    items:
+      $ref: ./StudyMap.yaml
+  durationMarketInMonth:
+    type: integer
+    deprecated: true
+  comment:
+    type: string
+    deprecated: true
+  competitiveAnalysisQuery:
+    $ref: ./PropertySearchQuery.yaml
+  competitiveAnalysisProperties:
+    type: array
+    items:
+      $ref: ./PropertyPoint.yaml
+  focusPropertiesIds:
+    type: array
+    items:
+      type: string

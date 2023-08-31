@@ -1,0 +1,12 @@
+type: object
+properties:
+  id:
+    type: string
+  hidden:
+    type: boolean
+  comment:
+    type: string
+  hiddenBlocks:
+    type: array
+    items:
+      type: string

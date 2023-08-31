@@ -1,0 +1,8 @@
+type: object
+properties:
+  recommendation:
+    type: string
+  priceFormat:
+    $ref: ./PriceFormat.yaml
+  feesFormat:
+    $ref: ./FeesFormat.yaml

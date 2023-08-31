@@ -9,38 +9,7 @@ post:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            id:
-              type: string
-              format: uuid
-            userId:
-              type: integer
-              format: int64
-            externalUserId:
-              type: string
-            agencyId:
-              type: integer
-              format: int64
-            externalAgencyId:
-              type: string
-            organizationId:
-              type: integer
-              format: int64
-            name:
-              type: string
-            customer:
-              $ref: ../components/schemas/Customer.yaml
-            property:
-              $ref: ../components/schemas/Property.yaml
-            sections:
-              $ref: ../components/schemas/Sections.yaml
-            creationDate:
-              type: string
-              format: date-time
-            updateDate:
-              type: string
-              format: date-time
+          $ref: ../components/schemas/Study.yaml
   responses:
     '200':
       description: L'étude créé
@@ -56,21 +25,47 @@ get:
   tags:
     - Etudes
   summary: Récupérer des études
-  description: Retourne des études selon plusieurs critères
+  description: >-
+    Retourne des études selon plusieurs critères
+    
+    
+    La recherche plein-texte est disponible sur le nom de l'étude, le nom du client et l'adresse du bien via
+    le query param `q`.
+    
+    
+    Par défaut les résultats sont paginés, pour parcourir l'ensemble des études
+    les paramètres `from` et `size` doivent être renseignés. Le paramètre `from`
+    définit le début du set de données et `size` le nombre d'éléments à
+    récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
+    
+    
+    Concernant le tri, le paramètre `sort` a pour syntaxe `field:asc|desc`, en
+    remplaçant `field` par le nom du champ sur lequel appliquer le tri.
+    
+    ### Exemples
+      #### Les études d'un utilisateur
+        /studies?userIds=123456789
+      #### Les études à partir d'un identifiant externe d'utilisateur
+        /studies?externalIds=USER:abc123
+      #### Les études à partir d'un identifiant externe de bien
+        /studies?propertyExternalIds=ID:abc123
   parameters:
     - name: searchQueryParam
       in: query
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-externalUserIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-externalAgencyIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-organizationIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-externalIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-marketingTypes.yaml
+    - $ref: ../components/parameters/StudySearchQuery-propertyIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-propertyExternalIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-creationDateMin.yaml
     - $ref: ../components/parameters/StudySearchQuery-creationDateMax.yaml
+    - $ref: ../components/parameters/missingFields.yaml
+    - $ref: ../components/parameters/existingFields.yaml
   responses:
     '200':
       description: Les études trouvées

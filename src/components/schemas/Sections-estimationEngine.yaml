@@ -1,0 +1,9 @@
+type: object
+properties:
+  priceFormat:
+    $ref: ./PriceFormat.yaml
+  price:
+    type: number
+    format: double
+  priceRange:
+    $ref: ./Range.yaml

@@ -1,0 +1,12 @@
+type: object
+properties:
+  streetViewImage:
+    type: string
+    format: uri
+  mainImage:
+    type: string
+    format: uri
+  maps:
+    type: array
+    items:
+      $ref: ./StudyMap.yaml

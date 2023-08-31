@@ -1,0 +1,11 @@
+type: object
+properties:
+  zoneData:
+    type: object
+    properties:
+      IRIS:
+        $ref: ./CensusStats.yaml
+      CITY:
+        $ref: ./CensusStats.yaml
+      DEPARTMENT:
+        $ref: ./CensusStats.yaml

@@ -1,0 +1,8 @@
+name: propertyIds
+in: query
+description: Liste d'identifiants de biens
+schema:
+  type: array
+  items:
+    type: string
+    format: uuid
