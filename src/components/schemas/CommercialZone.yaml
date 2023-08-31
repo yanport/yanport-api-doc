@@ -16,7 +16,7 @@ properties:
   quarters:
     type: array
     items:
-      type: number
+      type: integer
       format: int64
   locked:
     type: boolean
