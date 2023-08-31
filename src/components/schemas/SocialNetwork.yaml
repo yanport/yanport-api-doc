@@ -1,0 +1,12 @@
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - LINKEDIN
+      - FACEBOOK
+      - INSTAGRAM
+      - CUSTOM
+  url:
+    type: string
+    format: uri

@@ -5,5 +5,5 @@ properties:
   dealerIds:
     type: array
     items:
-      type: number
-      format: int54
+      type: integer
+      format: int64
