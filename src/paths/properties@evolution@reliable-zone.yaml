@@ -9,47 +9,68 @@ get:
 
     ### Exemple
       #### Zone fiable pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
-        /properties/evolution/reliable-zone?propertyType=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
+        /properties/evolution/reliable-zone?propertyTypes=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
   parameters:
     - $ref: ../components/parameters/marketingType.yaml
-    - $ref: ../components/parameters/propertyType.yaml
+    - name: propertyTypes
+      in: query
+      description: Types de bien (maison, appartement, terrain, parking, immeuble, local)
+      style: form
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - HOUSE
+            - APARTMENT
+            - PREMISES
+            - LAND
+            - BUILDING
+            - PARKING
+      required: true
     - name: agglomerationId
       in: query
-      description: Identifiant de l'agglomération. Requis si `zone=AGGLOMERATION`.
+      description: Identifiant de l'agglomération. Requis si `zones` contient `AGGLOMERATION`.
       schema:
         type: integer
         format: int64
     - name: cityId
       in: query
-      description: Identifiant de la ville. Requis si `zone=CITY`.
+      description: Identifiant de la ville. Requis si `zones` contient `CITY`.
       schema:
         type: integer
         format: int64
     - name: irisId
       in: query
-      description: Identifiant de l'iris. Requis si `zone=IRIS`.
+      description: Identifiant de l'iris. Requis si `zones` contient `IRIS`.
       schema:
         type: string
-    - name: zone
+    - name: zones
       in: query
-      description: Type de zone (iris, ville, agglomération)
+      description: Types de zone (iris, ville, agglomération)
+      style: form
       schema:
-        type: string
-        enum:
-          - IRIS
-          - CITY
-          - AGGLOMERATION
+        type: array
+        items:
+          type: string
+          enum:
+            - IRIS
+            - CITY
+            - AGGLOMERATION
     - $ref: ../components/parameters/roomCounts.yaml
     - $ref: ../components/parameters/newBuild.yaml
-    - name: intervalUnit
+    - name: intervalUnits
       in: query
-      description: Unité de temps de l'intervalle
+      description: Unités de temps de l'intervalle (mois, trimestres, années)
+      style: form
       schema:
-        type: string
-        enum:
-          - MONTHS
-          - QUARTERS
-          - YEARS
+        type: array
+        items:
+          type: string
+          enum:
+            - MONTHS
+            - QUARTERS
+            - YEARS
     - name: dateMin
       in: query
       description: Date minimale pour le calcul de l'évolution (YYYY-mm-dd)
