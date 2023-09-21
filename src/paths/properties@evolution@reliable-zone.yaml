@@ -1,9 +1,9 @@
 get:
   tags:
     - Indicateurs sur les biens (ancien/neuf)
-  summary: 'Zone fiable'
+  summary: Zone fiable pour l'évolution
   description: >-
-    Permet de construire une zone géographique où les indicateurs sur les biens sont fiables.
+    Permet de construire une zone géographique où l'évolution des indicateurs sur les biens est fiable.
 
     Voir notre [article](https://www.yanport.com/blog/posts/etude-de-marche-a-ladresse) pour plus de détails.
 
@@ -12,94 +12,18 @@ get:
         /properties/evolution/reliable-zone?propertyTypes=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
   parameters:
     - $ref: ../components/parameters/marketingType.yaml
-    - name: propertyTypes
-      in: query
-      description: Types de bien (maison, appartement, terrain, parking, immeuble, local)
-      style: form
-      schema:
-        type: array
-        items:
-          type: string
-          enum:
-            - HOUSE
-            - APARTMENT
-            - PREMISES
-            - LAND
-            - BUILDING
-            - PARKING
-      required: true
-    - name: agglomerationId
-      in: query
-      description: Identifiant de l'agglomération. Requis si `zones` contient `AGGLOMERATION`.
-      schema:
-        type: integer
-        format: int64
-    - name: cityId
-      in: query
-      description: Identifiant de la ville. Requis si `zones` contient `CITY`.
-      schema:
-        type: integer
-        format: int64
-    - name: irisId
-      in: query
-      description: Identifiant de l'iris. Requis si `zones` contient `IRIS`.
-      schema:
-        type: string
-    - name: zones
-      in: query
-      description: Types de zone (iris, ville, agglomération)
-      style: form
-      schema:
-        type: array
-        items:
-          type: string
-          enum:
-            - IRIS
-            - CITY
-            - AGGLOMERATION
+    - $ref: ../components/parameters/ReliableZoneQuery-propertyTypes.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-agglomerationId.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-cityId.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-irisId.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-zones.yaml
     - $ref: ../components/parameters/roomCounts.yaml
     - $ref: ../components/parameters/newBuild.yaml
-    - name: intervalUnits
-      in: query
-      description: Unités de temps de l'intervalle (mois, trimestres, années)
-      style: form
-      schema:
-        type: array
-        items:
-          type: string
-          enum:
-            - MONTHS
-            - QUARTERS
-            - YEARS
-    - name: dateMin
-      in: query
-      description: Date minimale pour le calcul de l'évolution (YYYY-mm-dd)
-      schema:
-        type: string
-        format: date
-    - name: dateMax
-      in: query
-      description: Date maximale pour le calcul de l'évolution (YYYY-mm-dd)
-      schema:
-        type: string
-        format: date
-    - name: source
-      in: query
-      description: Source des biens
-      schema:
-        type: string
-        enum:
-          - AD
-          - CLAMEUR
-          - DVF
-    - name: field
-      in: query
-      description: Champ sur lequel sont calculées les statistiques
-      schema:
-        type: string
-        default: PRICE_M2
-        enum:
-          - PRICE_M2
+    - $ref: ../components/parameters/ReliableZoneQuery-intervalUnits.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-dateMin.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-dateMax.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-source.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-field.yaml
   responses:
     '200':
       description: Zone fiable

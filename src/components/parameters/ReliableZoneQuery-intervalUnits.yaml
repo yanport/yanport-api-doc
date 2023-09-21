@@ -1,0 +1,12 @@
+name: intervalUnits
+in: query
+description: Unités de temps de l'intervalle possibles (mois, trimestres, années)
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - MONTHS
+      - QUARTERS
+      - YEARS

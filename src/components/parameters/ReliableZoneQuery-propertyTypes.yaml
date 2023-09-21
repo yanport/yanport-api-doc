@@ -1,0 +1,16 @@
+name: propertyTypes
+in: query
+description: Types de bien (maison, appartement, terrain, parking, immeuble, local)
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - HOUSE
+      - APARTMENT
+      - LAND
+      - PARKING
+      - BUILDING
+      - PREMISES
+required: true

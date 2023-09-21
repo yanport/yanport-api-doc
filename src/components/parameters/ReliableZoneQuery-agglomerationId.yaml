@@ -1,0 +1,6 @@
+name: agglomerationId
+in: query
+description: Identifiant de l'agglomération. Requis si `zones` contient `AGGLOMERATION`.
+schema:
+  type: integer
+  format: int64

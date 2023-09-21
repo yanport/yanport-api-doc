@@ -1,0 +1,6 @@
+name: cityId
+in: query
+description: Identifiant de la ville. Requis si `zones` contient `CITY`.
+schema:
+  type: integer
+  format: int64

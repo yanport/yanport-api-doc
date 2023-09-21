@@ -1,0 +1,5 @@
+name: irisId
+in: query
+description: Identifiant de l'iris. Requis si `zones` contient `IRIS`.
+schema:
+  type: string

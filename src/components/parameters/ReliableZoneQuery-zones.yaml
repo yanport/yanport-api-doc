@@ -1,0 +1,12 @@
+name: zones
+in: query
+description: Types de zone possibles (iris, ville, agglomération)
+style: form
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - IRIS
+      - CITY
+      - AGGLOMERATION
