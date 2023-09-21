@@ -1,0 +1,36 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf)
+  summary: Zone fiable pour les statistiques
+  description: >-
+    Permet de construire une zone géographique où les statistiques sur les biens sont fiables.
+
+    Voir notre [article](https://www.yanport.com/blog/posts/etude-de-marche-a-ladresse) pour plus de détails.
+
+    ### Exemple
+      #### Zone fiable pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
+        /properties/stats/reliable-zone?propertyTypes=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
+  parameters:
+    - $ref: ../components/parameters/marketingType.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-propertyTypes.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-agglomerationId.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-cityId.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-irisId.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-zones.yaml
+    - $ref: ../components/parameters/roomCounts.yaml
+    - $ref: ../components/parameters/newBuild.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-dateMin.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-dateMax.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-source.yaml
+    - $ref: ../components/parameters/ReliableZoneQuery-field.yaml
+  responses:
+    '200':
+      description: Zone fiable
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ReliableZone.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
