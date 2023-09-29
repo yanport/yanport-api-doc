@@ -1,0 +1,7 @@
+type: string
+enum:
+  - VERY_TIGHT
+  - TIGHT
+  - BALANCED
+  - LOOSE
+  - VERY_LOOSE

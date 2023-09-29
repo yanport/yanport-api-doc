@@ -1,0 +1,6 @@
+name: marketStressScoreMax
+in: query
+description: Score de tension de marché maximun (compris entre -100 et 100)
+schema:
+  type: number
+  format: double

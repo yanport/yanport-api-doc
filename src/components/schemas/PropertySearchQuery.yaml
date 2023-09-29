@@ -360,6 +360,16 @@ properties:
         - SUSPECT
         - ANORMAL
     description: Valeurs d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
+  marketStressScoreMin:
+    type: number
+    format: double
+  marketStressScoreMax:
+    type: number
+    format: double
+  marketStressValues:
+    type: array
+    items:
+      $ref: ./MarketStressValue.yaml
   externalProperties:
     type: array
     items:

@@ -1,0 +1,9 @@
+name: marketStressValues
+in: query
+description: 'Valeurs de tension de marché (très tendu, tendu, équilibré, détendu, très détendu'
+style: form
+schema:
+  type: array
+  items:
+    $ref: ./MarketStressValue.yaml
+  example: BALANCED
