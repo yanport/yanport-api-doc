@@ -339,6 +339,16 @@ properties:
     type: integer
   anomalyLevelMax:
     type: integer
+  marketStressScoreMin:
+    type: number
+    format: double
+  marketStressScoreMax:
+    type: number
+    format: double
+  marketStressValues:
+    type: array
+    items:
+      $ref: ./MarketStressValue.yaml
   externalProperties:
     type: array
     items:
