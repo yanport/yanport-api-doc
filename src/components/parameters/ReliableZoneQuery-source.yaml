@@ -1,0 +1,9 @@
+name: source
+in: query
+description: Source des biens
+schema:
+  type: string
+  enum:
+    - AD
+    - CLAMEUR
+    - DVF

@@ -247,12 +247,16 @@ paths:
     $ref: 'paths/properties@stats@group-by-{groupBy}.yaml'
   '/properties/stats/group-by-{groupBy}-and-{subGroupBy}':
     $ref: 'paths/properties@stats@group-by-{groupBy}-and-{subGroupBy}.yaml'
+  /properties/stats/reliable-zone:
+    $ref: paths/properties@stats@reliable-zone.yaml
   /properties/percentiles:
     $ref: paths/properties@percentiles.yaml
   '/properties/percentiles/group-by-{groupBy}':
     $ref: 'paths/properties@percentiles@group-by-{groupBy}.yaml'
   '/properties/percentiles/group-by-{groupBy}-and-{subGroupBy}':
     $ref: 'paths/properties@percentiles@group-by-{groupBy}-and-{subGroupBy}.yaml'
+  /properties/percentiles/reliable-zone:
+    $ref: paths/properties@percentiles@reliable-zone.yaml
   /properties/distribution:
     $ref: paths/properties@distribution.yaml
   /properties/evolution:
