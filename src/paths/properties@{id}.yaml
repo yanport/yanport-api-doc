@@ -20,3 +20,24 @@ get:
       $ref: ../components/responses/BadRequest.yaml
     '500':
       $ref: ../components/responses/InternalServerError.yaml
+
+head:
+  tags:
+    - Les biens (ancien/neuf)
+  summary: Vérifier l'existence d'un bien (ID)
+  description: Retourne une 200 si le bien existe, une 404 sinon
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Le bien existe
+    '400':
+      description: Paramètres de la requête invalides
+    '404':
+      description: Le bien n'existe pas
+    '500':
+      description: Une erreur coté serveur s'est produite
