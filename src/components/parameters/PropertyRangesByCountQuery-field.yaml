@@ -1,5 +1,5 @@
 name: field
-in: query
+in: path
 description: Champ sur lequel sont calculées les statistiques
 required: true
 schema:

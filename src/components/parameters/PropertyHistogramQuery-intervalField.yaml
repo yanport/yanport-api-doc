@@ -5,20 +5,21 @@ required: true
 schema:
   type: string
   enum:
-    - PRICE
-    - PRICE_HC
-    - PRICE_CC
-    - PRICE_M2
-    - PRICE_M2_HC
-    - PRICE_M2_CC
-    - PRICE_EVENTS_RANGE_PRICE
-    - PRICE_EVENTS_RANGE_PRICE_M2
-    - PRICE_EVENTS_COUNT
-    - SURFACE
-    - ROOM_COUNT
-    - DURATION_DAYS
-    - MARKETING_DAYS
-    - FEES_PERCENT
-    - GROSS_RENTAL_YIELD
-    - NEGOTIATION_MARGIN
-    - CONSTRUCTION_YEAR
+    - price
+    - price_hc
+    - price_cc
+    - price_m2
+    - price_m2_hc
+    - price_m2_cc
+    - price_events_range_price
+    - price_events_range_price_m2
+    - price_events_count
+    - surface
+    - room_count
+    - duration_days
+    - marketing_days
+    - fees_percent
+    - gross_rental_yield
+    - negotiation_margin
+    - market_stress
+    - construction_year
