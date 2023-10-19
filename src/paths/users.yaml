@@ -5,18 +5,11 @@ post:
   description: Retourne l'utilisateur créé
   requestBody:
     required: true
-    description: Formulaire pour la création d'un utilisateur
+    description: Données de l'utilisateur à créer
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            user:
-              $ref: ../components/schemas/User.yaml
-            password:
-              type: string
-            confirmPassword:
-              type: string
+          $ref: ../components/schemas/User.yaml
   responses:
     '200':
       description: L'utilisateur créé

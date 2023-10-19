@@ -1,0 +1,14 @@
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - ACTIVATED
+      - USER_ACCEPTED
+      - USER_REFUSED
+      - USER_DEACTIVATED
+      - USER_REACTIVATED
+      - FORCED
+  time:
+    type: string
+    format: date-time

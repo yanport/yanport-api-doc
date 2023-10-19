@@ -13,6 +13,7 @@ properties:
         type: string
       CLIENT:
         type: string
+        example: "123456"
       PIPEDRIVE:
         type: string
       PRODPAD:
@@ -21,6 +22,7 @@ properties:
         type: string
   username:
     type: string
+    example: 'user@example.com'
   personalInfo:
     $ref: ./PersonalInfo.yaml
   products:
