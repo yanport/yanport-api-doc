@@ -3,6 +3,7 @@ properties:
   email:
     type: string
     format: email
+    example: 'user@example.com'
   title:
     type: string
     enum:
@@ -16,8 +17,10 @@ properties:
     type: string
   mobilePhoneNumber:
     type: string
+    example: "+33601020304"
   officePhoneNumber:
     type: string
+    example: "+33601020304"
   avatarUrl:
     type: string
     format: uri
