@@ -1,0 +1,11 @@
+type: object
+properties:
+  id:
+    type: string
+  order:
+    type: integer
+  renderingModes:
+    type: array
+    items:
+      $ref: ./Summary-renderingMode.yaml
+

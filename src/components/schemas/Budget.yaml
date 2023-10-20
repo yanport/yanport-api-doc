@@ -1,0 +1,13 @@
+type: object
+properties:
+  cohabitationMode:
+    type: string
+    enum:
+      - SINGLE_PERSON
+      - OTHER_NON_FAMILY
+      - COUPLE_WITHOUT_CHILDREN
+      - COUPLE_WITH_CHILDREN
+      - SINGLE_PARENT_FAMILY
+  priceRange:
+    $ref: ./Range.yaml
+

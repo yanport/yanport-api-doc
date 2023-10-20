@@ -32,7 +32,3 @@ properties:
     type: array
     items:
       $ref: ./PropertyPoint.yaml
-  focusPropertiesIds:
-    type: array
-    items:
-      type: string

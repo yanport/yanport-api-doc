@@ -33,12 +33,8 @@ properties:
     $ref: ./Customer.yaml
   property:
     $ref: ./Property.yaml
-  pages:
-    type: array
-    items:
-      $ref: ./StudyPage.yaml
-  sections:
-    $ref: ./Sections.yaml
+  content:
+    $ref: ./Content.yaml
   creationDate:
     type: string
     format: date-time
