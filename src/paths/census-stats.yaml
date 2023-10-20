@@ -6,7 +6,7 @@ get:
     Retourne des statistiques socioéconomiques par zones géographiques (source INSEE)
     ### Exemple
       #### Statistiques socio-économiques de la zone iris Monpezat (64)
-        /census-stats?zone=IRIS&irisId=643940000
+        /census-stats?zone=IRIS&zoneIds=643940000
   parameters:
     - name: searchQueryParam
       in: query
