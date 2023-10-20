@@ -1,0 +1,22 @@
+type: object
+properties:
+  frontPage:
+    $ref: ./Content-frontPage.yaml
+  estimationEngine:
+    $ref: ./Content-estimationEngine.yaml
+  propertyFeatures:
+    $ref: ./Content-propertyFeatures.yaml
+  marketStats:
+    $ref: ./Content-marketStats.yaml
+  censusStats:
+    $ref: ./Content-censusStats.yaml
+  similarProperties:
+    $ref: ./Content-similarProperties.yaml
+  propertyPriceStudy:
+    $ref: ./Content-propertyPriceStudy.yaml
+  pinel:
+    $ref: ./Content-pinel.yaml
+  conclusion:
+    $ref: ./Content-conclusion.yaml
+  summary:
+    $ref: ./Summary.yaml
