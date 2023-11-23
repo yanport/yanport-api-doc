@@ -7,3 +7,5 @@ properties:
     format: double
   priceRange:
     $ref: ./Range.yaml
+  reliability:
+    $ref: ./EstimationResponse-reliability.yaml
