@@ -6,3 +6,8 @@ properties:
     $ref: ./PriceFormat.yaml
   feesFormat:
     $ref: ./FeesFormat.yaml
+  maps:
+    type: array
+    items:
+      $ref: ./StudyMap.yaml
+

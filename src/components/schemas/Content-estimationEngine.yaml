@@ -7,3 +7,15 @@ properties:
     format: double
   priceRange:
     $ref: ./Range.yaml
+  reliability:
+    type: object
+    properties:
+      score:
+        type: integer
+        description: >-
+          Score de fiabilité calculé à partir de l'erreur moyenne et de la zone
+          géographique (0 = non fiable, 100 = très fiable)
+        format: int32
+        minimum: 0
+        maximum: 100
+        example: 78
