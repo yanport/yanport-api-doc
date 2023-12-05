@@ -16,6 +16,7 @@ get:
     - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalField.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
     - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
     - $ref: ../components/parameters/ReliableQuery-reliability.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMin.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMax.yaml
