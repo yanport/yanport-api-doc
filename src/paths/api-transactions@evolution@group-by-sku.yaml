@@ -24,6 +24,7 @@ get:
     - $ref: ../components/parameters/ApiTransactionSearchQuery-organizationIds.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMin.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-skus.yaml
     - name: searchQueryParam
       in: query
