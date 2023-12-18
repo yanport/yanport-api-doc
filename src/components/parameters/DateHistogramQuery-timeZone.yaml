@@ -1,7 +1,7 @@
 name: timeZone
 in: query
 description: Fuseau horaire à utiliser pour le regroupement des données par date
-example: 'timeZone=Europe/Paris ou timeZone=+01:00 ou encore timeZone=UTC+1'
+example: 'Europe/Paris ou +01:00 ou encore UTC+1'
 schema:
   type: string
   default: UTC
