@@ -36,6 +36,7 @@ get:
     - $ref: ../components/parameters/ProgramSearchQuery-name.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-description.yaml
     - $ref: ../components/parameters/crawlSources.yaml
+    - $ref: ../components/parameters/excludedCrawlSources.yaml
     - $ref: ../components/parameters/active.yaml
     - $ref: ../components/parameters/dealerNames.yaml
     - $ref: ../components/parameters/dealerIds.yaml
