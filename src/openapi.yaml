@@ -273,8 +273,8 @@ paths:
     $ref: paths/properties@estimate.yaml
   /maps:
     $ref: paths/maps.yaml
-  /maps/stock:
-    $ref: paths/maps@stock.yaml
+  /maps/count:
+    $ref: paths/maps@count.yaml
   /departments:
     $ref: paths/departments.yaml
   '/departments/{id}':
