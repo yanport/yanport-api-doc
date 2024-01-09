@@ -1,6 +1,6 @@
 name: dateMax
 in: query
-description: Date limite pour le calcul de l'évolution du stock de bien (YYYY-mm-dd)
+description: Date maximale (incluse) pour le calcul de l'évolution du stock de bien (YYYY-mm-dd)
 schema:
   type: string
   format: date
