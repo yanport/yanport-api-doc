@@ -19,6 +19,7 @@ get:
     - $ref: ../components/parameters/ReliableZoneQuery-zones.yaml
     - $ref: ../components/parameters/roomCounts.yaml
     - $ref: ../components/parameters/newBuild.yaml
+    - $ref: ../components/parameters/furnished.yaml
     - $ref: ../components/parameters/ReliableZoneQuery-intervalUnits.yaml
     - $ref: ../components/parameters/ReliableZoneQuery-dateMin.yaml
     - $ref: ../components/parameters/ReliableZoneQuery-dateMax.yaml
