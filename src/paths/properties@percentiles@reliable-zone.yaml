@@ -8,8 +8,8 @@ get:
     Voir notre [article](https://www.yanport.com/blog/posts/etude-de-marche-a-ladresse) pour plus de détails.
 
     ### Exemple
-      #### Zone fiable pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
-        /properties/percentiles/reliable-zone?propertyTypes=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T00:00:00&source=AD
+      #### Zone fiable sur l'année 2021 pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
+        /properties/percentiles/reliable-zone?propertyTypes=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T23:59:59&source=AD
   parameters:
     - $ref: ../components/parameters/marketingType.yaml
     - $ref: ../components/parameters/ReliableZoneQuery-propertyTypes.yaml
