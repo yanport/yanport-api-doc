@@ -3,5 +3,6 @@ enum:
   - AGENT_360
   - DATA_360
   - ADB_360
+  - INVEST_360
   - API
   - CLAMEUR_360
