@@ -9,7 +9,7 @@ properties:
       - CITY
       - DEPARTMENT
       - AGGLOMERATION
-      - ZIPCODE
+      - ZIP_CODE
       - QUARTER
   zoneId:
     type: string
