@@ -6,6 +6,8 @@ properties:
   userId:
     type: integer
     format: int64
+  product:
+    $ref: ./ProductType.yaml
   version:
     type: string
     enum:

@@ -9,6 +9,8 @@ properties:
   organizationId:
     type: integer
     format: int64
+  product:
+    $ref: ./ProductType.yaml
   property:
     $ref: ./Property.yaml
   creationDate:

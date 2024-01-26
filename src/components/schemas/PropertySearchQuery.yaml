@@ -73,6 +73,10 @@ properties:
     type: array
     items:
       type: string
+  products:
+    type: array
+    items:
+      $ref: ./ProductType.yaml
   propertyTypes:
     type: array
     items:

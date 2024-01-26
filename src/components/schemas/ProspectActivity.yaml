@@ -12,6 +12,8 @@ properties:
   organizationId:
     type: integer
     format: int64
+  product:
+    $ref: ./ProductType.yaml
   type:
     type: string
     enum:

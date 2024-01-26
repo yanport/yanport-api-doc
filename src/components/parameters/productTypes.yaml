@@ -1,0 +1,7 @@
+name: products
+in: query
+description: Liste de types de produit
+schema:
+  type: array
+  items:
+    $ref: ../schemas/ProductType.yaml

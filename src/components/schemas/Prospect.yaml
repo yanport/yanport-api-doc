@@ -11,6 +11,8 @@ properties:
     format: int64
   propertyId:
     type: string
+  product:
+    $ref: ./ProductType.yaml
   dealer:
     $ref: ./Dealer.yaml
   creationDate:
