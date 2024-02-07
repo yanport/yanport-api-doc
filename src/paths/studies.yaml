@@ -56,6 +56,7 @@ get:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/productTypes.yaml
     - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-organizationIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-externalIds.yaml

@@ -27,6 +27,8 @@ properties:
       - key
     example:
       ID: external property id
+  product:
+    $ref: ./ProductType.yaml
   type:
     $ref: ./PropertyType.yaml
   subType:
