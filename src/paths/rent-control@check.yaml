@@ -3,8 +3,7 @@ post:
     - Encadrement des loyers
   summary: Encadrement des loyers
   description: >-
-    Permet de controller vis-à-vis de la législation si un loyer est hors/dans
-    l'encadrement des loyers.
+    Contrôle vis-à-vis de la législation si un loyer est hors/dans l'encadrement des loyers.
   requestBody:
     description: Requête d'encadrement d'un loyer
     required: true
@@ -15,16 +14,21 @@ post:
           properties:
             rawAddress:
               type: string
+              description: Adresse
             surface:
               type: number
               format: double
+              description: Surface
             roomCount:
               type: integer
+              description: Nombre de pièces
             price:
               type: number
               format: double
+              description: Prix
             furnished:
               type: boolean
+              description: Indique si le bien est meublé ou non
             constructionPeriod:
               $ref: ../components/schemas/Range.yaml
   responses:
