@@ -162,7 +162,7 @@ properties:
   occupied:
     type: boolean
   rentControl:
-    $ref: ./RentControl.yaml
+    $ref: ./Marketing-RentControl.yaml
   rentalCategory:
     type: string
     enum:
