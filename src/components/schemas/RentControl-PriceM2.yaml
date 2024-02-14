@@ -1,0 +1,17 @@
+type: object
+properties:
+  base:
+    type: number
+    format: double
+    minimum: 0
+    example: 32.8
+  max:
+    type: number
+    format: double
+    minimum: 0
+    example: 39.4
+  min:
+    type: number
+    format: double
+    minimum: 0
+    example: 23.0

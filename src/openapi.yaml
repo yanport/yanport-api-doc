@@ -124,6 +124,10 @@ tags:
     x-displayName: Statistiques socioéconomiques
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/CensusStats" />
+  - name: Modele-rentControl
+    x-displayName: Encadrement des loyers
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/RentControl" />
   - name: Modele-buildingPermit
     x-displayName: Permis de construire
     description: |
@@ -208,6 +212,7 @@ x-tagGroups:
       - Modele-quartier
       - Modele-IRIS
       - Modele-censusStats
+      - Modele-rentControl
       - Modele-buildingPermit
       - Modele-parcelle
       - Modele-utilisateur
