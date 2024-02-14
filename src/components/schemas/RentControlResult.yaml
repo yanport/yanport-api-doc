@@ -6,9 +6,11 @@ properties:
     $ref: ./Address.yaml
   constructionPeriod:
     $ref: ./Range.yaml
-  irisQuarter:
-    $ref: ./Iris.yaml
+  irisQuarters:
+    type: array
+    items:
+      $ref: ./Iris.yaml
   zones:
-    $ref: ./RentControlZone.yaml
-  buildings:
-    $ref: ./Building.yaml
+    type: array
+    items:
+      $ref: ./RentControlZone.yaml

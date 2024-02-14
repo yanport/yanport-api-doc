@@ -2,12 +2,15 @@ type: object
 properties:
   id:
     type: integer
+    example: 1068919171
   observatoryId:
     type: integer
+    example: 1
   irisQuarterIds:
     type: array
     items:
       type: string
+      example: 7510728
   roomCountCategory:
     $ref: ./Range.yaml
   constructionPeriod:
@@ -17,3 +20,14 @@ properties:
   median:
     type: number
     format: double
+    example: 32.8
+  min:
+    type: number
+    format: double
+    minimum: 0
+    example: 23.0
+  max:
+    type: number
+    format: double
+    minimum: 0
+    example: 39.4

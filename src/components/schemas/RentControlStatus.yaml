@@ -9,3 +9,4 @@ enum:
   - VALID
   - UNDER_MIN_PRICE_M2
   - OVER_MAX_PRICE_M2
+example: VALID
