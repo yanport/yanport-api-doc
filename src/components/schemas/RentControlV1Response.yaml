@@ -1,7 +1,7 @@
 type: object
 properties:
   status:
-    $ref: ./RentControlStatus.yaml
+    $ref: ./RentControlV1Status.yaml
   address:
     $ref: ./Address.yaml
   constructionPeriod:
@@ -13,4 +13,4 @@ properties:
   zones:
     type: array
     items:
-      $ref: ./RentControlZone.yaml
+      $ref: ./RentControlV1Zone.yaml

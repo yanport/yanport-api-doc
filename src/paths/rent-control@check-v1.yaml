@@ -3,7 +3,7 @@ post:
     - Encadrement des loyers
   summary: Vérifier un loyer
   description: >-
-    Contrôle vis-à-vis de la législation si un loyer est hors/dans l'encadrement des loyers.
+    Vérifie si un loyer respecte l'encadrement des loyers vis-à-vis de la législation
   requestBody:
     description: Requête d'encadrement d'un loyer
     required: true
@@ -28,7 +28,7 @@ post:
               description: Prix
             furnished:
               type: boolean
-              description: Indique si le bien est meublé ou non
+              description: Meublé
             constructionPeriod:
               $ref: ../components/schemas/Range.yaml
   responses:
@@ -37,7 +37,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/RentControlResult.yaml
+            $ref: ../components/schemas/RentControlV1Response.yaml
     400:
       $ref: ../components/responses/BadRequest.yaml
     500:

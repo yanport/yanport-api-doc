@@ -1,7 +1,7 @@
 type: object
 properties:
   status:
-    $ref: ./RentControlStatus.yaml
+    $ref: ./RentControlV1Status.yaml
   irisQuarterId:
     type: string
     example: 7510728
