@@ -2,9 +2,18 @@ get:
   tags:
     - Encadrement des loyers
   summary: Récupérer des encadrements des loyers
+  description: >-
+    Retourne les encadrements des loyers correspondant aux critères demandés
+
+    ### Exemples
+      #### La liste des encadrements
+        /rent-control
+      #### Les encadrements actifs pour les locations meublées d'appartements de 2 pièces construits entre 1940 et 1960 au centre du quartier de Plaisance à Paris
+        /rent-control?propertyTypes=APARTMENT&roomCountMin=2&roomCountMax=2&constructionYearMin=1940&constructionYearMax=1960&furnished=true&active=true&lat=48.830&lng=2.3190
   parameters:
     - name: searchQueryParam
       in: query
+      description: Paramètres de recherche d'encadrements des loyers
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/ids.yaml
@@ -31,7 +40,7 @@ get:
 
   responses:
     200:
-      description: Les encadrements des loyers recherchés
+      description: Les encadrements des loyers trouvés
       content:
         application/json:
           schema:
