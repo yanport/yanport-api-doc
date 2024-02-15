@@ -1,7 +1,7 @@
 post:
   tags:
     - Encadrement des loyers
-  summary: Encadrement des loyers
+  summary: Vérifier un loyer
   description: >-
     Contrôle vis-à-vis de la législation si un loyer est hors/dans l'encadrement des loyers.
   requestBody:
@@ -32,13 +32,13 @@ post:
             constructionPeriod:
               $ref: ../components/schemas/Range.yaml
   responses:
-    '200':
+    200:
       description: Le status vis-à-vis de l'encadrement
       content:
         application/json:
           schema:
             $ref: ../components/schemas/RentControlResult.yaml
-    '400':
+    400:
       $ref: ../components/responses/BadRequest.yaml
-    '500':
+    500:
       $ref: ../components/responses/InternalServerError.yaml
