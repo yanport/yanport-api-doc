@@ -4,7 +4,7 @@ get:
   summary: Récupérer des encadrements des loyers (ID)
   description: Retourne des encadrements des loyers selon leurs identifiants
   parameters:
-    - name: id
+    - name: ids
       in: query
       required: true
       style: form

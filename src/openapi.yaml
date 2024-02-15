@@ -370,7 +370,7 @@ paths:
     $ref: paths/rent-control.yaml
   /rent-control/{id}:
     $ref: paths/rent-control@{id}.yaml
-  /rent-control/{ids}:
+  /rent-control/ids:
     $ref: paths/rent-control@{ids}.yaml
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
