@@ -1,5 +1,5 @@
 name: constructionYearMin
-description: Année minimale de construction (YYYY)
+description: Année de construction minimale (YYYY)
 in: query
 schema:
   type: integer

@@ -366,6 +366,8 @@ paths:
     $ref: paths/api-transactions@evolution@group-by-sku.yaml
   '/api-transactions/{id}':
     $ref: 'paths/api-transactions@{id}.yaml'
+  /rent-control:
+    $ref: paths/rent-control.yaml
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
   /zip-codes:

@@ -1,0 +1,49 @@
+get:
+  tags:
+    - Encadrement des loyers
+  summary: Récupérer des encadrements des loyers
+  parameters:
+    - name: searchQueryParam
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/ids.yaml
+    - $ref: ../components/parameters/propertyTypes.yaml
+    - $ref: ../components/parameters/zone.yaml
+    - $ref: ../components/parameters/zoneIds.yaml
+    - $ref: ../components/parameters/roomCountMin.yaml
+    - $ref: ../components/parameters/roomCountMax.yaml
+    - $ref: ../components/parameters/constructionYearMin.yaml
+    - $ref: ../components/parameters/constructionYearMax.yaml
+    - $ref: ../components/parameters/furnished.yaml
+    - $ref: ../components/parameters/creationDateMin.yaml
+    - $ref: ../components/parameters/creationDateMax.yaml
+    - $ref: ../components/parameters/updateDateMin.yaml
+    - $ref: ../components/parameters/updateDateMax.yaml
+    - $ref: ../components/parameters/deleteDateMin.yaml
+    - $ref: ../components/parameters/deleteDateMax.yaml
+    - $ref: ../components/parameters/active.yaml
+    - name: geoSearchQueryParam
+      in: query
+      description: Paramètres géographiques de recherche
+      schema:
+        $ref: ../components/schemas/GeoSearchQuery.yaml
+
+  responses:
+    200:
+      description: Les encadrements des loyers recherchés
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/RentControl.yaml
+    400:
+      $ref: ../components/responses/BadRequest.yaml
+    500:
+      $ref: ../components/responses/InternalServerError.yaml

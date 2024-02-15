@@ -1,6 +1,6 @@
 name: zoneIds
 in: query
-description: Liste d'identifiants de zones (liés au champ zone)
+description: Identifiants de zones liés au champ `zone`
 style: form
 schema:
   type: array

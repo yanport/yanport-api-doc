@@ -43,8 +43,8 @@ get:
     - $ref: ../components/parameters/excludedDealerIds.yaml
     - $ref: ../components/parameters/ids.yaml
     - $ref: ../components/parameters/propertyIds.yaml
-    - $ref: ../components/parameters/ProgramSearchQuery-roomCountMin.yaml
-    - $ref: ../components/parameters/ProgramSearchQuery-roomCountMax.yaml
+    - $ref: ../components/parameters/roomCountMin.yaml
+    - $ref: ../components/parameters/roomCountMax.yaml
     - $ref: ../components/parameters/departments.yaml
     - $ref: ../components/parameters/zipCodes.yaml
     - $ref: ../components/parameters/cityIds.yaml

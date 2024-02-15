@@ -1,0 +1,6 @@
+name: updateDateMax
+in: query
+description: Date de mise à jour maximale (YYYY-mm-ddTHH:mm:ss)
+schema:
+  type: string
+  format: date-time

@@ -1,0 +1,6 @@
+name: creationDateMax
+in: query
+description: Date de création maximale (YYYY-mm-ddTHH:mm:ss)
+schema:
+  type: string
+  format: date-time

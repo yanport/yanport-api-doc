@@ -1,5 +1,5 @@
 name: active
 in: query
-description: Statut de l'annonce (expirée ou pas)
+description: Statut (expiré ou non)
 schema:
   type: boolean

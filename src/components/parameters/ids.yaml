@@ -1,8 +1,9 @@
 name: ids
 in: query
-description: Liste d'identifiants de biens ou de programmes (en fonction du endpoint)
+description: Liste d'identifiants
 style: form
 schema:
   type: array
   items:
     type: string
+    format: uuid
