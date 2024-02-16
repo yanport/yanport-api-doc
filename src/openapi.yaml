@@ -181,6 +181,9 @@ x-tagGroups:
   - name: STATISTIQUES SOCIOECONOMIQUES
     tags:
       - Statistiques socioéconomiques
+  - name: LEGISLATION
+    tags:
+      - Encadrement des loyers
   - name: REFERENTIEL DES PERMIS DE CONSTRUIRE
     tags:
       - Permis de construire
@@ -198,10 +201,6 @@ x-tagGroups:
   - name: FACTURATION
     tags:
       - Consommation API
-  - name: Autre
-    tags:
-      - Prospection
-      - Encadrement des loyers
   - name: MODELES
     tags:
       - Modele-bien
