@@ -373,7 +373,7 @@ paths:
   /rent-control/ids:
     $ref: paths/rent-control@{ids}.yaml
   /rent-control/check:
-    $ref: paths/rent-control@check-v1.yaml
+    $ref: paths/rent-control@check.yaml
   /zip-codes:
     $ref: paths/zip-codes.yaml
   '/zip-codes/{id}':

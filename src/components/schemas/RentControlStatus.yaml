@@ -1,0 +1,8 @@
+type: string
+enum:
+  - NOT_LOCATED
+  - ZONE_NOT_FOUND
+  - ZONE_CONFLICT
+  - INVALID
+  - VALID
+example: VALID
