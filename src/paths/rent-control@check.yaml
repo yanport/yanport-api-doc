@@ -4,6 +4,13 @@ get:
   summary: Vérifier un loyer
   description: >-
     Vérifie si un loyer respecte l'encadrement des loyers vis-à-vis de la législation
+
+    ### Exemples
+      #### Vérifier le loyer de 1000€ d'un appartement non meublé de 2 pièces de 30 m² construit en 1971 dans le quartier Gros Caillou à Paris
+        /rent-control/check?price=1000&surface=30&propertyType=APARTMENT&roomCount=2&constructionYear=1971&furnished=false&address=19 Rue du Gros Caillou, 75007 Paris
+
+      #### Vérifier le même loyer avec la latitude et la longitude
+        /rent-control/check?price=1000&surface=30&propertyType=APARTMENT&roomCount=2&constructionYear=1971&furnished=false&lat=48.856804&lng=2.303047
   parameters:
     - in: query
       name: price
