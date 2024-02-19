@@ -1,0 +1,27 @@
+type: object
+properties:
+  code:
+    type: string
+    example: 1
+  name:
+    type: string
+    example: Gros-Caillou
+  propertyTypes:
+    type: array
+    items:
+      type: string
+      enum:
+        - APARTMENT
+        - HOUSE
+      example: APARTMENT
+  zone:
+    $ref: ./RentControl-Features-Zone.yaml
+  roomCount:
+    $ref: ./Range.yaml
+  constructionYear:
+    $ref: ./Range.yaml
+  furnished:
+    type: boolean
+  geometry:
+    type: object
+    format: GeoJsonObject

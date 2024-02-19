@@ -1,18 +1,22 @@
 type: object
 properties:
-  status:
-    $ref: ./RentControlStatus.yaml
-  irisQuarterId:
+  id:
     type: string
-  median:
-    type: number
-    format: double
-  min:
-    type: number
-    format: double
-    minimum: 0
-  max:
-    type: number
-    format: double
-    minimum: 0
-
+    format: uuid
+    example: 9349b062-6624-4cec-b5cb-d55b0a6fadb0
+  priceM2:
+    $ref: ./RentControl-PriceM2.yaml
+  features:
+    $ref: ./RentControl-Features.yaml
+  creationDate:
+    type: string
+    format: date-time
+  updateDate:
+    type: string
+    format: date-time
+  deleteDate:
+    type: string
+    format: date-time
+  active:
+    type: boolean
+    example: true

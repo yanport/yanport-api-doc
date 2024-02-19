@@ -1,6 +1,6 @@
 name: deleteDateMax
 in: query
-description: 'Date limite de suppression (YYYY-mm-ddTHH:mm:ss)'
+description: Date de suppression maximale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date-time

@@ -1,0 +1,10 @@
+type: object
+properties:
+  status:
+    $ref: ./RentControlStatus.yaml
+  address:
+    $ref: ./Address.yaml
+  zones:
+    type: array
+    items:
+      $ref: ./RentControl.yaml

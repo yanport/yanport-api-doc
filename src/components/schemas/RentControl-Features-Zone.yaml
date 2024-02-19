@@ -1,0 +1,12 @@
+type: object
+properties:
+  type:
+    type: string
+    enum:
+      - IRIS
+    example: IRIS
+  ids:
+    type: array
+    items:
+      type: string
+      example: 751072801

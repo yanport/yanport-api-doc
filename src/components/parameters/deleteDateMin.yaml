@@ -1,6 +1,6 @@
 name: deleteDateMin
 in: query
-description: 'Date minimale de suppression (YYYY-mm-ddTHH:mm:ss)'
+description: Date de suppression minimale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date-time

@@ -1,6 +1,6 @@
 name: zone
 in: query
-description: La zone géographique des statistiques
+description: Type de zone géographique
 schema:
   type: string
   enum:

@@ -1,10 +1,104 @@
-post:
+get:
   tags:
     - Encadrement des loyers
-  summary: Encadrement des loyers
+  summary: Vérifier un loyer
   description: >-
-    Permet de controller vis-à-vis de la législation si un loyer est hors/dans
-    l'encadrement des loyers.
+    Vérifie si un loyer respecte l'encadrement des loyers vis-à-vis de la législation
+
+    ### Exemples
+      #### Vérifier le loyer de 1000€ d'un appartement non meublé de 2 pièces de 30 m² construit en 1971 dans le quartier Gros Caillou à Paris
+        /rent-control/check?price=1000&surface=30&propertyType=APARTMENT&roomCount=2&constructionYear=1971&furnished=false&address=19 Rue du Gros Caillou, 75007 Paris
+
+      #### Vérifier le même loyer avec la latitude et la longitude
+        /rent-control/check?price=1000&surface=30&propertyType=APARTMENT&roomCount=2&constructionYear=1971&furnished=false&lat=48.856804&lng=2.303047
+  parameters:
+    - in: query
+      name: price
+      schema:
+        type: number
+        format: double
+        example: 1000.0
+      required: true
+      description: Prix du loyer
+    - in: query
+      name: surface
+      schema:
+        type: number
+        format: double
+        example: 30.0
+      required: true
+      description: Surface
+    - in: query
+      name: propertyType
+      schema:
+        type: string
+        enum:
+          - APARTMENT
+          - HOUSE
+        example: APARTMENT
+      required: true
+      description: Type de bien
+    - in: query
+      name: roomCount
+      schema:
+        type: integer
+        example: 2
+      required: true
+      description: Nombre de pièces
+    - in: query
+      name: constructionYear
+      schema:
+        type: integer
+        example: 2000
+      required: true
+      description: Année de construction
+    - in: query
+      name: furnished
+      schema:
+        type: boolean
+        example: false
+      required: true
+      description: Meublé
+    - in: query
+      name: address
+      schema:
+        type: string
+        example: 19 Rue du Gros Caillou, 75007 Paris
+      description: Adresse (requis si `lat` et `lng` sont vides)
+    - in: query
+      name: lat
+      schema:
+        type: number
+        format: double
+        example: 48.830
+      description: Latitude (requis si `address` est vide)
+    - in: query
+      name: lng
+      schema:
+        type: number
+        format: double
+        example: 2.3190
+      description: Longitude (requis si `address` est vide)
+
+  responses:
+    200:
+      description: Le status vis-à-vis de l'encadrement
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/RentControlResponse.yaml
+    400:
+      $ref: ../components/responses/BadRequest.yaml
+    500:
+      $ref: ../components/responses/InternalServerError.yaml
+
+post:
+  deprecated: true
+  tags:
+    - Encadrement des loyers
+  summary: Vérifier un loyer
+  description: >-
+    Vérifie si un loyer respecte l'encadrement des loyers vis-à-vis de la législation
   requestBody:
     description: Requête d'encadrement d'un loyer
     required: true
@@ -15,26 +109,42 @@ post:
           properties:
             rawAddress:
               type: string
+              description: Adresse
             surface:
               type: number
               format: double
+              description: Surface
             roomCount:
               type: integer
+              description: Nombre de pièces
             price:
               type: number
               format: double
+              description: Prix du loyer
             furnished:
               type: boolean
+              description: Meublé
             constructionPeriod:
               $ref: ../components/schemas/Range.yaml
+          example:
+            rawAddress: 19 Rue du Gros Caillou, 75007 Paris
+            surface: 30.0
+            roomCount: 2
+            price: 1000.0
+            furnished: false
+            constructionPeriod:
+              lowerEndpoint: 1940
+              lowerBoundType: CLOSED
+              upperEndpoint: 1940
+              upperBoundType: CLOSED
   responses:
-    '200':
+    200:
       description: Le status vis-à-vis de l'encadrement
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/RentControlResult.yaml
-    '400':
+            $ref: ../components/schemas/RentControlV1Response.yaml
+    400:
       $ref: ../components/responses/BadRequest.yaml
-    '500':
+    500:
       $ref: ../components/responses/InternalServerError.yaml
