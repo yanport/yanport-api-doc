@@ -17,8 +17,24 @@ get:
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/ids.yaml
-    - $ref: ../components/parameters/propertyTypes.yaml
-    - $ref: ../components/parameters/zone.yaml
+    - in: query
+      name: propertyTypes
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - APARTMENT
+            - HOUSE
+      style: form
+      description: Types de bien
+    - in: query
+      name: zone
+      schema:
+        type: string
+        enum:
+          - IRIS
+      description: Type de zone géographique
     - $ref: ../components/parameters/zoneIds.yaml
     - $ref: ../components/parameters/roomCountMin.yaml
     - $ref: ../components/parameters/roomCountMax.yaml
@@ -48,6 +64,7 @@ get:
             properties:
               total:
                 type: integer
+                example: 1
               hits:
                 type: array
                 items:
