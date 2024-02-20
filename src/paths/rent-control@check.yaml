@@ -50,8 +50,19 @@ get:
       schema:
         type: integer
         example: 2000
-      required: true
       description: Année de construction
+    - in: query
+      name: constructionYearMin
+      schema:
+        type: integer
+        example: 1960
+      description: Année de construction minimale (si `constructionYear` est vide)
+    - in: query
+      name: constructionYearMax
+      schema:
+        type: integer
+        example: 1980
+      description: Année de construction maximale (si `constructionYear` est vide)
     - in: query
       name: furnished
       schema:
