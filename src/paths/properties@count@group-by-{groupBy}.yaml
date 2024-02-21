@@ -5,7 +5,7 @@ get:
   description: |-
     Retourne le nombre de biens regroupés selon 1 critère.
 
-    ### Exemples
+    ### Exemple
       #### Nombre de biens regroupés par portail en cours de publication sur Levallois-Perret
         /properties/count/group-by-crawl-sources?active=true&source=AD&zipCodes=92300
   parameters:
@@ -18,11 +18,11 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Le nombre de biens
+      description: Nombre de biens
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/CountResponse.yaml
+            $ref: ../components/schemas/CountResponse.yaml  # TODO fix response
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

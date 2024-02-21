@@ -5,8 +5,7 @@ get:
   description: >-
     Permet de récupérer des percentiles sur les biens.
 
-
-    ### Exemples
+    ### Exemple
       #### Prix au m² median des appartements en cours de publication en vente à Levallois-Perret
         /properties/percentiles?field=PRICE_M2&percentiles=50&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
@@ -20,7 +19,7 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Les percentiles
+      description: Percentiles
       content:
         application/json:
           schema:

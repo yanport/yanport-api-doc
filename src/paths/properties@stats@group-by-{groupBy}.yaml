@@ -3,11 +3,10 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Statistiques (GroupBy)
   description: >-
-    Permet de récupérer des statistiques de base regroupées selon 1 critère sur les biens.
-    
-    
-    ### Exemples
-      #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret regroupées par portail
+    Permet de récupérer des statistiques de base sur les biens regroupés selon 1 critère.
+
+    ### Exemple
+      #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret regroupés par portail
         /properties/stats/group-by-CRAWL_SOURCES?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/PropertyGroupByStatsQuery-groupBy.yaml
@@ -21,11 +20,11 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Les statistiques regroupées par le champ demandé
+      description: Statistiques
       content:
         application/json:
           schema:
-            type: object
+            type: object  # TODO add response
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

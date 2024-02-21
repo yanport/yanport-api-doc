@@ -6,8 +6,7 @@ get:
     Compte le nombre de biens par rapport à certains critères de recherches.
     (prix, surface, ville, ...)
 
-
-    ### Exemples
+    ### Exemple
       #### Nombre de biens en cours de publication sur Levallois-Perret entre 120 et 130m²
         /properties/count?active=true&source=AD&zipCodes=92300&surfaceMin=120&surfaceMax=130
   parameters:
@@ -18,7 +17,7 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Le nombre de biens
+      description: Nombre de biens
       content:
         application/json:
           schema:
