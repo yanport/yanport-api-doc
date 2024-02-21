@@ -11,7 +11,7 @@ get:
     - $ref: ../components/parameters/inseeCodes.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche de parcelles
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:

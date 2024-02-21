@@ -15,7 +15,7 @@ get:
           format: uuid
   responses:
     '200':
-      description: Le program
+      description: Les programmes
       content:
         application/json:
           schema:

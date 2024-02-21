@@ -1,19 +1,19 @@
 get:
   tags:
     - Réseaux de mandataires
-  summary: Récupérer un réseau mandataire
-  description: Retourne un réseau mandataire selon son identifiant
+  summary: Récupérer un réseau de mandataires
+  description: Retourne un réseau de mandataires selon son identifiant
   parameters:
     - name: id
       in: path
-      description: L'identifiant du réseau de mandataire
+      description: L'identifiant du réseau de mandataires
       required: true
       schema:
         type: integer
         format: int64
   responses:
     '200':
-      description: Le réseau mandataire correspondant
+      description: Le réseau de mandataires correspondant
       content:
         application/json:
           schema:

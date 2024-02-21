@@ -1,8 +1,8 @@
 get:
   tags:
     - Réseaux de mandataires
-  summary: Récupérer des réseaux mandataires
-  description: Retourne des réseaux mandataires selon leurs identifiants
+  summary: Récupérer des réseaux de mandataires
+  description: Retourne des réseaux de mandataires selon leurs identifiants
   parameters:
     - name: ids
       in: query
@@ -15,7 +15,7 @@ get:
           type: string
   responses:
     '200':
-      description: Les réseaux mandataires correspondants
+      description: Les réseaux de mandataires correspondants
       content:
         application/json:
           schema:

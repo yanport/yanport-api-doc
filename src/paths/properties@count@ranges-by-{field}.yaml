@@ -5,8 +5,8 @@ get:
   description: |-
     Retourne le nombre de biens regroupés par un ensemble d'intervalles selon 1 critère.
 
-    ### Exemples
-      #### Nombre de biens regroupés par surface en cours de publication sur Levallois-Perret répartis selon les intervalles ]-∞-60[  et [60-+∞[
+    ### Exemple
+      #### Nombre de biens regroupés par surface en cours de publication sur Levallois-Perret répartis selon les intervalles ]-∞, 60[ et [60, +∞[
         /properties/count/group-by-surface?active=true&source=AD&zipCodes=92300&intervals=*:60&intervals=60:*
   parameters:
     - $ref: ../components/parameters/PropertyRangesByCountQuery-field.yaml
@@ -18,7 +18,7 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Le nombre de biens
+      description: Nombre de biens
       content:
         application/json:
           schema:

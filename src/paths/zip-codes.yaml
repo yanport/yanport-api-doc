@@ -1,11 +1,10 @@
 get:
   tags:
-    - ZIP-CODE
-  summary: Récupérer des code postaux
+    - Code postal
+  summary: Récupérer des codes postaux
   description: >-
     Retourne des codes postaux selon différents critères
-    
-    
+
     ### Exemples
       #### La liste des codes postaux
         /zip-codes
@@ -20,12 +19,12 @@ get:
     - $ref: ../components/parameters/cityIds.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche de codes postaux
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:
     '200':
-      description: La liste des code postaux
+      description: La liste des codes postaux
       content:
         application/json:
           schema:

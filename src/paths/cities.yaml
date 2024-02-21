@@ -4,6 +4,7 @@ get:
   summary: Récupérer des villes
   description: >-
     Retourne des villes selon différents critères
+
     ### Exemple
       #### Les villes de l'agglomération d'Alès
         /cities?agglomerationsIds=4762789825649664
@@ -19,7 +20,7 @@ get:
     - $ref: ../components/parameters/excludedIds.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche de villes
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:

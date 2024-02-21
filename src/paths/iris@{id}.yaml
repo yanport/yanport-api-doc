@@ -12,7 +12,7 @@ get:
         type: string
   responses:
     '200':
-      description: Le quartier demandé
+      description: L'iris demandé
       content:
         application/json:
           schema:

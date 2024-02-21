@@ -1,13 +1,13 @@
 get:
   tags:
     - Réseaux de mandataires
-  summary: Récupérer des réseaux mandataires
+  summary: Récupérer des réseaux de mandataires
   description: |-
-    Retourne des réseaux mandataires selon plusieurs critères
+    Retourne des réseaux de mandataires selon différents critères
 
-    ### Exemples
+    ### Exemple
       #### Récupérer le réseau Efficity
-        /mandatary-networks?q=efficity'
+        /mandatary-networks?q=efficity
   parameters:
     - name: searchQueryParam
       in: query
@@ -17,7 +17,7 @@ get:
     - $ref: ../components/parameters/MandataryNetworkSearchQuery-siren.yaml
   responses:
     '200':
-      description: Les réseaux mandataires trouvés
+      description: Les réseaux de mandataires trouvés
       content:
         application/json:
           schema:

@@ -1,18 +1,18 @@
 get:
   tags:
-    - ZIP-CODE
-  summary: Récupérer un zip-code (ID)
-  description: Retourne un zip-code selon son identifiant
+    - Code postal
+  summary: Récupérer un code postal (ID)
+  description: Retourne un code postal selon son identifiant
   parameters:
     - name: id
       in: path
-      description: L'identifiant du zip-code
+      description: L'identifiant du code postal
       required: true
       schema:
         type: string
   responses:
     '200':
-      description: Le zip-code demandé
+      description: Le code postal demandé
       content:
         application/json:
           schema:
