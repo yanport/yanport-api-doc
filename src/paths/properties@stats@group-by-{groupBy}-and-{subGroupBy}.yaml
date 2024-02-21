@@ -3,7 +3,7 @@ get:
     - Indicateurs sur les biens (ancien/neuf)
   summary: Statistiques (SubGroupBy)
   description: >-
-    Permet de récupérer des statistiques de base sur les biens regroupés selon 2 critères.
+    Permet de récupérer des statistiques de base sur les biens regroupées selon 2 critères.
     
     
     ### Exemples
@@ -22,7 +22,7 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Les statistiques regoupés par le champ et sous champ demandé
+      description: Les statistiques regroupées par le champ et sous champ demandé
       content:
         application/json:
           schema:

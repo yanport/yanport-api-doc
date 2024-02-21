@@ -2,8 +2,9 @@ get:
   tags:
     - IRIS
   summary: Récupérer des iris
-  description:  >-
+  description: >-
     Retourne des iris selon différents critères
+
     ### Exemple
       #### Les iris de la ville de Pau de type habitation
         /iris?cityIds=51470903&types=HOUSING
@@ -20,7 +21,7 @@ get:
     - $ref: ../components/parameters/codes.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche d'iris
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:

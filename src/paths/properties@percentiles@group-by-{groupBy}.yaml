@@ -22,7 +22,7 @@ get:
         $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Les percentiles regoupés par le champ demandé
+      description: Les percentiles regroupés par le champ demandé
       content:
         application/json:
           schema:

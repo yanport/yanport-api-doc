@@ -12,7 +12,7 @@ post:
           $ref: ../components/schemas/Study.yaml
   responses:
     '200':
-      description: L'étude créé
+      description: L'étude créée
       content:
         application/json:
           schema:

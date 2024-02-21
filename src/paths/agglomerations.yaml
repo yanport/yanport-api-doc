@@ -4,8 +4,7 @@ get:
   summary: Récupérer des agglomérations
   description: >-
     Retourne les agglomérations correspondant aux critères demandés
-    
-    
+
     ### Exemples
       #### La liste des agglomérations
         /agglomerations
@@ -24,7 +23,7 @@ get:
     - $ref: ../components/parameters/departmentCodes.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche d'agglomérations
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:

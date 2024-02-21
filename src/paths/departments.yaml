@@ -4,8 +4,7 @@ get:
   summary: Récupérer des départements
   description: >-
     Retourne des départements selon différents critères
-    
-    
+
     ### Exemples
       #### La liste des départements
         /departments
@@ -23,7 +22,7 @@ get:
     - $ref: ../components/parameters/codes.yaml
     - name: geoSearchQueryParam
       in: query
-      description: Paramètres géographiques de recherche de biens
+      description: Paramètres géographiques de recherche de départements
       schema:
         $ref: ../components/schemas/GeoSearchQuery.yaml
   responses:

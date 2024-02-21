@@ -6,7 +6,6 @@ get:
     Retourne le nombre de permis de construire correspondant à certains critères de
     recherche. 
 
-
     ### Exemples
       #### Nombre de permis de construire actifs à Vincennes
         /building-permits/count?active=true&zipCodes=94300

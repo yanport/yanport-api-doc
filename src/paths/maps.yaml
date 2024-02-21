@@ -4,6 +4,7 @@ get:
   summary: Données cartographique
   description: >-
     Retourne un GeoJSON avec des données géographiques
+
     ### Exemple
       #### Carte des prix d'une zone du Nord de Nantes
         /maps?field=PRICE&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8

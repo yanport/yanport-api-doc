@@ -15,7 +15,7 @@ post:
               $ref: ../components/schemas/ProspectActivity.yaml
   responses:
     '200':
-      description: L'activité de prospection a été créé
+      description: L'activité de prospection a été créée
       content:
         application/json:
           schema:

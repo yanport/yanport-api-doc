@@ -4,6 +4,7 @@ get:
   summary: Récupérer des statistiques socioéconomiques
   description: >-
     Retourne des statistiques socioéconomiques par zones géographiques (source INSEE)
+
     ### Exemple
       #### Statistiques socio-économiques de la zone iris Monpezat (64)
         /census-stats?zone=IRIS&zoneIds=643940000

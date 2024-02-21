@@ -1,9 +1,10 @@
 get:
   tags:
-    - ZIP-CODE
-  summary: Récupérer des zip-code (ID)
+    - Code postal
+  summary: Récupérer des codes postaux (ID)
   description: >-
-    Retourne des zip-code selon leurs identifiants
+    Retourne des codes postaux selon leurs identifiants
+
     ### Exemple
       #### Les codes postaux du 8ème et 9ème arrondissements de Paris
         /zip-codes/ids?zipCodes=75008&zipCodes=75009
@@ -20,7 +21,7 @@ get:
               type: string
   responses:
     '200':
-      description: La liste des zip-code
+      description: La liste des codes postaux
       content:
         application/json:
           schema:
