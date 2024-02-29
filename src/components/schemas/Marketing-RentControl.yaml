@@ -1,21 +1,8 @@
 type: object
 properties:
-  status:
-    $ref: ./RentControlV1Status.yaml
-  irisQuarterId:
+  id:
     type: string
-    example: 7510728
-  median:
-    type: number
-    format: double
-    example: 32.8
-  min:
-    type: number
-    format: double
-    minimum: 0
-    example: 23.0
-  max:
-    type: number
-    format: double
-    minimum: 0
-    example: 39.4
+    format: uuid
+    example: 9349b062-6624-4cec-b5cb-d55b0a6fadb0
+  status:
+    $ref: ./RentControlStatus.yaml
