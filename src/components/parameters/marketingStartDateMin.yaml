@@ -1,0 +1,5 @@
+name: marketingStartDateMin
+in: query
+schema:
+  type: string
+  format: date-time

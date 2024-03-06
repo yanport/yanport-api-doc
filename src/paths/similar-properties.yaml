@@ -17,6 +17,13 @@ get:
     - $ref: ../components/parameters/price.yaml
     - $ref: ../components/parameters/surface.yaml
     - $ref: ../components/parameters/publicationDateMin.yaml
+    - $ref: ../components/parameters/publicationDateMax.yaml
+    - $ref: ../components/parameters/deleteDateMin.yaml
+    - $ref: ../components/parameters/deleteDateMax.yaml
+    - $ref: ../components/parameters/marketingEndDateMin.yaml
+    - $ref: ../components/parameters/marketingEndDateMax.yaml
+    - $ref: ../components/parameters/marketingEndDateMin.yaml
+    - $ref: ../components/parameters/marketingEndDateMax.yaml
     - $ref: ../components/parameters/SimilarPropertyQuery-active.yaml
     - $ref: ../components/parameters/SimilarPropertyQuery-roomCount.yaml
     - name: searchQueryParam

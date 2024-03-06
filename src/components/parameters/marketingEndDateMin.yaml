@@ -1,0 +1,6 @@
+name: marketingEndDateMin
+in: query
+description: 'Date minimale de transaction (YYYY-mm-ddTHH:mm:ss)'
+schema:
+  type: string
+  format: date-time

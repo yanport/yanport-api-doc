@@ -1,0 +1,6 @@
+name: marketingEndDateMax
+in: query
+description: 'Date maximale de transaction (YYYY-mm-ddTHH:mm:ss)'
+schema:
+  type: string
+  format: date-time
