@@ -20,8 +20,8 @@ get:
     - $ref: ../components/parameters/publicationDateMax.yaml
     - $ref: ../components/parameters/deleteDateMin.yaml
     - $ref: ../components/parameters/deleteDateMax.yaml
-    - $ref: ../components/parameters/marketingEndDateMin.yaml
-    - $ref: ../components/parameters/marketingEndDateMax.yaml
+    - $ref: ../components/parameters/marketingStartDateMin.yaml
+    - $ref: ../components/parameters/marketingStartDateMax.yaml
     - $ref: ../components/parameters/marketingEndDateMin.yaml
     - $ref: ../components/parameters/marketingEndDateMax.yaml
     - $ref: ../components/parameters/SimilarPropertyQuery-active.yaml
