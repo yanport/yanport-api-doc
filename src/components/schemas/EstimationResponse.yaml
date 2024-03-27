@@ -22,10 +22,12 @@ properties:
     $ref: ./EstimationResponse-reliability.yaml
   evaluation:
     type: object
+    description: Statistiques descriptives des erreurs commises sur des biens voisins du bien estimé.
     properties:
       count:
         type: integer
         format: int32
+        description: Nombre de voisins du bien estimé considérés.
         example: 30
       residual:
         type: object
@@ -33,10 +35,11 @@ properties:
           mean:
             type: number
             format: double
-            description: Erreur moyenne constatée lors de la validation de nos modèles
+            description: Erreur moyenne sur les voisins du bien estimé.
             example: 5.85
           percentiles:
             type: object
+            description: Percentiles des erreurs sur les voisins du bien estimé.
             properties:
               '50':
                 type: number
