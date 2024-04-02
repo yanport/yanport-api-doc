@@ -1,0 +1,6 @@
+name: creationDateMax
+in: query
+description: Date limite de création de l'opportunité
+schema:
+  type: string
+  format: date-time

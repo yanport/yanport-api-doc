@@ -1,0 +1,27 @@
+type: object
+properties:
+  surface:
+    type: number
+    format: double
+    example: 150
+  address:
+    $ref: ./Address.yaml
+  roomCount:
+    type: number
+    format: int64
+    example: 5
+  floorCount:
+    type: number
+    format: int64
+    example: 2
+  generalState:
+    $ref: ./State.yaml
+  areas:
+    $ref: ./Area-Type.yaml
+  furnished:
+    type: boolean
+    example: false
+  consumptionLetter:
+    $ref: ./ConsumptionLetter.yaml
+  greenHouseConsumptionLetter:
+    $ref: ./ConsumptionLetter.yaml

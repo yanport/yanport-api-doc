@@ -1,0 +1,10 @@
+type: object
+properties:
+  propertySearchQuery:
+    $ref: ./PropertySearchQuery.yaml
+  similarProperties:
+    type: array
+    items:
+      $ref: ./Property.yaml
+  stats:
+    $ref: ./Stats.yaml

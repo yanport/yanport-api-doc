@@ -1,0 +1,5 @@
+type: string
+enum:
+  - ESTIMATION_ENGINE
+  - SIMILAR_PROPERTIES
+  - MARKET_INDICATORS

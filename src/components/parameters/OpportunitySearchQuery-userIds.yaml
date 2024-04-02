@@ -1,0 +1,8 @@
+name: userIds
+in: query
+description: Liste d'identifiants d'utilisateurs
+schema:
+  type: array
+  items:
+    type: integer
+    format: int64

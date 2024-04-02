@@ -1,0 +1,18 @@
+type: object
+properties:
+  price:
+    type: number
+    format: double
+    example: 253000
+  negotiationMargin:
+    type: number
+    format: double
+    example: 3000
+  worksCost:
+    type: number
+    format: double
+    example: 800
+  notaryFees:
+    type: number
+    format: int64
+    example: 8

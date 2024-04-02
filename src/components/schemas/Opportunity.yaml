@@ -1,0 +1,24 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  userId:
+    type: integer
+    format: int64
+  organizationId:
+    type: integer
+    format: int64
+  product:
+    $ref: ./ProductType.yaml
+  propertyId:
+    type: string
+    format: uuid
+  budget:
+    $ref: ./Opportunity-ProjectBudget.yaml
+  propertyFeatures:
+    $ref: ./Opportunity-PropertyFeatures.yaml
+  sale:
+    $ref: ./Opportunity-Valuations.yaml
+  rent:
+    $ref: ./Opportunity-Valuations.yaml
