@@ -18,6 +18,10 @@ properties:
     $ref: ./Opportunity-ProjectBudget.yaml
   propertyFeatures:
     $ref: ./Opportunity-PropertyFeatures.yaml
+  selectedMarket:
+    $ref: ./MarketingType.yaml
+  buy:
+    $ref: ./Opportunity-Valuations.yaml
   sale:
     $ref: ./Opportunity-Valuations.yaml
   rent:

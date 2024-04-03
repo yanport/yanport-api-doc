@@ -3,6 +3,6 @@ properties:
   propertySearchQuery:
     $ref: ./PropertySearchQuery.yaml
   priceM2Distribution:
-    $ref: ./Histogram.yaml
+    $ref: ./CountAggHistogram.yaml
   priceM2Percentiles:
     $ref: ./Percentiles.yaml

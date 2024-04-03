@@ -1,6 +1,0 @@
-name: creationDateMin
-in: query
-description: Date minimale de création de l'opportunité
-schema:
-  type: string
-  format: date-time

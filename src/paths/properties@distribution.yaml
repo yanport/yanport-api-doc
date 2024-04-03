@@ -30,7 +30,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Histogram.yaml
+            $ref: ../components/schemas/PercentilesHistogram.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

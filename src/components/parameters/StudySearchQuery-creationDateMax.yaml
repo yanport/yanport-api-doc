@@ -1,6 +1,0 @@
-name: creationDateMax
-in: query
-description: Date limite de création de l'étude
-schema:
-  type: string
-  format: date-time

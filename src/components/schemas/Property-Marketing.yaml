@@ -1,11 +1,7 @@
 type: object
 properties:
   type:
-    type: string
-    enum:
-      - SALE
-      - RENT
-      - LIFE_ANNUITY
+    $ref: ./MarketingType.yaml
   price:
     type: number
     format: double

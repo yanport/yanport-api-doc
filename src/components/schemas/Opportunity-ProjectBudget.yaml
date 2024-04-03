@@ -7,12 +7,16 @@ properties:
   negotiationMargin:
     type: number
     format: double
-    example: 3000
+    minimum: 0
+    maximum: 100
+    example: 10
   worksCost:
     type: number
     format: double
     example: 800
   notaryFees:
-    type: number
-    format: int64
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 100
     example: 8

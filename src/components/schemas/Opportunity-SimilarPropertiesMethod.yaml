@@ -6,5 +6,3 @@ properties:
     type: array
     items:
       $ref: ./Property.yaml
-  stats:
-    $ref: ./Stats.yaml

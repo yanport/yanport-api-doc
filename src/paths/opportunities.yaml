@@ -2,7 +2,7 @@ post:
   tags:
     - Opportunités
   summary: Ajouter une opportunité
-  description: Retourne l'opportunité créée avec son identiant, l'horodatage et les différentes estimations associé
+  description: Retourne l'opportunité créée avec son identifiant, l'horodatage et les différentes estimations associées
   requestBody:
     required: true
     description: Formulaire pour la création d'une opportunité
@@ -14,7 +14,7 @@ post:
             properties:
               $ref: ../components/schemas/Opportunity.yaml
   responses:
-    '200':
+    '201':
       description: L'opportunité a été créée
       content:
         application/json:
@@ -55,12 +55,14 @@ get:
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
-    - $ref: ../components/parameters/OpportunitySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/userIds.yaml
     - $ref: ../components/parameters/productTypes.yaml
-    - $ref: ../components/parameters/OpportunitySearchQuery-organizationIds.yaml
-    - $ref: ../components/parameters/OpportunitySearchQuery-propertyIds.yaml
-    - $ref: ../components/parameters/OpportunitySearchQuery-creationDateMin.yaml
-    - $ref: ../components/parameters/OpportunitySearchQuery-creationDateMax.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
+    - $ref: ../components/parameters/propertyIds.yaml
+    - $ref: ../components/parameters/updateDateMin.yaml
+    - $ref: ../components/parameters/updateDateMax.yaml
+    - $ref: ../components/parameters/creationDateMin.yaml
+    - $ref: ../components/parameters/creationDateMax.yaml
   responses:
     '200':
       description: Les opportunités trouvées

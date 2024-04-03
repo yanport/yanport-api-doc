@@ -5,4 +5,4 @@ style: form
 schema:
   type: array
   items:
-    type: string
+    format: uuid

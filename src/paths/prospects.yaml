@@ -35,7 +35,7 @@ get:
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
-    - $ref: ../components/parameters/StudySearchQuery-userIds.yaml
+    - $ref: ../components/parameters/userIds.yaml
     - $ref: ../components/parameters/propertyIds.yaml
     - $ref: ../components/parameters/productTypes.yaml
     - $ref: ../components/parameters/dueDateMin.yaml

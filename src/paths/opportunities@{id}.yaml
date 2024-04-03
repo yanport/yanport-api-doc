@@ -20,6 +20,8 @@ get:
             $ref: ../components/schemas/Opportunity.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
     '500':
       $ref: ../components/responses/InternalServerError.yaml
 put:
@@ -35,6 +37,13 @@ put:
       schema:
         type: string
         format: uuid
+  requestBody:
+    required: true
+    description: Données de l'opportunité à mettre à jour
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Opportunity.yaml
   responses:
     '200':
       $ref: ../components/responses/NoContent.yaml
