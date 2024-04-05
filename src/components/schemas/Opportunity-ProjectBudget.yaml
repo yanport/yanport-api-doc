@@ -1,0 +1,22 @@
+type: object
+properties:
+  price:
+    type: number
+    format: double
+    example: 253000
+  negotiationMargin:
+    type: number
+    format: double
+    minimum: 0
+    maximum: 100
+    example: 10
+  worksCost:
+    type: number
+    format: double
+    example: 800
+  notaryFees:
+    type: integer
+    format: int32
+    minimum: 0
+    maximum: 100
+    example: 8

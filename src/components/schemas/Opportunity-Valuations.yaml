@@ -1,0 +1,10 @@
+type: object
+properties:
+  selectedMethod:
+    $ref: ./Opportunity-SelectedMethod.yaml
+  estimationEngine:
+    $ref: ./EstimationResponse.yaml
+  similarProperties:
+    $ref: ./Opportunity-SimilarPropertiesMethod.yaml
+  marketIndicators:
+    $ref: ./Opportunity-MarketIndicatorsMethod.yaml

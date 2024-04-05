@@ -9,9 +9,9 @@ properties:
   durationPercentiles:
     $ref: ./Percentiles.yaml
   priceM2Distribution:
-    $ref: ./Histogram.yaml
+    $ref: ./PercentilesHistogram.yaml
   durationDistribution:
-    $ref: ./Histogram.yaml
+    $ref: ./PercentilesHistogram.yaml
   priceM2Evolution:
     $ref: ./DateHistogram.yaml
   forecastPriceM2Evolution:

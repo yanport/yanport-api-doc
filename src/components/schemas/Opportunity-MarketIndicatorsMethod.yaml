@@ -1,0 +1,8 @@
+type: object
+properties:
+  propertySearchQuery:
+    $ref: ./PropertySearchQuery.yaml
+  priceM2Distribution:
+    $ref: ./CountAggHistogram.yaml
+  priceM2Percentiles:
+    $ref: ./Percentiles.yaml

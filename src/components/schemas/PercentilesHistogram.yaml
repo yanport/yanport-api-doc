@@ -3,4 +3,4 @@ properties:
   points:
     type: array
     items:
-      $ref: ./HistogramPoint.yaml
+      $ref: ./PercentilesHistogramPoint.yaml

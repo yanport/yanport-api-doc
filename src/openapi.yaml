@@ -357,6 +357,10 @@ paths:
     $ref: paths/estimations.yaml
   '/estimations/{id}':
     $ref: 'paths/estimations@{id}.yaml'
+  /opportunities:
+    $ref: paths/opportunities.yaml
+  /opportunities/{id}:
+    $ref: paths/opportunities@{id}.yaml
   /prospects:
     $ref: paths/prospects.yaml
   '/prospects/{id}':

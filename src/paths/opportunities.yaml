@@ -1,39 +1,41 @@
 post:
   tags:
-    - Etudes
-  summary: Créer une étude
-  description: Retourne l'étude créée
+    - Opportunités
+  summary: Ajouter une opportunité
+  description: Retourne l'opportunité créée avec son identifiant, l'horodatage et les différentes estimations associées
   requestBody:
     required: true
-    description: Formulaire pour la création d'une étude
+    description: Formulaire pour la création d'une opportunité
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Study.yaml
+          type: object
+          properties:
+            properties:
+              $ref: ../components/schemas/Opportunity.yaml
   responses:
-    '200':
-      description: L'étude créée
+    '201':
+      description: L'opportunité a été créée
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Study.yaml
+            $ref: ../components/schemas/Opportunity.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
       $ref: ../components/responses/InternalServerError.yaml
 get:
   tags:
-    - Etudes
-  summary: Récupérer des études
+    - Opportunités
+  summary: Récupérer des opportunités
   description: >-
-    Retourne des études selon plusieurs critères
+    Retourne des opportunités selon plusieurs critères
     
     
-    La recherche plein-texte est disponible sur le nom de l'étude, le nom du client et l'adresse du bien via
-    le query param `q`.
+    La recherche plein-texte est disponible sur l'adresse de l'opportunité via le query param `q`.
     
     
-    Par défaut les résultats sont paginés, pour parcourir l'ensemble des études
+    Par défaut les résultats sont paginés, pour parcourir l'ensemble des opportunités
     les paramètres `from` et `size` doivent être renseignés. Le paramètre `from`
     définit le début du set de données et `size` le nombre d'éléments à
     récupérer. Le nombre `total` d'éléments est renvoyé dans la réponse.
@@ -43,12 +45,10 @@ get:
     remplaçant `field` par le nom du champ sur lequel appliquer le tri.
     
     ### Exemples
-      #### Les études d'un utilisateur
-        /studies?userIds=123456789
-      #### Les études à partir d'un identifiant externe d'utilisateur
-        /studies?externalIds=USER:abc123
-      #### Les études à partir d'un identifiant externe de bien
-        /studies?propertyExternalIds=ID:abc123
+      #### Les opportunités d'un utilisateur
+        /opportunities?userIds=123456789
+      #### Les opportunités à partir d'un identifiant de bien
+        /opportunities?propertyIds=123456789
   parameters:
     - name: searchQueryParam
       in: query
@@ -57,19 +57,15 @@ get:
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/userIds.yaml
     - $ref: ../components/parameters/productTypes.yaml
-    - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml
     - $ref: ../components/parameters/organizationIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-externalIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-marketingTypes.yaml
     - $ref: ../components/parameters/propertyIds.yaml
-    - $ref: ../components/parameters/StudySearchQuery-propertyExternalIds.yaml
+    - $ref: ../components/parameters/updateDateMin.yaml
+    - $ref: ../components/parameters/updateDateMax.yaml
     - $ref: ../components/parameters/creationDateMin.yaml
     - $ref: ../components/parameters/creationDateMax.yaml
-    - $ref: ../components/parameters/missingFields.yaml
-    - $ref: ../components/parameters/existingFields.yaml
   responses:
     '200':
-      description: Les études trouvées
+      description: Les opportunités trouvées
       content:
         application/json:
           schema:
@@ -80,7 +76,7 @@ get:
               hits:
                 type: array
                 items:
-                  $ref: ../components/schemas/Study.yaml
+                  $ref: ../components/schemas/Opportunity.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

@@ -1,0 +1,73 @@
+get:
+  tags:
+    - Opportunités
+  summary: Récupérer une opportunité
+  description: Retourne une opportunité selon son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'opportunité
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':
+      description: L'opportunité correspondante
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Opportunity.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '404':
+      $ref: ../components/responses/ResourceNotFound.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+put:
+  tags:
+    - Opportunités
+  summary: Mettre à jour une opportunité
+  description: Mettre à jour une opportunité par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'opportunité
+      required: true
+      schema:
+        type: string
+        format: uuid
+  requestBody:
+    required: true
+    description: Données de l'opportunité à mettre à jour
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Opportunity.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/NoContent.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+delete:
+  tags:
+    - Opportunités
+  summary: Supprimer une opportunité
+  description: Supprimer une opportunité par son identifiant
+  parameters:
+    - name: id
+      in: path
+      description: L'identifiant de l'opportunité
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':
+      $ref: ../components/responses/NoContent.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

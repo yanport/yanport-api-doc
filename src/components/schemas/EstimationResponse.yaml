@@ -50,7 +50,7 @@ properties:
               '90':
                 type: number
                 example: 13.359326513857988
-  explain:
+  explanation:
     type: object
     properties:
       baseValue:

@@ -1,0 +1,16 @@
+type: string
+enum:
+  - BEDROOM
+  - BATHROOM
+  - SHOWER_ROOM
+  - TOILET
+  - KITCHEN
+  - LUNCHROOM
+  - LIVING_ROOM
+  - BALCONY
+  - TERRACE
+  - CELLAR
+  - GARDEN
+  - PARKING
+  - SWIMMING_POOL
+  - OTHER
