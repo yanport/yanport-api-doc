@@ -10,6 +10,8 @@ properties:
     $ref: ./Content-marketStats.yaml
   rentStats:
     $ref: ./Content-marketStats.yaml
+  investmentStats:
+    $ref: ./Content-investmentStats.yaml
   censusStats:
     $ref: ./Content-censusStats.yaml
   similarProperties:

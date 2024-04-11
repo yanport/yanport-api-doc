@@ -1,0 +1,10 @@
+type: object
+properties:
+  propertySearchQuery:
+    $ref: ./PropertySearchQuery.yaml
+  grossRentalYieldEvolution:
+    $ref: ./DateHistogram.yaml
+  maps:
+    type: array
+    items:
+      $ref: ./StudyMap.yaml
