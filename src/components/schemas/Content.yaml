@@ -16,6 +16,8 @@ properties:
     $ref: ./Content-censusStats.yaml
   similarProperties:
     $ref: ./Content-similarProperties.yaml
+  investment:
+    $ref: ./Content-investment.yaml
   propertyPriceStudy:
     $ref: ./Content-propertyPriceStudy.yaml
   legal:

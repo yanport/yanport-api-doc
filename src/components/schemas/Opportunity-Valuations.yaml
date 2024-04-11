@@ -1,4 +1,7 @@
 type: object
+required:
+  - similarProperties
+  - marketIndicators
 properties:
   selectedMethod:
     $ref: ./Opportunity-SelectedMethod.yaml
@@ -8,3 +11,5 @@ properties:
     $ref: ./Opportunity-SimilarPropertiesMethod.yaml
   marketIndicators:
     $ref: ./Opportunity-MarketIndicatorsMethod.yaml
+  userDefined:
+    $ref: ./Opportunity-UserDefinedMethod.yaml

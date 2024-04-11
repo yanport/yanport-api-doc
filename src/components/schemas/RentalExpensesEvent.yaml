@@ -1,9 +1,12 @@
 type: object
+required:
+  - year
+  - value
 properties:
   year:
     type: integer
   value:
     type: number
     format: double
-    minimum: 0
+    minimum: 1
     maximum: 100000
