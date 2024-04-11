@@ -1,4 +1,6 @@
 type: object
+required:
+  - propertySearchQuery
 properties:
   propertySearchQuery:
     $ref: ./PropertySearchQuery.yaml

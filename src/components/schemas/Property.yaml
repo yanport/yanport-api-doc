@@ -1,4 +1,7 @@
 type: object
+required:
+  - type
+  - marketing
 properties:
   id:
     type: string

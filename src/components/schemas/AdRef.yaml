@@ -1,4 +1,7 @@
 type: object
+required:
+  - crawlSource
+  - url
 properties:
   id:
     type: string

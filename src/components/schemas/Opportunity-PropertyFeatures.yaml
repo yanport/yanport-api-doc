@@ -1,4 +1,7 @@
 type: object
+required:
+  - surface
+  - address
 properties:
   surface:
     type: number

@@ -1,4 +1,8 @@
 type: object
+required:
+  - organizationId
+  - name
+  - property
 properties:
   id:
     type: string

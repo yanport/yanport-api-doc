@@ -344,6 +344,8 @@ properties:
     maxItems: 100
     items:
       type: object
+      required:
+        - type
       properties:
         type:
           type: string

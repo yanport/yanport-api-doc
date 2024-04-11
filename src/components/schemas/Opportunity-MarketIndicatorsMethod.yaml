@@ -1,4 +1,8 @@
 type: object
+required:
+  - propertySearchQuery
+  - priceM2Distribution
+  - priceM2Percentiles
 properties:
   propertySearchQuery:
     $ref: ./PropertySearchQuery.yaml
