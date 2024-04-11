@@ -1,5 +1,0 @@
-name: anomalyLevelMax
-in: query
-description: Niveau d'anomalie maximum (compris entre -1 et 3)
-schema:
-  type: integer
