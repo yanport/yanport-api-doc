@@ -6,7 +6,9 @@ properties:
     $ref: ./Content-estimationEngine.yaml
   propertyFeatures:
     $ref: ./Content-propertyFeatures.yaml
-  marketStats:
+  saleStats:
+    $ref: ./Content-marketStats.yaml
+  rentStats:
     $ref: ./Content-marketStats.yaml
   censusStats:
     $ref: ./Content-censusStats.yaml
