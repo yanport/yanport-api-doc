@@ -18,8 +18,8 @@ properties:
     $ref: ./Content-similarProperties.yaml
   propertyPriceStudy:
     $ref: ./Content-propertyPriceStudy.yaml
-  pinel:
-    $ref: ./Content-pinel.yaml
+  legal:
+    $ref: ./Content-legal.yaml
   conclusion:
     $ref: ./Content-conclusion.yaml
   summary:
