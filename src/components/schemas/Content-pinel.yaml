@@ -1,4 +1,8 @@
 type: object
+required:
+  - zone
+  - surface
+  - priceM2HC
 properties:
   zone:
     type: string

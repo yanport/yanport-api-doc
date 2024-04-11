@@ -1,4 +1,12 @@
 type: object
+required:
+  - userId
+  - organizationId
+  - product
+  - propertyId
+  - budget
+  - propertyFeatures
+  - selectedMarket
 properties:
   id:
     type: string
