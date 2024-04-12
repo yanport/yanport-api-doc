@@ -6,16 +6,25 @@ get:
     Retourne les biens similaires correspondant aux critères demandés.
 
     ### Exemple
-      #### Les biens similaires à un 2 pièces 47m2 à Bordeaux de 220000€ publiés depuis le 01/01/2023
-        /similar-properties?cityIds=48666765&marketingType=SALE&propertyTypes=APARTMENT&price=220000&surface=47&roomCount=2&publicationDateMin=2023-01-01T00:00:00Z
+      #### Les biens similaires à un appartement de 2 pièces de 47m² à Bordeaux de 220000€ publiés depuis le 01/01/2023
+        /similar-properties?marketingType=SALE&propertyTypes=APARTMENT&price=220000&surface=47&roomCount=2&cityIds=48666765&publicationDateMin=2023-01-01T00:00:00Z
   parameters:
+    - name: searchQueryParam
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/minDocCount.yaml
-    - $ref: ../components/parameters/cityIds.yaml
     - $ref: ../components/parameters/marketingType.yaml
     - $ref: ../components/parameters/propertyTypes.yaml
     - $ref: ../components/parameters/propertySubTypes.yaml
     - $ref: ../components/parameters/price.yaml
     - $ref: ../components/parameters/surface.yaml
+    - $ref: ../components/parameters/roomCount.yaml
+    - $ref: ../components/parameters/newBuild.yaml
+    - $ref: ../components/parameters/furnished.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/active.yaml
     - $ref: ../components/parameters/publicationDateMin.yaml
     - $ref: ../components/parameters/publicationDateMax.yaml
     - $ref: ../components/parameters/deleteDateMin.yaml
@@ -24,12 +33,8 @@ get:
     - $ref: ../components/parameters/marketingStartDateMax.yaml
     - $ref: ../components/parameters/marketingEndDateMin.yaml
     - $ref: ../components/parameters/marketingEndDateMax.yaml
-    - $ref: ../components/parameters/SimilarPropertyQuery-active.yaml
-    - $ref: ../components/parameters/SimilarPropertyQuery-roomCount.yaml
-    - name: searchQueryParam
-      in: query
-      schema:
-        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/anomalyLevelMin.yaml
+    - $ref: ../components/parameters/anomalyLevelMax.yaml
     - name: geoSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de biens

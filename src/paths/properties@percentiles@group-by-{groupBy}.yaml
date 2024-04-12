@@ -5,8 +5,14 @@ get:
   description: >-
     Permet de récupérer des percentiles sur les biens regroupés selon 1 critère.
 
+
+    Par défaut, les biens détectés comme anormaux sont filtrés : `anomalyLevelMax=1`.
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour plus de détails.
+
+
     ### Exemple
-      #### Prix au m² median des appartements en cours de publication en vente à Levallois-Perret regroupés par portail
+      #### Prix au m² médian des appartements en cours de publication en vente à Levallois-Perret regroupés par portail
         /properties/percentiles/group-by-CRAWL_SOURCES?field=PRICE_M2&percentiles=50&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/PropertyGroupByPercentileQuery-groupBy.yaml

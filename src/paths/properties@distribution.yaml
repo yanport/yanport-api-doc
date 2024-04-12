@@ -4,10 +4,15 @@ get:
   summary: 'Distribution (prix, surface, etc)'
   description: >-
     Permet de construire un graphique de distribution des biens selon plusieurs
-    critères (voir le champ field).
+    critères (voir le champ `field`).
 
 
-    ### Exemples
+    Par défaut, les biens détectés comme anormaux sont filtrés : `anomalyLevelMax=1`.
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour plus de détails.
+
+
+    ### Exemple
       #### Distribution des durées de publication des biens en vente entre 2016 et 2017 à Levallois-Perret
         /properties/distribution?field=DURATION_DAYS&intervalField=DURATION_DAYS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&publicationDateMin=2016-01-01T00%3A00%3A00.00&publicationDateMax=2017-01-01T00%3A00%3A00.00
   parameters:

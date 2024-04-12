@@ -7,7 +7,12 @@ get:
     selon plusieurs critères.
 
 
-    ### Exemples
+    Par défaut, les biens détectés comme anormaux sont filtrés : `anomalyLevelMax=1`.
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour plus de détails.
+
+
+    ### Exemple
        #### Evolution du stock des biens entre 2016 et 2017 à Levallois-Perret
          /properties/evolution/stock?interval=1&intervalUnit=MONTHS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&dateMin=2016-01-01&dateMax=2017-01-01
   parameters:

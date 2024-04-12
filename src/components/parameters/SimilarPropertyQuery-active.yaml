@@ -1,6 +1,0 @@
-name: active
-in: query
-description: En cours de publication
-schema:
-  type: boolean
-  default: true

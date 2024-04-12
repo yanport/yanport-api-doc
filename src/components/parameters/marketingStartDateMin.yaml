@@ -1,5 +1,6 @@
 name: marketingStartDateMin
 in: query
+description: Date de début de transaction minimale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date-time

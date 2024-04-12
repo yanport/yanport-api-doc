@@ -5,6 +5,12 @@ get:
   description: >-
     Permet de récupérer des statistiques de base sur les biens regroupés selon 2 critères.
 
+
+    Par défaut, les biens détectés comme anormaux sont filtrés : `anomalyLevelMax=1`.
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour plus de détails.
+
+
     ### Exemple
       #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret regroupés par portail et type d'annonceur
         /properties/stats/group-by-CRAWL_SOURCES-and-DEALERS_TYPE?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT

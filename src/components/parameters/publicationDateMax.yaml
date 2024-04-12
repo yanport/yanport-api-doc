@@ -1,6 +1,6 @@
 name: publicationDateMax
 in: query
-description: 'Date maximale de publication (YYYY-mm-ddTHH:mm:ss)'
+description: Date de publication maximale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date-time

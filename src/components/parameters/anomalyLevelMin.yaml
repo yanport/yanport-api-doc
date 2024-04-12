@@ -1,0 +1,8 @@
+name: anomalyLevelMin
+in: query
+description: Niveau d'anomalie minimal
+schema:
+  type: integer
+  minimum: -1
+  maximum: 3
+  example: 1
