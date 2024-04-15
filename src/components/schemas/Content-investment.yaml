@@ -16,9 +16,3 @@ properties:
     $ref: ./Opportunity-Valuations.yaml
   rent:
     $ref: ./Opportunity-Valuations.yaml
-  reSellPrice:
-    type: number
-    format: double
-  monthlyPrice:
-    type: number
-    format: double
