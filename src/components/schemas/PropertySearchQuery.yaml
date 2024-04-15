@@ -343,12 +343,12 @@ properties:
     type: integer
     minimum: -1
     maximum: 3
-    description: Niveau d'anomalie minimal
+    description: Niveau d'anomalie minimal (voir les valeurs correspondantes avec le paramètre `anomalyValues`)
   anomalyLevelMax:
     type: integer
     minimum: -1
     maximum: 3
-    description: Niveau d'anomalie maximal
+    description: Niveau d'anomalie maximal (voir les valeurs correspondantes avec le paramètre `anomalyValues`)
   anomalyValues:
     type: array
     items:
@@ -359,7 +359,7 @@ properties:
         - UNUSUAL
         - SUSPECT
         - ANORMAL
-    description: Valeurs d'anomalie
+    description: Valeurs d'anomalie (inconnu = -1, sûr = 0, inhabituel = 1, suspect = 2, anormal = 3)
   externalProperties:
     type: array
     items:
