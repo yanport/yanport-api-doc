@@ -35,6 +35,8 @@ get:
     - $ref: ../components/parameters/surface.yaml
     - $ref: ../components/parameters/roomCount.yaml
     - $ref: ../components/parameters/newBuild.yaml
+    - $ref: ../components/parameters/energyConsumptionDiagnosisLetter.yaml
+    - $ref: ../components/parameters/greenhouseGasConsumptionDiagnosisLetter.yaml
     - $ref: ../components/parameters/furnished.yaml
     - $ref: ../components/parameters/cityIds.yaml
     - $ref: ../components/parameters/active.yaml

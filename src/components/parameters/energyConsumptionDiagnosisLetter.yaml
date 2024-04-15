@@ -1,0 +1,14 @@
+name: energyConsumptionDiagnosisLetter
+in: query
+description: Classe de diagnostic de performance énergétique (DPE)
+schema:
+  type: string
+  enum:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+  example: D
