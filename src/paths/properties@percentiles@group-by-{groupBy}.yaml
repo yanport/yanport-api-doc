@@ -6,9 +6,12 @@ get:
     Permet de récupérer des percentiles sur les biens regroupés selon 1 critère.
 
 
-    Par défaut, les biens détectés comme anormaux sont filtrés : `anomalyLevelMax=1`.
+    Par défaut, les biens détectés comme anormaux sont ignorés : `anomalyLevelMax=1`
+    (voir les valeurs possibles dans le paramètre `anomalyValues`).
+
+
     Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
-    pour plus de détails.
+    pour comprendre la détection d'anomalies dans les annonces immobilières.
 
 
     ### Exemple
