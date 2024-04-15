@@ -359,7 +359,7 @@ properties:
         - UNUSUAL
         - SUSPECT
         - ANORMAL
-    description: Valeurs d'anomalie (inconnu = -1, sûr = 0, inhabituel = 1, suspect = 2, anormal = 3)
+    description: Valeurs d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
   externalProperties:
     type: array
     items:

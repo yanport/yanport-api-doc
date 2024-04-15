@@ -9,7 +9,7 @@ properties:
       - SUSPECT
       - ANORMAL
     example: SAFE
-    description: Valeur d'anomalie (inconnu = -1, sûr = 0, inhabituel = 1, suspect = 2, anormal = 3)
+    description: Valeur d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
   level:
     type: integer
     minimum: -1
