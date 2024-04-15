@@ -20,6 +20,7 @@ get:
     - $ref: ../components/parameters/propertyTypes.yaml
     - $ref: ../components/parameters/propertySubTypes.yaml
     - $ref: ../components/parameters/price.yaml
+    - $ref: ../components/parameters/priceHC.yaml
     - $ref: ../components/parameters/surface.yaml
     - $ref: ../components/parameters/roomCount.yaml
     - $ref: ../components/parameters/newBuild.yaml

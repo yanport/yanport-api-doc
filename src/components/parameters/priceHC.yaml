@@ -1,0 +1,6 @@
+name: price
+in: query
+description: Prix hors charges
+schema:
+  type: number
+  format: double
