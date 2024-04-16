@@ -2,13 +2,4 @@ name: greenhouseGasConsumptionDiagnosisLetter
 in: query
 description: Classe d'émission de gaz à effet de serre (GES)
 schema:
-  type: string
-  enum:
-    - A
-    - B
-    - C
-    - D
-    - E
-    - F
-    - G
-  example: D
+  $ref: ../schemas/ConsumptionLetter.yaml
