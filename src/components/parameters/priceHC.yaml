@@ -1,4 +1,4 @@
-name: price
+name: priceHC
 in: query
 description: Prix hors charges
 schema:
