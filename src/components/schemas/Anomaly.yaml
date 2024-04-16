@@ -9,9 +9,14 @@ properties:
       - SUSPECT
       - ANORMAL
     example: SAFE
+    description: Valeur d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
   level:
     type: integer
+    minimum: -1
+    maximum: 3
+    description: Niveau d'anomalie correspondant à la valeur
   causes:
     type: array
     items:
       $ref: ./Cause.yaml
+    description: Causes d'anomalie

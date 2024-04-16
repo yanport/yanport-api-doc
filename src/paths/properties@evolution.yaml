@@ -7,7 +7,15 @@ get:
     plusieurs critères.
 
 
-    ### Exemples
+    Par défaut, les biens détectés comme anormaux sont ignorés : `anomalyLevelMax=1`
+    (voir les valeurs possibles dans le paramètre `anomalyValues`).
+
+
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour comprendre la détection d'anomalies dans les annonces immobilières.
+
+
+    ### Exemple
       #### Evolution des prix des biens en vente entre 2016 et 2017 à Levallois-Perret
         /properties/evolution?field=PRICE&intervalField=DELETE_DATE&interval=1&intervalUnit=MONTHS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&publicationDateMin=2016-01-01T00:00:00.00&publicationDateMax=2017-01-01T00:00:00.00
   parameters:

@@ -3,29 +3,55 @@ get:
     - Indicateurs sur les biens similaires (ancien/neuf)
   summary: Centiles
   description: |-
-    Permet de récupérer les indicateurs de référence des biens similaires
+    Permet de récupérer les percentiles des biens similaires.
 
-    ### Exemples
-      #### Les prix/m² des appartements en vente situés autour d'un point (lat/lon) dans le 11ème arrondissement de Paris qui ont une surface proche de 49m².
-        /similar-properties/percentiles?marketingType=SALE&propertyType=APARTMENT&field=PRICE_M2&lat=48.865961&lng=2.3678967&cityIds=52421235&surface=49&percentiles=50.0&percentiles=40.0&percentiles=60.0
+
+    Par défaut, les biens détectés comme anormaux sont ignorés : `anomalyLevelMax=1`
+    (voir les valeurs possibles dans le paramètre `anomalyValues`).
+
+
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour comprendre la détection d'anomalies dans les annonces immobilières.
+
+
+    ### Exemple
+      #### Prix au m² médian des appartements en vente situés autour d'un point (lat/lon) dans le 11ème arrondissement de Paris qui ont une surface proche de 49m²
+        /similar-properties/percentiles?field=PRICE_M2&percentiles=50?marketingType=SALE&propertyType=APARTMENT&lat=48.865961&lng=2.3678967&cityIds=52421235&surface=49
   parameters:
+    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
+    - $ref: ../components/parameters/percentiles.yaml
     - name: searchQueryParam
       in: query
       description: Paramètres de recherche de biens
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/minDocCount.yaml
-    - $ref: ../components/parameters/cityIds.yaml
-    - $ref: ../components/parameters/marketingTypes.yaml
+    - $ref: ../components/parameters/source.yaml
+    - $ref: ../components/parameters/marketingType.yaml
     - $ref: ../components/parameters/propertyTypes.yaml
     - $ref: ../components/parameters/propertySubTypes.yaml
+    - $ref: ../components/parameters/externalProperties.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
     - $ref: ../components/parameters/price.yaml
+    - $ref: ../components/parameters/priceHC.yaml
     - $ref: ../components/parameters/surface.yaml
+    - $ref: ../components/parameters/roomCount.yaml
+    - $ref: ../components/parameters/newBuild.yaml
+    - $ref: ../components/parameters/energyConsumptionDiagnosisLetter.yaml
+    - $ref: ../components/parameters/greenhouseGasConsumptionDiagnosisLetter.yaml
+    - $ref: ../components/parameters/furnished.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/active.yaml
     - $ref: ../components/parameters/publicationDateMin.yaml
-    - $ref: ../components/parameters/SimilarPropertyQuery-active.yaml
-    - $ref: ../components/parameters/SimilarPropertyQuery-roomCount.yaml
-    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
-    - $ref: ../components/parameters/percentiles.yaml
+    - $ref: ../components/parameters/publicationDateMax.yaml
+    - $ref: ../components/parameters/deleteDateMin.yaml
+    - $ref: ../components/parameters/deleteDateMax.yaml
+    - $ref: ../components/parameters/marketingStartDateMin.yaml
+    - $ref: ../components/parameters/marketingStartDateMax.yaml
+    - $ref: ../components/parameters/marketingEndDateMin.yaml
+    - $ref: ../components/parameters/marketingEndDateMax.yaml
+    - $ref: ../components/parameters/anomalyLevelMin.yaml
+    - $ref: ../components/parameters/anomalyLevelMax.yaml
     - name: geoSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de biens

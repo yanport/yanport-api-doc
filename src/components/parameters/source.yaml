@@ -1,9 +1,12 @@
 name: source
 in: query
-description: La source de données à utiliser
+description: Source des biens
 schema:
   type: string
   enum:
     - AD
     - DVF
     - USER
+    - CLAMEUR
+    - ORGANIZATION
+  default: AD

@@ -341,8 +341,25 @@ properties:
     format: date-time
   anomalyLevelMin:
     type: integer
+    minimum: -1
+    maximum: 3
+    description: Niveau d'anomalie minimal (voir les valeurs correspondantes avec le paramètre `anomalyValues`)
   anomalyLevelMax:
     type: integer
+    minimum: -1
+    maximum: 3
+    description: Niveau d'anomalie maximal (voir les valeurs correspondantes avec le paramètre `anomalyValues`)
+  anomalyValues:
+    type: array
+    items:
+      type: string
+      enum:
+        - UNKNOWN
+        - SAFE
+        - UNUSUAL
+        - SUSPECT
+        - ANORMAL
+    description: Valeurs d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
   externalProperties:
     type: array
     items:

@@ -1,0 +1,5 @@
+name: greenhouseGasConsumptionDiagnosisLetter
+in: query
+description: Classe d'émission de gaz à effet de serre (GES)
+schema:
+  $ref: ../schemas/ConsumptionLetter.yaml

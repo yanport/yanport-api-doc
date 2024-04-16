@@ -1,5 +1,8 @@
 name: anomalyLevelMax
 in: query
-description: Niveau d'anomalie maximum (compris entre -1 et 3)
+description: Niveau d'anomalie maximal
 schema:
   type: integer
+  minimum: -1
+  maximum: 3
+  example: 1
