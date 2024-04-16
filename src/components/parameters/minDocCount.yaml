@@ -1,6 +1,6 @@
 name: minDocCount
 in: query
-description: Le nombre minimum de documents a matcher
+description: Nombre minimum de documents à matcher
 schema:
   type: integer
   minimum: 0
