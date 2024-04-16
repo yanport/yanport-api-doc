@@ -19,6 +19,8 @@ get:
     - $ref: ../components/parameters/marketingType.yaml
     - $ref: ../components/parameters/propertyTypes.yaml
     - $ref: ../components/parameters/propertySubTypes.yaml
+    - $ref: ../components/parameters/externalProperties.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
     - $ref: ../components/parameters/price.yaml
     - $ref: ../components/parameters/priceHC.yaml
     - $ref: ../components/parameters/surface.yaml
