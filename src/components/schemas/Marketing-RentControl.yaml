@@ -1,8 +1,0 @@
-type: object
-properties:
-  id:
-    type: string
-    format: uuid
-    example: 9349b062-6624-4cec-b5cb-d55b0a6fadb0
-  status:
-    $ref: ./RentControlStatus.yaml

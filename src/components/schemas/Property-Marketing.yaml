@@ -157,8 +157,6 @@ properties:
       - LOST
   occupied:
     type: boolean
-  rentControl:
-    $ref: ./Marketing-RentControl.yaml
   rentalCategory:
     type: string
     enum:

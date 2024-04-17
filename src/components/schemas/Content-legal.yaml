@@ -1,0 +1,6 @@
+type: object
+properties:
+  pinel:
+    $ref: ./Content-pinel.yaml
+  rentControlCheckResponse:
+    $ref: ./RentControlResponse.yaml

@@ -6,16 +6,20 @@ properties:
     $ref: ./Content-estimationEngine.yaml
   propertyFeatures:
     $ref: ./Content-propertyFeatures.yaml
-  marketStats:
+  saleStats:
     $ref: ./Content-marketStats.yaml
+  rentStats:
+    $ref: ./Content-marketStats.yaml
+  investmentStats:
+    $ref: ./Content-investmentStats.yaml
   censusStats:
     $ref: ./Content-censusStats.yaml
   similarProperties:
     $ref: ./Content-similarProperties.yaml
   propertyPriceStudy:
     $ref: ./Content-propertyPriceStudy.yaml
-  pinel:
-    $ref: ./Content-pinel.yaml
+  legal:
+    $ref: ./Content-legal.yaml
   conclusion:
     $ref: ./Content-conclusion.yaml
   summary:
