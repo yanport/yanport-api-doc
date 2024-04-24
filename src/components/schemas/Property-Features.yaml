@@ -315,16 +315,46 @@ properties:
           - INDIVIDUAL
           - COLLECTIVE
           - MIXED
+      diagnosisDate:
+        type: string
+        format: date
+      diagnosisVersion:
+        type: integer
+        enum:
+          - 1
+          - 2
       consumption:
         type: integer
         minimum: 0
         maximum: 10000
+      consumptionLetter:
+        type: string
+        enum:
+          - A
+          - B
+          - C
+          - D
+          - E
+          - F
+          - G
       consumptionRange:
         $ref: ./Range.yaml
       greenHouseGasConsumption:
         type: integer
         minimum: 0
         maximum: 10000
+      greenhouseGasConsumptionLetter:
+        type: string
+        enum:
+          - A
+          - B
+          - C
+          - D
+          - E
+          - F
+          - G
+      greenhouseGasConsumptionRange:
+        $ref: ./Range.yaml
   condominium:
     type: object
     properties:
