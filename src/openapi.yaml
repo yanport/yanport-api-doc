@@ -345,6 +345,8 @@ paths:
     $ref: paths/mandatary-networks@ids.yaml
   /users:
     $ref: paths/users.yaml
+  /users/signup:
+    $ref: paths/users@signup.yaml
   '/users/{id}':
     $ref: 'paths/users@{id}.yaml'
   '/users/{id}/team':

@@ -1,0 +1,23 @@
+post:
+  tags:
+    - Utilisateurs
+  summary: Inscrire un utilisateur
+  description: Retourne l'utilisateur créé et envoie un mail d'inscription à l'utilisateur.
+  requestBody:
+    required: true
+    description: Données de l'utilisateur à créer et origine
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/UserSignupForm.yaml
+  responses:
+    '200':
+      description: L'utilisateur créé
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
