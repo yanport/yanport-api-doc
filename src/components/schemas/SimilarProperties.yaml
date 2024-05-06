@@ -1,0 +1,12 @@
+type: object
+properties:
+  hits:
+    type: array
+    items:
+      $ref: ./SimilarProperty.yaml
+  weights:
+    type: array
+    items:
+      $ref: ./Weight.yaml
+  query:
+    $ref: ./PropertySearchQuery.yaml

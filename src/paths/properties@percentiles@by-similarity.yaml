@@ -1,0 +1,149 @@
+post:
+  tags:
+    - Indicateurs sur les biens similaires (ancien/neuf)
+  summary: Centiles
+  description: >-
+    Permet de récupérer les percentiles des biens similaires.
+    
+    
+    Par défaut, les biens détectés comme anormaux sont ignorés : `anomalyLevelMax=1`
+        (voir les valeurs possibles dans le paramètre `anomalyValues`).
+
+
+        Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+        pour comprendre la détection d'anomalies dans les annonces immobilières.
+  requestBody:
+    required: true
+    description: >-
+      Formulaire pour récupérer les centiles des biens similaires.
+      
+      
+      L'objet property peut contenir soit l'id du bien d'intérêt, soit directement ses caractéristiques, mais pas les deux.
+      
+      
+      L'objet query permet de définir les paramètres de la requête de centiles (field, percentiles et reliability)
+      ainsi que des filtres supplémentaires pour la recherche de biens similaires (propertySearchQuery). 
+      Par exemple: date de publication, source, zone géographique, ...
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            property:
+              type: object
+              description: Caractéristiques du bien d'intérêt
+              properties:
+                id:
+                  type: string
+                  format: uuid
+                  example: 007d73b0-1421-11eb-9515-0f9ad411d285
+                features:
+                  type: object
+                  required:
+                    - marketingType
+                    - propertyType
+                    - address
+                  properties:
+                    marketingType:
+                      $ref: ../components/schemas/MarketingType.yaml
+                    propertyType:
+                      $ref: ../components/schemas/PropertyType.yaml
+                    surface:
+                      type: number
+                      format: double
+                      example: 50.0
+                    price:
+                      type: number
+                      format: double
+                      example: 300000
+                    roomCount:
+                      type: integer
+                      example: 2
+                    furnished:
+                      type: boolean
+                      example: true
+                    newBuild:
+                      type: boolean
+                      example: false
+                    energyConsumptionDiagnosisLetter:
+                      type: string
+                      enum:
+                        - A
+                        - B
+                        - C
+                        - D
+                        - E
+                        - F
+                        - G
+                    greenhouseGasConsumptionDiagnosisLetter:
+                      type: string
+                      enum:
+                        - A
+                        - B
+                        - C
+                        - D
+                        - E
+                        - F
+                        - G
+                    address:
+                      description: adresse exacte ou cityId requis
+                      properties:
+                        cityId:
+                          type: number
+                          format: int64
+                          minimum: 0
+                          example: 47892974
+                        location:
+                          $ref: ../components/schemas/Location.yaml
+            query:
+              type: object
+              properties:
+                field:
+                  type: string
+                  description: Champ sur lequel sont calculées les percentiles
+                  enum:
+                    - price
+                    - price_hc
+                    - price_cc
+                    - price_m2
+                    - price_m2_hc
+                    - price_m2_cc
+                    - price_events_range_price
+                    - price_events_range_price_m2
+                    - price_events_count
+                    - surface
+                    - room_count
+                    - duration_days
+                    - marketing_days
+                    - fees_percent
+                    - gross_rental_yield
+                    - negotiation_margin
+                    - market_stress
+                    - construction_year
+                percentiles:
+                  type: array
+                  description: Les percentiles
+                  example:
+                    - '10.0'
+                    - '50.0'
+                    - '90.0'
+                  items:
+                    type: number
+                    format: double
+                reliability:
+                  description: Renvoie un score de fiabilité entre 0 et 100, avec le score de chaque méthode utilisée.
+                  type: boolean
+                  default: false
+                propertySearchQuery:
+                 $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Percentiles
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Percentiles.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

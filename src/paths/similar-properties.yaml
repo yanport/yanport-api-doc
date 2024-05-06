@@ -3,6 +3,9 @@ get:
     - Les biens similaires (ancien/neuf)
   summary: Récupérer les biens similaires
   description: >-
+    [DEPRECATED] Cet endpoint est déprécié, veuillez plutôt utiliser: /properties/by-similarity
+    
+    
     Retourne les biens similaires correspondant aux critères demandés.
 
     ### Exemple

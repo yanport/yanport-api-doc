@@ -1,0 +1,111 @@
+post:
+  tags:
+    - Les biens similaires (ancien/neuf)
+  summary: Récupérer les biens similaires
+  description: >-
+    Retourne les biens similaires correspondants au bien ou aux critères demandés.
+  requestBody:
+    required: true
+    description: >-
+      Formulaire pour la recherche de biens similaires.
+      
+      
+      L'objet property peut contenir soit l'id du bien d'intérêt, soit directement ses caractéristiques, mais pas les deux.
+      
+      
+      L'objet query permet de définir des filtres supplémentaires pour la recherche de biens similaires. 
+      Par exemple: date de publication, source, zone géographique, ...
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            size:
+              type: integer
+              minimum: 0
+              maximum: 100
+              default: 10
+              description: Nombre de résultats à retourner
+            property:
+              type: object
+              description: Caractéristiques du bien d'intérêt
+              properties:
+                id:
+                  type: string
+                  format: uuid
+                  example: 007d73b0-1421-11eb-9515-0f9ad411d285
+                features:
+                  type: object
+                  required:
+                    - marketingType
+                    - propertyType
+                    - address
+                  properties:
+                    marketingType:
+                      $ref: ../components/schemas/MarketingType.yaml
+                    propertyType:
+                      $ref: ../components/schemas/PropertyType.yaml
+                    surface:
+                      type: number
+                      format: double
+                      example: 50.0
+                    price:
+                      type: number
+                      format: double
+                      example: 300000
+                    roomCount:
+                      type: integer
+                      example: 2
+                    furnished:
+                      type: boolean
+                      example: true
+                    newBuild:
+                      type: boolean
+                      example: false
+                    energyConsumptionDiagnosisLetter:
+                      type: string
+                      enum:
+                        - A
+                        - B
+                        - C
+                        - D
+                        - E
+                        - F
+                        - G
+                    greenhouseGasConsumptionDiagnosisLetter:
+                      type: string
+                      enum:
+                        - A
+                        - B
+                        - C
+                        - D
+                        - E
+                        - F
+                        - G
+                    address:
+                      description: adresse exacte ou cityId requis
+                      properties:
+                        cityId:
+                          type: number
+                          format: int64
+                          minimum: 0
+                          example: 47892974
+                        location:
+                          $ref: ../components/schemas/Location.yaml
+            weights:
+              type: array
+              items:
+                $ref: ../components/schemas/Weight.yaml
+            query:
+              $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Liste des biens similaires
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/SimilarProperties.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
