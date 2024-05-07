@@ -2,6 +2,7 @@ get:
   tags:
     - Indicateurs sur les biens similaires (ancien/neuf)
   summary: Centiles
+  deprecated: true
   description: |-
     [DEPRECATED] Cet endpoint est déprécié, veuillez plutôt utiliser: /properties/percentiles/by-similarity
     
