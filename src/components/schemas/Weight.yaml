@@ -1,0 +1,18 @@
+type: object
+properties:
+  name:
+    type: string
+    enum:
+      - SURFACE
+      - PRICE
+      - ROOM_COUNT
+      - FURNISHED
+      - NEW_BUILD
+      - ENERGY_CONSUMPTION
+      - GREENHOUSE_GAS_CONSUMPTION
+      - LOCALISATION
+  value:
+    type: integer
+    description: Facteur d'importance de la variable
+    minimum: 0
+    maximum: 10

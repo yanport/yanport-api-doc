@@ -1,0 +1,8 @@
+type: object
+properties:
+  property:
+    $ref: ./Property.yaml
+  score:
+    type: number
+    format: double
+    description: Score de similarité du bien (entre 0 et 100)
