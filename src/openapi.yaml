@@ -229,10 +229,6 @@ paths:
     $ref: paths/properties@ids.yaml
   /properties/ads/urls:
     $ref: paths/properties@ads@urls.yaml
-  /properties/by-similarity:
-    $ref: paths/properties@by-similarity.yaml
-  /properties/by-similarity/scoring:
-    $ref: paths/properties@by-similarity@scoring.yaml
   /similar-properties:
     $ref: paths/similar-properties.yaml
   /programs:
@@ -273,10 +269,6 @@ paths:
     $ref: paths/properties@evolution@reliable-zone.yaml
   /properties/evolution/stock:
     $ref: paths/properties@evolution@stock.yaml
-  /properties/percentiles/by-similarity:
-    $ref: paths/properties@percentiles@by-similarity.yaml
-  /properties/stats/by-similarity:
-    $ref: paths/properties@stats@by-similarity.yaml
   /similar-properties/percentiles:
     $ref: paths/similar-properties@percentiles.yaml
   /programs/count:
