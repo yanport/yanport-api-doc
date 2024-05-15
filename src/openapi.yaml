@@ -231,8 +231,6 @@ paths:
     $ref: paths/properties@ads@urls.yaml
   /properties/by-similarity:
     $ref: paths/properties@by-similarity.yaml
-  /properties/by-similarity/scoring:
-    $ref: paths/properties@by-similarity@scoring.yaml
   /similar-properties:
     $ref: paths/similar-properties.yaml
   /programs:
