@@ -3,5 +3,8 @@ properties:
   score:
     type: number
     format: double
+  reliability:
+    type: number
+    format: integer
   type:
     $ref: ./MarketStressValue.yaml

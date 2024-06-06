@@ -169,3 +169,4 @@ properties:
     $ref: ./Owner.yaml
   marketStress:
     $ref: ./MarketStress.yaml
+    description: Renseigné uniquement sur les biens de source=`YANPORT`

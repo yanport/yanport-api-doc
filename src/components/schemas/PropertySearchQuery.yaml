@@ -195,13 +195,17 @@ properties:
   surfaceMin:
     type: number
     format: double
+    description: Surface minimum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.surface` vide)
   surfaceMax:
     type: number
     format: double
+    description: Surface maximum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.surface` vide)
   roomCountMin:
     type: integer
+    description: Nombre de pièces minimum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.roomCount` vide)
   roomCountMax:
     type: integer
+    description: Nombre de pièces maximum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.roomCount` vide)
   priceMin:
     type: number
     format: double
@@ -363,9 +367,11 @@ properties:
   marketStressScoreMin:
     type: number
     format: double
+    description: Valeur de tension de marché minimal (uniquement pour la source=`YANPORT`)
   marketStressScoreMax:
     type: number
     format: double
+    description: Valeur de tension de marché maximale (uniquement pour la source=`YANPORT`)
   marketStressValues:
     type: array
     items:

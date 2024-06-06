@@ -21,5 +21,6 @@ schema:
     - fees_percent
     - gross_rental_yield
     - negotiation_margin
-    - market_stress
     - construction_year
+    - market_stress
+    - market_stress_reliability
