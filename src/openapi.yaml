@@ -243,6 +243,12 @@ paths:
     $ref: 'paths/properties@count@group-by-{groupBy}.yaml'
   '/properties/count/group-by-{groupBy}-and-{subGroupBy}':
     $ref: 'paths/properties@count@group-by-{groupBy}-and-{subGroupBy}.yaml'
+  /properties/average:
+    $ref: paths/properties@average.yaml
+  '/properties/average/group-by-{groupBy}':
+    $ref: 'paths/properties@average@group-by-{groupBy}.yaml'
+  '/properties/average/group-by-{groupBy}-and-{subGroupBy}':
+    $ref: 'paths/properties@average@group-by-{groupBy}-and-{subGroupBy}.yaml'
   '/properties/count/ranges-by-{field}':
     $ref: 'paths/properties@count@ranges-by-{field}.yaml'
   /properties/stats:
