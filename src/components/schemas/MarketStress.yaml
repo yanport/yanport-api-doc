@@ -1,10 +1,15 @@
 type: object
+description: Renseigné uniquement sur les biens de source=`YANPORT`
 properties:
   score:
     type: number
     format: double
+    minimum: -100
+    maximum: 100
   reliability:
     type: number
     format: integer
+    minimum: 0
+    maximum: 100
   type:
     $ref: ./MarketStressValue.yaml

@@ -14,7 +14,7 @@ properties:
       type: string
   marketingTypes:
     type: array
-    description: 'Une unique valeur est obligatoire lorsque source=`YANPORT'
+    description: 'Une unique valeur est obligatoire avec `source=YANPORT`'
     items:
       $ref: ./MarketingType.yaml
   crawlSources:
@@ -365,14 +365,14 @@ properties:
         - SUSPECT
         - ANORMAL
     description: Valeurs d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
-  marketStressScoreMin:
+  marketStressReliabilityMin:
     type: number
     format: double
-    description: Valeur de tension de marché minimal (uniquement pour la source=`YANPORT`)
-  marketStressScoreMax:
+    description: Valeur de la fiabilité de tension de marché minimale (uniquement avec `source=YANPORT`)
+  marketStressReliabilityMax:
     type: number
     format: double
-    description: Valeur de tension de marché maximale (uniquement pour la source=`YANPORT`)
+    description: Valeur de la fiabilité de tension de marché maximale (uniquement avec `source=YANPORT`)
   marketStressValues:
     type: array
     items:

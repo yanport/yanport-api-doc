@@ -5,4 +5,4 @@ enum:
   - BALANCED
   - LOOSE
   - VERY_LOOSE
-description: Valeurs de la tension du marché (VERY_TIGHT x>=50, TIGHT 10<=x<50, BALANCED -10<x<10, LOOSE -50<x<=-10, VERY_LOOSE x<=-50)
+description: 'Valeurs de la tension du marché (VERY_TIGHT: score ≥ 50, TIGHT: 10 ≤ score < 50, BALANCED: -10 < score < 10, LOOSE: -50 < score ≤ -10, VERY_LOOSE: score ≤ -50)'

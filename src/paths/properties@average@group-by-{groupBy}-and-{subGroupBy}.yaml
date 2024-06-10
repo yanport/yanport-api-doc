@@ -23,7 +23,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/AverageSubGroupBy.yaml  # TODO fix response
+            $ref: ../components/schemas/Average.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

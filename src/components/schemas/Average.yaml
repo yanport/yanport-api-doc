@@ -3,10 +3,11 @@ properties:
   count:
     type: integer
     format: int64
+    minimum: 0
     example: 7568
-  reliability:
+  value:
     type: number
     format: double
-  value:
+  reliability:
     type: number
     format: double
