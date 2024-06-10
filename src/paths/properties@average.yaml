@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf/tension du marché)
+  summary: Moyenne
+  description: >-
+    Permet de récupérer des moyennes sur les biens.
+
+    ### Exemple
+      #### Prix au m² moyen des appartements en cours de publication en vente à Levallois-Perret
+        /properties/average?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
+  parameters:
+    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
+    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Moyenne
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Average.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

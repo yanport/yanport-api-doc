@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Indicateurs sur les biens (ancien/neuf/tension du marché)
+  summary: Moyenne (SubGroupBy)
+  description: |-
+    Permet de récupérer des moyennes sur les biens regroupés selon 2 critères.
+
+    ### Exemple
+      #### Prix au m² moyen regroupés par portail et par type de vendeur en cours de publication sur Levallois-Perret
+        /properties/average/group-by-crawl-sources-and-dealer-type?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
+  parameters:
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-groupBy.yaml
+    - $ref: ../components/parameters/PropertySubGroupByCountQuery-subGroupBy.yaml
+    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+  responses:
+    '200':
+      description: Moyenne
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AverageSubGroupBy.yaml  # TODO fix response
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
