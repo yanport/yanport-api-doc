@@ -9,4 +9,5 @@ schema:
     - USER
     - CLAMEUR
     - ORGANIZATION
+    - YANPORT
   default: AD

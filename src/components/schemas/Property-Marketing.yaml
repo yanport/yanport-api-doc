@@ -167,3 +167,5 @@ properties:
       - TAX_FREE
   owner:
     $ref: ./Owner.yaml
+  marketStress:
+    $ref: ./MarketStress.yaml

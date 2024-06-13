@@ -1,7 +1,7 @@
 name: metric
 in: query
 required: true
-description: méthode de calcul de l'aggrégation
+description: méthode de calcul de l'agrégation
 schema:
   type: array
   items:
@@ -9,3 +9,5 @@ schema:
     enum:
       - percentiles
       - sum
+      - count
+      - average

@@ -1,0 +1,13 @@
+type: object
+properties:
+  count:
+    type: integer
+    format: int64
+    minimum: 0
+    example: 7568
+  value:
+    type: number
+    format: double
+  reliability:
+    type: number
+    format: double
