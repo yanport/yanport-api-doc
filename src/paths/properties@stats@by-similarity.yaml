@@ -34,7 +34,7 @@ post:
               minimum: 0
               maximum: 100
               default: 10
-              description: Nombre de bien sur lequel faire l'analyse
+              description: Nombre de biens sur lesquels faire l'analyse
             property:
               type: object
               description: Caractéristiques du bien d'intérêt
