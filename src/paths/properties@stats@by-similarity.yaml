@@ -29,6 +29,12 @@ post:
         schema:
           type: object
           properties:
+            size:
+              type: integer
+              minimum: 0
+              maximum: 100
+              default: 10
+              description: Nombre de bien sur lequel faire l'analyse
             property:
               type: object
               description: Caractéristiques du bien d'intérêt
@@ -95,6 +101,17 @@ post:
                           example: 47892974
                         location:
                           $ref: ../components/schemas/Location.yaml
+            zone:
+              description: Zone de recherche des biens similaires
+              type: string
+              enum:
+                - IRIS
+                - CITY
+                - AGGLOMERATION
+            weights:
+              type: array
+              items:
+                $ref: ../components/schemas/Weight.yaml
             query:
               type: object
               properties:
@@ -125,7 +142,7 @@ post:
                   type: boolean
                   default: false
                 propertySearchQuery:
-                 $ref: ../components/schemas/PropertySearchQuery.yaml
+                  $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
       description: Statistiques

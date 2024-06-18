@@ -97,6 +97,13 @@ post:
               type: array
               items:
                 $ref: ../components/schemas/Weight.yaml
+            zone:
+              description: Zone de recherche des biens similaires
+              type: string
+              enum:
+                - IRIS
+                - CITY
+                - AGGLOMERATION
             query:
               $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:

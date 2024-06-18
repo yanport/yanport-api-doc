@@ -92,6 +92,13 @@ post:
                           example: 47892974
                         location:
                           $ref: ../components/schemas/Location.yaml
+            zone:
+              description: Zone de recherche des biens similaires
+              type: string
+              enum:
+                - IRIS
+                - CITY
+                - AGGLOMERATION
             weights:
               type: array
               items:
