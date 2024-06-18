@@ -98,7 +98,6 @@ post:
               enum:
                 - IRIS
                 - CITY
-                - AGGLOMERATION
             weights:
               type: array
               items:
