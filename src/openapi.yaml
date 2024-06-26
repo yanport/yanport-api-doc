@@ -229,6 +229,10 @@ paths:
     $ref: paths/properties@ids.yaml
   /properties/ads/urls:
     $ref: paths/properties@ads@urls.yaml
+#  /properties/by-similarity:
+#    $ref: paths/properties@by-similarity.yaml
+#  /properties/by-similarity/scoring:
+#    $ref: paths/properties@by-similarity@scoring.yaml
   /similar-properties:
     $ref: paths/similar-properties.yaml
   /programs:
@@ -266,7 +270,11 @@ paths:
   '/properties/percentiles/group-by-{groupBy}-and-{subGroupBy}':
     $ref: 'paths/properties@percentiles@group-by-{groupBy}-and-{subGroupBy}.yaml'
   /properties/percentiles/reliable-zone:
-    $ref: paths/properties@percentiles@reliable-zone.yaml
+    $ref: 'paths/properties@percentiles@reliable-zone.yaml'
+#  /properties/percentiles/by-similarity:
+#    $ref: 'paths/properties@percentiles@by-similarity.yaml'
+#  /properties/stats/by-similarity:
+#    $ref: 'paths/properties@stats@by-similarity.yaml'
   /properties/distribution:
     $ref: paths/properties@distribution.yaml
   /properties/evolution:

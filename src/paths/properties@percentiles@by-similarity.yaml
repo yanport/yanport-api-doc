@@ -10,8 +10,8 @@ post:
         (voir les valeurs possibles dans le paramètre `anomalyValues`).
 
 
-        Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
-        pour comprendre la détection d'anomalies dans les annonces immobilières.
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour comprendre la détection d'anomalies dans les annonces immobilières.
   requestBody:
     required: true
     description: >-
@@ -42,7 +42,6 @@ post:
                 id:
                   type: string
                   format: uuid
-                  example: 007d73b0-1421-11eb-9515-0f9ad411d285
                 features:
                   type: object
                   required:
