@@ -93,6 +93,12 @@ post:
                 type: string
                 format: uuid
                 example: 007d73b0-1421-11eb-9515-0f9ad411d285
+            zone:
+              description: Zone de recherche des biens similaires
+              type: string
+              enum:
+                - IRIS
+                - CITY
             weights:
               type: array
               items:

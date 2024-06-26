@@ -10,8 +10,8 @@ post:
         (voir les valeurs possibles dans le paramètre `anomalyValues`).
 
 
-        Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
-        pour comprendre la détection d'anomalies dans les annonces immobilières.
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour comprendre la détection d'anomalies dans les annonces immobilières.
   requestBody:
     required: true
     description: >-
@@ -29,6 +29,12 @@ post:
         schema:
           type: object
           properties:
+            size:
+              type: integer
+              minimum: 0
+              maximum: 100
+              default: 10
+              description: Nombre de biens sur lesquels faire l'analyse
             property:
               type: object
               description: Caractéristiques du bien d'intérêt
@@ -36,7 +42,7 @@ post:
                 id:
                   type: string
                   format: uuid
-                  example: 007d73b0-1421-11eb-9515-0f9ad411d285
+                  default: null
                 features:
                   type: object
                   required:
@@ -95,6 +101,16 @@ post:
                           example: 47892974
                         location:
                           $ref: ../components/schemas/Location.yaml
+            zone:
+              description: Zone de recherche des biens similaires
+              type: string
+              enum:
+                - IRIS
+                - CITY
+            weights:
+              type: array
+              items:
+                $ref: ../components/schemas/Weight.yaml
             query:
               type: object
               properties:
@@ -125,7 +141,7 @@ post:
                   type: boolean
                   default: false
                 propertySearchQuery:
-                 $ref: ../components/schemas/PropertySearchQuery.yaml
+                  $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
       description: Statistiques
