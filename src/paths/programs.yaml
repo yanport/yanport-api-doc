@@ -40,6 +40,7 @@ get:
     - $ref: ../components/parameters/active.yaml
     - $ref: ../components/parameters/dealerNames.yaml
     - $ref: ../components/parameters/dealerIds.yaml
+    - $ref: ../components/parameters/dealerSubTypes.yaml
     - $ref: ../components/parameters/excludedDealerIds.yaml
     - $ref: ../components/parameters/ids.yaml
     - $ref: ../components/parameters/propertyIds.yaml

@@ -28,6 +28,17 @@ properties:
     items:
       type: integer
       format: int64
+  dealerSubTypes:
+    type: array
+    items:
+      type: string
+      enum:
+        - REAL_ESTATE
+        - NOTARY
+        - MANDATARY
+        - REALTY_DEVELOPER
+        - PROPERTY_MANAGER
+        - OTHER
   propertyIds:
     type: array
     items:
