@@ -9,5 +9,7 @@ schema:
     enum:
       - REAL_ESTATE
       - NOTARY
+      - MANDATARY
       - REALTY_DEVELOPER
       - PROPERTY_MANAGER
+      - OTHER
