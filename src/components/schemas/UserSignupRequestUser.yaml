@@ -1,0 +1,13 @@
+type: object
+properties:
+  lastName:
+    type: string
+  firstName:
+    type: string
+  email:
+    type: string
+    format: email
+    example: 'user@example.com'
+  mobilePhone:
+    type: string
+    example: "+33601020304"

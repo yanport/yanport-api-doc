@@ -9,14 +9,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/UserSignupForm.yaml
+          $ref: ../components/schemas/UserSignupRequest.yaml
   responses:
     '200':
       description: L'utilisateur créé
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/User.yaml
+            $ref: ../components/schemas/UserSignupResponse.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

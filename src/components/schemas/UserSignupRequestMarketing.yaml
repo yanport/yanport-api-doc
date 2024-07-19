@@ -1,0 +1,35 @@
+type: object
+properties:
+  function:
+    type: string
+    enum:
+      - NETWORK_MANAGER
+      - AGENCY_MANAGER
+      - REAL_ESTATE_AGENT
+      - COMMERCIAL_AGENT
+      - REAL_ESTATE_HUNTER
+      - TEAM_MANAGER
+      - MANDATARY_AGENT
+      - REAL_ESTATE_DEVELOPER
+      - SOCIAL_LANDLORD
+      - REAL_ESTATE_EXPERT
+      - BANK_INSURANCE
+      - REAL_ESTATE_ADVISOR
+      - LANDHOLDING_CORPORATION
+      - ASSET_MANAGER
+      - PROPERTY_MANAGER
+      - RENTAL_MANAGER
+      - RENTAL_CONSULTANT
+      - CO_OWNERSHIP_SYNDICATE
+      - REAL_ESTATE_MERCHANT
+      - WEALTH_MANAGEMENT_ADVISOR
+      - TURNKEY_INVESTMENT
+      - OTHER
+  agentCount:
+    $ref: ./Range.yaml
+  company:
+    type: string
+  description:
+    type: string
+  newsletter:
+    type: boolean
