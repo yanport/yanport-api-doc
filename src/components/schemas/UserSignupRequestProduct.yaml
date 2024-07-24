@@ -1,8 +1,0 @@
-type: object
-properties:
-  dealerType:
-    $ref: ./Dealer-Type.yaml
-  products:
-    type: array
-    items:
-      $ref: ./ProductType.yaml
