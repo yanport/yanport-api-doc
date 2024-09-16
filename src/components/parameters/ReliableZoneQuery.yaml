@@ -1,0 +1,17 @@
+- $ref: marketingType.yaml
+- $ref: ReliableZoneQuery-propertyTypes.yaml
+- $ref: ReliableZoneQuery-agglomerationId.yaml
+- $ref: ReliableZoneQuery-cityId.yaml
+- $ref: ReliableZoneQuery-irisId.yaml
+- $ref: ReliableZoneQuery-zones.yaml
+- $ref: roomCounts.yaml
+- $ref: newBuild.yaml
+- $ref: furnished.yaml
+- $ref: ReliableZoneQuery-dateMin.yaml
+- $ref: ReliableZoneQuery-dateMax.yaml
+- $ref: ReliableZoneQuery-source.yaml
+- $ref: ReliableZoneQuery-field.yaml
+- $ref: anomalyLevelMax.yaml
+- $ref: anomalyLevelMin.yaml
+- $ref: energyConsumptionDiagnosisLetters.yaml
+- $ref: greenhouseGasConsumptionDiagnosisLetters.yaml
