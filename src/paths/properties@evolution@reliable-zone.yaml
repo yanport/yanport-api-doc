@@ -14,8 +14,11 @@ get:
       #### Zone fiable sur l'année 2021 pour les appartements à vendre autour de la Goutte d’Or (Paris 18ème)
         /properties/evolution/reliable-zone?propertyTypes=APARTMENT&marketingType=SALE&agglomerationId=4762789834677248&cityId=52421209&irisId=751062402&dateMin=2021-01-01T00:00:00&dateMax=2021-12-31T23:59:59&source=AD
   parameters:
-    - $ref: ../components/parameters/ReliableZoneQuery.yaml
     - $ref: ../components/parameters/ReliableZoneQuery-intervalUnits.yaml
+    - name: reliableZoneQuery
+      in: query
+      schema:
+        $ref: ../components/parameters/ReliableZoneQuery.yaml
   responses:
     '200':
       description: Zone fiable
