@@ -1,6 +1,0 @@
-name: dateMin
-in: query
-description: Date minimale (incluse) de suppression ou de fin de commercialisation des biens (YYYY-mm-ddTHH:mm:ss)
-schema:
-  type: string
-  format: date-time

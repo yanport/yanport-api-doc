@@ -1,8 +1,0 @@
-name: roomCounts
-in: query
-description: Nombre de pièces
-style: form
-schema:
-  type: array
-  items:
-    type: integer
