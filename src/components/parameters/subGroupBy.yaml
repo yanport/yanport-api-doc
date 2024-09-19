@@ -6,7 +6,9 @@ schema:
   type: string
   enum:
     - CRAWL_SOURCES
+    - IRIS_ID
     - CITY_ID
+    - AGGLOMERATION_ID
     - CITY_DEPT_CODE
     - DEALERS_TYPE
     - DEALERS_ID
@@ -14,3 +16,5 @@ schema:
     - PROPERTY_TYPE
     - SURFACE
     - ROOM_COUNT
+    - CONSTRUCTION_YEAR
+    - ENERGY_CONSUMPTION_DIAGNOSIS_LETTER
