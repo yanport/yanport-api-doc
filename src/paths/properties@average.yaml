@@ -5,9 +5,12 @@ get:
   description: >-
     Permet de récupérer des moyennes sur les biens.
 
-    ### Exemple
+    ### Exemples
       #### Prix au m² moyen des appartements en cours de publication en vente à Levallois-Perret
-        /properties/average?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
+        /properties/average?field=PRICE_M2&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&active=true&zipCodes=92300
+
+      #### Tension moyenne du marché de la vente d'appartements sur l'année 2023 dans la ville de Toulouse
+        /properties/average?field=MARKET_STRESS&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&cityIds=48611959&marketingStartDateMin=2023-01-01T00:00:00&marketingStartDateMax=2023-12-31T23:59:59
   parameters:
     - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/reliability.yaml
