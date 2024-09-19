@@ -1,6 +1,6 @@
 name: extendedBoundMin
 in: query
-description: Garantit un intervalle minimale
+description: Garantit un intervalle minimal
 schema:
   type: number
   format: double
