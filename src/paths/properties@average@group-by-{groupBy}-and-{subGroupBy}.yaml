@@ -9,7 +9,7 @@ get:
       #### Prix au m² moyen regroupés par portail et par type de vendeur en cours de publication sur Levallois-Perret
         /properties/average/group-by-crawl-sources-and-dealer-type?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-groupBy.yaml
+    - $ref: ../components/parameters/groupBy.yaml
     - $ref: ../components/parameters/PropertySubGroupByCountQuery-subGroupBy.yaml
     - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
     - name: propertySearchQuery
