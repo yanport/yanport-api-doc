@@ -13,6 +13,7 @@ get:
     - $ref: ../components/parameters/DateHistogramQuery-interval.yaml
     - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-intervalField.yaml
     - $ref: ../components/parameters/DateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalOffset.yaml
     - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMin.yaml
     - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMax.yaml
     - $ref: ../components/parameters/DateHistogramQuery-hardBoundMin.yaml

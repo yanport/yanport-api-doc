@@ -1,0 +1,5 @@
+name: intervalOffset
+in: query
+description: Décalage de l'intervalle
+schema:
+  type: string
