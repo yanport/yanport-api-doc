@@ -18,10 +18,10 @@ get:
       #### Statistiques du prix au m² des appartements en cours de publication en vente à Levallois-Perret regroupés par portail et type d'annonceur
         /properties/stats/group-by-CRAWL_SOURCES-and-DEALERS_TYPE?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
-    - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/groupBy.yaml
     - $ref: ../components/parameters/subGroupBy.yaml
     - $ref: ../components/parameters/termsSize.yaml
+    - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query
