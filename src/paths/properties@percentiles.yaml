@@ -14,9 +14,12 @@ get:
     pour comprendre la détection d'anomalies dans les annonces immobilières.
 
 
-    ### Exemple
+    ### Exemples
       #### Prix au m² médian des appartements en cours de publication en vente à Levallois-Perret
-        /properties/percentiles?field=PRICE_M2&percentiles=50&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
+        /properties/percentiles?field=PRICE_M2&percentiles=50&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&active=true&zipCodes=92300
+
+      #### Prix au m² médian du marché de la vente d'appartements sur l'année 2023 dans la ville de Toulouse
+        /properties/percentiles?field=PRICE_M2&percentiles=50&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&cityIds=48611959&marketingStartDateMin=2023-01-01T00:00:00&marketingStartDateMax=2024-01-01T00:00:00
   parameters:
     - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/percentiles.yaml
