@@ -21,7 +21,7 @@ get:
     - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/groupBy.yaml
     - $ref: ../components/parameters/PropertySubGroupByStatsQuery-subGroupBy.yaml
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/termsSize.yaml
     - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query

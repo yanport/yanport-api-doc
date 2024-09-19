@@ -19,7 +19,7 @@ get:
         /properties/stats/group-by-CRAWL_SOURCES?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/groupBy.yaml
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/termsSize.yaml
     - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery

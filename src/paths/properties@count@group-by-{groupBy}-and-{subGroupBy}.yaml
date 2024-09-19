@@ -11,7 +11,7 @@ get:
   parameters:
     - $ref: ../components/parameters/groupBy.yaml
     - $ref: ../components/parameters/PropertySubGroupByCountQuery-subGroupBy.yaml
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/termsSize.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens

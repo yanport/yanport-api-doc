@@ -10,7 +10,7 @@ get:
         /properties/count/group-by-crawl-sources?active=true&source=AD&zipCodes=92300
   parameters:
     - $ref: ../components/parameters/groupBy.yaml
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/termsSize.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens
