@@ -19,7 +19,7 @@ get:
        #### Evolution du stock des biens entre 2016 et 2017 à Levallois-Perret
          /properties/evolution/stock?interval=1&intervalUnit=MONTHS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&dateMin=2016-01-01&dateMax=2017-01-01
   parameters:
-    - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-interval.yaml
     - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalUnit.yaml
     - $ref: ../components/parameters/dateMin.yaml
     - $ref: ../components/parameters/dateMax.yaml
