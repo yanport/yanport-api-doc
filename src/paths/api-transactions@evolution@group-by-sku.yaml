@@ -13,7 +13,7 @@ get:
     - $ref: >-
         ../components/parameters/ApiTransactionDateHistogramQuery-intervalField.yaml
     - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-intervalUnit.yaml
+        ../components/parameters/DateHistogramQuery-intervalUnit.yaml
     - $ref: >-
         ../components/parameters/ApiTransactionDateHistogramQuery-percentiles.yaml
     - $ref: >-

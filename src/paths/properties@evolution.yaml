@@ -22,9 +22,9 @@ get:
     - $ref: ../components/parameters/metric.yaml
     - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/percentiles.yaml
-    - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalField.yaml
     - $ref: ../components/parameters/DateHistogramQuery-interval.yaml
-    - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalField.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalUnit.yaml
     - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
     - $ref: ../components/parameters/reliability.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMin.yaml

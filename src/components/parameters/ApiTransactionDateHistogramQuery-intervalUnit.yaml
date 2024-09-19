@@ -1,8 +1,0 @@
-name: intervalUnit
-in: query
-required: true
-schema:
-  type: string
-  enum:
-    - MONTHS
-  default: MONTHS
