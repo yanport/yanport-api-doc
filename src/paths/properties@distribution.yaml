@@ -28,6 +28,7 @@ get:
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMax.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-hardBoundMin.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-hardBoundMax.yaml
+    - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens
