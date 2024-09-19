@@ -27,6 +27,8 @@ get:
     - $ref: ../components/parameters/DateHistogramQuery-intervalUnit.yaml
     - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMin.yaml
     - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMax.yaml
     - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
     - $ref: ../components/parameters/forecasting.yaml
     - $ref: ../components/parameters/reliability.yaml
