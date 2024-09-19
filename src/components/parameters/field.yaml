@@ -4,23 +4,4 @@ description: |
   Champ sur lequel sont calculées les statistiques (uniquement `PRICE_M2` ou `MARKET_STRESS` si `source=YANPORT`)
 required: true
 schema:
-  type: string
-  enum:
-    - PRICE
-    - PRICE_HC
-    - PRICE_CC
-    - PRICE_M2
-    - PRICE_M2_HC
-    - PRICE_M2_CC
-    - PRICE_EVENTS_RANGE_PRICE
-    - PRICE_EVENTS_RANGE_PRICE_M2
-    - PRICE_EVENTS_COUNT
-    - SURFACE
-    - ROOM_COUNT
-    - DURATION_DAYS
-    - MARKETING_DAYS
-    - FEES_PERCENT
-    - GROSS_RENTAL_YIELD
-    - NEGOTIATION_MARGIN
-    - CONSTRUCTION_YEAR
-    - MARKET_STRESS
+  $ref: "../schemas/Field-Numeric-Property.yaml"
