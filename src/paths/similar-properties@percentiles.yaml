@@ -22,7 +22,7 @@ get:
       #### Prix au m² médian des appartements en vente situés autour d'un point (lat/lon) dans le 11ème arrondissement de Paris qui ont une surface proche de 49m²
         /similar-properties/percentiles?field=PRICE_M2&percentiles=50?marketingType=SALE&propertyType=APARTMENT&lat=48.865961&lng=2.3678967&cityIds=52421235&surface=49
   parameters:
-    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
+    - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/percentiles.yaml
     - name: searchQueryParam
       in: query
