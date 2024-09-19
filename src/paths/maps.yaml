@@ -64,7 +64,7 @@ get:
       schema:
         $ref: ../components/schemas/MapsZone-Type.yaml
       example: AGGLOMERATION
-    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
+    - $ref: ../components/parameters/reliability.yaml
   x-codeSamples:
     - lang: cURL
       label: maps_percentiles_price_m2

@@ -10,7 +10,7 @@ get:
         /properties/average?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
   parameters:
     - $ref: ../components/parameters/field.yaml
-    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
+    - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens
