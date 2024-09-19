@@ -16,10 +16,8 @@ get:
         ../components/parameters/DateHistogramQuery-intervalUnit.yaml
     - $ref: >-
         ../components/parameters/ApiTransactionDateHistogramQuery-percentiles.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-extendedBoundMin.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMax.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-tokenIds.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-organizationIds.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMin.yaml
@@ -36,5 +34,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: >-
-              ../components/schemas/ApiTransactionGroupBySkuSumDateHistogram.yaml
+            $ref: ../components/schemas/ApiTransactionGroupBySkuSumDateHistogram.yaml
