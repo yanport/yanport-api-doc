@@ -7,13 +7,13 @@ get:
     l'intervalle de temps demandé, correspondant aux critères demandés et
     regroupé par sku
   parameters:
+    - $ref: ../components/parameters/metric.yaml
     - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-field.yaml
     - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-interval.yaml
     - $ref: >-
         ../components/parameters/ApiTransactionDateHistogramQuery-intervalField.yaml
     - $ref: >-
         ../components/parameters/ApiTransactionDateHistogramQuery-intervalUnit.yaml
-    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-metric.yaml
     - $ref: >-
         ../components/parameters/ApiTransactionDateHistogramQuery-percentiles.yaml
     - $ref: >-
