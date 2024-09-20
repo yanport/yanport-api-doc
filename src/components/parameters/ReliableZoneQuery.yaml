@@ -41,12 +41,15 @@ properties:
         - CITY
         - AGGLOMERATION
   roomCounts:
+    description: Nombre de pièces
     type: array
     items:
       type: integer
   newBuild:
+    description: Nouvelles constructions
     type: boolean
   furnished:
+    description: Biens meublés
     type: boolean
   dateMin:
     description: Date minimale (incluse) de suppression ou de fin de commercialisation des biens (YYYY-mm-ddTHH:mm:ss)
