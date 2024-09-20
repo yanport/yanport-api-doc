@@ -1,0 +1,96 @@
+type: object
+properties:
+  marketingType:
+    description: Type de marché (vente, location, vente en viager)
+    type: string
+    enum:
+      - SALE
+      - RENT
+      - LIFE_ANNUITY
+    example: SALE
+  propertyTypes:
+    description: Types de bien (maison, appartement, terrain, parking, immeuble, local)
+    type: array
+    items:
+      type: string
+      enum:
+        - HOUSE
+        - APARTMENT
+        - LAND
+        - PARKING
+        - BUILDING
+        - PREMISES
+  agglomerationId:
+    description: Identifiant de l'agglomération. Requis si `zones` contient `AGGLOMERATION`.
+    type: integer
+    format: int64
+  cityId:
+    description: Identifiant de la ville. Requis si `zones` contient `CITY`.
+    type: integer
+    format: int64
+  irisId:
+    description: Identifiant de l'iris. Requis si `zones` contient `IRIS`.
+    type: string
+  zones:
+    description: Types de zone possibles (iris, ville, agglomération)
+    type: array
+    items:
+      type: string
+      enum:
+        - IRIS
+        - CITY
+        - AGGLOMERATION
+  roomCounts:
+    description: Nombre de pièces
+    type: array
+    items:
+      type: integer
+  newBuild:
+    description: Nouvelles constructions
+    type: boolean
+  furnished:
+    description: Biens meublés
+    type: boolean
+  dateMin:
+    description: Date minimale (incluse) de suppression ou de fin de commercialisation des biens (YYYY-mm-ddTHH:mm:ss)
+    type: string
+    format: date-time
+  dateMax:
+    description: Date maximale (incluse) de suppression ou de fin de commercialisation des biens (YYYY-mm-ddTHH:mm:ss)
+    type: string
+    format: date-time
+  source:
+    description: Source des biens
+    type: string
+    enum:
+      - AD
+      - CLAMEUR
+      - DVF
+  field:
+    description: Champ sur lequel sont calculées les statistiques.
+    type: string
+    default: PRICE_M2
+    enum:
+      - PRICE_M2
+  anomalyLevelMax:
+    description: Niveau d'anomalie maximal
+    type: integer
+    minimum: -1
+    maximum: 3
+    example: 1
+  anomalyLevelMin:
+    description: Niveau d'anomalie minimal
+    type: integer
+    minimum: -1
+    maximum: 3
+    example: 1
+  energyConsumptionDiagnosisLetters:
+    description: Classe de diagnostic de performance énergétique (DPE)
+    type: array
+    items:
+      $ref: ../schemas/ConsumptionLetter.yaml
+  greenhouseGasConsumptionDiagnosisLetters:
+    description: Classe d'émission de gaz à effet de serre (GES)
+    type: array
+    items:
+      $ref: ../schemas/ConsumptionLetter.yaml

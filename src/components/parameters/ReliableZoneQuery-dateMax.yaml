@@ -1,6 +1,0 @@
-name: dateMax
-in: query
-description: Date maximale (incluse) de suppression ou de fin de commercialisation des biens (YYYY-mm-ddTHH:mm:ss)
-schema:
-  type: string
-  format: date-time
