@@ -1237,12 +1237,6 @@ properties:
               type: string
               example: CC Médullienne
             zoneType:
-              type: string
-              enum:
-                - IRIS
-                - CITY
-                - AGGLOMERATION
-                - DEPARTMENT
-              example: AGGLOMERATION
+              $ref: ./MapsZone-Type.yaml
             percentiles:
               $ref: ./Percentiles.yaml
