@@ -1,1 +1,0 @@
-curl 'https://api.yanport.com/maps/stock?size=20&propertyTypes=APARTMENT&propertyTypes=HOUSE&bbox=44.981324154475466%2C-0.9365576647579089%2C44.791562973381694%2C0.41893811604506676&from=0&newBuild=true&zoomLevel=10.75&marketingTypes=SALE&deleteDateMin=2015-10-07T12%3A46%3A10.723Z&source=AD' --header 'Authorization: Bearer YOUR_TOKEN'
