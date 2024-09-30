@@ -10,3 +10,4 @@ schema:
     - COUNT
     - AVERAGE
     - NONE
+  example: COUNT
