@@ -1,7 +1,7 @@
 get:
   tags:
     - Génération de carte
-  summary: Données cartographique
+  summary: Données cartographiques
   description: >-
     Retourne un GeoJSON avec des données géographiques.
 
