@@ -10,6 +10,7 @@ properties:
       - NEW_BUILD
       - ENERGY_CONSUMPTION
       - GREENHOUSE_GAS_CONSUMPTION
+      - LAND_SURFACE
       - LOCALISATION
   value:
     type: integer
