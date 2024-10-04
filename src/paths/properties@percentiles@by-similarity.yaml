@@ -36,70 +36,7 @@ post:
               default: 10
               description: Nombre de biens sur lesquels faire l'analyse
             property:
-              type: object
-              description: Caractéristiques du bien d'intérêt
-              properties:
-                id:
-                  type: string
-                  format: uuid
-                features:
-                  type: object
-                  required:
-                    - marketingType
-                    - propertyType
-                    - address
-                  properties:
-                    marketingType:
-                      $ref: ../components/schemas/MarketingType.yaml
-                    propertyType:
-                      $ref: ../components/schemas/PropertyType.yaml
-                    surface:
-                      type: number
-                      format: double
-                      example: 50.0
-                    price:
-                      type: number
-                      format: double
-                      example: 300000
-                    roomCount:
-                      type: integer
-                      example: 2
-                    furnished:
-                      type: boolean
-                      example: true
-                    newBuild:
-                      type: boolean
-                      example: false
-                    energyConsumptionDiagnosisLetter:
-                      type: string
-                      enum:
-                        - A
-                        - B
-                        - C
-                        - D
-                        - E
-                        - F
-                        - G
-                    greenhouseGasConsumptionDiagnosisLetter:
-                      type: string
-                      enum:
-                        - A
-                        - B
-                        - C
-                        - D
-                        - E
-                        - F
-                        - G
-                    address:
-                      description: adresse exacte ou cityId requis
-                      properties:
-                        cityId:
-                          type: number
-                          format: int64
-                          minimum: 0
-                          example: 47892974
-                        location:
-                          $ref: ../components/schemas/Location.yaml
+              $ref: ../components/schemas/PropertySimilarity.yaml
             zone:
               description: Zone de recherche des biens similaires
               type: string
