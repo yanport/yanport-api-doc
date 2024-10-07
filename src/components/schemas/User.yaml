@@ -20,6 +20,8 @@ properties:
         type: string
       SENDINBLUE:
         type: string
+      STRIPE:
+        type: string
   username:
     type: string
     example: 'user@example.com'
