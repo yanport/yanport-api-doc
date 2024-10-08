@@ -1,7 +1,7 @@
 get:
   tags:
     - Indicateurs sur les biens (ancien/neuf)
-  summary: 'Evolution (prix, surface, etc)'
+  summary: Évolution (prix, surface, etc)
   description: >-
     Permet de construire une courbe d'évolution du nombre de biens selon
     plusieurs critères.
@@ -15,20 +15,30 @@ get:
     pour comprendre la détection d'anomalies dans les annonces immobilières.
 
 
-    ### Exemple
-      #### Evolution des prix des biens en vente entre 2016 et 2017 à Levallois-Perret
-        /properties/evolution?field=PRICE&intervalField=DELETE_DATE&interval=1&intervalUnit=MONTHS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&publicationDateMin=2016-01-01T00:00:00.00&publicationDateMax=2017-01-01T00:00:00.00
+    ### Exemples
+      #### Évolution des prix des biens en vente entre 2016 et 2017 à Levallois-Perret
+        /properties/evolution?field=PRICE&intervalField=DELETE_DATE&interval=1&intervalUnit=MONTHS&source=AD&marketingTypes=SALE&active=false&zipCodes=92300&publicationDateMin=2016-01-01T00:00:00.00&publicationDateMax=2017-01-01T00:00:00.00
+
+      #### Évolution moyenne par trimestre de la tension du marché de la vente d'appartements sur l'année 2023 dans la ville de Toulouse
+        /properties/evolution?metric=AVERAGE&field=MARKET_STRESS&intervalField=MARKETING_START_DATE&interval=3&intervalUnit=MONTHS&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&cityIds=48611959&marketingStartDateMin=2023-01-01T00:00:00&marketingStartDateMax=2023-12-31T23:59:59
+
+      #### Évolution des quartiles des prix au m² du marché de la vente d'appartements sur l'année 2023 dans la ville de Toulouse
+        /properties/evolution?metric=PERCENTILES&field=PRICE_M2&percentiles=25.0&percentiles=50.0&percentiles=75.0&intervalField=MARKETING_START_DATE&interval=3&intervalUnit=MONTHS&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&cityIds=48611959&marketingStartDateMin=2023-01-01T00:00:00&marketingStartDateMax=2023-12-31T23:59:59
   parameters:
-    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
+    - $ref: ../components/parameters/metric.yaml
+    - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/percentiles.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-interval.yaml
     - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalField.yaml
-    - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
-    - $ref: ../components/parameters/PropertyDateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalOffset.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMax.yaml
     - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
-    - $ref: ../components/parameters/ReliableQuery-reliability.yaml
-    - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMin.yaml
-    - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMax.yaml
-    - $ref: ../components/parameters/PropertyHistogramQuery-forecasting.yaml
+    - $ref: ../components/parameters/forecasting.yaml
+    - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens

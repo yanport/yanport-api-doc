@@ -1,30 +1,28 @@
 get:
   tags:
     - Consommation API
-  summary: Récupérer l'aggregation d'une propriété des transactions d'API
+  summary: Récupérer l'agrégation d'une propriété des transactions d'API
   description: >-
     Retourne l'agrégation d'une propriété des transactions d'API selon
     l'intervalle de temps demandé, correspondant aux critères demandés et
     regroupé par sku
   parameters:
+    - $ref: ../components/parameters/metric.yaml
     - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-field.yaml
-    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-interval.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-intervalField.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-intervalUnit.yaml
-    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-metric.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-percentiles.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-extendedBoundMin.yaml
-    - $ref: >-
-        ../components/parameters/ApiTransactionDateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/percentiles.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-interval.yaml
+    - $ref: ../components/parameters/ApiTransactionDateHistogramQuery-intervalField.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalOffset.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-tokenIds.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-organizationIds.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMin.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-dateMax.yaml
-    - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
     - $ref: ../components/parameters/ApiTransactionSearchQuery-skus.yaml
     - name: searchQueryParam
       in: query
@@ -36,5 +34,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: >-
-              ../components/schemas/ApiTransactionGroupBySkuSumDateHistogram.yaml
+            $ref: ../components/schemas/ApiTransactionGroupBySkuSumDateHistogram.yaml

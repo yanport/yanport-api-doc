@@ -1,6 +1,0 @@
-name: forecasting
-in: query
-description: Prévision de l'indicateur. Valide uniquement avec la combinaison `source=DVF`, `reliability=true` et `field=price_m2`.
-schema:
-  type: boolean
-  default: false

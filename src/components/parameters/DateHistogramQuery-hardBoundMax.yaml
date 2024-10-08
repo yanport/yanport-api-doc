@@ -1,0 +1,6 @@
+name: hardBoundMax
+in: query
+description: Tronque les résultats supérieurs à cette date
+schema:
+  type: string
+  format: date

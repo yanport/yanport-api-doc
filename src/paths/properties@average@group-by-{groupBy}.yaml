@@ -5,12 +5,17 @@ get:
   description: |-
     Permet de récupérer des moyennes sur les biens regroupés selon 1 critère.
 
-    ### Exemple
+    ### Exemples
       #### Prix au m² moyen regroupés par portail des appartements en cours de publication en vente à Levallois-Perret
-        /properties/average/group-by-crawl-sources?field=PRICE_M2&marketingTypes=SALE&active=true&zipCodes=92300&source=AD&propertyTypes=APARTMENT
+        /properties/average/group-by-crawl-sources?field=PRICE_M2&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&active=true&zipCodes=92300
+
+      #### Tension moyenne par type de bien du marché de la vente sur l'année 2023 dans la ville de Toulouse
+        /properties/average/group-by-property-type?field=MARKET_STRESS&source=YANPORT&marketingTypes=SALE&cityIds=48611959&marketingStartDateMin=2023-01-01T00:00:00&marketingStartDateMax=2023-12-31T23:59:59
   parameters:
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-groupBy.yaml
-    - $ref: ../components/parameters/PropertyGroupByCountQuery-termsSize.yaml
+    - $ref: ../components/parameters/groupBy.yaml
+    - $ref: ../components/parameters/termsSize.yaml
+    - $ref: ../components/parameters/field.yaml
+    - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens

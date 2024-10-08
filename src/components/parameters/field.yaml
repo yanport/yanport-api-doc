@@ -1,0 +1,7 @@
+name: field
+in: query
+description: |
+  Champ sur lequel sont calculées les statistiques (uniquement `PRICE_M2` ou `MARKET_STRESS` si `source=YANPORT`)
+required: true
+schema:
+  $ref: "../schemas/Field-Numeric-Property.yaml"

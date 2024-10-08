@@ -1,0 +1,13 @@
+name: metric
+in: query
+description: Méthode de calcul de l'agrégation
+schema:
+  type: string
+  default: PERCENTILES
+  enum:
+    - PERCENTILES
+    - SUM
+    - COUNT
+    - AVERAGE
+    - NONE
+  example: COUNT

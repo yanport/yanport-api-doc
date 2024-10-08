@@ -1,0 +1,6 @@
+name: extendedBoundMin
+in: query
+description: Date minimale
+schema:
+  type: string
+  format: date

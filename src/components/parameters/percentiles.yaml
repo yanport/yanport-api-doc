@@ -1,10 +1,10 @@
 name: percentiles
 in: query
-description: Les percentiles
+description: Percentiles (uniquement `25.0`, `50.0` et `75.0` si `source=YANPORT`)
 example:
-  - '10.0'
+  - '25.0'
   - '50.0'
-  - '90.0'
+  - '75.0'
 style: form
 schema:
   type: array

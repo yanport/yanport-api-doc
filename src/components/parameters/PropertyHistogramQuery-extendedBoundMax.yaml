@@ -1,6 +1,6 @@
 name: extendedBoundMax
 in: query
-description: Garantit un intervalle maximale
+description: Garantit un intervalle maximal
 schema:
   type: number
   format: double
