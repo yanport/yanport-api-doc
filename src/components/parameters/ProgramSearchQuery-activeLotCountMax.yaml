@@ -1,0 +1,6 @@
+name: activeLotCountMax
+in: query
+description: Nombre de lots actifs maximum
+schema:
+  type: integer
+  format: int64
