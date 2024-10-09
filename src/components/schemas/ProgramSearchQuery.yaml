@@ -135,6 +135,12 @@ properties:
   lotCountMax:
     type: integer
     format: int64
+  activeLotCountMin:
+    type: integer
+    format: int64
+  activeLotCountMax:
+    type: integer
+    format: int64
   stockPreview:
     type: boolean
   stage:
