@@ -1,6 +1,6 @@
 name: lotCountMin
 in: query
-description: Nombre de lot minimum
+description: Nombre de lots minimum
 schema:
   type: integer
   format: int64

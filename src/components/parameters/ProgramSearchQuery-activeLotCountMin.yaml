@@ -1,0 +1,6 @@
+name: activeLotCountMin
+in: query
+description: Nombre de lots actifs minimum
+schema:
+  type: integer
+  format: int64
