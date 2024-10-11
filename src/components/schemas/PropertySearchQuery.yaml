@@ -14,7 +14,6 @@ properties:
       type: string
   marketingTypes:
     type: array
-    description: 'Une unique valeur est obligatoire avec `source=YANPORT`'
     items:
       $ref: ./MarketingType.yaml
   crawlSources:
@@ -200,17 +199,13 @@ properties:
   surfaceMin:
     type: number
     format: double
-    description: Surface minimum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.surface` vide)
   surfaceMax:
     type: number
     format: double
-    description: Surface maximum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.surface` vide)
   roomCountMin:
     type: integer
-    description: Nombre de pièces minimum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.roomCount` vide)
   roomCountMax:
     type: integer
-    description: Nombre de pièces maximum (si min et max non renseigné et que la source=`YANPORT` alors les biens récupéré auront le champ `features.geometry.roomCount` vide)
   priceMin:
     type: number
     format: double
@@ -369,18 +364,6 @@ properties:
         - SUSPECT
         - ANORMAL
     description: Valeurs d'anomalie (UNKNOWN = -1, SAFE = 0, UNUSUAL = 1, SUSPECT = 2, ANORMAL = 3)
-  marketStressReliabilityMin:
-    type: number
-    format: double
-    description: Valeur de la fiabilité de tension de marché minimale (uniquement avec `source=YANPORT`)
-  marketStressReliabilityMax:
-    type: number
-    format: double
-    description: Valeur de la fiabilité de tension de marché maximale (uniquement avec `source=YANPORT`)
-  marketStressValues:
-    type: array
-    items:
-      $ref: ./MarketStressValue.yaml
   externalProperties:
     type: array
     items:

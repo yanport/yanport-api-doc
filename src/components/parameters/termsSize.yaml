@@ -1,7 +1,6 @@
 name: termsSize
 in: query
-description: Précision des résultats
-required: true
+description: Nombre maximum de groupes
 schema:
   type: integer
   minimum: 10

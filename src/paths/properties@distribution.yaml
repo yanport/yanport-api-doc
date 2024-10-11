@@ -1,7 +1,7 @@
 get:
   tags:
     - Indicateurs sur les biens (ancien/neuf)
-  summary: 'Distribution (prix, surface, etc)'
+  summary: Distribution (prix, surface, etc)
   description: >-
     Permet de construire un graphique de distribution des biens selon plusieurs
     critères (voir le champ `field`).
@@ -19,7 +19,8 @@ get:
       #### Distribution des durées de publication des biens en vente entre 2016 et 2017 à Levallois-Perret
         /properties/distribution?field=DURATION_DAYS&intervalField=DURATION_DAYS&marketingTypes=SALE&active=false&source=AD&zipCodes=92300&publicationDateMin=2016-01-01T00%3A00%3A00.00&publicationDateMax=2017-01-01T00%3A00%3A00.00
   parameters:
-    - $ref: ../components/parameters/PropertyAnalyticsQuery-field.yaml
+    - $ref: ../components/parameters/metric.yaml
+    - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/percentiles.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-intervalField.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-interval.yaml
@@ -27,6 +28,7 @@ get:
     - $ref: ../components/parameters/PropertyHistogramQuery-extendedBoundMax.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-hardBoundMin.yaml
     - $ref: ../components/parameters/PropertyHistogramQuery-hardBoundMax.yaml
+    - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery
       in: query
       description: Paramètres de recherche de biens

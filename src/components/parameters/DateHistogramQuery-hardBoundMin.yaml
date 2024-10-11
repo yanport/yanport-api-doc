@@ -1,0 +1,6 @@
+name: hardBoundMin
+in: query
+description: Tronque les résultats inférieurs à cette date
+schema:
+  type: string
+  format: date

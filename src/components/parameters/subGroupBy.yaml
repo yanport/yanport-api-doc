@@ -1,0 +1,6 @@
+name: subGroupBy
+in: path
+description: Grouper par
+required: true
+schema:
+  $ref: "../schemas/Field-Discrete-Property.yaml"
