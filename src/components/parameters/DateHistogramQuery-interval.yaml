@@ -1,6 +1,6 @@
 name: interval
 in: query
-required: true
+description: Valeur de l'intervalle
 schema:
   type: integer
   default: 1
