@@ -4,6 +4,13 @@ get:
   summary: Moyenne (SubGroupBy)
   description: |-
     Permet de récupérer des moyennes sur les biens regroupés selon 2 critères.
+    
+    Par défaut, les biens détectés comme anormaux sont ignorés : `anomalyLevelMax=1`
+    (voir les valeurs possibles dans le paramètre `anomalyValues`).
+
+
+    Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
+    pour comprendre la détection d'anomalies dans les annonces immobilières.
 
     ### Exemples
       #### Prix au m² moyen regroupés par portail et par type de vendeur des appartements en cours de publication en vente à Levallois-Perret    
