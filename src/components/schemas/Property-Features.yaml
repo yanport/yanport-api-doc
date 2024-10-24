@@ -84,6 +84,9 @@ properties:
           DISABLED_ACCESS:
             type: boolean
             example: false
+          HOME_AUTOMATION:
+            type: boolean
+            example: false
   visual:
     type: object
     properties:
