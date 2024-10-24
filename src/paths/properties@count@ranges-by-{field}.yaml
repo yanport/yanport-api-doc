@@ -9,7 +9,13 @@ get:
       #### Nombre de biens regroupés par surface en cours de publication sur Levallois-Perret répartis selon les intervalles ]-∞, 60[ et [60, +∞[
         /properties/count/ranges-by-surface?active=true&source=AD&zipCodes=92300&intervals=*:60&intervals=60:*
   parameters:
-    - $ref: ../components/parameters/field.yaml
+    - name: field
+      in: path
+      description: |
+        Champ sur lequel sont calculées les statistiques (uniquement `PRICE_M2` ou `MARKET_STRESS` si `source=YANPORT`)
+      required: true
+      schema:
+        $ref: "../components/schemas/Field-Numeric-Property.yaml"
     - $ref: ../components/parameters/intervals.yaml
     - name: propertySearchQuery
       in: query
