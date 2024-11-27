@@ -1,5 +1,0 @@
-name: constructionYearMax
-description: Année de construction maximale (YYYY)
-in: query
-schema:
-  type: integer
