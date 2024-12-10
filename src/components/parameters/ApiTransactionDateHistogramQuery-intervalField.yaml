@@ -1,7 +1,0 @@
-name: intervalField
-in: query
-required: true
-schema:
-  type: string
-  enum:
-    - DATE
