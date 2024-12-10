@@ -1,6 +1,0 @@
-name: dateMax
-in: query
-description: Date maximale (incluse) de la transaction d'API
-schema:
-  type: string
-  format: date-time
