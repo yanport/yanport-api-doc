@@ -1,9 +1,9 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Évolution (prix, surface, etc)
   description: >-
-    Permet de construire une courbe d'évolution du nombre de biens selon
+    Permet de construire une courbe d'évolution des statistiques sur les biens selon
     plusieurs critères.
 
 

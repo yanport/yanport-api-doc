@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Nombre de biens (RangesBy)
   description: |-
     Retourne le nombre de biens regroupés par un ensemble d'intervalles selon 1 critère.
