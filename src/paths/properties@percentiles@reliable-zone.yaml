@@ -1,7 +1,7 @@
 get:
   tags:
     - Statistiques sur les biens (ancien/neuf)
-  summary: Zone fiable pour les centiles
+  summary: Centiles (zone fiable)
   description: >-
     Permet de construire une zone géographique où les percentiles sur les biens sont fiables.
 
