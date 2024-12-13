@@ -1,13 +1,13 @@
 get:
   tags:
     - Génération de carte
-  summary: Données cartographiques
+  summary: Statistiques de marché
   deprecated: true
   description: >-
     **Ce endpoint est déprécié. Utiliser `/maps/properties` à la place.**
 
 
-    Retourne un GeoJSON avec des données géographiques.
+    Retourne un GeoJSON avec des statistiques de marché.
 
     ### Exemples
       #### Carte des prix au m² du marché de la vente d'une zone du nord de Nantes
