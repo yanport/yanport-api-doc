@@ -1,7 +1,7 @@
 get:
   tags:
     - Statistiques sur les biens (ancien/neuf)
-  summary: Zone fiable pour l'évolution
+  summary: Évolution (zone fiable)
   description: >-
     Permet de construire une zone géographique où l'évolution des statistiques sur les biens est fiable.
 
