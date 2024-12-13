@@ -1,9 +1,9 @@
 post:
   tags:
     - Indicateurs sur les biens similaires (ancien/neuf)
-  summary: Statistiques
+  summary: Centiles
   description: >-
-    Permet de récupérer des statistiques de base (moyenne, somme, minimum et maximum) sur les biens similaires.
+    Permet de récupérer les percentiles des biens similaires.
     
     
     Par défaut, les biens détectés comme anormaux sont ignorés : `anomalyLevelMax=1`
@@ -15,10 +15,10 @@ post:
   requestBody:
     required: true
     description: >-
-      Formulaire pour récupérer les statistiques sur les biens similaires.
+      Formulaire pour récupérer les centiles des biens similaires.
 
 
-      L'objet query permet de définir les paramètres de la requête de stats (field, percentiles et reliability)
+      L'objet query permet de définir les paramètres de la requête de centiles (field, percentiles et reliability)
       ainsi que des filtres supplémentaires pour la recherche de biens similaires (propertySearchQuery). 
       Par exemple: date de publication, source, zone géographique, ...
     content:
@@ -32,8 +32,6 @@ post:
               maximum: 100
               default: 10
               description: Nombre de biens sur lesquels faire l'analyse
-            features:
-              $ref: ../components/schemas/PropertyFeaturesSimilarity.yaml
             zone:
               description: Zone de recherche des biens similaires
               type: string
@@ -49,7 +47,7 @@ post:
               properties:
                 field:
                   type: string
-                  description: Champ sur lequel sont calculées les statistiques
+                  description: Champ sur lequel sont calculées les percentiles
                   enum:
                     - price
                     - price_hc
@@ -69,19 +67,29 @@ post:
                     - negotiation_margin
                     - market_stress
                     - construction_year
+                percentiles:
+                  type: array
+                  description: Les percentiles
+                  example:
+                    - '10.0'
+                    - '50.0'
+                    - '90.0'
+                  items:
+                    type: number
+                    format: double
                 reliability:
                   description: Renvoie un score de fiabilité entre 0 et 100, avec le score de chaque méthode utilisée.
                   type: boolean
                   default: false
                 propertySearchQuery:
-                  $ref: ../components/schemas/PropertySearchQuery.yaml
+                 $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
-      description: Statistiques
+      description: Percentiles
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Stats.yaml
+            $ref: ../components/schemas/Percentiles.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

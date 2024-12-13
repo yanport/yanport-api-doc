@@ -8,11 +8,8 @@ post:
     required: true
     description: >-
       Formulaire pour le scoring d'une liste de biens.
-      
-      
-      L'objet property peut contenir soit l'id du bien d'intérêt, soit directement ses caractéristiques, mais pas les deux.
-      
-      
+
+
       L'objet query permet de définir des filtres supplémentaires pour la recherche de biens similaires. 
       Par exemple: date de publication, source, zone géographique, ...
     content:
@@ -20,8 +17,6 @@ post:
         schema:
           type: object
           properties:
-            features:
-              $ref: ../components/schemas/PropertyFeaturesSimilarity.yaml
             propertiesToScore:
               type: array
               description: Liste d'ids des biens à scorer

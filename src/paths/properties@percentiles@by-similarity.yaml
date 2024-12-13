@@ -16,11 +16,8 @@ post:
     required: true
     description: >-
       Formulaire pour récupérer les centiles des biens similaires.
-      
-      
-      L'objet property peut contenir soit l'id du bien d'intérêt, soit directement ses caractéristiques, mais pas les deux.
-      
-      
+
+
       L'objet query permet de définir les paramètres de la requête de centiles (field, percentiles et reliability)
       ainsi que des filtres supplémentaires pour la recherche de biens similaires (propertySearchQuery). 
       Par exemple: date de publication, source, zone géographique, ...
@@ -35,8 +32,8 @@ post:
               maximum: 100
               default: 10
               description: Nombre de biens sur lesquels faire l'analyse
-            property:
-              $ref: ../components/schemas/PropertySimilarity.yaml
+            features:
+              $ref: ../components/schemas/PropertyFeaturesSimilarity.yaml
             zone:
               description: Zone de recherche des biens similaires
               type: string
