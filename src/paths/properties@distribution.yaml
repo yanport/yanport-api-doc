@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Distribution (prix, surface, etc)
   description: >-
     Permet de construire un graphique de distribution des biens selon plusieurs

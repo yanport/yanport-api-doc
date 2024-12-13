@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Zone fiable pour les statistiques
   description: >-
     Permet de construire une zone géographique où les statistiques sur les biens sont fiables.
