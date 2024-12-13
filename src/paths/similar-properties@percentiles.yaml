@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens similaires (ancien/neuf)
+    - Statistiques sur les biens similaires (ancien/neuf)
   summary: Centiles
   deprecated: true
   description: |-
