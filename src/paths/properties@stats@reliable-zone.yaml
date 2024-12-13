@@ -1,7 +1,7 @@
 get:
   tags:
     - Statistiques sur les biens (ancien/neuf)
-  summary: Zone fiable pour les statistiques
+  summary: Statistiques (zone fiable)
   description: >-
     Permet de construire une zone géographique où les statistiques sur les biens sont fiables.
 
