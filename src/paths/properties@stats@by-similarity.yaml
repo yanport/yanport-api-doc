@@ -1,6 +1,6 @@
 post:
   tags:
-    - Indicateurs sur les biens similaires (ancien/neuf)
+    - Statistiques sur les biens similaires (ancien/neuf)
   summary: Statistiques
   description: >-
     Permet de récupérer des statistiques de base (moyenne, somme, minimum et maximum) sur les biens similaires.

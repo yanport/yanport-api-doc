@@ -164,11 +164,11 @@ x-tagGroups:
   - name: CARTOGRAPHIE DU MARCHE
     tags:
       - Génération de carte
-  - name: INDICATEURS DE MARCHE
+  - name: STATISTIQUES DE MARCHE
     tags:
-      - Indicateurs sur les biens (ancien/neuf)
-      - Indicateurs sur les biens similaires (ancien/neuf)
-      - Indicateurs sur les programmes (neuf)
+      - Statistiques sur les biens (ancien/neuf)
+      - Statistiques sur les biens similaires (ancien/neuf)
+      - Statistiques sur les programmes (neuf)
   - name: REFERENTIEL GEOGRAPHIQUE
     tags:
       - Département
@@ -344,12 +344,12 @@ paths:
     $ref: paths/census-stats.yaml
   /building-permits:
     $ref: paths/building-permit.yaml
-  /building-permits/count:
-    $ref: paths/building-permit@count.yaml
   '/building-permits/{id}':
     $ref: 'paths/building-permit@{id}.yaml'
   /building-permits/ids:
     $ref: paths/building-permit@ids.yaml
+  /building-permits/count:
+    $ref: paths/building-permit@count.yaml
   /agencies:
     $ref: paths/agencies.yaml
   '/agencies/{id}':

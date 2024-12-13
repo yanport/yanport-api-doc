@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les programmes (neuf)
+    - Statistiques sur les programmes (neuf)
   summary: Nombre de programmes
   description: >-
     Compte le nombre de programmes par rapport à certains critères de

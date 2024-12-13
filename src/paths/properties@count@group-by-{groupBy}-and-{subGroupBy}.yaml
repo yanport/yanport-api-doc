@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Nombre de biens (SubGroupBy)
   description: |-
     Retourne le nombre de biens regroupés selon 2 critères.
