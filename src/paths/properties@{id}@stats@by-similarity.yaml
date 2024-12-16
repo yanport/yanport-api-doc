@@ -32,8 +32,6 @@ post:
               maximum: 100
               default: 10
               description: Nombre de biens sur lesquels faire l'analyse
-            features:
-              $ref: ../components/schemas/PropertyFeaturesSimilarity.yaml
             zone:
               description: Zone de recherche des biens similaires
               type: string

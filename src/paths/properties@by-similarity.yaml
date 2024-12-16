@@ -26,8 +26,8 @@ post:
               maximum: 100
               default: 10
               description: Nombre de résultats à retourner
-            property:
-              $ref: ../components/schemas/PropertySimilarity.yaml
+            features:
+              $ref: ../components/schemas/PropertyFeaturesSimilarity.yaml
             zone:
               description: Zone de recherche des biens similaires
               type: string
