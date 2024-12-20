@@ -281,8 +281,8 @@ paths:
     $ref: 'paths/properties@{id}@percentiles@by-similarity.yaml'
   /properties/stats/by-similarity:
     $ref: 'paths/properties@stats@by-similarity.yaml'
-    /properties/{id}/stats/by-similarity:
-      $ref: 'paths/properties@{id}@stats@by-similarity.yaml'
+  /properties/{id}/stats/by-similarity:
+    $ref: 'paths/properties@{id}@stats@by-similarity.yaml'
   /properties/distribution:
     $ref: paths/properties@distribution.yaml
   /properties/evolution:
