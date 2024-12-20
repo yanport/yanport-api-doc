@@ -1,0 +1,33 @@
+type: object
+properties:
+  methods:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          enum:
+            - NUMBER_OF_OBSERVATIONS
+            - INDICATOR_STABILITY
+            - INDICATORS_CONSISTENCY
+            - DEFAULT
+            - FORECASTING
+            - MARKET_INDICATOR
+          example: NUMBER_OF_OBSERVATIONS
+          description: Nom de la méthode de fiabilité
+        score:
+          type: integer
+          minimum: 0
+          maximum: 100
+          example: 80
+          description: Score de fiabilité
+        weight:
+          type: number
+          format: double
+          minimum: 0
+          maximum: 1
+          example: 0.55
+          description: Poids de la méthode de fiabilité
+    description: Méthodes de fiabilité
+description: Fiabilité de l'indicateur

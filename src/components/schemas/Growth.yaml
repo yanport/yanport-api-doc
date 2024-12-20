@@ -1,0 +1,24 @@
+type: object
+properties:
+  lag:
+    type: integer
+    example: 1
+    description: Nombre de périodes à soustraire pour obtenir la période de référence
+  value:
+    type: number
+    format: double
+    example: 50.25
+    description: Différence entre la période actuelle et la période de référence
+  percent:
+    type: number
+    format: double
+    example: 2.75
+    description: Différence en pourcentage entre la période actuelle et la période de référence
+  type:
+    type: string
+    enum:
+      - INTERVAL
+      - YEAR
+    example: INTERVAL
+    description: Type de croissance (sur la période précédente, sur la période de l'année précédente)
+description: Croissance de l'indicateur

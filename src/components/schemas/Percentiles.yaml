@@ -3,25 +3,27 @@ properties:
   count:
     type: integer
     format: int64
+    minimum: 0
     example: 7568
+    description: Nombre d'observations
+  values:
+    type: object
+    additionalProperties:
+      type: number
+      format: double
+    example:
+      '25.0': 1419.69
+      '50.0': 1755.62
+      '75.0': 2102.72
+    description: Percentiles
+  growths:
+    type: array
+    items:
+      $ref: ./Growth.yaml
+    description: Indicateurs de croissance des percentiles
   forecast:
     type: boolean
     example: false
+    description: Indique si les valeurs sont des prévisions ou non
   reliability:
-    type: object
-    items:
-      $ref: ./ReliableQueryReliability.yaml
-    example:
-      'score': 81
-      'methods':
-        'name': "NUMBER_OF_OBSERVATIONS"
-        'score': 81
-        'weight': 1.0
-  values:
-    type: array
-    items:
-      $ref: ./PercentilesValues.yaml
-    example:
-      '10.0': 733.9903725490195
-      '90.0': 2090.3659166666666
-      '50.0': 1382.6789025251455
+    $ref: ./Reliability.yaml

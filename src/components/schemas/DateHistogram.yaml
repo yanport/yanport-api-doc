@@ -4,3 +4,14 @@ properties:
     type: array
     items:
       $ref: ./DateHistogramPoint.yaml
+    description: Liste de points
+  type:
+    type: string
+    enum:
+      - PERCENTILES
+      - SUM
+      - COUNT
+      - AVERAGE
+      - NONE
+    example: PERCENTILES
+    description: Type d'agrégation

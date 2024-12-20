@@ -3,8 +3,16 @@ properties:
   count:
     type: integer
     format: int64
+    minimum: 0
     example: 7568
+    description: Nombre d'observations
   value:
     type: integer
     format: int64
     example: 10068
+    description: Nombre d'observations
+  growths:
+    type: array
+    items:
+      $ref: ./Growth.yaml
+    description: Indicateurs de croissance du nombre d'observations

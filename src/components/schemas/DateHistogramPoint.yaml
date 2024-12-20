@@ -3,5 +3,5 @@ properties:
   x:
     type: string
     format: date
-  'y':
+  y:
     $ref: ./Percentiles.yaml
