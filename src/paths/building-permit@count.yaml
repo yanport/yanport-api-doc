@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les permis de construire
+    - Permis de construire
   summary: Nombre de permis de construire
   description: >-
     Retourne le nombre de permis de construire correspondant à certains critères de

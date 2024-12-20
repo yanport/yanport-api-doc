@@ -1,9 +1,9 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
-  summary: Zone fiable pour l'évolution
+    - Statistiques sur les biens (ancien/neuf)
+  summary: Évolution (zone fiable)
   description: >-
-    Permet de construire une zone géographique où l'évolution des indicateurs sur les biens est fiable.
+    Permet de construire une zone géographique où l'évolution des statistiques sur les biens est fiable.
 
     Voir notre [article](https://www.yanport.com/blog/posts/etude-de-marche-a-ladresse) pour plus de détails.
     

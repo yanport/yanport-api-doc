@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Statistiques (GroupBy)
   description: >-
     Permet de récupérer des statistiques de base sur les biens regroupés selon 1 critère.
