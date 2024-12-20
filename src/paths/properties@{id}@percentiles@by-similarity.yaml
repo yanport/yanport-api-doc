@@ -12,6 +12,12 @@ post:
 
     Voir notre [article](https://www.yanport.com/blog/posts/detection-anomalies-dans-les-annonces-immobilieres)
     pour comprendre la détection d'anomalies dans les annonces immobilières.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
   requestBody:
     required: true
     description: >-

@@ -4,6 +4,12 @@ post:
   summary: Récupérer les biens similaires
   description: >-
     Retourne les biens similaires correspondants au bien ou aux critères demandés.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
   requestBody:
     required: true
     description: >-

@@ -4,6 +4,12 @@ post:
   summary: Récupérer un score de similarité
   description: >-
     Retourne un score de similarité par-rapport à un bien d'intérêt pour une liste de biens.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
   requestBody:
     required: true
     description: >-
