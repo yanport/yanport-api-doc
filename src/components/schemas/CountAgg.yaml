@@ -10,7 +10,7 @@ properties:
     type: integer
     format: int64
     example: 10068
-    description: Nombre d'observations
+    description: Nombre de valeurs présentes pour le champ demandé
   growths:
     type: array
     items:
