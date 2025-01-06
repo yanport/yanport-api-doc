@@ -198,9 +198,6 @@ x-tagGroups:
       - Prospects
       - Activités de prospection
       - Estimation
-  - name: FACTURATION
-    tags:
-      - Consommation API
   - name: MODELES
     tags:
       - Modele-bien
@@ -389,12 +386,6 @@ paths:
     $ref: paths/prospect-activities.yaml
   '/prospect-activities/{id}':
     $ref: 'paths/prospect-activities@{id}.yaml'
-  /api-transactions:
-    $ref: paths/api-transactions.yaml
-  /api-transactions/evolution/group-by-sku:
-    $ref: paths/api-transactions@evolution@group-by-sku.yaml
-  '/api-transactions/{id}':
-    $ref: 'paths/api-transactions@{id}.yaml'
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
 components:

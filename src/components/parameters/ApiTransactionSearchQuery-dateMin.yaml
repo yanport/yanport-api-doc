@@ -1,6 +1,0 @@
-name: dateMin
-in: query
-description: Date minimale (incluse) de la transaction d'API
-schema:
-  type: string
-  format: date-time
