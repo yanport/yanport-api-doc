@@ -15,4 +15,6 @@ properties:
     type: array
     items:
       $ref: ./Growth.yaml
-    description: Indicateurs de croissance du nombre d'observations
+    description: |
+      Indicateurs de croissance du nombre de valeurs présentes pour le champ demandé par rapport aux points précédents
+      (présents uniquement lors d'une requête d'évolution)

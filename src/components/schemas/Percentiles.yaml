@@ -20,7 +20,9 @@ properties:
     type: array
     items:
       $ref: ./Growth.yaml
-    description: Indicateurs de croissance des percentiles
+    description: |
+      Indicateurs de croissance du percentile par rapport aux points précédents
+      (présents uniquement lors d'une requête d'évolution avec un seul percentile)
   forecast:
     type: boolean
     example: false

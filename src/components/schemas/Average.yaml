@@ -14,7 +14,9 @@ properties:
     type: array
     items:
       $ref: ./Growth.yaml
-    description: Indicateurs de croissance de la moyenne
+    description: |
+      Indicateurs de croissance de la moyenne par rapport aux points précédents
+      (présents uniquement lors d'une requête d'évolution)
   reliability:
     type: number
     format: double
