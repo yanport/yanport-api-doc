@@ -5,30 +5,27 @@ properties:
     format: int64
     minimum: 0
     example: 191524
+    description: Nombre d'observations
   min:
     type: number
     format: double
     example: 1
+    description: Minimum
   max:
     type: number
     format: double
     example: 29000
+    description: Maximum
   avg:
     type: number
     format: double
     example: 700.4780763768509
+    description: Moyenne
   sum:
     type: number
     format: double
     minimum: 0
     example: 1.341583631E
+    description: Somme
   reliability:
-    type: object
-    items:
-      $ref: ./ReliableQueryReliability.yaml
-    example:
-      'score': 81
-      'methods':
-        'name': "NUMBER_OF_OBSERVATIONS"
-        'score': 81
-        'weight': 1.0
+    $ref: ./Reliability.yaml

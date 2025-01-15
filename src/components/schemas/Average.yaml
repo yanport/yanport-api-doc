@@ -5,9 +5,22 @@ properties:
     format: int64
     minimum: 0
     example: 7568
+    description: Nombre d'observations
   value:
     type: number
     format: double
+    description: Moyenne
+  growths:
+    type: array
+    items:
+      $ref: ./Growth.yaml
+    description: |
+      Indicateurs de croissance de la moyenne par rapport aux points précédents
+      (présents uniquement lors d'une requête d'évolution)
   reliability:
     type: number
     format: double
+    minimum: 0
+    maximum: 100
+    example: 80.0
+    description: Score de fiabilité
