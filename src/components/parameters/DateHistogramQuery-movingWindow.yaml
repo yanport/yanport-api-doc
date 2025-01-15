@@ -1,6 +1,6 @@
 name: movingWindow
 in: query
-description: Taille de la fenêtre glissante
+description: Taille de la fenêtre glissante (alignée à gauche)
 schema:
   type: integer
   example: 12

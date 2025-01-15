@@ -1,6 +1,6 @@
 name: movingFunction
 in: query
-description: Fonction à appliquer sur la fenêtre glissante
+description: Fonction à appliquer sur la fenêtre glissante (alignée à gauche)
 schema:
   type: string
   enum:
