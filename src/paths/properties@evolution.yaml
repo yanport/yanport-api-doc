@@ -37,6 +37,8 @@ get:
     - $ref: ../components/parameters/DateHistogramQuery-hardBoundMin.yaml
     - $ref: ../components/parameters/DateHistogramQuery-hardBoundMax.yaml
     - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-movingFunction.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-movingWindow.yaml
     - $ref: ../components/parameters/forecasting.yaml
     - $ref: ../components/parameters/reliability.yaml
     - name: propertySearchQuery

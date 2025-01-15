@@ -1,0 +1,9 @@
+name: movingFunction
+in: query
+description: Fonction à appliquer sur la fenêtre glissante
+schema:
+  type: string
+  enum:
+    - UNWEIGHTED_AVG
+    - LINEAR_WEIGHTED_AVG
+  example: UNWEIGHTED_AVG
