@@ -21,7 +21,7 @@ properties:
           minimum: 0
           maximum: 100
           example: 80
-          description: Score de fiabilité
+          description: Score de fiabilité de la méthode
         weight:
           type: number
           format: double
@@ -30,4 +30,10 @@ properties:
           example: 0.55
           description: Poids de la méthode de fiabilité
     description: Méthodes de fiabilité
+  score:
+    type: integer
+    minimum: 0
+    maximum: 100
+    example: 80
+    description: Score de fiabilité
 description: Fiabilité de l'indicateur
