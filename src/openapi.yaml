@@ -294,8 +294,8 @@ paths:
     $ref: paths/programs@count.yaml
   /properties/estimate:
     $ref: paths/properties@estimate.yaml
-  /maps:
-    $ref: paths/maps.yaml
+  /maps/properties:
+    $ref: paths/maps@properties.yaml
   /departments:
     $ref: paths/departments.yaml
   '/departments/{id}':
