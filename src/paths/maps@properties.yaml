@@ -2,22 +2,18 @@ get:
   tags:
     - Génération de carte
   summary: Données cartographiques
-  deprecated: true
   description: >-
-    **Ce endpoint est déprécié. Utiliser `/maps/properties` à la place.**
-
-
     Retourne un GeoJSON avec des données géographiques.
 
     ### Exemples
       #### Carte des prix au m² du marché de la vente d'une zone du nord de Nantes
-        /maps?field=PRICE_M2&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999
+        /maps/properties?field=PRICE_M2&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999
 
       #### Carte de la tension du marché de la vente d'une zone du nord de Nantes
-        /maps?metric=AVERAGE&field=MARKET_STRESS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&marketingStartDateMin=2023-01-01T00:00:00.000&marketingStartDateMax=2023-12-31T23:59:59.999
+        /maps/properties?metric=AVERAGE&field=MARKET_STRESS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&marketingStartDateMin=2023-01-01T00:00:00.000&marketingStartDateMax=2023-12-31T23:59:59.999
 
       #### Carte des stocks du marché de la vente d'une zone du nord de Nantes
-        /maps?metric=COUNT&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999
+        /maps/properties?metric=COUNT&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999
   parameters:
     - name: propertySearchQuery
       in: query
@@ -57,17 +53,17 @@ get:
     - lang: cURL
       label: maps_percentiles_price_m2
       source: |
-        curl 'https://api.yanport.com/maps?field=PRICE_M2&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999' \
+        curl 'https://api.yanport.com/maps/properties?field=PRICE_M2&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999' \
         --header 'Authorization: Bearer YOUR_TOKEN'
     - lang: cURL
       label: maps_average_market_stress
       source: |
-        curl 'https://api.yanport.com/maps?metric=AVERAGE&field=MARKET_STRESS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&marketingStartDateMin=2023-01-01T00:00:00.000&marketingStartDateMax=2023-12-31T23:59:59.999' \
+        curl 'https://api.yanport.com/maps/properties?metric=AVERAGE&field=MARKET_STRESS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&marketingStartDateMin=2023-01-01T00:00:00.000&marketingStartDateMax=2023-12-31T23:59:59.999' \
         --header 'Authorization: Bearer YOUR_TOKEN'
     - lang: cURL
       label: maps_count
       source: |
-        curl 'https://api.yanport.com/maps?metric=COUNT&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999' \
+        curl 'https://api.yanport.com/maps/properties?metric=COUNT&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999' \
         --header 'Authorization: Bearer YOUR_TOKEN'
   responses:
     '200':
