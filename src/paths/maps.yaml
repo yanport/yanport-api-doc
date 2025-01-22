@@ -1,0 +1,82 @@
+get:
+  tags:
+    - Génération de carte
+  summary: Données cartographiques
+  deprecated: true
+  description: >-
+    **Ce endpoint est déprécié. Utiliser `/maps/properties` à la place.**
+
+
+    Retourne un GeoJSON avec des données géographiques.
+
+    ### Exemples
+      #### Carte des prix au m² du marché de la vente d'une zone du nord de Nantes
+        /maps?field=PRICE_M2&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999
+    
+      #### Carte de la tension du marché de la vente d'une zone du nord de Nantes
+        /maps?metric=AVERAGE&field=MARKET_STRESS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&marketingStartDateMin=2023-01-01T00:00:00.000&marketingStartDateMax=2023-12-31T23:59:59.999
+    
+      #### Carte des stocks du marché de la vente d'une zone du nord de Nantes
+        /maps?metric=COUNT&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999
+  parameters:
+    - name: propertySearchQuery
+      in: query
+      description: Paramètres de recherche de biens
+      schema:
+        $ref: ../components/schemas/PropertySearchQuery.yaml
+    - name: bbox
+      in: query
+      description: >-
+        Rectangle qui délimite la zone géographique (latitude en haut à
+        gauche, longitude en haut à gauche, latitude en bas à droite, longitude en
+        bas à droite)
+      schema:
+        type: string
+      required: true
+      example: >-
+        46.677582373658055,-5.154210305797569,43.44691443123976,7.7415115092989115
+    - $ref: ../components/parameters/metric.yaml
+    - $ref: ../components/parameters/field.yaml
+    - $ref: ../components/parameters/percentiles.yaml
+    - name: zoomLevel
+      in: query
+      description: Niveau de zoom
+      schema:
+        type: number
+        format: double
+      required: true
+      example: 7.5
+    - name: zoneType
+      in: query
+      description: Type de zone
+      schema:
+        $ref: ../components/schemas/MapsZone-Type.yaml
+      example: AGGLOMERATION
+    - $ref: ../components/parameters/reliability.yaml
+  x-codeSamples:
+    - lang: cURL
+      label: maps_percentiles_price_m2
+      source: |
+        curl 'https://api.yanport.com/maps?field=PRICE_M2&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+    - lang: cURL
+      label: maps_average_market_stress
+      source: |
+        curl 'https://api.yanport.com/maps?metric=AVERAGE&field=MARKET_STRESS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=YANPORT&marketingTypes=SALE&propertyTypes=APARTMENT&marketingStartDateMin=2023-01-01T00:00:00.000&marketingStartDateMax=2023-12-31T23:59:59.999' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+    - lang: cURL
+      label: maps_count
+      source: |
+        curl 'https://api.yanport.com/maps?metric=COUNT&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&publicationStartDateMin=2023-01-01T00:00:00.000&publicationStartDateMax=2023-12-31T23:59:59.999' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+  responses:
+    '200':
+      description: GeoJson de données géographiques
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/MapsResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
