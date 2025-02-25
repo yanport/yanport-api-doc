@@ -1,0 +1,5 @@
+type: string
+enum:
+  - TERRACED
+  - SEMI_DETACHED
+  - DETACHED

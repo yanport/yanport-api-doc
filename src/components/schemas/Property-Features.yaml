@@ -35,6 +35,8 @@ properties:
         maxLength: 2000
       generalState:
         $ref: ./State.yaml
+      detachment:
+        $ref: ./Detachment.yaml
       services:
         type: object
         properties:
@@ -87,6 +89,24 @@ properties:
           HOME_AUTOMATION:
             type: boolean
             example: false
+          ELECTRIC_VEHICLE_CHARGER:
+            type: boolean
+            example: false
+          SEPTIC_TANK:
+            type: boolean
+            example: false
+          COMPACT_FILTER:
+            type: boolean
+            example: false
+          MICRO_STATION:
+            type: boolean
+            example: false
+          PHYTODEPURATION:
+            type: boolean
+            example: false
+          MAINS_DRAINAGE:
+            type: boolean
+            example: false
   visual:
     type: object
     properties:
@@ -114,6 +134,9 @@ properties:
             - MOUNTAIN
             - RIVER
             - LAKE
+            - OPEN
+            - NO_OVERLOOK
+            - OUTSTANDING
   geometry:
     type: object
     properties:
