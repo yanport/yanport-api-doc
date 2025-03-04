@@ -18,8 +18,6 @@ get:
       #### Prix au m² médian des appartements en cours de publication en vente à Levallois-Perret regroupés par portail et type d'annonceur
         /properties/percentiles/group-by-crawl-sources-and-dealers-type?field=PRICE_M2&percentiles=50&source=AD&marketingTypes=SALE&propertyTypes=APARTMENT&active=true&zipCodes=92300
 
-      #### Prix au m² médian par type de marché et de bien sur l'année 2023 dans la ville de Toulouse
-        /properties/percentiles/group-by-marketing-type-and-property-type?field=PRICE_M2&percentiles=50&source=YANPORT&cityIds=48611959&marketingStartDateMin=2023-01-01T00:00:00&marketingStartDateMax=2023-12-31T23:59:59
   parameters:
     - $ref: ../components/parameters/groupBy.yaml
     - $ref: ../components/parameters/subGroupBy.yaml

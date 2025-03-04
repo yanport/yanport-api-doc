@@ -1,6 +1,6 @@
 name: intervalField
 in: query
-description: Champ sur lequel sont définis les intervalles
+description: Champ sur lequel sont définis les intervalles.
 required: true
 schema:
   type: string
@@ -22,4 +22,3 @@ schema:
     - GROSS_RENTAL_YIELD
     - NEGOTIATION_MARGIN
     - CONSTRUCTION_YEAR
-    - MARKET_STRESS
