@@ -6,5 +6,4 @@ enum:
   - USER
   - CLAMEUR
   - ORGANIZATION
-  - YANPORT
 example: AD

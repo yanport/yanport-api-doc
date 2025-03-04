@@ -1,6 +1,6 @@
 name: percentiles
 in: query
-description: Percentiles (uniquement `25.0`, `50.0` et `75.0` si `source=YANPORT`)
+description: Percentiles
 example:
   - '25.0'
   - '50.0'

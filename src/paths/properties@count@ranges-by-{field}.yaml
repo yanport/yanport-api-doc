@@ -12,7 +12,7 @@ get:
     - name: field
       in: path
       description: |
-        Champ sur lequel sont calculées les statistiques (uniquement `PRICE_M2` ou `MARKET_STRESS` si `source=YANPORT`)
+        Champ sur lequel sont calculées les statistiques.
       required: true
       schema:
         $ref: "../components/schemas/Field-Numeric-Property.yaml"
