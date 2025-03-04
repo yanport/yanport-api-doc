@@ -1,6 +1,6 @@
 name: percentiles
 in: query
-description: Percentiles.
+description: Percentiles
 example:
   - '25.0'
   - '50.0'
