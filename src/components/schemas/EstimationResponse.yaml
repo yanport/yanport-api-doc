@@ -5,6 +5,7 @@ properties:
     properties:
       value:
         type: number
+        description: Valeur du champ estimé. S'il s'agit du prix ou loyer, cette valeur correspond à la valeur centrale de la distribution (percentile 50).
         example: 348277.28
       percentiles:
         type: object
