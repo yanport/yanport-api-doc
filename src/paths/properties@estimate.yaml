@@ -208,6 +208,24 @@ get:
       Si l'interprétabilité n'est pas jugée suffisamment fiable cet argument est ignoré."
       schema:
         type: boolean
+    - name: percentiles
+      in: query
+      description: "Liste des percentiles de la distribution du champ estimé (`field=PRICE` uniquement)."
+      schema:
+        type: array
+        items:
+          type: number
+        default:
+          - 1.0
+          - 5.0
+          - 10.0
+          - 25.0
+          - 50.0
+          - 75.0
+          - 90.0
+          - 95.0
+          - 99.0
+
   responses:
     '200':
       description: 'La valeur du champ estimé (Prix, etc).'
