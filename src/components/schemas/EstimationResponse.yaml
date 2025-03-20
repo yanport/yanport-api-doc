@@ -9,16 +9,14 @@ properties:
         example: 348277.28
       percentiles:
         type: object
-        properties:
-          '25':
-            type: number
-            example: 328002.78511154104
-          '50':
-            type: number
-            example: 348277.28089816734
-          '75':
-            type: number
-            example: 362923.32953035925
+        additionalProperties:
+          type: number
+          format: double
+        example:
+          '25.0': 328002.78511154104
+          '50.0': 348277.28089816734
+          '75.0': 362923.32953035925
+        description: Percentiles
   reliability:
     $ref: ./EstimationResponse-reliability.yaml
   evaluation:
