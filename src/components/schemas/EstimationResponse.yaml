@@ -38,17 +38,14 @@ properties:
             example: 5.85
           percentiles:
             type: object
-            description: Percentiles des erreurs sur les biens similaires au bien estimé.
-            properties:
-              '50':
-                type: number
-                example: 4.218634115526066
-              '75':
-                type: number
-                example: 8.277662756212566
-              '90':
-                type: number
-                example: 13.359326513857988
+            additionalProperties:
+              type: number
+              format: double
+            example:
+              '50.0': 4.218634115526066
+              '75.0': 8.277662756212566
+              '90.0': 13.359326513857988
+            description: Percentiles
   explanation:
     type: object
     properties:
