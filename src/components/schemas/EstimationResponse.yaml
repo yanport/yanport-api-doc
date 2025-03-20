@@ -9,16 +9,14 @@ properties:
         example: 348277.28
       percentiles:
         type: object
-        properties:
-          '25':
-            type: number
-            example: 328002.78511154104
-          '50':
-            type: number
-            example: 348277.28089816734
-          '75':
-            type: number
-            example: 362923.32953035925
+        additionalProperties:
+          type: number
+          format: double
+        example:
+          '25.0': 328002.78511154104
+          '50.0': 348277.28089816734
+          '75.0': 362923.32953035925
+        description: Percentiles
   reliability:
     $ref: ./EstimationResponse-reliability.yaml
   evaluation:
@@ -40,17 +38,14 @@ properties:
             example: 5.85
           percentiles:
             type: object
-            description: Percentiles des erreurs sur les biens similaires au bien estimé.
-            properties:
-              '50':
-                type: number
-                example: 4.218634115526066
-              '75':
-                type: number
-                example: 8.277662756212566
-              '90':
-                type: number
-                example: 13.359326513857988
+            additionalProperties:
+              type: number
+              format: double
+            example:
+              '50.0': 4.218634115526066
+              '75.0': 8.277662756212566
+              '90.0': 13.359326513857988
+            description: Percentiles
   explanation:
     type: object
     properties:
