@@ -31,6 +31,9 @@ properties:
     type: array
     items:
       $ref: ./Product.yaml
+  onBoarded:
+    type: boolean
+    description: Permet de terminer l'inscription de l'utilisateur lors de sa première authentification
   security:
     $ref: ./Security.yaml
   creationDate:
