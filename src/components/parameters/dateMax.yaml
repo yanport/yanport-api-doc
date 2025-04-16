@@ -1,6 +1,7 @@
 name: dateMax
 in: query
-description: Date maximale (incluse) pour le calcul de l'évolution du stock de bien (YYYY-mm-dd)
+description: Date maximale (incluse)
 schema:
   type: string
   format: date
+  example: 2025-03-01

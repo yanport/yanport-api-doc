@@ -1,6 +1,7 @@
 name: dateMin
 in: query
-description: Date minimale (incluse) pour le calcul de l'évolution du stock de biens (YYYY-mm-dd)
+description: Date minimale (incluse)
 schema:
   type: string
   format: date
+  example: 2016-01-01

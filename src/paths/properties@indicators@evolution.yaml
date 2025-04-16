@@ -27,6 +27,8 @@ get:
     - $ref: ../components/parameters/irisIds.yaml
     - $ref: ../components/parameters/zipCodes.yaml
     - $ref: ../components/parameters/PropertyIndicatorQuery-frequency.yaml
+    - $ref: ../components/parameters/dateMin.yaml
+    - $ref: ../components/parameters/dateMax.yaml
   x-codeSamples:
     - lang: cURL
       label: evolution_price_m2
