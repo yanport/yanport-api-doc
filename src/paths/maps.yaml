@@ -21,7 +21,7 @@ get:
       description: Paramètres de recherche de biens
       schema:
         $ref: ../components/schemas/PropertySearchQuery.yaml
-    - $ref: ../components/parameters/bbox.yaml
+    - $ref: ../components/parameters/bbox-required.yaml
     - $ref: ../components/parameters/metric.yaml
     - $ref: ../components/parameters/field.yaml
     - $ref: ../components/parameters/percentiles.yaml
