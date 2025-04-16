@@ -1,0 +1,5 @@
+in: query
+name: zoneType
+schema:
+  $ref: ../../components/schemas/MapsZone-Type.yaml
+description: Type de zone

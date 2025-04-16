@@ -1,0 +1,8 @@
+in: query
+name: zoomLevel
+schema:
+  type: number
+  format: double
+  example: 7.5
+required: true
+description: Niveau de zoom

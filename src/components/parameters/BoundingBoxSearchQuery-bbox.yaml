@@ -1,8 +1,0 @@
-name: size
-in: query
-description: >-
-  Tableau de 2 points géographiques (latitude, longitude). Le premier représente
-  le point plus au Sud-Ouest, le deuxième celui le plus au Nord-Est. Exemple:
-  [-10.0, -10.0, 10.0, 10.0]
-schema:
-  type: string

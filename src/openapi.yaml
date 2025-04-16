@@ -294,6 +294,8 @@ paths:
     $ref: paths/similar-properties@percentiles.yaml
   /programs/count:
     $ref: paths/programs@count.yaml
+  /maps/properties/indicators:
+    $ref: paths/maps@properties@indicators.yaml
   /maps/properties:
     $ref: paths/maps@properties.yaml
   /maps:
