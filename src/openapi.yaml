@@ -247,6 +247,8 @@ paths:
     $ref: paths/programs@ids.yaml
   /properties/estimate:
     $ref: paths/properties@estimate.yaml
+  /properties/indicators:
+    $ref: paths/properties@indicators.yaml
   /properties/indicators/evolution:
     $ref: paths/properties@indicators@evolution.yaml
   /properties/count:
