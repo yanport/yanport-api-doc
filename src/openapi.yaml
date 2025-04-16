@@ -161,6 +161,9 @@ x-tagGroups:
   - name: MOTEUR D'ESTIMATION
     tags:
       - 'Estimation (prix, loyer, etc)'
+  - name: INDICATEURS DE MARCHE
+    tags:
+      - Indicateurs sur les biens (ancien/neuf)
   - name: STATISTIQUES DE MARCHE
     tags:
       - Statistiques sur les biens (ancien/neuf)
@@ -244,6 +247,8 @@ paths:
     $ref: paths/programs@ids.yaml
   /properties/estimate:
     $ref: paths/properties@estimate.yaml
+  /properties/indicators/evolution:
+    $ref: paths/properties@indicators@evolution.yaml
   /properties/count:
     $ref: paths/properties@count.yaml
   '/properties/count/group-by-{groupBy}':

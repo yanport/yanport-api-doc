@@ -1,0 +1,10 @@
+type: object
+properties:
+  x:
+    type: string
+    format: date
+    example: 2025-03-01
+    description: Date
+  y:
+    $ref: ./PropertyIndicator.yaml
+description: Point

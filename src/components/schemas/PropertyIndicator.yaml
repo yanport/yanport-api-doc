@@ -1,0 +1,19 @@
+type: object
+properties:
+  value:
+    type: number
+    format: double
+    example: 9841.39
+    description: Valeur de l'indicateur
+  bounds:
+    $ref: ./Bounds.yaml
+  reliability:
+    $ref: ./Reliability.yaml
+  growths:
+    type: array
+    items:
+      $ref: ./Growth.yaml
+    description: |
+      Indicateurs de croissance de l'indicateur par rapport aux points précédents
+      (présents uniquement lors d'une requête d'évolution)
+description: Indicateur
