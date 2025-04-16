@@ -37,7 +37,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/MapsResponse.yaml
+            $ref: ../components/schemas/MapsPropertiesIndicatorsResponse.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
