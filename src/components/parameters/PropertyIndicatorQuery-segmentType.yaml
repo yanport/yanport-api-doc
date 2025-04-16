@@ -1,0 +1,11 @@
+in: query
+name: segmentType
+schema:
+  type: string
+  enum:
+    - TYPOLOGY
+    - SURFACE
+    - ENERGY_PERFORMANCE
+    - FURNITURE
+  example: TYPOLOGY
+description: Type de segment

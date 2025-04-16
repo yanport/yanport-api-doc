@@ -12,44 +12,11 @@ get:
       #### Carte des durées du marché de la vente d'appartements d'une zone du nord de Nantes
         /maps/properties/indicators?type=DURATION&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
   parameters:
-    - in: query
-      name: marketingType
-      schema:
-        type: string
-        enum:
-          - RENT
-          - SALE
-        example: RENT
-      required: true
-      description: Type de marché
-    - in: query
-      name: propertyTypes
-      schema:
-        type: array
-        items:
-          type: string
-          enum:
-            - APARTMENT
-            - HOUSE
-          example: APARTMENT
-      required: true
-      description: Types de bien
-    - in: query
-      name: newBuild
-      schema:
-        type: boolean
-      required: true
-      description: Marché du neuf
-    - in: query
-      name: frequency
-      schema:
-        type: string
-        enum:
-          - MONTHS
-          - QUARTERS
-          - YEARS
-        default: MONTHS
-      description: Fréquence
+    - $ref: ../components/parameters/PropertyIndicatorQuery-type.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-marketingType.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-propertyTypes.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-newBuild.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-frequency.yaml
     - $ref: ../components/parameters/bbox.yaml
     - $ref: ../components/parameters/zoomLevel.yaml
     - $ref: ../components/parameters/zoneType.yaml

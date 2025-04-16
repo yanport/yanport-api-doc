@@ -1,0 +1,6 @@
+in: query
+name: newBuild
+schema:
+  type: boolean
+required: true
+description: Marché du neuf
