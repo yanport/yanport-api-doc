@@ -17,7 +17,7 @@ get:
     - $ref: ../components/parameters/PropertyIndicatorQuery-propertyTypes.yaml
     - $ref: ../components/parameters/PropertyIndicatorQuery-newBuild.yaml
     - $ref: ../components/parameters/PropertyIndicatorQuery-frequency.yaml
-    - $ref: ../components/parameters/bbox-required.yaml
+    - $ref: ../components/parameters/bbox.yaml
     - $ref: ../components/parameters/zoomLevel.yaml
     - $ref: ../components/parameters/zoneType.yaml
   x-codeSamples:
