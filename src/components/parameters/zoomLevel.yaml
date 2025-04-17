@@ -4,5 +4,4 @@ schema:
   type: number
   format: double
   example: 7.5
-required: true
-description: Niveau de zoom
+description: Niveau de zoom (requis si `zoneType` est vide)
