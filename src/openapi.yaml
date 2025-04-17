@@ -161,6 +161,9 @@ x-tagGroups:
   - name: MOTEUR D'ESTIMATION
     tags:
       - 'Estimation (prix, loyer, etc)'
+  - name: CARTOGRAPHIE DU MARCHE
+    tags:
+      - Génération de carte
   - name: INDICATEURS DE MARCHE
     tags:
       - Indicateurs sur les biens (ancien/neuf)
@@ -169,9 +172,6 @@ x-tagGroups:
       - Statistiques sur les biens (ancien/neuf)
       - Statistiques sur les biens similaires (ancien/neuf)
       - Statistiques sur les programmes (neuf)
-  - name: CARTOGRAPHIE DU MARCHE
-    tags:
-      - Génération de carte
   - name: REFERENTIEL GEOGRAPHIQUE
     tags:
       - Département
@@ -247,6 +247,12 @@ paths:
     $ref: paths/programs@ids.yaml
   /properties/estimate:
     $ref: paths/properties@estimate.yaml
+  /maps/properties/indicators:
+    $ref: paths/maps@properties@indicators.yaml
+  /maps/properties:
+    $ref: paths/maps@properties.yaml
+  /maps:
+    $ref: paths/maps.yaml
   /properties/indicators:
     $ref: paths/properties@indicators.yaml
   /properties/indicators/evolution:
@@ -301,12 +307,6 @@ paths:
     $ref: paths/similar-properties@percentiles.yaml
   /programs/count:
     $ref: paths/programs@count.yaml
-  /maps/properties/indicators:
-    $ref: paths/maps@properties@indicators.yaml
-  /maps/properties:
-    $ref: paths/maps@properties.yaml
-  /maps:
-    $ref: paths/maps.yaml
   /departments:
     $ref: paths/departments.yaml
   '/departments/{id}':
