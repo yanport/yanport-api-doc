@@ -1,9 +1,9 @@
 get:
   tags:
     - Indicateurs sur les biens (ancien/neuf)
-  summary: Valeur d'un indicateur (prix, loyer, etc)
+  summary: Valeur la plus récente d'un indicateur (prix, loyer, etc)
   description: >-
-    Obtenir la valeur d'un indicateur sur les biens.
+    Obtenir la valeur la plus récente d'un indicateur sur les biens.
     Un segment du marché (typologie, DPE, ...) peut être sélectionné pour affiner les critères.
 
 
