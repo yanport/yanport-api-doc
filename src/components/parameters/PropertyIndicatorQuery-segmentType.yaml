@@ -8,4 +8,4 @@ schema:
     - ENERGY_PERFORMANCE
     - FURNITURE
   example: TYPOLOGY
-description: Type de segment
+description: Type de segment (voir [les différents segments de marché](https://support.yanport.com/hc/fr/articles/19627396421404-Les-diff%C3%A9rents-segments-de-march%C3%A9))
