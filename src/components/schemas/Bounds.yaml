@@ -1,0 +1,28 @@
+type: object
+properties:
+  min:
+    type: number
+    format: double
+    example: 8257.26
+    description: Valeur très basse
+  low:
+    type: number
+    format: double
+    example: 9157.83
+    description: Valeur basse
+  mid:
+    type: number
+    format: double
+    example: 9841.39
+    description: Valeur centrale
+  high:
+    type: number
+    format: double
+    example: 10576.26
+    description: Valeur haute
+  max:
+    type: number
+    format: double
+    example: 11734.03
+    description: Valeur très haute
+description: Bornes

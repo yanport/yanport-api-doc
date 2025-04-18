@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Centiles
   description: >-
     Permet de récupérer des percentiles sur les biens.

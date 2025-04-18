@@ -1,0 +1,35 @@
+in: query
+name: segments
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - T1
+      - T2
+      - T3
+      - TO_T3
+      - T4
+      - T5
+      - FROM_T5
+      - FROM_T6
+      - TO_30
+      - FROM_30_TO_50
+      - FROM_50_TO_70
+      - FROM_70_TO_90
+      - FROM_90
+      - TO_90
+      - FROM_90_TO_110
+      - FROM_110_TO_140
+      - FROM_140
+      - A
+      - B
+      - C
+      - D
+      - E
+      - F
+      - G
+      - FURNISHED
+      - UNFURNISHED
+    example: T1
+description: Segments (voir [les différents segments de marché](https://support.yanport.com/hc/fr/articles/19627396421404-Les-diff%C3%A9rents-segments-de-march%C3%A9))

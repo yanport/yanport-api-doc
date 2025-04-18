@@ -1,0 +1,12 @@
+in: query
+name: type
+schema:
+  type: string
+  enum:
+    - PRICE_M2
+    - DURATION
+    - NEGOTIATION_MARGIN
+    - GROSS_RENTAL_YIELD
+  example: PRICE_M2
+required: true
+description: Type d'indicateur

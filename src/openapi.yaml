@@ -167,8 +167,11 @@ x-tagGroups:
   - name: INDICATEURS DE MARCHE
     tags:
       - Indicateurs sur les biens (ancien/neuf)
-      - Indicateurs sur les biens similaires (ancien/neuf)
-      - Indicateurs sur les programmes (neuf)
+  - name: STATISTIQUES DE MARCHE
+    tags:
+      - Statistiques sur les biens (ancien/neuf)
+      - Statistiques sur les biens similaires (ancien/neuf)
+      - Statistiques sur les programmes (neuf)
   - name: REFERENTIEL GEOGRAPHIQUE
     tags:
       - Département
@@ -242,6 +245,18 @@ paths:
     $ref: 'paths/programs@{id}.yaml'
   /programs/ids:
     $ref: paths/programs@ids.yaml
+  /properties/estimate:
+    $ref: paths/properties@estimate.yaml
+  /maps/properties/indicators:
+    $ref: paths/maps@properties@indicators.yaml
+  /maps/properties:
+    $ref: paths/maps@properties.yaml
+  /maps:
+    $ref: paths/maps.yaml
+  /properties/indicators:
+    $ref: paths/properties@indicators.yaml
+  /properties/indicators/evolution:
+    $ref: paths/properties@indicators@evolution.yaml
   /properties/count:
     $ref: paths/properties@count.yaml
   '/properties/count/group-by-{groupBy}':
@@ -272,14 +287,6 @@ paths:
     $ref: 'paths/properties@percentiles@group-by-{groupBy}-and-{subGroupBy}.yaml'
   /properties/percentiles/reliable-zone:
     $ref: 'paths/properties@percentiles@reliable-zone.yaml'
-  /properties/percentiles/by-similarity:
-    $ref: 'paths/properties@percentiles@by-similarity.yaml'
-  /properties/{id}/percentiles/by-similarity:
-    $ref: 'paths/properties@{id}@percentiles@by-similarity.yaml'
-  /properties/stats/by-similarity:
-    $ref: 'paths/properties@stats@by-similarity.yaml'
-  /properties/{id}/stats/by-similarity:
-    $ref: 'paths/properties@{id}@stats@by-similarity.yaml'
   /properties/distribution:
     $ref: paths/properties@distribution.yaml
   /properties/evolution:
@@ -288,16 +295,18 @@ paths:
     $ref: paths/properties@evolution@reliable-zone.yaml
   /properties/evolution/stock:
     $ref: paths/properties@evolution@stock.yaml
+  /properties/percentiles/by-similarity:
+    $ref: 'paths/properties@percentiles@by-similarity.yaml'
+  /properties/{id}/percentiles/by-similarity:
+    $ref: 'paths/properties@{id}@percentiles@by-similarity.yaml'
+  /properties/stats/by-similarity:
+    $ref: 'paths/properties@stats@by-similarity.yaml'
+  /properties/{id}/stats/by-similarity:
+    $ref: 'paths/properties@{id}@stats@by-similarity.yaml'
   /similar-properties/percentiles:
     $ref: paths/similar-properties@percentiles.yaml
   /programs/count:
     $ref: paths/programs@count.yaml
-  /properties/estimate:
-    $ref: paths/properties@estimate.yaml
-  /maps/properties:
-    $ref: paths/maps@properties.yaml
-  /maps:
-    $ref: paths/maps.yaml
   /departments:
     $ref: paths/departments.yaml
   '/departments/{id}':
@@ -342,14 +351,16 @@ paths:
     $ref: paths/parcels@ids.yaml
   /census-stats:
     $ref: paths/census-stats.yaml
+  /rent-control/check:
+    $ref: paths/rent-control@check.yaml
   /building-permits:
     $ref: paths/building-permit.yaml
-  /building-permits/count:
-    $ref: paths/building-permit@count.yaml
   '/building-permits/{id}':
     $ref: 'paths/building-permit@{id}.yaml'
   /building-permits/ids:
     $ref: paths/building-permit@ids.yaml
+  /building-permits/count:
+    $ref: paths/building-permit@count.yaml
   /agencies:
     $ref: paths/agencies.yaml
   '/agencies/{id}':
@@ -388,8 +399,6 @@ paths:
     $ref: paths/prospect-activities.yaml
   '/prospect-activities/{id}':
     $ref: 'paths/prospect-activities@{id}.yaml'
-  /rent-control/check:
-    $ref: paths/rent-control@check.yaml
 components:
   securitySchemes:
     JWT:

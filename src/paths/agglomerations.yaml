@@ -15,7 +15,7 @@ get:
       in: query
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
-    - $ref: ../components/parameters/BoundingBoxSearchQuery-bbox.yaml
+    - $ref: ../components/parameters/bbox.yaml
     - $ref: ../components/parameters/ids.yaml
     - $ref: ../components/parameters/codes.yaml
     - $ref: ../components/parameters/types.yaml

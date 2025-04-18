@@ -1,0 +1,10 @@
+in: query
+name: marketingType
+schema:
+  type: string
+  enum:
+    - RENT
+    - SALE
+  example: RENT
+required: true
+description: Type de marché

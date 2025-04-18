@@ -1,0 +1,44 @@
+get:
+  tags:
+    - Génération de carte
+  summary: Indicateurs de marché
+  description: >-
+    Retourne un GeoJSON avec des indicateurs de marché.
+
+    ### Exemples
+      #### Carte des prix au m² du marché de la vente d'appartements d'une zone du nord de Nantes
+        /maps/properties/indicators?type=PRICE_M2&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
+
+      #### Carte des durées du marché de la vente d'appartements d'une zone du nord de Nantes
+        /maps/properties/indicators?type=DURATION&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
+  parameters:
+    - $ref: ../components/parameters/PropertyIndicatorQuery-type.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-marketingType.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-propertyTypes.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-newBuild.yaml
+    - $ref: ../components/parameters/PropertyIndicatorQuery-frequency.yaml
+    - $ref: ../components/parameters/bbox.yaml
+    - $ref: ../components/parameters/zoomLevel.yaml
+    - $ref: ../components/parameters/zoneType.yaml
+  x-codeSamples:
+    - lang: cURL
+      label: maps_price_m2
+      source: |
+        curl 'https://api.yanport.com/maps/properties/indicators?type=PRICE_M2&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+    - lang: cURL
+      label: maps_duration
+      source: |
+        curl 'https://api.yanport.com/maps/properties/indicators?type=DURATION&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+  responses:
+    '200':
+      description: GeoJson de données géographiques
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/MapsPropertiesIndicatorsResponse.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

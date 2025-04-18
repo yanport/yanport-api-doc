@@ -1,0 +1,34 @@
+type: object
+properties:
+  value:
+    type: number
+    format: double
+    example: 9841.39
+    description: Valeur de l'indicateur
+  bounds:
+    $ref: ./Bounds.yaml
+  reliability:
+    $ref: ./Reliability.yaml
+  growths:
+    type: array
+    items:
+      $ref: ./Growth.yaml
+    description: |
+      Indicateurs de croissance de l'indicateur par rapport aux points précédents
+      (présents uniquement lors d'une requête d'évolution)
+example:
+  value: 9841.39
+  bounds:
+    min: 8257.26
+    low: 9157.83
+    mid: 9841.39
+    high: 10576.26
+    max: 11734.03
+  reliability:
+    methods:
+      - name: MARKET_INDICATOR
+        score: 65
+        weight: 1.0
+    score: 65
+  growths: [ ]
+description: Indicateur

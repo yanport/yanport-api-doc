@@ -1,0 +1,7 @@
+in: query
+name: zoomLevel
+schema:
+  type: number
+  format: double
+  example: 7.5
+description: Niveau de zoom (requis si `zoneType` est vide)

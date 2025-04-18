@@ -1,0 +1,10 @@
+in: query
+name: frequency
+schema:
+  type: string
+  enum:
+    - MONTHS
+    - QUARTERS
+    - YEARS
+  default: MONTHS
+description: Fréquence

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Indicateurs sur les biens (ancien/neuf)
+    - Statistiques sur les biens (ancien/neuf)
   summary: Moyenne (SubGroupBy)
   description: |-
     Permet de récupérer des moyennes sur les biens regroupés selon 2 critères.

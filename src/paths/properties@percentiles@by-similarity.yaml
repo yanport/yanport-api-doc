@@ -1,6 +1,6 @@
 post:
   tags:
-    - Indicateurs sur les biens similaires (ancien/neuf)
+    - Statistiques sur les biens similaires (ancien/neuf)
   summary: Centiles
   description: >-
     Permet de récupérer les percentiles des biens similaires.

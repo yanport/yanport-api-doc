@@ -1,0 +1,12 @@
+in: query
+name: propertyTypes
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - APARTMENT
+      - HOUSE
+    example: APARTMENT
+required: true
+description: Types de bien

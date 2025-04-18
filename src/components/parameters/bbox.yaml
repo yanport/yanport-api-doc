@@ -1,0 +1,10 @@
+in: query
+name: bbox
+schema:
+  type: string
+  example: >-
+    46.677582373658055,-5.154210305797569,43.44691443123976,7.7415115092989115
+description: >-
+  Rectangle qui délimite la zone géographique : latitude en haut à
+  gauche, longitude en haut à gauche, latitude en bas à droite, longitude en
+  bas à droite
