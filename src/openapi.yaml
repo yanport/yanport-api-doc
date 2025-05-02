@@ -237,8 +237,6 @@ paths:
     $ref: paths/properties@by-similarity@scoring.yaml
   /properties/{id}/by-similarity/scoring:
     $ref: paths/properties@{id}@by-similarity@scoring.yaml
-  /similar-properties:
-    $ref: paths/similar-properties.yaml
   /programs:
     $ref: paths/programs.yaml
   '/programs/{id}':
@@ -251,8 +249,6 @@ paths:
     $ref: paths/maps@properties@indicators.yaml
   /maps/properties:
     $ref: paths/maps@properties.yaml
-  /maps:
-    $ref: paths/maps.yaml
   /properties/indicators:
     $ref: paths/properties@indicators.yaml
   /properties/indicators/evolution:
@@ -303,8 +299,6 @@ paths:
     $ref: 'paths/properties@stats@by-similarity.yaml'
   /properties/{id}/stats/by-similarity:
     $ref: 'paths/properties@{id}@stats@by-similarity.yaml'
-  /similar-properties/percentiles:
-    $ref: paths/similar-properties@percentiles.yaml
   /programs/count:
     $ref: paths/programs@count.yaml
   /departments:
