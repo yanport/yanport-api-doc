@@ -1,0 +1,12 @@
+type: object
+properties:
+  points:
+    type: array
+    items:
+      $ref: ./CountDateHistogramPoint.yaml
+    description: Liste de points
+  type:
+    type: string
+    enum:
+      - COUNT
+    description: Type d'agrégation
