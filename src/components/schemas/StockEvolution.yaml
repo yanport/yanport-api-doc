@@ -1,4 +1,14 @@
-type: array
+type: object
 properties:
-  items:
-    $ref: ./StockEvolutionPoint.yaml
+  in:
+    type: array
+    items:
+      $ref: ./StockEvolutionPoint.yaml
+  out:
+    type: array
+    items:
+      $ref: ./StockEvolutionPoint.yaml
+  global:
+    type: array
+    items:
+      $ref: ./StockEvolutionPoint.yaml
