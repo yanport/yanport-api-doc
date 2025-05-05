@@ -1,7 +1,0 @@
-name: energyConsumptionDiagnosisLetters
-in: query
-description: Classe de diagnostic de performance énergétique (DPE)
-schema:
-  type: array
-  items:
-    $ref: ../schemas/ConsumptionLetter.yaml

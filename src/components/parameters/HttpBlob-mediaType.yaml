@@ -1,6 +1,0 @@
-name: mediaType
-in: query
-required: true
-description: Type de l'image
-schema:
-  type: string

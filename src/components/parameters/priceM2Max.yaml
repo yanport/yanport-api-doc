@@ -1,6 +1,0 @@
-name: priceM2Max
-in: query
-description: Prix au mètre carré maximum
-schema:
-  type: integer
-  format: double

@@ -1,6 +1,0 @@
-name: priceCCMin
-in: query
-description: Prix charges comprises minimum
-schema:
-  type: integer
-  format: double

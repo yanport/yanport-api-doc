@@ -1,8 +1,0 @@
-name: externalProperties
-in: query
-description: Propriétés externes
-schema:
-  type: array
-  items:
-    type: string
-    example: ID:2020-366464

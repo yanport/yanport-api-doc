@@ -1,6 +1,0 @@
-name: price
-in: query
-description: Prix
-schema:
-  type: number
-  format: double

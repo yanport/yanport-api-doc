@@ -1,3 +1,4 @@
 type: array
-items:
-  $ref: ./StockEvolutionPoint.yaml
+properties:
+  items:
+    $ref: ./StockEvolutionPoint.yaml

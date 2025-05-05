@@ -3,6 +3,6 @@ properties:
   x:
     type: string
     format: date
-  'y':
+  y:
     type: integer
     format: int64

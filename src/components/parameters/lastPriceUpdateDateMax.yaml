@@ -1,6 +1,0 @@
-name: lastPriceUpdateDateMax
-in: query
-description: 'Date limite du dernier changement de prix (YYYY-mm-ddTHH:mm:ss)'
-schema:
-  type: string
-  format: date-time

@@ -1,6 +1,0 @@
-name: priceM2CCMax
-in: query
-description: Prix au mètres carré charges comprises maximum
-schema:
-  type: integer
-  format: double

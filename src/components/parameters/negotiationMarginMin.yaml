@@ -1,6 +1,0 @@
-name: negotiationMarginMin
-in: query
-description: Marge de négociation minimum
-schema:
-  type: integer
-  format: double

@@ -1,6 +1,0 @@
-name: lastPriceDecreaseDateMin
-in: query
-description: 'Date minimale de la dernière baisse de prix (YYYY-mm-ddTHH:mm:ss)'
-schema:
-  type: string
-  format: date-time
