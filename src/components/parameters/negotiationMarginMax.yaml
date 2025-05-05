@@ -1,6 +1,0 @@
-name: negotiationMarginMax
-in: query
-description: Marge de négociation maximum
-schema:
-  type: integer
-  format: double

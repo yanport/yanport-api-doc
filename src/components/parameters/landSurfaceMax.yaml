@@ -1,6 +1,0 @@
-name: landSurfaceMax
-in: query
-description: Surface maximale du terrain
-schema:
-  type: integer
-  format: double

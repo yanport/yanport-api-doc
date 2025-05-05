@@ -1,6 +1,0 @@
-name: fileName
-in: query
-required: true
-description: Nom du fichier
-schema:
-  type: string

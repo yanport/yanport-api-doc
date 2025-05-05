@@ -1,6 +1,0 @@
-name: marketingEndDateMax
-in: query
-description: Date de fin de transaction maximale (YYYY-mm-ddTHH:mm:ss)
-schema:
-  type: string
-  format: date-time

@@ -1,5 +1,0 @@
-name: floorLevelMax
-in: query
-description: Étage maximum
-schema:
-  type: integer

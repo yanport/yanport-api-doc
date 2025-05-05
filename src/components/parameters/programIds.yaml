@@ -1,8 +1,0 @@
-name: programIds
-in: query
-description: Liste d'identifiants de programmes
-style: form
-schema:
-  type: array
-  items:
-    type: string

@@ -1,8 +1,0 @@
-type: object
-properties:
-  x:
-    type: string
-    format: date
-  'y':
-    type: integer
-    format: int64

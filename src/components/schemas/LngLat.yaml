@@ -1,8 +1,0 @@
-type: object
-properties:
-  longitude:
-    type: number
-    format: double
-  latitude:
-    type: number
-    format: double

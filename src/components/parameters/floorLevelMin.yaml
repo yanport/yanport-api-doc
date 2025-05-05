@@ -1,5 +1,0 @@
-name: floorLevelMin
-in: query
-description: Étage minimum
-schema:
-  type: integer

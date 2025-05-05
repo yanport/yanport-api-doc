@@ -1,8 +1,0 @@
-name: minDocCount
-in: query
-description: Nombre minimum de documents à matcher
-schema:
-  type: integer
-  minimum: 0
-  maximum: 100
-  default: 10

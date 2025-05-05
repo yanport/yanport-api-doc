@@ -1,6 +1,0 @@
-name: marketingStartDateMax
-in: query
-description: Date de début de transaction maximale (YYYY-mm-ddTHH:mm:ss)
-schema:
-  type: string
-  format: date-time

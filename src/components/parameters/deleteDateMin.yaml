@@ -1,6 +1,0 @@
-name: deleteDateMin
-in: query
-description: Date de fin de publication minimale (YYYY-mm-ddTHH:mm:ss)
-schema:
-  type: string
-  format: date-time

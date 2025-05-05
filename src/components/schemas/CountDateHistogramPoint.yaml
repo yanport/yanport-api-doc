@@ -1,0 +1,13 @@
+type: object
+properties:
+  x:
+    type: string
+    format: date
+  y:
+    $ref: ./CountAgg.yaml
+example:
+  x: 2025-03-01
+  y:
+    count: 0
+    growths: []
+description: Point

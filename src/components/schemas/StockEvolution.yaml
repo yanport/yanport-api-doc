@@ -1,3 +1,8 @@
-type: array
-items:
-  $ref: ./StockEvolutionPoint.yaml
+type: object
+properties:
+  in:
+    $ref: ./CountDateHistogram.yaml
+  out:
+    $ref: ./CountDateHistogram.yaml
+  global:
+    $ref: ./CountDateHistogram.yaml

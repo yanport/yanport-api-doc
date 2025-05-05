@@ -1,5 +1,0 @@
-name: newBuild
-in: query
-description: Nouvelle construction
-schema:
-  type: boolean

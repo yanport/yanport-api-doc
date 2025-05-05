@@ -1,7 +1,0 @@
-name: externalIds
-in: query
-description: Identifiants externes
-schema:
-  type: array
-  items:
-    type: string
