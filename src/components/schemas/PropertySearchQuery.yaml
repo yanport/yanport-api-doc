@@ -5,9 +5,7 @@ properties:
   queryString:
     type: string
   source:
-    type: string
-    items:
-      $ref: ./Source.yaml
+    $ref: ./Source.yaml
   ids:
     type: array
     items:
