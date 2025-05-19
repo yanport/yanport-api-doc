@@ -29,6 +29,11 @@ schema:
       - E
       - F
       - G
+      - TO_1945
+      - FROM_1945_TO_1970
+      - FROM_1970_TO_1990
+      - FROM_1990_TO_2010
+      - FROM_2010
       - FURNISHED
       - UNFURNISHED
     example: T1
