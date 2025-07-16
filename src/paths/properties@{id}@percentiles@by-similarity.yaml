@@ -52,29 +52,10 @@ post:
               type: object
               properties:
                 field:
-                  type: string
-                  description: Champ sur lequel sont calculées les percentiles
-                  enum:
-                    - price
-                    - price_hc
-                    - price_cc
-                    - price_m2
-                    - price_m2_hc
-                    - price_m2_cc
-                    - price_events_range_price
-                    - price_events_range_price_m2
-                    - price_events_count
-                    - surface
-                    - room_count
-                    - duration_days
-                    - marketing_days
-                    - fees_percent
-                    - gross_rental_yield
-                    - negotiation_margin
-                    - construction_year
+                  $ref: ../components/schemas/Field-Numeric-Property.yaml
                 percentiles:
                   type: array
-                  description: Les percentiles
+                  description: Percentiles
                   example:
                     - '10.0'
                     - '50.0'
@@ -83,11 +64,11 @@ post:
                     type: number
                     format: double
                 reliability:
-                  description: Renvoie un score de fiabilité entre 0 et 100, avec le score de chaque méthode utilisée.
+                  description: Renvoie un score de fiabilité entre 0 et 100, avec le score de chaque méthode utilisée
                   type: boolean
                   default: false
-                propertySearchQuery:
-                 $ref: ../components/schemas/PropertySearchQuery.yaml
+                searchQuery:
+                  $ref: ../components/schemas/PropertySearchQuery.yaml
   responses:
     '200':
       description: Percentiles
