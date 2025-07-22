@@ -142,10 +142,12 @@ properties:
     properties:
       surface:
         type: number
+        nullable: true
         format: double
         minimum: 5
       surfaceCarrez:
         type: number
+        nullable: true
         format: double
         minimum: 5
       areas:
@@ -158,9 +160,11 @@ properties:
               $ref: ./Area-Type.yaml
             surface:
               type: number
+              nullable: true
               format: double
             kitchenType:
               type: string
+              nullable: true
               enum:
                 - OPENED
                 - CLOSED
@@ -175,6 +179,7 @@ properties:
                   - NONE
       roomCount:
         type: integer
+        nullable: true
         minimum: 1
         maximum: 200
       areaCount:
@@ -257,17 +262,20 @@ properties:
           properties:
             level:
               type: integer
+              nullable: true
               minimum: -10
               maximum: 100
               example: 2
             surface:
               type: number
+              nullable: true
               format: double
               minimum: 1
               maximum: 10000
               example: 120
             basementType:
               type: string
+              nullable: true
               enum:
                 - PARTIAL
                 - FULL
