@@ -19,6 +19,6 @@ Congratulations :tada::tada: The Yanport team thanks you :sparkles:.
 ## Testing
 1. Generate documentation
 ```shell
-npx @redocly/openapi-cli  bundle src/openapi.yaml -o dist/openapi.yaml
+npx @redocly/cli@1.34.5  bundle src/openapi.yaml -o dist/openapi.yaml
 ```
 2. Check changes, for example with [https://editor.swagger.io](https://editor.swagger.io)
