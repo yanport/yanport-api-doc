@@ -50,63 +50,83 @@ properties:
           FURNITURE:
             type: boolean
             example: true
+            description: valide pour les appartements et maisons uniquement
           FIREPLACE:
             type: boolean
             example: true
+            description: valide pour les appartements et maisons uniquement
           AIR_CONDITIONING:
             type: boolean
             example: false
+            description: valide pour les appartements, maisons et locaux commerciaux uniquement
           ADSL:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles, maisons et locaux commerciaux uniquement
           CABLE:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles, maisons et locaux commerciaux uniquement
           FIBER:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles, maisons et locaux commerciaux uniquement
           ELEVATOR:
             type: boolean
             example: false
+            description: valide pour les immeubles uniquement
           DIGICODE:
             type: boolean
             example: false
+            description: valide pour les immeubles uniquement
           INTERCOM:
             type: boolean
             example: false
+            description: valide pour les immeubles uniquement
           VIDEOPHONE:
             type: boolean
             example: false
+            description: valide pour les immeubles uniquement
           BIKE_AREA:
             type: boolean
             example: true
+            description: valide pour les immeubles uniquement
           TWO_WHEEL_PARK:
             type: boolean
             example: false
+            description: valide pour les immeubles uniquement
           DISABLED_ACCESS:
             type: boolean
             example: false
+            description: valide pour les immeubles et maisons uniquement
           HOME_AUTOMATION:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles, maisons et locaux commerciaux uniquement
           ELECTRIC_VEHICLE_CHARGER:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles, maisons et locaux commerciaux uniquement
           SEPTIC_TANK:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles et maisons uniquement
           COMPACT_FILTER:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles et maisons uniquement
           MICRO_STATION:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles et maisons uniquement
           PHYTODEPURATION:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles et maisons uniquement
           MAINS_DRAINAGE:
             type: boolean
             example: false
+            description: valide pour les appartements, immeubles et maisons uniquement
   visual:
     type: object
     properties:
