@@ -5,6 +5,6 @@ properties:
     items:
       $ref: ./ReliableZone-zone.yaml
   query:
-    $ref: ./ReliableZone-query.yaml
+    $ref: ./ReliableZoneQuerySettings.yaml
   reliability:
     $ref: ./ReliableZone-reliability.yaml

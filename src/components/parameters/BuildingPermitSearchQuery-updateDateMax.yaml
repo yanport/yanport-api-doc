@@ -1,4 +1,4 @@
-name: updateDateMin
+name: updateDateMax
 in: query
 description: 'Date de mise à jour maximale du permis de construire dans notre base (YYYY-mm-dd)'
 schema:
