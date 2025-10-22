@@ -1,0 +1,15 @@
+name: residenceTypes
+in: query
+description: 'Type de résidence avec services spécifiques (personnes âgées, personnes en situation de handicap, étudiants, ...)'
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - SENIORS
+      - STUDENTS
+      - TOURISM
+      - SOCIAL_HOSTEL
+      - SOCIAL
+      - DISABLED_PERSONS
+      - OTHER
