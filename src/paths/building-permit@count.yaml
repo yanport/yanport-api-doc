@@ -43,6 +43,7 @@ get:
     - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantSirens.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantSirets.yaml
     - $ref: ../components/parameters/BuildingPermitSearchQuery-applicantZipCodes.yaml
+    - $ref: ../components/parameters/BuildingPermitSearchQuery-residenceTypes.yaml
     - $ref: ../components/parameters/existingFields.yaml
     - $ref: ../components/parameters/missingFields.yaml
     - name: geoSearchQueryParam

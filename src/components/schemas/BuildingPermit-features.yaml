@@ -62,4 +62,15 @@ properties:
         type: integer
   housingCount:
     $ref: ./BuildingPermit-housingCount.yaml
-
+  residenceTypes:
+    type: array
+    items:
+      type: string
+      enum:
+        - SENIORS
+        - STUDENTS
+        - TOURISM
+        - SOCIAL_HOSTEL
+        - SOCIAL
+        - DISABLED_PERSONS
+        - OTHER
