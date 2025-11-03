@@ -1,0 +1,6 @@
+type: object
+properties:
+  duration:
+    $ref: ./Estimation-marketIndicator.yaml
+  marketStress:
+    $ref: ./Estimation-marketIndicator.yaml

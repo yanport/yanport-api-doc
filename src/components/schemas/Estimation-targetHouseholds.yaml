@@ -1,0 +1,8 @@
+type: object
+properties:
+  censusStats:
+    $ref: ./CensusStats.yaml
+  budgets:
+    type: array
+    items:
+      $ref: ./Budget.yaml

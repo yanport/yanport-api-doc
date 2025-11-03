@@ -13,11 +13,20 @@ properties:
     $ref: ./ProductType.yaml
   property:
     $ref: ./Property.yaml
+  valuations:
+    $ref: ./Estimation-valuations.yaml
+  marketStats:
+    $ref: ./Estimation-marketStats.yaml
+  targetHouseholds:
+    $ref: ./Estimation-targetHouseholds.yaml
+  similarProperties:
+    $ref: ./Estimation-similarProperties.yaml
   creationDate:
     type: string
     format: date-time
   estimates:
     type: array
+    deprecated: true
     items:
       type: object
       properties:

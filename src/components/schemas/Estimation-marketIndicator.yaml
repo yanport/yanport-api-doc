@@ -1,0 +1,6 @@
+type: object
+properties:
+  bounds:
+    $ref: ./Bounds.yaml
+  reliability:
+    $ref: ./Reliability.yaml
