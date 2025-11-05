@@ -37,3 +37,8 @@ properties:
           $ref: ./Sale.yaml
         rent:
           $ref: ./Rent.yaml
+required:
+  - userId
+  - organizationId
+  - product
+  - property
