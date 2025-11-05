@@ -1,4 +1,5 @@
 type: object
+deprecated: true
 properties:
   estimate:
     $ref: ./Estimate-rent.yaml

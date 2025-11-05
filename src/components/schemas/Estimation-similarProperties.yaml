@@ -1,0 +1,14 @@
+type: object
+properties:
+  onMarket:
+    type: array
+    items:
+      $ref: ./SimilarProperty.yaml
+  offMarket:
+    type: array
+    items:
+      $ref: ./SimilarProperty.yaml
+  outdated:
+    type: array
+    items:
+      $ref: ./SimilarProperty.yaml

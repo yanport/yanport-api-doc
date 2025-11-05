@@ -17,7 +17,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Study.yaml
+            $ref: ../components/schemas/Estimation.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
@@ -41,7 +41,7 @@ put:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Study.yaml
+            $ref: ../components/schemas/Estimation.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

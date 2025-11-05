@@ -2,7 +2,7 @@ post:
   tags:
     - Estimation
   summary: Ajouter une estimation
-  description: Retourne l'estimation créée avec son identifiant, l'horodatage et une estimation par marché
+  description: Retourne l’estimation créée avec son identifiant, l'horodatage et les données des sections complétées
   requestBody:
     required: true
     description: Formulaire pour la création d'une estimation

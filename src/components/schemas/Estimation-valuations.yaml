@@ -1,7 +1,6 @@
 type: object
-deprecated: true
 properties:
   price:
     $ref: ./EstimationResponse.yaml
-  marketingDuration:
+  negotiationMargin:
     $ref: ./EstimationResponse.yaml
