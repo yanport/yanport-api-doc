@@ -14,7 +14,7 @@ get:
       in: query
       description: Paramètres géographiques de recherche de parcelles
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: Liste des parcelles trouvées

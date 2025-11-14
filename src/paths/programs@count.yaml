@@ -61,7 +61,7 @@ get:
       in: query
       description: Paramètres géographiques de recherche de programmes
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: Le nombre de programmes

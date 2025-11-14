@@ -21,7 +21,7 @@ get:
       in: query
       description: Paramètres géographiques de recherche de codes postaux
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: La liste des codes postaux

@@ -32,7 +32,7 @@ get:
       in: query
       description: Paramètres géographiques de recherche d'agences
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: Les agences trouvées

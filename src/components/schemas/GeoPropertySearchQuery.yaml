@@ -1,0 +1,17 @@
+type: object
+properties:
+  precision:
+    type: string
+    enum:
+      - ACCURATE
+      - APPROXIMATE
+      - ADMINISTRATIVE
+    default: ACCURATE
+    description: >-
+      ACCURATE : uniquement les biens dont la localisation est précisément connue (valeur par défaut)
+      APPROXIMATE : les biens dont la localisation est précise ou approximative
+      ADMINISTRATIVE : les biens dont la localisation est précise ou approximative ou simplement rattachés à un référentiel géographique administratif
+  pointSearchQuery:
+    $ref: ./PointSearchQuery.yaml
+  boundingBoxSearchQuery:
+    $ref: ./BoundingBoxSearchQuery.yaml
