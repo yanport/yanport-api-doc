@@ -21,7 +21,7 @@ get:
     - $ref: ../components/parameters/types.yaml
     - $ref: ../components/parameters/regionCodes.yaml
     - $ref: ../components/parameters/departmentCodes.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche d'agglomérations
       schema:

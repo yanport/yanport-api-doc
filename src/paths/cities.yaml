@@ -19,7 +19,7 @@ get:
     - $ref: ../components/parameters/CitySearchQuery-inseeCodes.yaml
     - $ref: ../components/parameters/CitySearchQuery-deptCodes.yaml
     - $ref: ../components/parameters/excludedIds.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de villes
       schema:

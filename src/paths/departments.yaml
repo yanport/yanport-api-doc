@@ -21,7 +21,7 @@ get:
     - $ref: ../components/parameters/deptCodes.yaml
     - $ref: ../components/parameters/zipCodes.yaml
     - $ref: ../components/parameters/codes.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de départements
       schema:

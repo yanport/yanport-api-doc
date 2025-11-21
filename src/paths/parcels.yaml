@@ -10,7 +10,7 @@ get:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/bbox.yaml
     - $ref: ../components/parameters/inseeCodes.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de parcelles
       schema:

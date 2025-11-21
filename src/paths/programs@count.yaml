@@ -57,7 +57,7 @@ get:
     - $ref: ../components/parameters/ProgramSearchQuery-activeLotCountMax.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-stockPreview.yaml
     - $ref: ../components/parameters/ProgramSearchQuery-stages.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de programmes
       schema:

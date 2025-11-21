@@ -46,7 +46,7 @@ get:
     - $ref: ../components/parameters/BuildingPermitSearchQuery-residenceTypes.yaml
     - $ref: ../components/parameters/existingFields.yaml
     - $ref: ../components/parameters/missingFields.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de permis de construire
       schema:

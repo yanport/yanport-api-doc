@@ -17,7 +17,7 @@ get:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/cityIds.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de codes postaux
       schema:

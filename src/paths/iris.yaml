@@ -20,7 +20,7 @@ get:
     - $ref: ../components/parameters/deptCodes.yaml
     - $ref: ../components/parameters/irisTypes.yaml
     - $ref: ../components/parameters/codes.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche d'iris
       schema:
