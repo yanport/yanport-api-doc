@@ -3,7 +3,7 @@ get:
     - Encadrement des loyers
   summary: Vérifier un loyer
   description: >-
-    Vérifie si un loyer respecte l'encadrement des loyers vis-à-vis de la législation
+    Vérifie si un loyer respecte l'encadrement des loyers vis-à-vis de la législation. Nous nous basons sur notre [référentiel d'IRIS](#tag/IRIS) pour retrouver une zone à partir d'une adresse.  Si la précision utilisée pour le zonage dans l'arrété préfectoral est différente cela peut se traduire par un décalage en bordure de zone.
 
     ### Exemples
       #### Vérifier le loyer de 1000€ d'un appartement non meublé de 2 pièces de 30 m² construit en 1971 dans le quartier Gros Caillou à Paris
