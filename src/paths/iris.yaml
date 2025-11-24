@@ -3,7 +3,7 @@ get:
     - IRIS
   summary: Récupérer des iris
   description: >-
-    Retourne des iris selon différents critères
+    Retourne des iris selon différents critères. [Données IGN Contours... IRIS®](https://geoservices.ign.fr/contoursiris).
 
     ### Exemple
       #### Les iris de la ville de Pau de type habitation

@@ -7,6 +7,7 @@
 
 # testing
 dist/
+/redoc-static.html
 
 # System Files
 .DS_Store

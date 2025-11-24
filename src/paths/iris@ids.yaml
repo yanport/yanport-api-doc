@@ -2,7 +2,8 @@ get:
   tags:
     - IRIS
   summary: Récupérer des iris (ID)
-  description: Retourne des iris selon leurs identifiants
+  description: >-
+    Retourne des iris selon leurs identifiants. [Données IGN Contours... IRIS®](https://geoservices.ign.fr/contoursiris).
   parameters:
     - name: ids
       in: query
