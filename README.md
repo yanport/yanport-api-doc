@@ -17,8 +17,12 @@ Thank you for investing your time in contributing to our project! Any contributi
 Congratulations :tada::tada: The Yanport team thanks you :sparkles:. 
 
 ## Testing
+
 1. Generate documentation
 ```shell
 npx @redocly/cli@1.34.5  bundle src/openapi.yaml -o dist/openapi.yaml
 ```
-2. Check changes, for example with [https://editor.swagger.io](https://editor.swagger.io)
+2. Check changes, using [https://editor.swagger.io](https://editor.swagger.io) or by generating static HTML locally
+```shell
+npx @redocly/cli@1.34.5 build-docs dist/openapi.yaml
+```

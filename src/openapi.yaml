@@ -179,10 +179,7 @@ x-tagGroups:
       - Commune
       - Code postal
       - Quartier
-      - name: IRIS
-        externalDocs:
-          description: Données IGN Contours... IRIS®.
-          url: https://geoservices.ign.fr/contoursiris
+      - IRIS
       - Parcelle
   - name: STATISTIQUES SOCIOECONOMIQUES
     tags:
