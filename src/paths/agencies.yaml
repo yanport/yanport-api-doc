@@ -28,11 +28,11 @@ get:
     - $ref: ../components/parameters/AgencySearchQuery-rentPropertyCountMin.yaml
     - $ref: ../components/parameters/AgencySearchQuery-rentPropertyCountMax.yaml
     - $ref: ../components/parameters/AgencySearchQuery-active.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche d'agences
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: Les agences trouvées

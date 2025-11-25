@@ -21,11 +21,11 @@ get:
     - $ref: ../components/parameters/deptCodes.yaml
     - $ref: ../components/parameters/zipCodes.yaml
     - $ref: ../components/parameters/codes.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de départements
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: La liste des départements

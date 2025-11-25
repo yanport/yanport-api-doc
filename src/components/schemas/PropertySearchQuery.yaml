@@ -369,4 +369,4 @@ properties:
       example:
         ID:externalId
   geoSearchQuery:
-    $ref: ./GeoSearchQuery.yaml
+    $ref: ./GeoPropertySearchQuery.yaml

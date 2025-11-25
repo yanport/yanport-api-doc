@@ -8,6 +8,3 @@ properties:
     format: double
   radius:
     type: string
-  approximate:
-    type: boolean
-    default: false

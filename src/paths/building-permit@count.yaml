@@ -46,11 +46,11 @@ get:
     - $ref: ../components/parameters/BuildingPermitSearchQuery-residenceTypes.yaml
     - $ref: ../components/parameters/existingFields.yaml
     - $ref: ../components/parameters/missingFields.yaml
-    - name: geoSearchQueryParam
+    - name: pointSearchQueryParam
       in: query
       description: Paramètres géographiques de recherche de permis de construire
       schema:
-        $ref: ../components/schemas/GeoSearchQuery.yaml
+        $ref: ../components/schemas/PointSearchQuery.yaml
   responses:
     '200':
       description: Le nombre de permis de construire
