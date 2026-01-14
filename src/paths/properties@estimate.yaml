@@ -121,7 +121,7 @@ get:
         type: integer
     - name: generalState
       in: query
-      description: "Etat général du bien (maison et appartement uniquement)."
+      description: "Etat général du bien (maison et appartement uniquement). Dans la version actuelle du moteur d'estimation l'état VERY_BAD (resp. VERY_GOOD) est assimilé à BAD (resp. GOOD)."
       schema:
         type: string
         enum:
