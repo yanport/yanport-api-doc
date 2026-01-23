@@ -9,4 +9,4 @@ schema:
     - CONSTRUCTION_PERIOD
     - FURNITURE
   example: TYPOLOGY
-description: Type de segment (voir [les différents segments de marché](https://support.yanport.com/hc/fr/articles/19627396421404-Les-diff%C3%A9rents-segments-de-march%C3%A9))
+description: Type de segment (voir [les différents segments de marché](https://support.yanport.com/hc/fr/articles/21315793909276-Comment-puis-je-segmenter-ou-filtrer-les-donn%C3%A9es-d-un-indicateur))
