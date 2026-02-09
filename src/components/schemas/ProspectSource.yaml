@@ -1,0 +1,6 @@
+type: string
+enum:
+  - ONLINE_ADS
+  - FIELD_PROSPECTING
+  - WEBSITE_ESTIMATOR
+  - WEBSITE_CONTACT

@@ -1,6 +1,6 @@
 name: doneDateMax
 in: query
-description: description de doneDateMax
+description: Date de fin maximale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date

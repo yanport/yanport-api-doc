@@ -1,6 +1,6 @@
 name: dueDateMin
 in: query
-description: description de dueDateMin
+description: Date d'échéance minimale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date

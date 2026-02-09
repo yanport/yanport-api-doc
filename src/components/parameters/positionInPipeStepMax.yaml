@@ -1,0 +1,6 @@
+name: positionInPipeStepMax
+in: query
+description: Position maximale dans le pipe
+schema:
+  type: number
+  format: double

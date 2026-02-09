@@ -1,0 +1,6 @@
+name: archiveDateMin
+in: query
+description: Date d'archivage minimale (YYYY-mm-ddTHH:mm:ss)
+schema:
+  type: string
+  format: date

@@ -38,6 +38,10 @@ get:
     - $ref: ../components/parameters/userIds.yaml
     - $ref: ../components/parameters/propertyIds.yaml
     - $ref: ../components/parameters/productTypes.yaml
+    - $ref: ../components/parameters/prospectStatuses.yaml
+    - $ref: ../components/parameters/prospectLostReasons.yaml
+    - $ref: ../components/parameters/creationDateMin.yaml
+    - $ref: ../components/parameters/creationDateMax.yaml
     - $ref: ../components/parameters/dueDateMin.yaml
     - $ref: ../components/parameters/dueDateMax.yaml
     - $ref: ../components/parameters/missingFields.yaml
@@ -47,6 +51,12 @@ get:
     - $ref: ../components/parameters/savedSearchIds.yaml
     - $ref: ../components/parameters/organizationIds.yaml
     - $ref: ../components/parameters/prospectSource.yaml
+    - $ref: ../components/parameters/pipeIds.yaml
+    - $ref: ../components/parameters/pipeStepIds.yaml
+    - $ref: ../components/parameters/positionInPipeStepMin.yaml
+    - $ref: ../components/parameters/positionInPipeStepMax.yaml
+    - $ref: ../components/parameters/archiveDateMin.yaml
+    - $ref: ../components/parameters/archiveDateMax.yaml
   responses:
     '200':
       description: Les prospects correspondant

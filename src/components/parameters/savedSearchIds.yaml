@@ -1,6 +1,6 @@
 name: savedSearchIds
 in: query
-description: Les identifiants sauvegardés
+description: Identifiants d'alertes
 schema:
   type: string
   format: uuid
