@@ -2,5 +2,7 @@ name: pipeStepIds
 in: query
 description: Identifiants d'étapes de pipe
 schema:
-  type: string
-  format: uuid
+  type: array
+  items:
+    type: string
+    format: uuid

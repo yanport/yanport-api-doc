@@ -2,5 +2,7 @@ name: savedSearchIds
 in: query
 description: Identifiants d'alertes
 schema:
-  type: string
-  format: uuid
+  type: array
+  items:
+    type: string
+    format: uuid

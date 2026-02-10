@@ -2,5 +2,7 @@ name: pipeIds
 in: query
 description: Identifiants de pipes
 schema:
-  type: string
-  format: uuid
+  type: array
+  items:
+    type: string
+    format: uuid
