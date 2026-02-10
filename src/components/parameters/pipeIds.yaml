@@ -1,6 +1,6 @@
-name: savedSearchIds
+name: pipeIds
 in: query
-description: Identifiants d'alertes
+description: Identifiants de pipes
 schema:
   type: array
   items:

@@ -1,6 +1,6 @@
 name: dueDateMax
 in: query
-description: description de dueDateMax
+description: Date d'échéance maximale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date

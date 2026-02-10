@@ -1,0 +1,7 @@
+name: lostReasons
+in: query
+description: Raisons de perte d'un prospect
+schema:
+  type: array
+  items:
+    $ref: ../schemas/ProspectLostReason.yaml

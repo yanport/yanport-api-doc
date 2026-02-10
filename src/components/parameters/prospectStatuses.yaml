@@ -1,0 +1,7 @@
+name: statuses
+in: query
+description: Statuts du prospect
+schema:
+  type: array
+  items:
+    $ref: ../schemas/ProspectStatus.yaml

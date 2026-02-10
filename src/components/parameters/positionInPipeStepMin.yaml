@@ -1,0 +1,6 @@
+name: positionInPipeStepMin
+in: query
+description: Position minimale dans le pipe
+schema:
+  type: number
+  format: double

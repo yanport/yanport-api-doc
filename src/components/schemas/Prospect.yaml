@@ -11,6 +11,7 @@ properties:
     format: int64
   propertyId:
     type: string
+    format: uuid
   product:
     $ref: ./ProductType.yaml
   dealer:
@@ -21,29 +22,47 @@ properties:
   dueDate:
     type: string
     format: date-time
+  nextActivityId:
+    type: string
+    format: uuid
   doneDate:
     type: string
     format: date-time
   status:
-    type: string
-    enum:
-      - WON
-      - LOST
-      - UNKNOWN
+    $ref: ./ProspectStatus.yaml
   lostReason:
-    type: string
-    enum:
-      - REFUSAL
-      - UNREACHABLE
-      - MARKETING_DONE
-      - IN_MANDATE
-      - OTHER
+    $ref: ./ProspectLostReason.yaml
   savedSearchIds:
-    type: string
+    type: array
+    items:
+      type: string
+      format: uuid
   source:
+    $ref: ./ProspectSource.yaml
+  pipeId:
     type: string
-    enum:
-      - ONLINE_ADS
-      - FIELD_PROSPECTING
-      - WEBSITE_ESTIMATOR
-      - WEBSITE_CONTACT
+    format: uuid
+  pipeStepId:
+    type: string
+    format: uuid
+  pipeStepPosition:
+    type: integer
+  positionInPipeStep:
+    type: number
+    format: double
+  archiveDate:
+    type: string
+    format: date-time
+  fees:
+    type: number
+    format: int64
+  prospectionConsent:
+    $ref: ./ProspectionConsent.yaml
+  propertyPros:
+    type: array
+    items:
+      type: string
+  propertyCons:
+    type: array
+    items:
+      type: string

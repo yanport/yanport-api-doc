@@ -1,6 +1,6 @@
-name: savedSearchIds
+name: pipeStepIds
 in: query
-description: Identifiants d'alertes
+description: Identifiants d'étapes de pipe
 schema:
   type: array
   items:

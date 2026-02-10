@@ -1,0 +1,6 @@
+name: archiveDateMax
+in: query
+description: Date d'archivage maximale (YYYY-mm-ddTHH:mm:ss)
+schema:
+  type: string
+  format: date

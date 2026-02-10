@@ -1,0 +1,7 @@
+type: string
+enum:
+  - REFUSAL
+  - UNREACHABLE
+  - MARKETING_DONE
+  - IN_MANDATE
+  - OTHER

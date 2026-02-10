@@ -1,6 +1,6 @@
 name: doneDateMin
 in: query
-description: description de doneDateMin
+description: Date de fin minimale (YYYY-mm-ddTHH:mm:ss)
 schema:
   type: string
   format: date
