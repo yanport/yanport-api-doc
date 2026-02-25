@@ -13,10 +13,7 @@ properties:
       - BUILDING
       - PARKING
   price:
-    items:
-      $ref: ./Range.yaml
-    minimum: 10
-    maximum: 100000000
+    $ref: ./Range.yaml
   surface:
     type: number
     format: double

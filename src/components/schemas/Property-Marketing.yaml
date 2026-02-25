@@ -11,10 +11,7 @@ properties:
     maximum: 100000000
     example: 253000
   priceRange:
-    items:
-      $ref: ./Range.yaml
-    minimum: 10
-    maximum: 100000000
+    $ref: ./Range.yaml
   sellingPrice:
     type: number
     format: double
@@ -22,10 +19,7 @@ properties:
     maximum: 100000000
     example: 250000
   sellingPriceRange:
-    items:
-      $ref: ./Range.yaml
-    minimum: 10
-    maximum: 100000000
+    $ref: ./Range.yaml
   priceHC:
     type: number
     format: double
@@ -52,13 +46,9 @@ properties:
     type: number
     format: double
   priceM2Range:
-    items:
-      $ref: ./Range.yaml
+    $ref: ./Range.yaml
   negotiationMargin:
-    items:
-      $ref: ./Range.yaml
-    minimum: 0
-    maximum: 100
+    $ref: ./Range.yaml
   priceEvents:
     type: array
     items:

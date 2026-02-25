@@ -11,10 +11,7 @@ properties:
     items:
       $ref: ./ActiveLotCountEvent.yaml
   priceRange:
-    items:
-      $ref: ./Range.yaml
-    minimum: 10
-    maximum: 100000000
+    $ref: ./Range.yaml
   surfaceRange:
     $ref: ./Range.yaml
   roomCountRange:
