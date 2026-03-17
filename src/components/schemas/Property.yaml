@@ -24,6 +24,7 @@ properties:
           - ID
           - REALTY_ID
           - VERSION
+          - BAN_INTEROP_KEY
       value:
         type: string
     required:
