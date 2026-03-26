@@ -1,0 +1,26 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  organizationId:
+    type: integer
+    format: int64
+  agencyId:
+    type: integer
+    format: int64
+  userIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  steps:
+    type: array
+    items:
+      $ref: ./PipeStep.yaml
+  creationDate:
+    type: string
+    format: date-time
+  updateDate:
+    type: string
+    format: date-time
