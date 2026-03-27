@@ -11,14 +11,7 @@ get:
       schema:
         type: integer
         format: int64
-    - name: agencyIds
-      in: query
-      description: Liste d'identifiants d'agences
-      schema:
-        type: array
-        items:
-          type: integer
-          format: int64
+    - $ref: ../components/parameters/agencyIds.yaml
   responses:
     '200':
       description: L'utilisateur créé

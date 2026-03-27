@@ -1,8 +1,0 @@
-name: agencyIds
-in: query
-description: Liste d'identifiants d'agences
-schema:
-  type: array
-  items:
-    type: integer
-    format: int64
