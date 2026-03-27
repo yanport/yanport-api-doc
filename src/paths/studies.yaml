@@ -57,7 +57,7 @@ get:
     - $ref: ../components/parameters/q.yaml
     - $ref: ../components/parameters/userIds.yaml
     - $ref: ../components/parameters/productTypes.yaml
-    - $ref: ../components/parameters/StudySearchQuery-agencyIds.yaml
+    - $ref: ../components/parameters/agencyIds.yaml
     - $ref: ../components/parameters/organizationIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-externalIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-marketingTypes.yaml

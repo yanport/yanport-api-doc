@@ -385,6 +385,8 @@ paths:
     $ref: paths/opportunities.yaml
   /opportunities/{id}:
     $ref: paths/opportunities@{id}.yaml
+  /pipes:
+    $ref: paths/pipes.yaml
   /prospects:
     $ref: paths/prospects.yaml
   '/prospects/{id}':

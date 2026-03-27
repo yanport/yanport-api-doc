@@ -1,0 +1,36 @@
+get:
+  tags:
+    - Prospects
+  summary: Récupérer des pipes
+  description: Retourne des pipes (Kanban) selon plusieurs critères.
+  parameters:
+    - name: searchQueryParam
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/organizationIds.yaml
+    - $ref: ../components/parameters/agencyIds.yaml
+    - $ref: ../components/parameters/userIds.yaml
+    - $ref: ../components/parameters/productTypes.yaml
+    - $ref: ../components/parameters/updateDateMin.yaml
+    - $ref: ../components/parameters/updateDateMax.yaml
+    - $ref: ../components/parameters/creationDateMin.yaml
+    - $ref: ../components/parameters/creationDateMax.yaml
+  responses:
+    '200':
+      description: Les pipes correspondant
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/Pipe.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

@@ -1,6 +1,6 @@
 name: agencyIds
 in: query
-description: Liste d'identifiants d'agences
+description: Identifiants d'agences
 schema:
   type: array
   items:
