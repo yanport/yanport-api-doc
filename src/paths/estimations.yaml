@@ -9,10 +9,7 @@ post:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            properties:
-              $ref: ../components/schemas/Estimation.yaml
+          $ref: ../components/schemas/Estimation.yaml
   responses:
     '200':
       description: L'estimation a été créée
