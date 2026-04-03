@@ -16,7 +16,7 @@ properties:
         example: "123456"
       PIPEDRIVE:
         type: string
-      PRODPAD:
+      PRODUCT_FRUIT:
         type: string
       SENDINBLUE:
         type: string
