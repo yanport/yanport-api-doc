@@ -68,10 +68,7 @@ post:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            properties:
-              $ref: ../components/schemas/Property.yaml
+          $ref: ../components/schemas/Property.yaml
   responses:
     '200':
       description: Le bien a été créé

@@ -9,10 +9,7 @@ post:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            properties:
-              $ref: ../components/schemas/Opportunity.yaml
+          $ref: ../components/schemas/Opportunity.yaml
   responses:
     '201':
       description: L'opportunité a été créée
