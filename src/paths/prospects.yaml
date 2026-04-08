@@ -9,10 +9,7 @@ post:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            prospects:
-              $ref: ../components/schemas/Prospect.yaml
+          $ref: ../components/schemas/Prospect.yaml
   responses:
     '200':
       description: Le prospect a été créé
