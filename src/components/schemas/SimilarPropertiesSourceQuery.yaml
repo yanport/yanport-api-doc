@@ -1,0 +1,10 @@
+type: object
+properties:
+  searchQuery:
+    $ref: ./PropertySearchQuery.yaml
+  weights:
+    type: array
+    items:
+      $ref: ./Weight.yaml
+  active:
+    type: boolean

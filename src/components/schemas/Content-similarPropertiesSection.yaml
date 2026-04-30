@@ -1,0 +1,10 @@
+type: object
+properties:
+  sourceQueries:
+    type: array
+    items:
+      $ref: ./SimilarPropertiesSourceQuery.yaml
+  properties:
+    type: array
+    items:
+      $ref: ./SimilarProperty.yaml
