@@ -9,6 +9,7 @@ schema:
     - GROSS_RENTAL_YIELD
     - SOLD_STOCK
     - SUPPLY_STOCK
+    - MARKET_STRESS
   example: PRICE_M2
 required: true
 description: Type d'indicateur
