@@ -13,12 +13,13 @@ properties:
     type: number
     format: double
     example: 2.75
-    description: Différence en pourcentage entre la période actuelle et la période de référence
+    description: Différence en pourcentage entre la période actuelle et la période de référence (absent pour le type d'indicateur MARKET_STRESS)
   type:
     type: string
     enum:
       - INTERVAL
       - YEAR
+      - CUMULATIVE
     example: INTERVAL
-    description: Type de croissance (sur la période précédente, sur la période de l'année précédente)
+    description: Type de croissance (CUMULATIVE est absent pour le type d'indicateur MARKET_STRESS)
 description: Croissance de l'indicateur
