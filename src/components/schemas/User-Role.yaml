@@ -1,5 +1,11 @@
 type: string
-enum:
-  - USER
-  - MANAGER
-  - ADMIN
+oneOf:
+  - enum:
+      - USER
+      - MANAGER
+      - ADMIN
+  - enum:
+      - CONSULTANT
+      - ASSISTANT
+    description: deprecated, replaced by USER
+    deprecated: true
