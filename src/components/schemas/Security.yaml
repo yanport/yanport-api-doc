@@ -8,6 +8,9 @@ properties:
     type: array
     items:
       $ref: ./User-Role.yaml
+    description: |
+      - `CONSULTANT` : obsolète, utiliser `USER`.
+      - `ASSISTANT` : obsolète, utiliser `USER`.
   emailChecked:
     type: boolean
   authenticationModes:

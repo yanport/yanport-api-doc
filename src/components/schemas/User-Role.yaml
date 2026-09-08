@@ -1,5 +1,10 @@
 type: string
 enum:
-  - CONSULTANT
+  - USER
   - MANAGER
+  - ADMIN
+  - CONSULTANT
+  - ASSISTANT
+x-deprecated-enum-values:
+  - CONSULTANT
   - ASSISTANT
