@@ -1,0 +1,8 @@
+name: intervalField
+in: query
+description: Champ de date utilisé pour les regroupements
+required: true
+schema:
+  type: string
+  enum:
+    - DATE

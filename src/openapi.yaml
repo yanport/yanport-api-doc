@@ -194,6 +194,9 @@ x-tagGroups:
     tags:
       - 'Etablissement (agence, promoteur, etc)'
       - Réseaux de mandataires
+  - name: FACTURATION
+    tags:
+      - Consommation
   - name: INTEGRATION DE NOS SOLUTIONS
     tags:
       - Utilisateurs
@@ -395,6 +398,12 @@ paths:
     $ref: paths/prospect-activities.yaml
   '/prospect-activities/{id}':
     $ref: 'paths/prospect-activities@{id}.yaml'
+  /product-sku-records/evolution:
+    $ref: 'paths/product-sku-records@evolution.yaml'
+  /product-sku-records/evolution/group-by-{groupBy}:
+    $ref: 'paths/product-sku-records@evolution@group-by-{groupBy}.yaml'
+  /product-sku-records/sum:
+    $ref: 'paths/product-sku-records@sum.yaml'
 components:
   securitySchemes:
     JWT:

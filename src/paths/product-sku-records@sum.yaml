@@ -1,0 +1,23 @@
+get:
+  tags:
+    - Consommation
+  summary: Somme de la consommation
+  description: Permet de calculer le montant total consommé.
+  parameters:
+    - $ref: ../components/parameters/ProductSkuRecordDateHistogramQuery-field.yaml
+    - name: searchQuery
+      in: query
+      description: Paramètres de filtre sur les SKU consommés
+      schema:
+        $ref: ../components/schemas/ProductSkuRecordSearchQuery.yaml
+  responses:
+    '200':
+      description: Une liste de points
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DateHistogram.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

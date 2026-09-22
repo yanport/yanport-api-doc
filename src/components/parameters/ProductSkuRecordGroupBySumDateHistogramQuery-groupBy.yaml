@@ -1,0 +1,8 @@
+name: groupBy
+in: path
+description: Grouper par
+required: true
+schema:
+  type: string
+  enum:
+    - PRODUCT_SKU

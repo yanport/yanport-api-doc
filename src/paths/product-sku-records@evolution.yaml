@@ -1,0 +1,34 @@
+get:
+  tags:
+    - Consommation
+  summary: Évolution de la consommation
+  description: Permet de construire une courbe d'évolution des coûts liés à la consommation des SKU.
+  parameters:
+    - $ref: ../components/parameters/metric.yaml
+    - $ref: ../components/parameters/ProductSkuRecordDateHistogramQuery-field.yaml
+    - $ref: ../components/parameters/percentiles.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-interval.yaml
+    - $ref: ../components/parameters/ProductSkuRecordDateHistogramQuery-intervalField.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalUnit.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-intervalOffset.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-extendedBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMin.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-hardBoundMax.yaml
+    - $ref: ../components/parameters/DateHistogramQuery-timeZone.yaml
+    - name: searchQuery
+      in: query
+      description: Paramètres de filtre sur les SKU consommés
+      schema:
+        $ref: ../components/schemas/ProductSkuRecordSearchQuery.yaml
+  responses:
+    '200':
+      description: Une liste de points
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DateHistogram.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
