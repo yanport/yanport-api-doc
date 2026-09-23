@@ -10,7 +10,7 @@ properties:
   principalIds:
     type: array
     description: Liste des identifiants de token API ou d'utilisateurs à inclure dans la recherche.
-    example: 5597605959192576
+    example: 1234567891234567
     items:
       type: integer
       format: int64
