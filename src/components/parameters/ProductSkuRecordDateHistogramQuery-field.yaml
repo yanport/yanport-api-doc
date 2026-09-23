@@ -1,0 +1,10 @@
+name: field
+in: query
+required: true
+description: |
+  Champ sur lequel sont calculées les statistiques
+schema:
+  type: string
+  enum:
+    - CREDITS_COST
+    - CURRENCY_COST

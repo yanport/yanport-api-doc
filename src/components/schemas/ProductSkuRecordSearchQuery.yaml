@@ -1,0 +1,39 @@
+type: object
+properties:
+  searchQueryParam:
+    $ref: ./SearchQueryParam.yaml
+  organizationIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  principalIds:
+    type: array
+    description: Liste des identifiants de token API ou d'utilisateurs à inclure dans la recherche.
+    example: 1234567891234567
+    items:
+      type: integer
+      format: int64
+  subscriptionIds:
+    type: array
+    items:
+      type: string
+  productSkus:
+    type: array
+    items:
+      $ref: ./ProductSku.yaml
+  products:
+    type: array
+    items:
+      $ref: ./ProductType.yaml
+  dateMin:
+    type: string
+    format: date-time
+  dateMax:
+    type: string
+    format: date-time
+  missingFields:
+    type: array
+    description: Liste des champs manquants dans les résultats de recherche
+    items:
+      $ref: ./ProductType.yaml
