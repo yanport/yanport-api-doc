@@ -1,0 +1,8 @@
+type: object
+required:
+  - budget
+properties:
+  budget:
+    $ref: ./Opportunity-Budget.yaml
+  valuations:
+    $ref: ./Opportunity-Valuations.yaml

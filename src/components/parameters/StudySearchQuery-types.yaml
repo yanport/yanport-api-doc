@@ -1,0 +1,7 @@
+name: types
+in: query
+description: Types d'étude
+schema:
+  type: array
+  items:
+    $ref: ../schemas/study/StudyType.yaml

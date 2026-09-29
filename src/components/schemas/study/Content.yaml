@@ -1,0 +1,41 @@
+type: object
+properties:
+  sections:
+    type: array
+    items:
+      $ref: ./section/Section.yaml
+  customer:
+    $ref: ./Customer.yaml
+  property:
+    $ref: ../Property.yaml
+  estimationEngine:
+    $ref: ./EstimationEngine.yaml
+  opportunityId:
+    type: string
+    format: uuid
+  frontPage:
+    $ref: ./legacy/LegacyFrontPage.yaml
+  propertyFeatures:
+    $ref: ./legacy/LegacyPropertyFeatures.yaml
+  condominium:
+    $ref: ./section/standard/Condominium.yaml
+  saleStats:
+    $ref: ./legacy/LegacyMarketStats.yaml
+  rentStats:
+    $ref: ./legacy/LegacyMarketStats.yaml
+  investmentStats:
+    $ref: ./legacy/LegacyInvestmentStats.yaml
+  censusStats:
+    $ref: ./legacy/LegacyCensusStats.yaml
+  similarProperties:
+    $ref: ./legacy/LegacySimilarProperties.yaml
+  customerReviews:
+    $ref: ./legacy/LegacyCustomerReviews.yaml
+  investment:
+    $ref: ./legacy/LegacyInvestment.yaml
+  legal:
+    $ref: ./legacy/LegacyLegal.yaml
+  conclusion:
+    $ref: ./legacy/LegacyConclusion.yaml
+  summary:
+    $ref: ./legacy/LegacySummary.yaml

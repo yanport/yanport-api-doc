@@ -1,0 +1,7 @@
+name: templateTypes
+in: query
+description: Types de modèle d'étude
+schema:
+  type: array
+  items:
+    $ref: ../schemas/study/TemplateType.yaml

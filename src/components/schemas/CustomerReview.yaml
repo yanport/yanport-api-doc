@@ -1,0 +1,52 @@
+type: object
+required:
+  - id
+  - organizationId
+  - source
+  - externalId
+  - description
+  - rating
+  - publicationDate
+properties:
+  id:
+    type: string
+    format: uuid
+  userId:
+    type: integer
+    format: int64
+  agencyId:
+    type: integer
+    format: int64
+  organizationId:
+    type: integer
+    format: int64
+  source:
+    type: string
+    enum:
+      - IMMODVISOR
+  externalId:
+    type: string
+  title:
+    type: string
+  description:
+    type: string
+  rating:
+    type: number
+    format: double
+  link:
+    type: string
+    format: uri
+  reviewer:
+    type: string
+  publicationDate:
+    type: string
+    format: date-time
+  deleteDate:
+    type: string
+    format: date-time
+  creationDate:
+    type: string
+    format: date-time
+  updateDate:
+    type: string
+    format: date-time

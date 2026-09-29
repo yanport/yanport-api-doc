@@ -1,0 +1,9 @@
+type: object
+deprecated: true
+properties:
+  pinel:
+    $ref: ../section/standard/Pinel.yaml
+  hasRentControl:
+    type: boolean
+  rentControlCheckResponse:
+    $ref: ../../RentControlResponse.yaml

@@ -1,0 +1,23 @@
+type: object
+required:
+  - style
+properties:
+  style:
+    type: string
+    enum:
+      - GRAPHIC_A
+      - GRAPHIC_B
+      - PRESTIGE_A
+      - PRESTIGE_B
+      - MODERN_A
+      - MODERN_B
+      - CLASSIC_A
+      - CLASSIC_B
+  logos:
+    type: array
+    items:
+      $ref: ./StudyLogo.yaml
+  colors:
+    type: array
+    items:
+      $ref: ./StudyColor.yaml

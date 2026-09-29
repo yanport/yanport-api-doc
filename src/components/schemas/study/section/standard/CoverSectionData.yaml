@@ -1,0 +1,12 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      title:
+        type: string
+      image:
+        type: string
+        format: uri
+      defaultImage:
+        type: string
+        format: uri

@@ -1,7 +1,0 @@
-type: object
-properties:
-  sections:
-    type: array
-    items:
-      $ref: ./Summary-section.yaml
-

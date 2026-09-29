@@ -1,0 +1,10 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      propertyFeatures:
+        $ref: ../../../Opportunity-PropertyFeatures.yaml
+      acquisition:
+        $ref: ../../../Opportunity-Acquisition.yaml
+      project:
+        $ref: ../../../Opportunity-Project.yaml

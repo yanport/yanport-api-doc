@@ -1,0 +1,7 @@
+allOf:
+  - $ref: ../SectionCommons.yaml
+  - type: object
+    properties:
+      data:
+        $ref: ../SectionCommonData.yaml
+

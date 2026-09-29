@@ -1,0 +1,6 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      offMarket:
+        $ref: ./SimilarProperties.yaml

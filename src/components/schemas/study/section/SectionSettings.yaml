@@ -1,0 +1,8 @@
+type: object
+properties:
+  showHeader:
+    type: boolean
+  showFooter:
+    type: boolean
+  withPadding:
+    type: boolean

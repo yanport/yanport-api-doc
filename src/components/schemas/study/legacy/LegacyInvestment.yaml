@@ -1,0 +1,13 @@
+type: object
+deprecated: true
+required:
+  - propertyFeatures
+  - acquisition
+  - project
+properties:
+  propertyFeatures:
+    $ref: ../../Opportunity-PropertyFeatures.yaml
+  acquisition:
+    $ref: ../../Opportunity-Acquisition.yaml
+  project:
+    $ref: ../../Opportunity-Project.yaml

@@ -1,0 +1,17 @@
+type: object
+properties:
+  name:
+    type: string
+  parcelIds:
+    type: array
+    items:
+      type: string
+  legalRepresentativeName:
+    type: string
+  registrationDate:
+    type: string
+    format: date
+  unitCounts:
+    type: integer
+  housingCounts:
+    type: integer

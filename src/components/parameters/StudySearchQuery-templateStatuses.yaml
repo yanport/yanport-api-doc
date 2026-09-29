@@ -1,0 +1,7 @@
+name: templateStatuses
+in: query
+description: Statuts de modèle d'étude
+schema:
+  type: array
+  items:
+    $ref: ../schemas/study/TemplateStatus.yaml

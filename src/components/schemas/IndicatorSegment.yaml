@@ -1,0 +1,33 @@
+type: string
+enum:
+  - T1
+  - T2
+  - T3
+  - TO_T3
+  - T4
+  - T5
+  - FROM_T5
+  - FROM_T6
+  - TO_30
+  - FROM_30_TO_50
+  - FROM_50_TO_70
+  - FROM_70_TO_90
+  - FROM_90
+  - TO_90
+  - FROM_90_TO_110
+  - FROM_110_TO_140
+  - FROM_140
+  - TO_1945
+  - FROM_1945_TO_1970
+  - FROM_1970_TO_1990
+  - FROM_1990_TO_2010
+  - FROM_2010
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - FURNISHED
+  - UNFURNISHED

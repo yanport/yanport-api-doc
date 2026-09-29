@@ -1,0 +1,15 @@
+type: object
+deprecated: true
+required:
+  - id
+  - active
+properties:
+  id:
+    type: string
+  active:
+    type: boolean
+  pages:
+    type: array
+    items:
+      $ref: ./LegacyStudyPage.yaml
+

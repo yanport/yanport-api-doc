@@ -1,0 +1,13 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  renderingModes:
+    type: array
+    items:
+      $ref: ./RenderingMode.yaml
+  settings:
+    $ref: ./SectionSettings.yaml
+  type:
+    type: string

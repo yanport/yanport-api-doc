@@ -1,0 +1,21 @@
+type: object
+deprecated: true
+properties:
+  sourceQueries:
+    type: array
+    items:
+      $ref: ../section/standard/SimilarPropertiesSourceQuery.yaml
+  properties:
+    type: array
+    items:
+      $ref: ../../SimilarPropertyHit.yaml
+  refreshedPrices:
+    type: object
+    additionalProperties:
+      type: number
+      format: double
+  enrichedPropertyIds:
+    type: array
+    items:
+      type: string
+      format: uuid

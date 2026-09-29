@@ -1,0 +1,7 @@
+type: string
+enum:
+  - TYPOLOGY
+  - SURFACE
+  - ENERGY_PERFORMANCE
+  - CONSTRUCTION_PERIOD
+  - FURNITURE

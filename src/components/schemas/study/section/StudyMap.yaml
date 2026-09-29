@@ -1,0 +1,16 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+  bbox:
+    $ref: ../../BoundingBox.yaml
+  data:
+    $ref: ../../FeatureCollection.yaml
+  tileType:
+    type: string
+    enum:
+      - STANDARD
+      - SATELLITE
+

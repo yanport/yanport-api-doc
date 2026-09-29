@@ -1,0 +1,13 @@
+type: object
+deprecated: true
+properties:
+  streetViewImage:
+    type: string
+    format: uri
+  mainImage:
+    type: string
+    format: uri
+  maps:
+    type: array
+    items:
+      $ref: ../section/StudyMap.yaml

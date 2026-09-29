@@ -1,0 +1,6 @@
+name: template
+in: query
+description: Modèle d'étude (oui ou non)
+schema:
+  type: boolean
+  default: false

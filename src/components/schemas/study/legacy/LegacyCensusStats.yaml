@@ -1,0 +1,40 @@
+type: object
+deprecated: true
+properties:
+  zoneData:
+    type: object
+    properties:
+      IRIS:
+        $ref: ../../CensusStats.yaml
+      CITY:
+        $ref: ../../CensusStats.yaml
+      AGGLOMERATION:
+        $ref: ../../CensusStats.yaml
+      DEPARTMENT:
+        $ref: ../../CensusStats.yaml
+  budgets:
+    type: array
+    items:
+      $ref: ../../Budget.yaml
+  loanInterestRates:
+    type: array
+    items:
+      type: object
+      properties:
+        x:
+          type: string
+          format: date
+        y:
+          type: number
+          format: double
+  rentReferenceIndexes:
+    type: array
+    items:
+      type: object
+      properties:
+        x:
+          type: string
+          format: date
+        y:
+          type: number
+          format: double

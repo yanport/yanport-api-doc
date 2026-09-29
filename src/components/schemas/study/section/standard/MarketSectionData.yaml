@@ -1,0 +1,10 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      saleStats:
+        $ref: ./MarketStats.yaml
+      rentStats:
+        $ref: ./MarketStats.yaml
+      investmentStats:
+        $ref: ./InvestmentStats.yaml

@@ -1,0 +1,22 @@
+type: object
+deprecated: true
+properties:
+  onMarket:
+    $ref: ./LegacySimilarPropertiesSection.yaml
+  offMarket:
+    $ref: ./LegacySimilarPropertiesSection.yaml
+  outdated:
+    $ref: ./LegacySimilarPropertiesSection.yaml
+  organization:
+    $ref: ./LegacySimilarPropertiesSection.yaml
+  competitiveAnalysisProperties:
+    type: array
+    items:
+      $ref: ../../PropertyPoint.yaml
+  maps:
+    type: array
+    items:
+      $ref: ../section/StudyMap.yaml
+  durationMarketInMonth:
+    type: number
+    format: integer

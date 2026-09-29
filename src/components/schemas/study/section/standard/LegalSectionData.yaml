@@ -1,0 +1,11 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      pinel:
+        $ref: ./Pinel.yaml
+      hasRentControl:
+        type: boolean
+      rentControlCheckResponse:
+        $ref: ../../../RentControlResponse.yaml
+

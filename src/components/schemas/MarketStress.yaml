@@ -1,0 +1,14 @@
+type: object
+required:
+  - value
+  - reliability
+properties:
+  value:
+    type: number
+    format: double
+  decomposition:
+    type: array
+    items:
+      $ref: ./MarketStressIndicator.yaml
+  reliability:
+    $ref: ./Reliability.yaml

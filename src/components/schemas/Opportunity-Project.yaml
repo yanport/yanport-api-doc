@@ -1,0 +1,13 @@
+type: object
+required:
+  - type
+properties:
+  type:
+    type: string
+    enum:
+      - RESALE
+      - RENTAL
+  resale:
+    $ref: ./Opportunity-Resale.yaml
+  rental:
+    $ref: ./Opportunity-Rental.yaml

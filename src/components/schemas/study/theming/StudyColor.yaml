@@ -1,0 +1,16 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+    enum:
+      - primary
+      - secondary
+      - tertiary
+      - surface
+      - text
+      - light-text
+  hex:
+    type: string
+    pattern: ^#([a-f0-9]{6})$

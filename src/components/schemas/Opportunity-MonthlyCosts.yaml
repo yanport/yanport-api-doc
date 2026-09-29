@@ -1,0 +1,11 @@
+type: object
+properties:
+  funding:
+    type: number
+    format: double
+  insurance:
+    type: number
+    format: double
+  others:
+    type: number
+    format: double

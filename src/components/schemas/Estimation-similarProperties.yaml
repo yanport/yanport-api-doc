@@ -3,12 +3,12 @@ properties:
   onMarket:
     type: array
     items:
-      $ref: ./SimilarProperty.yaml
+      $ref: ./SimilarPropertyHit.yaml
   offMarket:
     type: array
     items:
-      $ref: ./SimilarProperty.yaml
+      $ref: ./SimilarPropertyHit.yaml
   outdated:
     type: array
     items:
-      $ref: ./SimilarProperty.yaml
+      $ref: ./SimilarPropertyHit.yaml
