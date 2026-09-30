@@ -1,6 +1,6 @@
 name: types
 in: query
-description: Types d'étude
+description: Types des études
 schema:
   type: array
   items:

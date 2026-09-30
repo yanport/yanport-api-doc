@@ -1,6 +1,6 @@
 name: templateStatuses
 in: query
-description: Statuts de modèle d'étude
+description: Statuts des modèles d'étude
 schema:
   type: array
   items:

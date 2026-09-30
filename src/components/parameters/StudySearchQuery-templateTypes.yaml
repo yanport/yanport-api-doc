@@ -1,6 +1,6 @@
 name: templateTypes
 in: query
-description: Types de modèle d'étude
+description: Types des modèles d'étude
 schema:
   type: array
   items:

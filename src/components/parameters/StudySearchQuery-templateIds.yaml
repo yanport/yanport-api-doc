@@ -1,6 +1,6 @@
 name: templateIds
 in: query
-description: Identifiants de modèle d'étude
+description: Identifiants des modèles d'étude
 schema:
   type: array
   items:
