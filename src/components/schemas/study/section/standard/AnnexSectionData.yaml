@@ -1,0 +1,14 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      contentUri:
+        type: string
+        format: uri
+      richText:
+        type: string
+      source:
+        type: string
+        enum:
+          - TEMPLATE
+          - USER

@@ -1,0 +1,8 @@
+type: object
+deprecated: true
+properties:
+  sections:
+    type: array
+    items:
+      $ref: ./LegacySection.yaml
+

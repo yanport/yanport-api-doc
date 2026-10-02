@@ -1,0 +1,7 @@
+type: object
+properties:
+  points:
+    type: array
+    items:
+      $ref: ./MarketStressDateHistogramPoint.yaml
+    description: Liste de points

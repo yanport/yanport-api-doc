@@ -1,0 +1,9 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+  hex:
+    type: string
+    pattern: ^#([a-f0-9]{6})$

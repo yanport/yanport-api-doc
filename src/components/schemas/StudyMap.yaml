@@ -1,9 +1,0 @@
-type: object
-properties:
-  id:
-    type: string
-  bbox:
-    $ref: ./BoundingBox.yaml
-  data:
-    $ref: ./FeatureCollection.yaml
-

@@ -1,0 +1,47 @@
+type: object
+required:
+  - type
+  - marketingType
+  - propertyTypes
+  - newBuild
+properties:
+  type:
+    $ref: ./IndicatorType.yaml
+  segmentType:
+    $ref: ./IndicatorSegmentType.yaml
+  segments:
+    type: array
+    items:
+      $ref: ./IndicatorSegment.yaml
+  marketingType:
+    $ref: ./MarketingType.yaml
+  propertyTypes:
+    type: array
+    items:
+      $ref: ./PropertyType.yaml
+  newBuild:
+    type: boolean
+  agglomerationIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  departments:
+    type: array
+    items:
+      type: string
+  cityIds:
+    type: array
+    items:
+      type: integer
+      format: int64
+  irisIds:
+    type: array
+    items:
+      type: string
+  zipCodes:
+    type: array
+    items:
+      type: string
+  frequency:
+    $ref: ./Frequency.yaml

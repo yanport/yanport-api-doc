@@ -1,0 +1,6 @@
+type: object
+properties:
+  monthlyCosts:
+    $ref: ./Opportunity-MonthlyCosts.yaml
+  valuations:
+    $ref: ./Opportunity-Valuations.yaml

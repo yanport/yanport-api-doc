@@ -1,0 +1,16 @@
+type: object
+deprecated: true
+properties:
+  selectedReviews:
+    type: array
+    items:
+      $ref: ../../CustomerReview.yaml
+  satisfactionRate:
+    type: number
+    format: double
+  averageRating:
+    type: number
+    format: double
+  totalReviews:
+    type: integer
+    format: int64

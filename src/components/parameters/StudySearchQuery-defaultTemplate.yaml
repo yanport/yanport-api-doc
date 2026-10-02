@@ -1,0 +1,5 @@
+name: defaultTemplate
+in: query
+description: Modèle d'étude par défaut (oui ou non)
+schema:
+  type: boolean

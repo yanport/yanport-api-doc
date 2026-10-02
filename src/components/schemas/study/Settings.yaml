@@ -1,0 +1,24 @@
+type: object
+properties:
+  template:
+    type: boolean
+  templateId:
+    type: string
+    format: uuid
+  templateType:
+    $ref: ./TemplateType.yaml
+  templateStatus:
+    $ref: ./TemplateStatus.yaml
+  defaultTemplate:
+    type: boolean
+  showPagination:
+    type: boolean
+    default: true
+  priceFormat:
+    $ref: ./PriceFormat.yaml
+  feesFormat:
+    $ref: ./FeesFormat.yaml
+  feesPayer:
+    $ref: ../FeesPayer.yaml
+  theming:
+    $ref: ./theming/Theming.yaml

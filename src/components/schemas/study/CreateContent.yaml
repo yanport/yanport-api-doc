@@ -1,0 +1,11 @@
+type: object
+properties:
+  customer:
+    $ref: ./Customer.yaml
+  property:
+    $ref: ../Property.yaml
+  estimationEngine:
+    $ref: ./EstimationEngine.yaml
+  opportunityId:
+    type: string
+    format: uuid

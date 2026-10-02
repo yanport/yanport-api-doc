@@ -1,0 +1,14 @@
+type: object
+properties:
+  hiddenBlocks:
+    type: array
+    items:
+      type: string
+  texts:
+    type: array
+    items:
+      $ref: ./StudyText.yaml
+  maps:
+    type: array
+    items:
+      $ref: ./StudyMap.yaml

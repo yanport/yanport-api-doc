@@ -1,0 +1,9 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    required:
+      - propertyId
+    properties:
+      propertyId:
+        type: string
+        format: uuid

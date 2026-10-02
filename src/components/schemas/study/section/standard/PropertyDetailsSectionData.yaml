@@ -1,0 +1,10 @@
+allOf:
+  - $ref: ../SectionCommonData.yaml
+  - type: object
+    properties:
+      streetViewImage:
+        type: string
+        format: uri
+      mainImage:
+        type: string
+        format: uri

@@ -1,0 +1,15 @@
+type: object
+deprecated: true
+required:
+  - id
+  - order
+properties:
+  id:
+    type: string
+  order:
+    type: integer
+  renderingModes:
+    type: array
+    items:
+      $ref: ./LegacyRenderingMode.yaml
+

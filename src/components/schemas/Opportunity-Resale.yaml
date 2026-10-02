@@ -1,0 +1,4 @@
+type: object
+properties:
+  valuations:
+    $ref: ./Opportunity-Valuations.yaml

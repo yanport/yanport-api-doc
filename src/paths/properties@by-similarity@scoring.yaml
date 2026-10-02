@@ -47,7 +47,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/SimilarProperties.yaml
+            $ref: ../components/schemas/SimilarPropertiesResponse.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

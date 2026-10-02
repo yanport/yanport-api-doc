@@ -1,0 +1,15 @@
+type: object
+deprecated: true
+properties:
+  requestType:
+    $ref: ../section/standard/MarketRequestType.yaml
+  propertySearchQuery:
+    $ref: ../../PropertySearchQuery.yaml
+  propertyIndicatorQuery:
+    $ref: ../../PropertyIndicatorQuery.yaml
+  grossRentalYieldEvolution:
+    $ref: ../../DateHistogram.yaml
+  maps:
+    type: array
+    items:
+      $ref: ../section/StudyMap.yaml

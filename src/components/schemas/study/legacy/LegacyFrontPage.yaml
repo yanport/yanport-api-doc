@@ -1,0 +1,8 @@
+type: object
+deprecated: true
+properties:
+  title:
+    type: string
+  coverImage:
+    type: string
+    format: uri

@@ -1,0 +1,48 @@
+type: object
+required:
+  - organizationId
+  - userId
+  - type
+  - product
+  - name
+properties:
+  organizationId:
+    type: integer
+    format: int64
+  agencyId:
+    type: integer
+    format: int64
+  mandataryNetworkId:
+    type: integer
+    format: int64
+  userId:
+    type: integer
+    format: int64
+  externalIds:
+    type: object
+    properties:
+      USER:
+        type: string
+      AGENCY:
+        type: string
+  type:
+    $ref: ./StudyType.yaml
+  product:
+    $ref: ../ProductType.yaml
+  name:
+    type: string
+  settings:
+    $ref: ./CreateSettings.yaml
+  customer:
+    deprecated: true
+    allOf:
+      - $ref: ./Customer.yaml
+  property:
+    deprecated: true
+    allOf:
+      - $ref: ../Property.yaml
+  content:
+    $ref: ./CreateContent.yaml
+  releaseDate:
+    type: string
+    format: date-time

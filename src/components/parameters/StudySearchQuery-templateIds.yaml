@@ -1,0 +1,8 @@
+name: templateIds
+in: query
+description: Identifiants des modèles d'étude
+schema:
+  type: array
+  items:
+    type: string
+    format: uuid

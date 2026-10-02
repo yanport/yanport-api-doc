@@ -1,0 +1,24 @@
+type: object
+deprecated: true
+required:
+  - id
+  - hidden
+  - order
+properties:
+  id:
+    type: string
+  hidden:
+    type: boolean
+  comment:
+    type: string
+  texts:
+    type: object
+    additionalProperties:
+      type: string
+  hiddenBlocks:
+    type: array
+    items:
+      type: string
+  order:
+    type: integer
+

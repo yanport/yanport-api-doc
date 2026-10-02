@@ -1,0 +1,21 @@
+type: object
+properties:
+  title:
+    type: string
+    enum:
+      - MR
+      - MRS
+      - MR_MRS
+      - JOINT_OWNERSHIP
+      - COMPAGNY
+      - GENTLEMEN
+      - LADIES
+      - LADIES_AND_GENTLEMEN
+  name:
+    type: string
+  address:
+    $ref: ../Address.yaml
+  mail:
+    type: string
+  phone:
+    type: string

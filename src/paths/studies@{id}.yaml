@@ -17,7 +17,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Study.yaml
+            $ref: ../components/schemas/study/Study.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
@@ -35,13 +35,16 @@ put:
       schema:
         type: string
         format: uuid
+  requestBody:
+    required: true
+    description: Données de l'étude à mettre à jour
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/study/Study.yaml
   responses:
     '200':
-      description: L'étude mise à jour
-      content:
-        application/json:
-          schema:
-            $ref: ../components/schemas/Study.yaml
+      $ref: ../components/responses/NoContent.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

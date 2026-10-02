@@ -1,0 +1,18 @@
+type: object
+properties:
+  requestType:
+    $ref: ./MarketRequestType.yaml
+  propertySearchQuery:
+    $ref: ../../../PropertySearchQuery.yaml
+  propertyIndicatorQuery:
+    $ref: ../../../PropertyIndicatorQuery.yaml
+  priceM2Percentiles:
+    $ref: ../../../Percentiles.yaml
+  durationPercentiles:
+    $ref: ../../../Percentiles.yaml
+  priceM2Evolution:
+    $ref: ../../../DateHistogram.yaml
+  forecastPriceM2Evolution:
+    $ref: ../../../DateHistogram.yaml
+  marketStressEvolution:
+    $ref: ../../../MarketStressDateHistogram.yaml

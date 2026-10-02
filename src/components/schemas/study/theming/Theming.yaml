@@ -1,0 +1,14 @@
+type: object
+required:
+  - style
+properties:
+  style:
+    type: string
+  logos:
+    type: array
+    items:
+      $ref: ./StudyLogo.yaml
+  colors:
+    type: array
+    items:
+      $ref: ./StudyColor.yaml

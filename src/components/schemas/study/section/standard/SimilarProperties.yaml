@@ -1,0 +1,20 @@
+type: object
+properties:
+  sourceQueries:
+    type: array
+    items:
+      $ref: ./SimilarPropertiesSourceQuery.yaml
+  properties:
+    type: array
+    items:
+      $ref: ../../../SimilarPropertyHit.yaml
+  refreshedPrices:
+    type: object
+    additionalProperties:
+      type: number
+      format: double
+  enrichedPropertyIds:
+    type: array
+    items:
+      type: string
+      format: uuid

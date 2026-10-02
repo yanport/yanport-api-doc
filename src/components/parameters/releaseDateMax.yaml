@@ -1,0 +1,6 @@
+name: releaseDateMax
+in: query
+description: Date de réalisation maximale (YYYY-mm-ddTHH:mm:ss)
+schema:
+  type: string
+  format: date-time

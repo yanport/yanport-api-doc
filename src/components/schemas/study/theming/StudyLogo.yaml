@@ -1,0 +1,13 @@
+type: object
+required:
+  - format
+  - uri
+properties:
+  format:
+    type: string
+    enum:
+      - LANDSCAPE
+      - SQUARE
+  uri:
+    type: string
+    format: uri

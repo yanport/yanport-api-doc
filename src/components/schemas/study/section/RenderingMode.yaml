@@ -1,0 +1,20 @@
+type: object
+required:
+  - type
+  - active
+properties:
+  type:
+    type: string
+    enum:
+      - DEFAULT
+      - SYNTHETIC
+      - COMPACT
+      - DETAILED
+      - GEOMETRIC
+      - ROUNDED
+  pages:
+    type: array
+    items:
+      $ref: ./Page.yaml
+  active:
+    type: boolean

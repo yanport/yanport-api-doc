@@ -1,0 +1,5 @@
+type: string
+enum:
+  - MONTHS
+  - QUARTERS
+  - YEARS

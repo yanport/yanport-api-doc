@@ -9,14 +9,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Study.yaml
+          $ref: ../components/schemas/study/CreateStudy.yaml
   responses:
     '200':
       description: L'étude créée
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Study.yaml
+            $ref: ../components/schemas/study/Study.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':
@@ -49,22 +49,36 @@ get:
         /studies?externalIds=USER:abc123
       #### Les études à partir d'un identifiant externe de bien
         /studies?propertyExternalIds=ID:abc123
+      #### Les modèles d'étude de mon organisation sur Agent 360
+        /studies?organizationIds=123456789&products=AGENT_360&template=true
+      #### Les modèles d'étude par défaut de mon organisation sur Agent 360 (1 seul résultat attendu)
+        /studies?organizationIds=123456789&products=AGENT_360&template=true&defaultTemplate=true
   parameters:
     - name: searchQueryParam
       in: query
       schema:
         $ref: ../components/schemas/SearchQueryParam.yaml
     - $ref: ../components/parameters/q.yaml
-    - $ref: ../components/parameters/userIds.yaml
-    - $ref: ../components/parameters/productTypes.yaml
-    - $ref: ../components/parameters/agencyIds.yaml
     - $ref: ../components/parameters/organizationIds.yaml
+    - $ref: ../components/parameters/agencyIds.yaml
+    - $ref: ../components/parameters/userIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-externalIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-types.yaml
+    - $ref: ../components/parameters/productTypes.yaml
+    - $ref: ../components/parameters/StudySearchQuery-templateIds.yaml
+    - $ref: ../components/parameters/StudySearchQuery-template.yaml
+    - $ref: ../components/parameters/StudySearchQuery-templateTypes.yaml
+    - $ref: ../components/parameters/StudySearchQuery-templateStatuses.yaml
+    - $ref: ../components/parameters/StudySearchQuery-defaultTemplate.yaml
     - $ref: ../components/parameters/StudySearchQuery-marketingTypes.yaml
     - $ref: ../components/parameters/propertyIds.yaml
     - $ref: ../components/parameters/StudySearchQuery-propertyExternalIds.yaml
     - $ref: ../components/parameters/creationDateMin.yaml
     - $ref: ../components/parameters/creationDateMax.yaml
+    - $ref: ../components/parameters/updateDateMin.yaml
+    - $ref: ../components/parameters/updateDateMax.yaml
+    - $ref: ../components/parameters/releaseDateMin.yaml
+    - $ref: ../components/parameters/releaseDateMax.yaml
     - $ref: ../components/parameters/missingFields.yaml
     - $ref: ../components/parameters/existingFields.yaml
   responses:
@@ -80,7 +94,7 @@ get:
               hits:
                 type: array
                 items:
-                  $ref: ../components/schemas/Study.yaml
+                  $ref: ../components/schemas/study/Study.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
     '500':

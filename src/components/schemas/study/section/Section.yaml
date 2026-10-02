@@ -1,0 +1,37 @@
+type: object
+discriminator:
+  propertyName: type
+  mapping:
+    COVER: ./standard/CoverSection.yaml
+    CONTACT: ./standard/ContactSection.yaml
+    CUSTOMER_REVIEWS: ./standard/CustomerReviewsSection.yaml
+    SITUATION_PLAN: ./standard/SituationPlanSection.yaml
+    PROPERTY_DETAILS: ./standard/PropertyDetailsSection.yaml
+    PROPERTY_PICTURES: ./standard/PropertyPicturesSection.yaml
+    CENSUS_STATS: ./standard/CensusStatsSection.yaml
+    MARKET: ./standard/MarketSection.yaml
+    INVESTMENT: ./standard/InvestmentSection.yaml
+    SIMILAR_PROPERTIES: ./standard/SimilarPropertiesSection.yaml
+    ORGANIZATION_SIMILAR_PROPERTIES: ./standard/OrganizationSimilarPropertiesSection.yaml
+    FOCUS_PROPERTY: ./standard/FocusPropertySection.yaml
+    LEGAL: ./standard/LegalSection.yaml
+    PRICE_SYNTHESIS: ./standard/PriceSynthesisSection.yaml
+    CONCLUSION: ./standard/ConclusionSection.yaml
+    ANNEX: ./standard/AnnexSection.yaml
+oneOf:
+  - $ref: ./standard/CoverSection.yaml
+  - $ref: ./standard/ContactSection.yaml
+  - $ref: ./standard/CustomerReviewsSection.yaml
+  - $ref: ./standard/SituationPlanSection.yaml
+  - $ref: ./standard/PropertyDetailsSection.yaml
+  - $ref: ./standard/PropertyPicturesSection.yaml
+  - $ref: ./standard/CensusStatsSection.yaml
+  - $ref: ./standard/MarketSection.yaml
+  - $ref: ./standard/InvestmentSection.yaml
+  - $ref: ./standard/SimilarPropertiesSection.yaml
+  - $ref: ./standard/OrganizationSimilarPropertiesSection.yaml
+  - $ref: ./standard/FocusPropertySection.yaml
+  - $ref: ./standard/LegalSection.yaml
+  - $ref: ./standard/PriceSynthesisSection.yaml
+  - $ref: ./standard/ConclusionSection.yaml
+  - $ref: ./standard/AnnexSection.yaml

@@ -1,0 +1,14 @@
+type: object
+required:
+  - name
+  - value
+properties:
+  name:
+    type: string
+    enum:
+      - DURATION_DAYS
+      - PRICE_REVISION
+      - STOCK
+  value:
+    type: number
+    format: double
