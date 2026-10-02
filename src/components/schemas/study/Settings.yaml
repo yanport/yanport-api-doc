@@ -18,5 +18,7 @@ properties:
     $ref: ./PriceFormat.yaml
   feesFormat:
     $ref: ./FeesFormat.yaml
+  feesPayer:
+    $ref: ../FeesPayer.yaml
   theming:
     $ref: ./theming/Theming.yaml

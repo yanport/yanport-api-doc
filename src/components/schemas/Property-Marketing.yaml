@@ -131,11 +131,7 @@ properties:
     minimum: 0
     maximum: 100
   feesPayer:
-    type: string
-    enum:
-      - BUYER
-      - SELLER
-    default: BUYER
+    $ref: ./FeesPayer.yaml
   feesIncluded:
     type: boolean
   exclusiveMandate:
