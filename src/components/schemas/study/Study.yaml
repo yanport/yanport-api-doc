@@ -30,7 +30,10 @@ properties:
       AGENCY:
         type: string
   type:
-    $ref: ./StudyType.yaml
+    type: string
+    enum:
+      - ESTIMATION_STUDY
+    description: Ce champ n'est pas requis sur l'ancien modèle d'étude
   product:
     $ref: ../ProductType.yaml
   name:
