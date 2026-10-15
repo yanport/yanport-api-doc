@@ -1,0 +1,8 @@
+type: object
+properties:
+  points:
+    type: array
+    items:
+      $ref: ./SocioeconomicIndicatorDateHistogramPoint.yaml
+    description: Liste de points
+description: Évolution d'un indicateur

@@ -1,0 +1,4 @@
+type: string
+enum:
+  - HOUSEHOLD_TYPE
+  - ZONE_OF_ORIGIN

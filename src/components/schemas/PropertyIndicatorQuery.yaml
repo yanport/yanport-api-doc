@@ -6,13 +6,13 @@ required:
   - newBuild
 properties:
   type:
-    $ref: ./IndicatorType.yaml
+    $ref: ./PropertyIndicatorType.yaml
   segmentType:
-    $ref: ./IndicatorSegmentType.yaml
+    $ref: ./PropertyIndicatorSegmentType.yaml
   segments:
     type: array
     items:
-      $ref: ./IndicatorSegment.yaml
+      $ref: ./PropertyIndicatorSegment.yaml
   marketingType:
     $ref: ./MarketingType.yaml
   propertyTypes:

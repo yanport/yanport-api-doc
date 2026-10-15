@@ -1,0 +1,5 @@
+in: query
+name: newBuild
+schema:
+  type: boolean
+description: Marché du neuf (required pour les indicateurs de type AFFORDABILITY_PERCENT, AFFORDABLE_SURFACE et INCOME_NEEDED)

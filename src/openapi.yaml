@@ -184,6 +184,9 @@ x-tagGroups:
   - name: STATISTIQUES SOCIOECONOMIQUES
     tags:
       - Statistiques socioéconomiques
+  - name: INDICATEURS SOCIOECONOMIQUES
+    tags:
+      - Indicateurs socioéconomiques
   - name: LEGISLATION
     tags:
       - Encadrement des loyers
@@ -250,6 +253,8 @@ paths:
     $ref: paths/properties@estimate.yaml
   /maps/properties/indicators:
     $ref: paths/maps@properties@indicators.yaml
+  /maps/socioeconomic/indicators:
+    $ref: paths/maps@socioeconomic@indicators.yaml
   /maps/properties:
     $ref: paths/maps@properties.yaml
   /properties/indicators:
@@ -348,6 +353,10 @@ paths:
     $ref: paths/parcels@ids.yaml
   /census-stats:
     $ref: paths/census-stats.yaml
+  /socioeconomic/indicators:
+    $ref: paths/socioeconomic@indicators.yaml
+  /socioeconomic/indicators/evolution:
+    $ref: paths/socioeconomic@indicators@evolution.yaml
   /rent-control/check:
     $ref: paths/rent-control@check.yaml
   /building-permits:
