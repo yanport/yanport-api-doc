@@ -7,10 +7,10 @@ get:
 
     ### Exemples
       #### Carte du taux de pauvreté pour les familles sans enfants d'une zone du nord de Nantes
-        /maps/properties/indicators?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
+        /maps/socioeconomic/indicators?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
 
-      #### Carte des surfaces accessibles sur le marché de la location pour des appartments d'une zone du nord de Nantes venant du reste de la France
-        /maps/properties/indicators?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=NATIONAL&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
+      #### Carte des surfaces accessibles sur le marché de la location pour des appartements d'une zone du nord de Nantes venant du reste de la France
+        /maps/socioeconomic/indicators?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=NATIONAL&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8
   parameters:
     - $ref: ../components/parameters/SocioeconomicIndicatorQuery-type.yaml
     - $ref: ../components/parameters/SocioeconomicIndicatorQuery-marketingType.yaml
@@ -24,12 +24,12 @@ get:
     - lang: cURL
       label: maps_poverty_rate
       source: |
-        curl 'https://api.yanport.com/maps/properties/indicators?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8' \
+        curl 'https://api.yanport.com/maps/socioeconomic/indicators?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8' \
         --header 'Authorization: Bearer YOUR_TOKEN'
     - lang: cURL
-      label: maps_duration
+      label: maps_affordable_surface
       source: |
-        curl 'https://api.yanport.com/maps/properties/indicators?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=NATIONAL&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8' \
+        curl 'https://api.yanport.com/maps/socioeconomic/indicators?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=NATIONAL&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&bbox=47.26014138609658,-1.5653532226675742,47.25029468632819,-1.556522599382966&zoomLevel=8' \
         --header 'Authorization: Bearer YOUR_TOKEN'
   responses:
     '200':

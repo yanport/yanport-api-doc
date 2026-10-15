@@ -7,4 +7,4 @@ schema:
     - QUARTERS
     - YEARS
   default: MONTHS
-description: Fréquence. Pour les indicateurs de type MEDIAN_INCOME, POVERTY_RATE et INTERDECILE_RATIO uniquement la frequence YEARS est possible
+description: Fréquence. Doit être fixée à YEARS pour les indicateurs de type MEDIAN_INCOME, POVERTY_RATE et INTERDECILE_RATIO.

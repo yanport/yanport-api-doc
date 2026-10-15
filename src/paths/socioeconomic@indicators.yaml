@@ -4,13 +4,14 @@ get:
   summary: Valeur la plus récente d'un indicateur (taux de pauvreté, surface accessible, etc)
   description: >-
     Obtenir la valeur la plus récente d'un indicateur socioéconomique.
+    Pour le revenu nécessaire et l'accessibilité, un segment du marché (zone d'origine ou type de ménage) peut être sélectionné pour affiner les critères.
 
 
     ### Exemples
       #### Taux de pauvreté pour les familles sans enfants à Levallois-Perret
         /socioeconomic/indicators?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&cityIds=54178039
 
-      #### Les surfaces accessibles sur le marché de la location pour des appartments à Levallois-Perret pour les foyers venant du reste du département
+      #### Surfaces accessibles sur le marché de la location pour des appartements à Levallois-Perret pour les foyers venant du reste du département
         /socioeconomic/indicators?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039
 
   parameters:
@@ -23,8 +24,6 @@ get:
     - $ref: ../components/parameters/agglomerationIds.yaml
     - $ref: ../components/parameters/departments.yaml
     - $ref: ../components/parameters/cityIds.yaml
-    - $ref: ../components/parameters/irisIds.yaml
-    - $ref: ../components/parameters/zipCodes.yaml
     - $ref: ../components/parameters/SocioeconomicIndicatorQuery-frequency.yaml
   x-codeSamples:
     - lang: cURL

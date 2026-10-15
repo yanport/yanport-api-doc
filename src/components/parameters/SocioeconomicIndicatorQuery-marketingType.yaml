@@ -6,4 +6,4 @@ schema:
     - RENT
     - SALE
   example: RENT
-description: Type de marché (required pour les indicateurs de type AFFORDABILITY_PERCENT, AFFORDABLE_SURFACE et INCOME_NEEDED)
+description: Type de marché (requis pour les indicateurs de type AFFORDABILITY_PERCENT, AFFORDABLE_SURFACE et INCOME_NEEDED)
