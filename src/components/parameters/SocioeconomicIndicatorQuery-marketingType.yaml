@@ -1,0 +1,9 @@
+in: query
+name: marketingType
+schema:
+  type: string
+  enum:
+    - RENT
+    - SALE
+  example: RENT
+description: Type de marché (requis pour les indicateurs de type AFFORDABILITY_PERCENT, AFFORDABLE_SURFACE et INCOME_NEEDED)

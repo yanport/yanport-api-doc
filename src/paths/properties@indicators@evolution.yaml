@@ -38,7 +38,7 @@ get:
     - lang: cURL
       label: evolution_price_m2_with_segment
       source: |
-        curl '/properties/indicators/evolution?type=PRICE_M2&segmentType=TYPOLOGY&segments=T3&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039' \
+        curl 'https://api.yanport.com/properties/indicators/evolution?type=PRICE_M2&segmentType=TYPOLOGY&segments=T3&marketingType=SALE&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039' \
         --header 'Authorization: Bearer YOUR_TOKEN'
 
   responses:
