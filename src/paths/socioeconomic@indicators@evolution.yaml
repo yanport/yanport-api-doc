@@ -9,10 +9,10 @@ get:
 
     ### Exemples
       #### Évolution du taux de pauvreté pour les familles sans enfants à Levallois-Perret
-        /socioeconomic/indicators/evolution?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&cityIds=54178039
+        /socioeconomic/indicators/evolution?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&cityIds=54178039
 
       #### Évolution des surfaces accessibles sur le marché de la location pour des appartments à Levallois-Perret pour les foyers venant du reste du département
-        /socioeconomic/indicators/evolution?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENTS&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039
+        /socioeconomic/indicators/evolution?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039
 
   parameters:
     - $ref: ../components/parameters/SocioeconomicIndicatorQuery-type.yaml
@@ -33,12 +33,12 @@ get:
     - lang: cURL
       label: evolution_poverty_rate
       source: |
-        curl 'https://api.yanport.com/socioeconomic/indicators/evolution?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&cityIds=54178039' \
+        curl 'https://api.yanport.com/socioeconomic/indicators/evolution?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&cityIds=54178039' \
         --header 'Authorization: Bearer YOUR_TOKEN'
     - lang: cURL
       label: evolution_affordable_surface_with_segment
       source: |
-        curl '/socioeconomic/indicators/evolution?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENTS&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039' \
+        curl '/socioeconomic/indicators/evolution?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039' \
         --header 'Authorization: Bearer YOUR_TOKEN'
 
   responses:
