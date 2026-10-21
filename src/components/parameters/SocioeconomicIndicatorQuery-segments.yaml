@@ -1,0 +1,17 @@
+in: query
+name: segments
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+    - COUPLE_WITH_CHILDREN
+    - COUPLE_WITHOUT_CHILDREN
+    - SINGLE_PERSON
+    - SINGLE_PARENT_FAMILY
+    - OTHERS
+    - AGGLOMERATION
+    - DEPARTMENT
+    - NATIONAL
+    example: COUPLE_WITH_CHILDREN
+description: Segments

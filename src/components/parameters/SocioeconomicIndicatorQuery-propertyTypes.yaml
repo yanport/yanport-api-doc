@@ -1,0 +1,11 @@
+in: query
+name: propertyTypes
+schema:
+  type: array
+  items:
+    type: string
+    enum:
+      - APARTMENT
+      - HOUSE
+    example: APARTMENT
+description: Types de bien (requis pour les indicateurs de type AFFORDABILITY_PERCENT, AFFORDABLE_SURFACE et INCOME_NEEDED)

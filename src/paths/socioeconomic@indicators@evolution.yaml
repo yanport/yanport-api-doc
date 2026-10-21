@@ -1,0 +1,52 @@
+get:
+  tags:
+    - Indicateurs socioéconomiques
+  summary: Évolution d'un indicateur (taux de pauvreté, surface accessible, etc)
+  description: >-
+    Obtenir l'évolution d'un indicateur socioéconomique.
+    Pour le revenu nécessaire et l'accessibilité, un segment du marché (zone d'origine ou type de ménage) peut être sélectionné pour affiner les critères.
+
+
+    ### Exemples
+      #### Évolution du taux de pauvreté pour les ménages sans enfants à Levallois-Perret
+        /socioeconomic/indicators/evolution?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&cityIds=54178039
+
+      #### Évolution des surfaces accessibles sur le marché de la location pour des appartements à Levallois-Perret pour les foyers venant du reste du département
+        /socioeconomic/indicators/evolution?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039
+
+  parameters:
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-type.yaml
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-segmentType.yaml
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-segments.yaml
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-marketingType.yaml
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-propertyTypes.yaml
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-newBuild.yaml
+    - $ref: ../components/parameters/agglomerationIds.yaml
+    - $ref: ../components/parameters/departments.yaml
+    - $ref: ../components/parameters/cityIds.yaml
+    - $ref: ../components/parameters/SocioeconomicIndicatorQuery-frequency.yaml
+    - $ref: ../components/parameters/dateMin.yaml
+    - $ref: ../components/parameters/dateMax.yaml
+  x-codeSamples:
+    - lang: cURL
+      label: evolution_poverty_rate
+      source: |
+        curl 'https://api.yanport.com/socioeconomic/indicators/evolution?type=POVERTY_RATE&segmentType=HOUSEHOLD_TYPE&segments=COUPLE_WITHOUT_CHILDREN&frequency=YEARS&cityIds=54178039' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+    - lang: cURL
+      label: evolution_affordable_surface_with_segment
+      source: |
+        curl 'https://api.yanport.com/socioeconomic/indicators/evolution?type=AFFORDABLE_SURFACE&segmentType=ZONE_OF_ORIGIN&segments=DEPARTMENT&marketingType=RENT&propertyTypes=APARTMENT&newBuild=false&cityIds=54178039' \
+        --header 'Authorization: Bearer YOUR_TOKEN'
+
+  responses:
+    '200':
+      description: Évolution d'un indicateur
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/SocioeconomicIndicatorDateHistogram.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

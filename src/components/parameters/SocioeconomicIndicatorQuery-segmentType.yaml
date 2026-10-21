@@ -1,0 +1,9 @@
+in: query
+name: segmentType
+schema:
+  type: string
+  enum:
+    - HOUSEHOLD_TYPE
+    - ZONE_OF_ORIGIN
+  example: HOUSEHOLD_TYPE
+description: Type de segment
