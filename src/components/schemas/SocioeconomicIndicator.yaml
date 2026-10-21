@@ -3,7 +3,7 @@ properties:
   value:
     type: number
     format: double
-    example: 9841.39
+    example: 47.95
     description: Valeur de l'indicateur
   bounds:
     $ref: ./Bounds.yaml
