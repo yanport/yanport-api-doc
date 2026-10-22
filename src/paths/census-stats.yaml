@@ -2,7 +2,11 @@ get:
   tags:
     - Statistiques socioéconomiques
   summary: Récupérer des statistiques socioéconomiques
+  deprecated: true
   description: >-
+    **Déprécié** : utiliser `/socioeconomic/stats` à la place.
+
+
     Retourne des statistiques socioéconomiques par zones géographiques (source INSEE)
 
     ### Exemple

@@ -1,0 +1,38 @@
+get:
+  tags:
+    - Statistiques socioéconomiques
+  summary: Récupérer des statistiques socioéconomiques
+  description: >-
+    Retourne des statistiques socioéconomiques par zones géographiques (source INSEE)
+
+    ### Exemple
+      #### Statistiques socioéconomiques de la zone iris Monpezat (64)
+        /socioeconomic/stats?zone=IRIS&zoneIds=643940000
+  parameters:
+    - name: searchQueryParam
+      in: query
+      schema:
+        $ref: ../components/schemas/SearchQueryParam.yaml
+    - $ref: ../components/parameters/q.yaml
+    - $ref: ../components/parameters/zone.yaml
+    - $ref: ../components/parameters/zoneIds.yaml
+    - $ref: ../components/parameters/censusYears.yaml
+
+  responses:
+    '200':
+      description: Les statistiques des zones recherchées
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              total:
+                type: integer
+              hits:
+                type: array
+                items:
+                  $ref: ../components/schemas/CensusStats.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

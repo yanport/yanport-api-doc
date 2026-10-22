@@ -124,7 +124,7 @@ tags:
     x-displayName: Parcelle
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Parcel" />
-  - name: Modele-censusStats
+  - name: Modele-SocioeconomicStats
     x-displayName: Statistiques socioéconomiques
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/CensusStats" />
@@ -218,7 +218,7 @@ x-tagGroups:
       - Modele-quartier
       - Modele-IRIS
       - Modele-parcelle
-      - Modele-censusStats
+      - Modele-SocioeconomicStats
       - Modele-rentControl
       - Modele-buildingPermit
       - Modele-utilisateur
@@ -315,6 +315,8 @@ paths:
     $ref: paths/socioeconomic@indicators@evolution.yaml
   /census-stats:
     $ref: paths/census-stats.yaml
+  /socioeconomic/stats:
+    $ref: paths/socioeconomic@stats.yaml
   /departments:
     $ref: paths/departments.yaml
   '/departments/{id}':
