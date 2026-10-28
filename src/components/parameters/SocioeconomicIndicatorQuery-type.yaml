@@ -3,12 +3,12 @@ name: type
 schema:
   type: string
   enum:
-    - AFFORDABILITY_PERCENT
+    - AFFORDABILITY_RATE
     - INCOME_NEEDED
     - AFFORDABLE_SURFACE
     - MEDIAN_INCOME
     - POVERTY_RATE
     - INTERDECILE_RATIO
-  example: AFFORDABILITY_PERCENT
+  example: AFFORDABILITY_RATE
 required: true
 description: Type d'indicateur

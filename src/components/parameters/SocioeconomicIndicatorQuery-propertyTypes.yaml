@@ -8,4 +8,4 @@ schema:
       - APARTMENT
       - HOUSE
     example: APARTMENT
-description: Types de bien (requis pour les indicateurs de type AFFORDABILITY_PERCENT, AFFORDABLE_SURFACE et INCOME_NEEDED)
+description: Types de bien (requis pour les indicateurs de type AFFORDABILITY_RATE, AFFORDABLE_SURFACE et INCOME_NEEDED)
