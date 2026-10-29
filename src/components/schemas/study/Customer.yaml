@@ -6,6 +6,7 @@ properties:
       - MR
       - MRS
       - MR_MRS
+      - MRS_MR
       - JOINT_OWNERSHIP
       - COMPAGNY
       - GENTLEMEN
