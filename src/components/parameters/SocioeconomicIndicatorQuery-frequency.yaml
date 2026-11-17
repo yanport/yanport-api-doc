@@ -1,9 +1,10 @@
 in: query
 name: frequency
+required: true
 schema:
   type: string
   enum:
     - MONTHS
     - QUARTERS
     - YEARS
-description: "Fréquence. Par défaut : MONTHS, ou YEARS pour les types MEDIAN_INCOME, POVERTY_RATE et INTERDECILE_RATIO. Pour ces derniers, toute valeur autre que YEARS est rejetée."
+description: Fréquence. Doit être YEARS pour les types MEDIAN_INCOME, POVERTY_RATE et INTERDECILE_RATIO.
