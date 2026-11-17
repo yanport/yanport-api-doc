@@ -20,11 +20,9 @@ properties:
     properties:
       key:
         type: string
-        enum:
-          - ID
-          - REALTY_ID
-          - VERSION
-          - BAN_INTEROP_KEY
+        description: |
+          `"ID"` `"REALTY_ID"` `"VERSION"` `"BAN_INTEROP_KEY"` `"ENERGY_DIAGNOSIS_ID"`
+        example: REALTY_ID
       value:
         type: string
     required:
