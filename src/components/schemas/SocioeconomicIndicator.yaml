@@ -5,6 +5,11 @@ properties:
     format: double
     example: 47.95
     description: Valeur de l'indicateur
+  quantity:
+    type: integer
+    format: int64
+    example: 1520
+    description: Nombre de ménages
   bounds:
     $ref: ./Bounds.yaml
   growths:
@@ -16,6 +21,7 @@ properties:
       (présents uniquement lors d'une requête d'évolution)
 example:
   value: 47.95
+  quantity: 1520
   bounds:
     min: 38.65
     low: 43.9
