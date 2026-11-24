@@ -11,6 +11,7 @@ example:
   x: 2025-03-01
   y:
     value: 47.95
+    quantity: 1520
     bounds:
       min: 38.65
       low: 43.9
